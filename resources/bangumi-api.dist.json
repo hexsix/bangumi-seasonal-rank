@@ -1,0 +1,2489 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "Bangumi API",
+        "description": "你可以在 <https://next.bgm.tv/demo/access-token> 生成一个 Access Token\n\n## [关于 User Agent](https://github.com/bangumi/api/blob/master/docs-raw/user%20agent.md)\n\n如果你在使用中遇到了问题，请优先使用 GitHub issue 提交问题。在 bangumi 小组发帖可能无法得到及时反馈。\n",
+        "version": "2025-02-5",
+        "contact": {
+            "name": "Bangumi API",
+            "url": "https://github.com/bangumi/api/"
+        }
+    },
+    "servers": [
+        {
+            "url": "https://api.bgm.tv"
+        }
+    ],
+    "tags": [
+        {
+            "name": "条目"
+        },
+        {
+            "name": "章节"
+        },
+        {
+            "name": "角色"
+        },
+        {
+            "name": "人物"
+        },
+        {
+            "name": "用户"
+        },
+        {
+            "name": "收藏"
+        },
+        {
+            "name": "编辑历史"
+        },
+        {
+            "name": "目录"
+        }
+    ],
+    "paths": {
+        "/calendar": {
+            "get": {
+                "tags": [
+                    "条目"
+                ],
+                "summary": "每日放送",
+                "operationId": "getCalendar",
+                "responses": {
+                    "200": {
+                        "description": "每日放送",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "weekday": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "en": {
+                                                        "type": "string",
+                                                        "example": "Mon"
+                                                    },
+                                                    "cn": {
+                                                        "type": "string",
+                                                        "example": "星期一"
+                                                    },
+                                                    "ja": {
+                                                        "type": "string",
+                                                        "example": "月耀日"
+                                                    },
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    }
+                                                }
+                                            },
+                                            "items": {
+                                                "type": "array",
+                                                "items": {
+                                                    "$ref": "#/components/schemas/Legacy_SubjectSmall"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/search/subject/{keywords}": {
+            "get": {
+                "tags": [
+                    "搜索"
+                ],
+                "summary": "条目搜索",
+                "operationId": "searchSubjectByKeywords",
+                "parameters": [
+                    {
+                        "name": "keywords",
+                        "in": "path",
+                        "description": "关键词 <br> 需要 URL Encode",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "条目类型，参考 [SubjectType](#model-Legacy_SubjectType)",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/components/schemas/Legacy_SubjectType"
+                        }
+                    },
+                    {
+                        "name": "responseGroup",
+                        "in": "query",
+                        "description": "返回数据大小 <br> 默认为 small",
+                        "required": false,
+                        "schema": {
+                            "description": "返回数据大小",
+                            "type": "string",
+                            "enum": [
+                                "small",
+                                "medium",
+                                "large"
+                            ],
+                            "default": "small"
+                        }
+                    },
+                    {
+                        "name": "start",
+                        "in": "query",
+                        "description": "开始条数",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "max_results",
+                        "in": "query",
+                        "description": "每页条数 <br> 最多 25",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "maximum": 25
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "搜索结果",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "oneOf": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "results": {
+                                                    "description": "总条数",
+                                                    "type": "integer"
+                                                },
+                                                "list": {
+                                                    "description": "结果列表",
+                                                    "type": "array",
+                                                    "items": {
+                                                        "$ref": "#/components/schemas/Legacy_SubjectSmall"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "results": {
+                                                    "description": "总条数",
+                                                    "type": "integer"
+                                                },
+                                                "list": {
+                                                    "description": "结果列表",
+                                                    "type": "array",
+                                                    "items": {
+                                                        "$ref": "#/components/schemas/Legacy_SubjectMedium"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "results": {
+                                                    "description": "总条数",
+                                                    "type": "integer"
+                                                },
+                                                "list": {
+                                                    "description": "结果列表",
+                                                    "type": "array",
+                                                    "items": {
+                                                        "$ref": "#/components/schemas/Legacy_SubjectLarge"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v0/search/subjects": {
+            "post": {
+                "tags": [
+                    "条目"
+                ],
+                "summary": "条目搜索",
+                "operationId": "searchSubjects",
+                "description": "## 实验性 API， 本 schema 和实际的 API 行为都可能随时发生改动\n\n目前支持的筛选条件包括:\n- `type`: 条目类型，参照 `SubjectType` enum， `或`。\n- `tag`: 标签，可以多次出现。`且` 关系。\n- `airdate`: 播出日期/发售日期。`且` 关系。\n- `rating`: 用于搜索指定评分的条目。`且` 关系。\n- `rank`: 用于搜索指定排名的条目。`且` 关系。\n- `nsfw`: 使用 `include` 包含NSFW搜索结果。默认排除搜索NSFW条目。无权限情况下忽略此选项，不会返回NSFW条目。\n\n不同筛选条件之间为 `且`\n",
+                "parameters": [
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "分页参数",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "分页参数",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "keyword"
+                                ],
+                                "properties": {
+                                    "keyword": {
+                                        "type": "string"
+                                    },
+                                    "sort": {
+                                        "enum": [
+                                            "match",
+                                            "heat",
+                                            "rank",
+                                            "score"
+                                        ],
+                                        "default": "match",
+                                        "type": "string",
+                                        "example": "rank",
+                                        "description": "排序规则\n\n- `match` meilisearch 的默认排序，按照匹配程度\n- `heat` 收藏人数\n- `rank` 排名由高到低\n- `score` 评分\n"
+                                    },
+                                    "filter": {
+                                        "type": "object",
+                                        "description": "不同条件之间是 `且` 的关系",
+                                        "properties": {
+                                            "type": {
+                                                "type": "array",
+                                                "items": {
+                                                    "$ref": "#/components/schemas/SubjectType"
+                                                },
+                                                "description": "条目类型，参照 `SubjectType` enum，多值之间为 `或` 的关系。"
+                                            },
+                                            "meta_tags": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                },
+                                                "example": [
+                                                    "童年",
+                                                    "原创"
+                                                ],
+                                                "description": "公共标签。多个值之间为 `且` 关系。可以用 `-` 排除标签。比如 `-科幻` 可以排除科幻标签。"
+                                            },
+                                            "tag": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                },
+                                                "example": [
+                                                    "童年",
+                                                    "原创"
+                                                ],
+                                                "description": "标签，可以多次出现。多值之间为 `且` 关系。"
+                                            },
+                                            "air_date": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                },
+                                                "example": [
+                                                    ">=2020-07-01",
+                                                    "<2020-10-01"
+                                                ],
+                                                "description": "播出日期/发售日期，日期必需为 `YYYY-MM-DD` 格式。多值之间为 `且` 关系。"
+                                            },
+                                            "rating": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                },
+                                                "example": [
+                                                    ">=6",
+                                                    "<8"
+                                                ],
+                                                "description": "用于搜索指定评分的条目，多值之间为 `且` 关系。"
+                                            },
+                                            "rank": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                },
+                                                "example": [
+                                                    ">10",
+                                                    "<=18"
+                                                ],
+                                                "description": "用于搜索指定排名的条目，多值之间为 `且` 关系。"
+                                            },
+                                            "nsfw": {
+                                                "type": "boolean",
+                                                "description": "无权限的用户会直接忽略此字段，不会返回R18条目。\n\n默认或者 `null` 会返回包含 R18 的所有搜索结果。\n\n`true` 只会返回 R18 条目。\n\n`false` 只会返回非 R18 条目。\n"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "返回搜索结果",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Paged_Subject"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v0/search/characters": {
+            "post": {
+                "tags": [
+                    "角色"
+                ],
+                "summary": "角色搜索",
+                "operationId": "searchCharacters",
+                "description": "## 实验性 API， 本 schema 和实际的 API 行为都可能随时发生改动\n\n目前支持的筛选条件包括:\n- `nsfw`: 使用 `include` 包含NSFW搜索结果。默认排除搜索NSFW条目。无权限情况下忽略此选项，不会返回NSFW条目。\n",
+                "parameters": [
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "分页参数",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "分页参数",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "keyword"
+                                ],
+                                "properties": {
+                                    "keyword": {
+                                        "type": "string"
+                                    },
+                                    "filter": {
+                                        "type": "object",
+                                        "description": "不同条件之间是 `且` 的关系",
+                                        "properties": {
+                                            "nsfw": {
+                                                "type": "boolean",
+                                                "description": "无权限的用户会直接忽略此字段，不会返回 R18 角色。\n\n默认或者 `null` 会返回包含 R18 的所有搜索结果。\n\n`true` 只会返回 R18 角色。\n\n`false` 只会返回非 R18 角色。\n"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "返回搜索结果",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Paged_Character"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v0/search/persons": {
+            "post": {
+                "tags": [
+                    "人物"
+                ],
+                "summary": "人物搜索",
+                "operationId": "searchPersons",
+                "description": "## 实验性 API， 本 schema 和实际的 API 行为都可能随时发生改动\n\n目前支持的筛选条件包括:\n- `career`: 职业，可以多次出现。`且` 关系。\n\n不同筛选条件之间为 `且`\n",
+                "parameters": [
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "分页参数",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "分页参数",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "keyword"
+                                ],
+                                "properties": {
+                                    "keyword": {
+                                        "type": "string"
+                                    },
+                                    "filter": {
+                                        "type": "object",
+                                        "description": "不同条件之间是 `且` 的关系",
+                                        "properties": {
+                                            "career": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                },
+                                                "example": [
+                                                    "artist",
+                                                    "director"
+                                                ],
+                                                "description": "职业，可以多次出现。多值之间为 `且` 关系。"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "返回搜索结果",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Paged_Person"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v0/subjects": {
+            "get": {
+                "tags": [
+                    "条目"
+                ],
+                "summary": "浏览条目",
+                "description": "第一页会 cache 24h，之后会 cache 1h",
+                "operationId": "getSubjects",
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "条目类型",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/SubjectType"
+                        }
+                    },
+                    {
+                        "name": "cat",
+                        "in": "query",
+                        "description": "条目分类，参照 `SubjectCategory` enum",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/components/schemas/SubjectCategory"
+                        }
+                    },
+                    {
+                        "name": "series",
+                        "in": "query",
+                        "description": "是否系列，仅对书籍类型的条目有效",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    },
+                    {
+                        "name": "platform",
+                        "in": "query",
+                        "description": "平台，仅对游戏类型的条目有效",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "排序，枚举值 {date|rank}",
+                        "required": false,
+                        "schema": {
+                            "title": "Sort Order",
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "year",
+                        "in": "query",
+                        "description": "年份",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "month",
+                        "in": "query",
+                        "description": "月份",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "$ref": "#/components/parameters/default_query_limit"
+                    },
+                    {
+                        "$ref": "#/components/parameters/default_query_offset"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Paged_Subject"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDetail"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDetail"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "OptionalHTTPBearer": []
+                    }
+                ]
+            }
+        },
+        "/v0/subjects/{subject_id}": {
+            "get": {
+                "tags": [
+                    "条目"
+                ],
+                "summary": "获取条目",
+                "description": "cache with 300s",
+                "operationId": "getSubjectById",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/path_subject_id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Subject"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDetail"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDetail"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "OptionalHTTPBearer": []
+                    }
+                ]
+            }
+        },
+        "/v0/subjects/{subject_id}/image": {
+            "get": {
+                "tags": [
+                    "条目"
+                ],
+                "summary": "Get Subject Image",
+                "operationId": "getSubjectImageById",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/path_subject_id"
+                    },
+                    {
+                        "required": true,
+                        "description": "枚举值 {small|grid|large|medium|common}",
+                        "schema": {
+                            "title": "Image Type",
+                            "type": "string"
+                        },
+                        "name": "type",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "302": {
+                        "description": "Successful Response",
+                        "headers": {
+                            "Location": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "description": "图片链接\n无图时返回默认图片 https://lain.bgm.tv/img/no_icon_subject.png"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDetail"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDetail"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "OptionalHTTPBearer": []
+                    }
+                ]
+            }
+        },
+        "/v0/subjects/{subject_id}/persons": {
+            "get": {
+                "tags": [
+                    "条目"
+                ],
+                "summary": "Get Subject Persons",
+                "operationId": "getRelatedPersonsBySubjectId",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/path_subject_id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/RelatedPerson"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDetail"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDetail"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "OptionalHTTPBearer": []
+                    }
+                ]
+            }
+        },
+        "/v0/subjects/{subject_id}/characters": {
+            "get": {
+                "tags": [
+                    "条目"
+                ],
+                "summary": "Get Subject Characters",
+                "operationId": "getRelatedCharactersBySubjectId",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/path_subject_id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/RelatedCharacter"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDetail"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDetail"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "OptionalHTTPBearer": []
+                    }
+                ]
+            }
+        },
+        "/v0/subjects/{subject_id}/subjects": {
+            "get": {
+                "tags": [
+                    "条目"
+                ],
+                "summary": "Get Subject Relations",
+                "operationId": "getRelatedSubjectsBySubjectId",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/path_subject_id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/v0_subject_relation"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDetail"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDetail"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "OptionalHTTPBearer": []
+                    }
+                ]
+            }
+        },
+        "/v0/indices": {
+            "post": {
+                "tags": [
+                    "目录"
+                ],
+                "summary": "Create a new index",
+                "operationId": "newIndex",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Index"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDetail"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "HTTPBearer": []
+                    }
+                ]
+            }
+        },
+        "/v0/indices/{index_id}": {
+            "get": {
+                "tags": [
+                    "目录"
+                ],
+                "summary": "Get Index By ID",
+                "operationId": "getIndexById",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/path_index_id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Index"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/404"
+                    }
+                },
+                "security": [
+                    {
+                        "OptionalHTTPBearer": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "目录"
+                ],
+                "summary": "Edit index's information",
+                "operationId": "editIndexById",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/path_index_id"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/IndexBasicInfo"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Index"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/400"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/401"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/404"
+                    }
+                },
+                "security": [
+                    {
+                        "HTTPBearer": []
+                    }
+                ]
+            }
+        },
+        "/v0/indices/{index_id}/subjects": {
+            "get": {
+                "tags": [
+                    "目录"
+                ],
+                "summary": "Get Index Subjects",
+                "operationId": "getIndexSubjectsByIndexId",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/path_index_id"
+                    },
+                    {
+                        "required": false,
+                        "description": "条目类型",
+                        "schema": {
+                            "$ref": "#/components/schemas/SubjectType"
+                        },
+                        "name": "type",
+                        "in": "query"
+                    },
+                    {
+                        "$ref": "#/components/parameters/default_query_limit"
+                    },
+                    {
+                        "$ref": "#/components/parameters/default_query_offset"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/400"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/404"
+                    }
+                },
+                "security": [
+                    {
+                        "OptionalHTTPBearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "目录"
+                ],
+                "summary": "Add a subject to Index",
+                "operationId": "addSubjectToIndexByIndexId",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/path_index_id"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/IndexSubjectAddInfo"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/200-no-content"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/401"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/400"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/404"
+                    }
+                },
+                "security": [
+                    {
+                        "HTTPBearer": []
+                    }
+                ]
+            }
+        },
+        "/v0/indices/{index_id}/subjects/{subject_id}": {
+            "put": {
+                "tags": [
+                    "目录"
+                ],
+                "summary": "Edit subject information in a index",
+                "operationId": "editIndexSubjectsByIndexIdAndSubjectID",
+                "description": "如果条目不存在于目录，会创建该条目",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/path_index_id"
+                    },
+                    {
+                        "$ref": "#/components/parameters/path_subject_id"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/IndexSubjectEditInfo"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/200-no-content"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/400"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/401"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/404"
+                    }
+                },
+                "security": [
+                    {
+                        "HTTPBearer": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "目录"
+                ],
+                "summary": "Delete a subject from a Index",
+                "operationId": "delelteSubjectFromIndexByIndexIdAndSubjectID",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/path_index_id"
+                    },
+                    {
+                        "$ref": "#/components/parameters/path_subject_id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/200-no-content"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/401"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/404"
+                    }
+                },
+                "security": [
+                    {
+                        "HTTPBearer": []
+                    }
+                ]
+            }
+        },
+        "/v0/indices/{index_id}/collect": {
+            "post": {
+                "tags": [
+                    "目录"
+                ],
+                "summary": "Collect index for current user",
+                "operationId": "collectIndexByIndexIdAndUserId",
+                "description": "为当前用户收藏一条目录",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/path_index_id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/200-no-content"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/401"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/404"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/500"
+                    }
+                },
+                "security": [
+                    {
+                        "HTTPBearer": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "目录"
+                ],
+                "summary": "Uncollect index for current user",
+                "operationId": "uncollectIndexByIndexIdAndUserId",
+                "description": "为当前用户取消收藏一条目录",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/path_index_id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/200-no-content"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/401"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/404"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/500"
+                    }
+                },
+                "security": [
+                    {
+                        "HTTPBearer": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Legacy_SubjectType": {
+                "description": "条目类型 <br> 1 = book <br> 2 = anime <br> 3 = music <br> 4 = game <br> 6 = real",
+                "type": "integer",
+                "enum": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    6
+                ],
+                "example": 2
+            },
+            "Legacy_SubjectSmall": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "条目 ID",
+                        "type": "integer",
+                        "example": 12
+                    },
+                    "url": {
+                        "description": "条目地址",
+                        "type": "string",
+                        "example": "https://bgm.tv/subject/12"
+                    },
+                    "type": {
+                        "title": "SubjectType",
+                        "example": 2,
+                        "enum": [
+                            1,
+                            2,
+                            3,
+                            4,
+                            6
+                        ],
+                        "type": "integer",
+                        "description": "条目类型\n- `1` 为 书籍\n- `2` 为 动画\n- `3` 为 音乐\n- `4` 为 游戏\n- `6` 为 三次元\n\n没有 `5`",
+                        "x-ms-enum": {
+                            "name": "SubjectType",
+                            "modelAsString": false,
+                            "values": [
+                                "Book",
+                                "Anime",
+                                "Music",
+                                "Game",
+                                "Real"
+                            ]
+                        },
+                        "x-enum-varnames": [
+                            "Book",
+                            "Anime",
+                            "Music",
+                            "Game",
+                            "Real"
+                        ]
+                    },
+                    "name": {
+                        "description": "条目名称",
+                        "type": "string",
+                        "example": "ちょびっツ"
+                    },
+                    "name_cn": {
+                        "description": "条目中文名称",
+                        "type": "string",
+                        "example": "人形电脑天使心"
+                    },
+                    "summary": {
+                        "description": "剧情简介",
+                        "type": "string",
+                        "example": "在不久的将来,电子技术飞速发展,电脑成为人们生活中不可缺少的一部分.主角的名字是本须和秀树,是个19岁的少年,由于考试失败,来到东京上补习班,过着贫穷潦倒的生活……\\r\\n到达东京的第一天,他很幸运的在垃圾堆捡到一个人型电脑,一直以来秀树都非常渴望拥有个人电脑.当他抱着她带返公寓后,却不知如何开机,在意想不到的地方找到开关并开启后,故事就此展开\\r\\n本须和秀树捡到了人型计算机〔唧〕。虽然不晓得她到底是不是〔Chobits〕，但她的身上似乎藏有极大的秘密。看到秀树为了钱而烦恼，唧出去找打工，没想到却找到了危险的工作！为了让秀树开心，唧开始到色情小屋打工。但她在遭到过度激烈的强迫要求之后失控。让周遭计算机因此而强制停摆。\\r\\n另一方面，秀树发现好友新保与补习班的清水老师有着不可告人的关系……"
+                    },
+                    "air_date": {
+                        "description": "放送开始日期",
+                        "type": "string",
+                        "example": "2002-04-02"
+                    },
+                    "air_weekday": {
+                        "description": "放送星期",
+                        "type": "integer",
+                        "example": 2
+                    },
+                    "images": {
+                        "description": "封面",
+                        "type": "object",
+                        "properties": {
+                            "large": {
+                                "type": "string",
+                                "example": "https://lain.bgm.tv/pic/cover/l/c2/0a/12_24O6L.jpg"
+                            },
+                            "common": {
+                                "type": "string",
+                                "example": "https://lain.bgm.tv/pic/cover/c/c2/0a/12_24O6L.jpg"
+                            },
+                            "medium": {
+                                "type": "string",
+                                "example": "https://lain.bgm.tv/pic/cover/m/c2/0a/12_24O6L.jpg"
+                            },
+                            "small": {
+                                "type": "string",
+                                "example": "https://lain.bgm.tv/pic/cover/s/c2/0a/12_24O6L.jpg"
+                            },
+                            "grid": {
+                                "type": "string",
+                                "example": "https://lain.bgm.tv/pic/cover/g/c2/0a/12_24O6L.jpg"
+                            }
+                        }
+                    },
+                    "eps": {
+                        "description": "话数",
+                        "type": "integer",
+                        "example": 27
+                    },
+                    "eps_count": {
+                        "description": "话数",
+                        "type": "integer",
+                        "example": 27
+                    },
+                    "rating": {
+                        "description": "评分",
+                        "type": "object",
+                        "properties": {
+                            "total": {
+                                "description": "总评分人数",
+                                "type": "integer",
+                                "example": 2289
+                            },
+                            "count": {
+                                "description": "各分值评分人数",
+                                "type": "object",
+                                "properties": {
+                                    "1": {
+                                        "type": "integer",
+                                        "example": 5
+                                    },
+                                    "2": {
+                                        "type": "integer",
+                                        "example": 3
+                                    },
+                                    "3": {
+                                        "type": "integer",
+                                        "example": 4
+                                    },
+                                    "4": {
+                                        "type": "integer",
+                                        "example": 6
+                                    },
+                                    "5": {
+                                        "type": "integer",
+                                        "example": 46
+                                    },
+                                    "6": {
+                                        "type": "integer",
+                                        "example": 267
+                                    },
+                                    "7": {
+                                        "type": "integer",
+                                        "example": 659
+                                    },
+                                    "8": {
+                                        "type": "integer",
+                                        "example": 885
+                                    },
+                                    "9": {
+                                        "type": "integer",
+                                        "example": 284
+                                    },
+                                    "10": {
+                                        "type": "integer",
+                                        "example": 130
+                                    }
+                                }
+                            },
+                            "score": {
+                                "description": "评分",
+                                "type": "number",
+                                "example": 7.6
+                            }
+                        }
+                    },
+                    "rank": {
+                        "description": "排名",
+                        "type": "integer",
+                        "example": 573
+                    },
+                    "collection": {
+                        "description": "收藏人数",
+                        "type": "object",
+                        "properties": {
+                            "wish": {
+                                "description": "想做",
+                                "type": "integer",
+                                "example": 608
+                            },
+                            "collect": {
+                                "description": "做过",
+                                "type": "integer",
+                                "example": 3010
+                            },
+                            "doing": {
+                                "description": "在做",
+                                "type": "integer",
+                                "example": 103
+                            },
+                            "on_hold": {
+                                "description": "搁置",
+                                "type": "integer",
+                                "example": 284
+                            },
+                            "dropped": {
+                                "description": "抛弃",
+                                "type": "integer",
+                                "example": 86
+                            }
+                        }
+                    }
+                }
+            },
+            "Legacy_SubjectMedium": {
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/Legacy_SubjectSmall"
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "crt": {
+                                "description": "角色信息",
+                                "type": "array",
+                                "items": {
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Legacy_Character"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "role_name": {
+                                                    "description": "角色类型",
+                                                    "type": "string",
+                                                    "example": "主角"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "staff": {
+                                "description": "制作人员信息",
+                                "type": "array",
+                                "items": {
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Legacy_Person"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "role_name": {
+                                                    "description": "人物类型",
+                                                    "type": "string",
+                                                    "example": "主角"
+                                                },
+                                                "jobs": {
+                                                    "description": "职位",
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "Legacy_SubjectLarge": {
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/Legacy_SubjectMedium"
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "eps": {
+                                "description": "章节列表",
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Legacy_Episode"
+                                }
+                            },
+                            "topic": {
+                                "description": "讨论版",
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Legacy_Topic"
+                                }
+                            },
+                            "blog": {
+                                "description": "评论日志",
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Legacy_Blog"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "SubjectID": {
+                "title": "Subject ID",
+                "minimum": 1,
+                "description": "条目 ID",
+                "type": "integer"
+            },
+            "SubjectCollectionType": {
+                "title": "CollectionType",
+                "example": 3,
+                "enum": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "type": "integer",
+                "description": "- `1`: 想看\n- `2`: 看过\n- `3`: 在看\n- `4`: 搁置\n- `5`: 抛弃",
+                "x-ms-enum": {
+                    "name": "CollectionType",
+                    "modelAsString": false,
+                    "values": [
+                        "Wish",
+                        "Done",
+                        "Doing",
+                        "OnHold",
+                        "Dropped"
+                    ]
+                },
+                "x-enum-varnames": [
+                    "Wish",
+                    "Done",
+                    "Doing",
+                    "OnHold",
+                    "Dropped"
+                ]
+            },
+            "ErrorDetail": {
+                "title": "ErrorDetail",
+                "required": [
+                    "title",
+                    "description"
+                ],
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "title": "Title",
+                        "type": "string"
+                    },
+                    "description": {
+                        "title": "Description",
+                        "type": "string"
+                    },
+                    "details": {
+                        "title": "Detail",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "error": {
+                                        "type": "string",
+                                        "description": "error message"
+                                    },
+                                    "path": {
+                                        "type": "string",
+                                        "description": "request path"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "Images": {
+                "title": "Images",
+                "required": [
+                    "large",
+                    "common",
+                    "medium",
+                    "small",
+                    "grid"
+                ],
+                "type": "object",
+                "properties": {
+                    "large": {
+                        "title": "Large",
+                        "type": "string"
+                    },
+                    "common": {
+                        "title": "Common",
+                        "type": "string"
+                    },
+                    "medium": {
+                        "title": "Medium",
+                        "type": "string"
+                    },
+                    "small": {
+                        "title": "Small",
+                        "type": "string"
+                    },
+                    "grid": {
+                        "title": "Grid",
+                        "type": "string"
+                    }
+                }
+            },
+            "Index": {
+                "title": "Index",
+                "required": [
+                    "id",
+                    "title",
+                    "desc",
+                    "stat",
+                    "created_at",
+                    "updated_at",
+                    "creator",
+                    "ban",
+                    "nsfw"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "title": "ID",
+                        "type": "integer"
+                    },
+                    "title": {
+                        "title": "Title",
+                        "type": "string"
+                    },
+                    "desc": {
+                        "title": "Desc",
+                        "type": "string"
+                    },
+                    "total": {
+                        "title": "Total",
+                        "type": "integer",
+                        "description": "收录条目总数",
+                        "default": 0
+                    },
+                    "stat": {
+                        "title": "Stat",
+                        "type": "object",
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/Stat"
+                            }
+                        ],
+                        "description": "目录评论及收藏数"
+                    },
+                    "created_at": {
+                        "title": "Created At",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "title": "Updated At",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "creator": {
+                        "$ref": "#/components/schemas/Creator"
+                    },
+                    "ban": {
+                        "title": "Ban",
+                        "deprecated": true,
+                        "type": "boolean",
+                        "description": "deprecated, always false."
+                    },
+                    "nsfw": {
+                        "title": "目录是否包括 nsfw 条目",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "IndexSubject": {
+                "title": "IndexSubject",
+                "required": [
+                    "id",
+                    "type",
+                    "name",
+                    "comment",
+                    "added_at"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "title": "ID",
+                        "type": "integer"
+                    },
+                    "type": {
+                        "title": "Type",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "title": "Name",
+                        "type": "string"
+                    },
+                    "images": {
+                        "$ref": "#/components/schemas/Images"
+                    },
+                    "infobox": {
+                        "$ref": "#/components/schemas/WikiV0"
+                    },
+                    "date": {
+                        "title": "Date",
+                        "type": "string"
+                    },
+                    "comment": {
+                        "title": "Comment",
+                        "type": "string"
+                    },
+                    "added_at": {
+                        "title": "Added At",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "description": "同名字段意义同<a href=\"#model-Subject\">Subject</a>"
+            },
+            "IndexBasicInfo": {
+                "title": "IndexBasicInfo",
+                "type": "object",
+                "description": "新增或修改条目的内容，同名字段意义同<a href=\"#model-Subject\">Subject</a>",
+                "properties": {
+                    "title": {
+                        "title": "Title",
+                        "type": "string"
+                    },
+                    "description": {
+                        "title": "Description",
+                        "type": "string"
+                    }
+                }
+            },
+            "IndexSubjectAddInfo": {
+                "title": "IndexBasicInfo",
+                "type": "object",
+                "description": "新增某条目到目录的请求信息",
+                "properties": {
+                    "subject_id": {
+                        "title": "Subject ID",
+                        "type": "integer"
+                    },
+                    "sort": {
+                        "title": "Sort",
+                        "type": "integer",
+                        "description": "排序条件，越小越靠前"
+                    },
+                    "comment": {
+                        "title": "Comment",
+                        "type": "string"
+                    }
+                }
+            },
+            "IndexSubjectEditInfo": {
+                "title": "IndexBasicInfo",
+                "type": "object",
+                "description": "修改目录中条目的信息",
+                "properties": {
+                    "sort": {
+                        "title": "Sort",
+                        "type": "integer",
+                        "description": "排序条件，越小越靠前"
+                    },
+                    "comment": {
+                        "title": "Comment",
+                        "type": "string"
+                    }
+                }
+            },
+            "Subject": {
+                "title": "Subject",
+                "required": [
+                    "id",
+                    "type",
+                    "name",
+                    "name_cn",
+                    "summary",
+                    "nsfw",
+                    "locked",
+                    "platform",
+                    "meta_tags",
+                    "volumes",
+                    "eps",
+                    "series",
+                    "total_episodes",
+                    "rating",
+                    "images",
+                    "collection",
+                    "tags"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "title": "ID",
+                        "type": "integer"
+                    },
+                    "type": {
+                        "title": "Type",
+                        "type": "integer",
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/SubjectType"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "title": "Name",
+                        "type": "string"
+                    },
+                    "name_cn": {
+                        "title": "Name Cn",
+                        "type": "string"
+                    },
+                    "summary": {
+                        "title": "Summary",
+                        "type": "string"
+                    },
+                    "series": {
+                        "title": "Series",
+                        "type": "boolean",
+                        "description": "是否为书籍系列的主条目"
+                    },
+                    "nsfw": {
+                        "title": "Nsfw",
+                        "type": "boolean"
+                    },
+                    "locked": {
+                        "title": "Locked",
+                        "type": "boolean"
+                    },
+                    "date": {
+                        "title": "Date",
+                        "type": "string",
+                        "description": "air date in `YYYY-MM-DD` format"
+                    },
+                    "platform": {
+                        "title": "Platform",
+                        "type": "string",
+                        "description": "TV, Web, 欧美剧, DLC..."
+                    },
+                    "images": {
+                        "$ref": "#/components/schemas/Images"
+                    },
+                    "infobox": {
+                        "$ref": "#/components/schemas/WikiV0"
+                    },
+                    "volumes": {
+                        "title": "Volumes",
+                        "type": "integer",
+                        "description": "书籍条目的册数，由旧服务端从wiki中解析"
+                    },
+                    "eps": {
+                        "title": "Eps",
+                        "type": "integer",
+                        "description": "由旧服务端从wiki中解析，对于书籍条目为`话数`"
+                    },
+                    "total_episodes": {
+                        "title": "Total Episodes",
+                        "type": "integer",
+                        "description": "数据库中的章节数量"
+                    },
+                    "rating": {
+                        "title": "Rating",
+                        "required": [
+                            "rank",
+                            "total",
+                            "count",
+                            "score"
+                        ],
+                        "type": "object",
+                        "properties": {
+                            "rank": {
+                                "title": "Rank",
+                                "type": "integer"
+                            },
+                            "total": {
+                                "title": "Total",
+                                "type": "integer"
+                            },
+                            "count": {
+                                "title": "Count",
+                                "type": "object",
+                                "properties": {
+                                    "1": {
+                                        "type": "integer"
+                                    },
+                                    "2": {
+                                        "type": "integer"
+                                    },
+                                    "3": {
+                                        "type": "integer"
+                                    },
+                                    "4": {
+                                        "type": "integer"
+                                    },
+                                    "5": {
+                                        "type": "integer"
+                                    },
+                                    "6": {
+                                        "type": "integer"
+                                    },
+                                    "7": {
+                                        "type": "integer"
+                                    },
+                                    "8": {
+                                        "type": "integer"
+                                    },
+                                    "9": {
+                                        "type": "integer"
+                                    },
+                                    "10": {
+                                        "type": "integer"
+                                    }
+                                }
+                            },
+                            "score": {
+                                "title": "Score",
+                                "type": "number"
+                            }
+                        }
+                    },
+                    "collection": {
+                        "title": "Collection",
+                        "required": [
+                            "wish",
+                            "collect",
+                            "doing",
+                            "on_hold",
+                            "dropped"
+                        ],
+                        "type": "object",
+                        "properties": {
+                            "wish": {
+                                "title": "Wish",
+                                "type": "integer"
+                            },
+                            "collect": {
+                                "title": "Collect",
+                                "type": "integer"
+                            },
+                            "doing": {
+                                "title": "Doing",
+                                "type": "integer"
+                            },
+                            "on_hold": {
+                                "title": "On Hold",
+                                "type": "integer"
+                            },
+                            "dropped": {
+                                "title": "Dropped",
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    "meta_tags": {
+                        "description": "由维基人维护的 tag",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "tags": {
+                        "$ref": "#/components/schemas/SubjectTags"
+                    }
+                }
+            },
+            "SlimSubject": {
+                "title": "SlimSubject",
+                "required": [
+                    "images",
+                    "name",
+                    "name_cn",
+                    "short_summary",
+                    "tags",
+                    "score",
+                    "type",
+                    "id",
+                    "eps",
+                    "volumes",
+                    "collection_total",
+                    "rank"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "title": "ID",
+                        "type": "integer"
+                    },
+                    "type": {
+                        "title": "Type",
+                        "type": "integer",
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/SubjectType"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "title": "Name",
+                        "type": "string"
+                    },
+                    "name_cn": {
+                        "title": "Name Cn",
+                        "type": "string"
+                    },
+                    "short_summary": {
+                        "title": "Summary",
+                        "type": "string",
+                        "description": "截短后的条目描述。"
+                    },
+                    "date": {
+                        "title": "Date",
+                        "type": "string",
+                        "description": "air date in `YYYY-MM-DD` format"
+                    },
+                    "images": {
+                        "$ref": "#/components/schemas/Images"
+                    },
+                    "volumes": {
+                        "title": "Volumes",
+                        "type": "integer",
+                        "description": "书籍条目的册数，由旧服务端从wiki中解析"
+                    },
+                    "eps": {
+                        "title": "Eps",
+                        "type": "integer",
+                        "description": "由旧服务端从wiki中解析，对于书籍条目为`话数`"
+                    },
+                    "collection_total": {
+                        "description": "收藏人数",
+                        "title": "Total",
+                        "type": "integer"
+                    },
+                    "score": {
+                        "description": "分数",
+                        "title": "Score",
+                        "type": "number"
+                    },
+                    "rank": {
+                        "description": "排名",
+                        "title": "Rank",
+                        "type": "integer"
+                    },
+                    "tags": {
+                        "description": "前 10 个 tag",
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/SubjectTags"
+                            }
+                        ]
+                    }
+                }
+            },
+            "SubjectTags": {
+                "title": "Tags",
+                "type": "array",
+                "items": {
+                    "title": "Tag",
+                    "required": [
+                        "name",
+                        "count"
+                    ],
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "title": "Name",
+                            "type": "string"
+                        },
+                        "count": {
+                            "title": "Count",
+                            "type": "integer"
+                        }
+                    }
+                }
+            },
+            "SubjectType": {
+                "title": "SubjectType",
+                "example": 2,
+                "enum": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    6
+                ],
+                "type": "integer",
+                "description": "条目类型\n- `1` 为 书籍\n- `2` 为 动画\n- `3` 为 音乐\n- `4` 为 游戏\n- `6` 为 三次元\n\n没有 `5`",
+                "x-ms-enum": {
+                    "name": "SubjectType",
+                    "modelAsString": false,
+                    "values": [
+                        "Book",
+                        "Anime",
+                        "Music",
+                        "Game",
+                        "Real"
+                    ]
+                },
+                "x-enum-varnames": [
+                    "Book",
+                    "Anime",
+                    "Music",
+                    "Game",
+                    "Real"
+                ]
+            },
+            "SubjectBookCategory": {
+                "title": "SubjectBookCategory",
+                "example": 1001,
+                "enum": [
+                    0,
+                    1001,
+                    1002,
+                    1003
+                ],
+                "type": "integer",
+                "description": "书籍类型\n- `0` 为 其他\n- `1001` 为 漫画\n- `1002` 为 小说\n- `1003` 为 画集",
+                "x-ms-enum": {
+                    "name": "SubjectBookCategory",
+                    "modelAsString": false,
+                    "values": [
+                        "Other",
+                        "Comic",
+                        "Novel",
+                        "Illustration"
+                    ]
+                },
+                "x-enum-varnames": [
+                    "Other",
+                    "Comic",
+                    "Novel",
+                    "Illustration"
+                ]
+            },
+            "SubjectAnimeCategory": {
+                "title": "SubjectAnimeCategory",
+                "example": 1,
+                "enum": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    5
+                ],
+                "type": "integer",
+                "description": "动画类型\n- `0` 为 其他\n- `1` 为 TV\n- `2` 为 OVA\n- `3` 为 Movie\n- `5` 为 WEB",
+                "x-ms-enum": {
+                    "name": "SubjectAnimeCategory",
+                    "modelAsString": false,
+                    "values": [
+                        "Other",
+                        "TV",
+                        "OVA",
+                        "Movie",
+                        "WEB"
+                    ]
+                },
+                "x-enum-varnames": [
+                    "Other",
+                    "TV",
+                    "OVA",
+                    "Movie",
+                    "WEB"
+                ]
+            },
+            "SubjectGameCategory": {
+                "title": "SubjectGameCategory",
+                "example": 4001,
+                "enum": [
+                    0,
+                    4001,
+                    4003,
+                    4002,
+                    4005
+                ],
+                "type": "integer",
+                "description": "游戏类型\n- `0` 为 其他\n- `4001` 为 游戏\n- `4002` 为 软件\n- `4003` 为 扩展包\n- `4005` 为 桌游",
+                "x-ms-enum": {
+                    "name": "SubjectGameCategory",
+                    "modelAsString": false,
+                    "values": [
+                        "Other",
+                        "Games",
+                        "Software",
+                        "DLC",
+                        "Tabletop"
+                    ]
+                },
+                "x-enum-varnames": [
+                    "Other",
+                    "Games",
+                    "Software",
+                    "DLC",
+                    "Tabletop"
+                ]
+            },
+            "SubjectRealCategory": {
+                "title": "SubjectRealCategory",
+                "example": 6,
+                "enum": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    6001,
+                    6002,
+                    6003,
+                    6004
+                ],
+                "type": "integer",
+                "description": "电影类型\n- `0` 为 其他\n- `1` 为 日剧\n- `2` 为 欧美剧\n- `3` 为 华语剧\n- `6001` 为 电视剧\n- `6002` 为 电影\n- `6003` 为 演出\n- `6004` 为 综艺",
+                "x-ms-enum": {
+                    "name": "SubjectRealCategory",
+                    "modelAsString": false,
+                    "values": [
+                        "Other",
+                        "JP",
+                        "EN",
+                        "CN",
+                        "TV",
+                        "Movie",
+                        "Live",
+                        "Show"
+                    ]
+                },
+                "x-enum-varnames": [
+                    "Other",
+                    "JP",
+                    "EN",
+                    "CN",
+                    "TV",
+                    "Movie",
+                    "Live",
+                    "Show"
+                ]
+            },
+            "SubjectCategory": {
+                "anyOf": [
+                    {
+                        "$ref": "#/components/schemas/SubjectBookCategory"
+                    },
+                    {
+                        "$ref": "#/components/schemas/SubjectAnimeCategory"
+                    },
+                    {
+                        "$ref": "#/components/schemas/SubjectGameCategory"
+                    },
+                    {
+                        "$ref": "#/components/schemas/SubjectRealCategory"
+                    }
+                ]
+            }
+        },
+        "securitySchemes": {
+            "OptionalHTTPBearer": {
+                "type": "http",
+                "description": "Some api like getting a subject doesn't require any authorization. \nBut NSFW contents are only visible to authorized user, non-authorized user will get 404 response.\nYou can create a access token here [https://bgm.tv/dev/app](https://bgm.tv/dev/app)\n",
+                "scheme": "bearer"
+            },
+            "HTTPBearer": {
+                "type": "http",
+                "description": "require a authorization",
+                "scheme": "bearer"
+            }
+        },
+        "responses": {
+            "400": {
+                "description": "Bad Request",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ErrorDetail"
+                        }
+                    }
+                }
+            },
+            "401": {
+                "description": "Unauthorized",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ErrorDetail"
+                        }
+                    }
+                }
+            },
+            "404": {
+                "description": "Not Found",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ErrorDetail"
+                        }
+                    }
+                }
+            },
+            "500": {
+                "description": "Internal Server Error",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ErrorDetail"
+                        }
+                    }
+                }
+            },
+            "200-no-content": {
+                "description": "Successful Response"
+            }
+        },
+        "parameters": {
+            "path_subject_id": {
+                "required": true,
+                "name": "subject_id",
+                "description": "条目 ID",
+                "schema": {
+                    "$ref": "#/components/schemas/SubjectID"
+                },
+                "in": "path"
+            },
+            "path_username": {
+                "required": true,
+                "schema": {
+                    "type": "string"
+                },
+                "description": "设置了用户名之后无法使用 UID。",
+                "name": "username",
+                "in": "path"
+            },
+            "path_episode_id": {
+                "required": true,
+                "schema": {
+                    "title": "Episode ID",
+                    "minimum": 1,
+                    "description": "剧集 ID",
+                    "type": "integer"
+                },
+                "name": "episode_id",
+                "description": "章节 ID",
+                "in": "path"
+            },
+            "path_character_id": {
+                "required": true,
+                "description": "角色 ID",
+                "schema": {
+                    "title": "Character ID",
+                    "minimum": 1,
+                    "type": "integer"
+                },
+                "name": "character_id",
+                "in": "path"
+            },
+            "path_person_id": {
+                "required": true,
+                "schema": {
+                    "title": "Person ID",
+                    "minimum": 1,
+                    "type": "integer"
+                },
+                "name": "person_id",
+                "description": "人物 ID",
+                "in": "path"
+            },
+            "path_index_id": {
+                "required": true,
+                "description": "目录 ID",
+                "schema": {
+                    "title": "Index ID",
+                    "minimum": 1,
+                    "type": "integer"
+                },
+                "name": "index_id",
+                "in": "path"
+            },
+            "query_subject_id": {
+                "required": true,
+                "name": "subject_id",
+                "description": "条目 ID",
+                "schema": {
+                    "$ref": "#/components/schemas/SubjectID"
+                },
+                "in": "query"
+            },
+            "default_query_limit": {
+                "required": false,
+                "schema": {
+                    "title": "Limit",
+                    "maximum": 50,
+                    "minimum": 1,
+                    "type": "integer",
+                    "default": 30
+                },
+                "name": "limit",
+                "description": "分页参数",
+                "in": "query"
+            },
+            "default_query_offset": {
+                "required": false,
+                "schema": {
+                    "title": "Offset",
+                    "minimum": 0,
+                    "type": "integer",
+                    "default": 0
+                },
+                "description": "分页参数",
+                "name": "offset",
+                "in": "query"
+            },
+            "path_revision_id": {
+                "required": true,
+                "schema": {
+                    "title": "Revision ID",
+                    "minimum": 1,
+                    "type": "integer"
+                },
+                "name": "revision_id",
+                "description": "版本 ID",
+                "in": "path"
+            }
+        }
+    }
+}
