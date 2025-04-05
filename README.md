@@ -40,10 +40,9 @@ npm run generate
 
 ## 如何添加新的季度数据
 
-1. 将新的季度JSON文件（例如 `202507.json`）放入 `public` 目录
+1. 将新的季度JSON文件（例如 `202507.json`）放入 `static` 目录
 2. 在 `store/index.js` 中的 `seasons` 数组添加新的季度编号
-3. 更新 `create-static-files.js` 中的季度列表
-4. 重新构建项目
+3. 重新构建项目
 
 ## 数据结构
 

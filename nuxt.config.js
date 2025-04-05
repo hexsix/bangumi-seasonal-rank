@@ -36,6 +36,12 @@ export default {
     '@nuxtjs/tailwindcss'
   ],
 
+  // Axios配置
+  axios: {
+    baseURL: '/', // 设置baseURL为相对路径
+    browserBaseURL: '/' // 确保浏览器端也使用相对路径
+  },
+
   // 构建配置
   build: {
   },

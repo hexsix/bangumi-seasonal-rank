@@ -1,5 +1,6 @@
 // 导入预加载的数据
 import data202504 from '@/static/202504.json'
+import data202501 from '@/static/202501.json'
 
 export const state = () => ({
   // 季度列表
@@ -14,7 +15,8 @@ export const state = () => ({
   
   // 默认预加载当前季度数据
   animeData: {
-    '202504': data202504
+    '202504': data202504,
+    '202501': data202501
   }
 })
 
@@ -35,9 +37,26 @@ export const actions = {
     }
     
     try {
-      // 否则尝试加载
-      const response = await this.$axios.get(`/${season}.json`)
-      const data = response.data
+      // 在静态生成的环境中，我们需要使用动态导入而不是axios请求
+      let data
+      
+      // 静态部署环境下使用动态导入
+      if (process.static) {
+        try {
+          // 动态导入JSON文件
+          const module = await import(`@/static/${season}.json`);
+          data = module.default
+        } catch (importError) {
+          console.error(`Failed to import data for season ${season}:`, importError)
+          // 导入失败回退到axios请求
+          const response = await this.$axios.get(`/${season}.json`)
+          data = response.data
+        }
+      } else {
+        // 开发环境下使用axios请求
+        const response = await this.$axios.get(`/${season}.json`)
+        data = response.data
+      }
       
       // 保存到状态中
       commit('SET_ANIME_DATA', { season, data })
