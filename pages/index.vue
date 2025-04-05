@@ -97,6 +97,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import LoadingSpinner from '~/components/LoadingSpinner.vue'
 import AnimeCard from '~/components/AnimeCard.vue'
 
@@ -107,17 +108,7 @@ export default {
   },
   data() {
     return {
-      // 预定义的季度列表
-      defaultSeasons: [
-        '202504', '202501', '202410', '202407', '202404', '202401',
-        '202310', '202307', '202304', '202301', '202210', '202207',
-        '202204', '202201', '202110', '202107', '202104', '202101',
-        '202010', '202007', '202004', '202001', '201910', '201907',
-        '201904', '201901', '201810', '201807', '201804', '201801',
-        '201710', '201707', '201704'
-      ],
-      seasons: [],
-      selectedSeason: null,
+      selectedSeason: '202504', // 默认选择最新季度
       animeList: [],
       seasonTitle: '',
       loading: true,
@@ -125,47 +116,40 @@ export default {
     }
   },
   computed: {
+    ...mapGetters({
+      getSeasons: 'getSeasons',
+      getAnimeData: 'getAnimeData'
+    }),
+    seasons() {
+      return this.getSeasons
+    },
     sortedAnimeList() {
       // 按评分从高到低排序
       return [...this.animeList].sort((a, b) => b.rating.score - a.rating.score)
     }
   },
   async mounted() {
-    await this.getAvailableSeasons()
-    if (this.seasons.length > 0) {
-      this.selectedSeason = this.seasons[0]
-      await this.loadSeasonData()
-    }
+    await this.loadSeasonData()
   },
   methods: {
-    async getAvailableSeasons() {
-      try {
-        // 尝试从生成的文件中获取季度列表
-        const { data } = await this.$axios.get('/_nuxt/public-files.json', { 
-          validateStatus: () => true 
-        })
-        
-        if (data && Array.isArray(data) && data.length > 0) {
-          this.seasons = data
-            .filter(file => file.endsWith('.json') && /^\d{6}\.json$/.test(file))
-            .map(file => file.replace('.json', ''))
-            .sort((a, b) => b.localeCompare(a)) // 降序排序，最新的季度在前面
-        } else {
-          // 如果获取失败，使用默认列表
-          this.seasons = this.defaultSeasons
-        }
-      } catch (error) {
-        console.error('Failed to get seasons:', error)
-        // 如果获取失败，使用默认列表
-        this.seasons = this.defaultSeasons
-      }
-    },
     async loadSeasonData() {
       this.loading = true
+      
       try {
-        const { data } = await this.$axios.get(`/${this.selectedSeason}.json`)
-        this.animeList = data.subjects
-        this.seasonTitle = data.title
+        // 从Vuex存储获取数据
+        let data = this.getAnimeData(this.selectedSeason)
+        
+        // 如果存储中没有，尝试加载
+        if (!data) {
+          data = await this.$store.dispatch('loadSeasonData', this.selectedSeason)
+        }
+        
+        if (data && data.subjects) {
+          this.animeList = data.subjects
+          this.seasonTitle = data.title
+        } else {
+          throw new Error('Invalid data format')
+        }
       } catch (error) {
         console.error(`Failed to load data for season ${this.selectedSeason}:`, error)
         this.animeList = []

@@ -267,11 +267,11 @@ def get_subject_detail(subject_id: str) -> Dict:
 
 def save_to_json(data: Dict, year: str, month: str):
     """保存数据到JSON文件"""
-    # 确保data目录存在
-    os.makedirs('data', exist_ok=True)
+    # 确保static目录存在
+    os.makedirs('static', exist_ok=True)
     
     # 格式化文件名
-    filename = f"data/{year}{month.zfill(2)}.json"
+    filename = f"static/{year}{month.zfill(2)}.json"
     
     logger.info(f"正在保存数据到文件: {filename}")
     try:

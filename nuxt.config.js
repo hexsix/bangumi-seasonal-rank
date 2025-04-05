@@ -24,6 +24,7 @@ export default {
 
   // 插件配置
   plugins: [
+    '~/plugins/public-files.js'
   ],
 
   // 自动导入组件
@@ -37,5 +38,10 @@ export default {
 
   // 构建配置
   build: {
+  },
+  
+  // 静态文件配置
+  static: {
+    prefix: false
   }
 } 

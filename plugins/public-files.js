@@ -1,23 +1,14 @@
-import fs from 'fs'
-import path from 'path'
+export default function ({ $axios }, inject) {
+  // 获取所有季度数据列表
+  const seasons = [
+    '202504', '202501', '202410', '202407', '202404', '202401',
+    '202310', '202307', '202304', '202301', '202210', '202207',
+    '202204', '202201', '202110', '202107', '202104', '202101',
+    '202010', '202007', '202004', '202001', '201910', '201907',
+    '201904', '201901', '201810', '201807', '201804', '201801',
+    '201710', '201707', '201704'
+  ]
 
-export default function () {
-  this.nuxt.hook('generate:done', async (generator) => {
-    // 获取public目录下的所有JSON文件
-    const publicDir = path.join(generator.options.srcDir, 'public')
-    try {
-      if (fs.existsSync(publicDir)) {
-        const files = fs.readdirSync(publicDir)
-          .filter(file => file.endsWith('.json') && /^\d{6}\.json$/.test(file))
-        
-        // 创建文件列表JSON
-        const outputPath = path.join(generator.options.generate.dir, '_nuxt', 'public-files.json')
-        fs.writeFileSync(outputPath, JSON.stringify(files))
-
-        console.log('Public files list generated:', outputPath)
-      }
-    } catch (error) {
-      console.error('Error generating public files list:', error)
-    }
-  })
+  // 将季度列表注入到应用中
+  inject('seasons', seasons)
 } 

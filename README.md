@@ -11,7 +11,7 @@
 
 ## 开发
 
-本项目使用Nuxt.js构建。
+本项目使用Nuxt.js构建，数据直接打包在前端，无需后端支持。
 
 ```bash
 # 安装依赖
@@ -38,7 +38,49 @@ npm run generate
    - 输出目录：`dist`
 5. 保存并开始部署
 
-## 后端工作流
+## 如何添加新的季度数据
+
+1. 将新的季度JSON文件（例如 `202507.json`）放入 `public` 目录
+2. 在 `store/index.js` 中的 `seasons` 数组添加新的季度编号
+3. 更新 `create-static-files.js` 中的季度列表
+4. 重新构建项目
+
+## 数据结构
+
+JSON数据结构如下:
+
+```json
+{
+  "title": "2025年4月（共68部）",
+  "subjects": [
+    {
+      "date": "2025-04-01",
+      "platform": "TV",
+      "images": { ... },
+      "name": "ある魔女が死ぬまで",
+      "name_cn": "直至魔女消逝",
+      "tags": [ ... ],
+      "rating": {
+        "rank": 6058,
+        "total": 364,
+        "count": { ... },
+        "score": 6.2
+      },
+      "collection": {
+        "on_hold": 30,
+        "dropped": 42,
+        "wish": 933,
+        "collect": 38,
+        "doing": 1906
+      },
+      "id": 501702
+    },
+    ...
+  ]
+}
+```
+
+## 后端工作流（仅用于更新数据）
 
 在[https://bangumi.github.io/api/](https://bangumi.github.io/api/)中获取token，保存到`.env`文件中，形如`TOKEN=123456`，运行 `python main.py`，会以如下流程工作，完整更新约20分钟。
 
