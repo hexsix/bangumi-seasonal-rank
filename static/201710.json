@@ -2040,7 +2040,7 @@
       "total_episodes": 13,
       "collection": {
         "on_hold": 32,
-        "dropped": 118,
+        "dropped": 119,
         "wish": 64,
         "collect": 148,
         "doing": 23
@@ -2079,7 +2079,7 @@
         },
         {
           "name": "西尾維新",
-          "count": 517,
+          "count": 516,
           "total_cont": 0
         },
         {
@@ -4321,7 +4321,319 @@
       "nsfw": false,
       "type": 2
     },
-    {},
+    {
+      "date": "2017-10-05",
+      "platform": "TV",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/cf/9d/212278_zwYLL.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/cf/9d/212278_zwYLL.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/cf/9d/212278_zwYLL.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/cf/9d/212278_zwYLL.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/cf/9d/212278_zwYLL.jpg"
+      },
+      "summary": "       高中三年级的冬天、剩下没多久的高中生活，大家都认为会在毫无变化的情况下迎来毕业之日……但在某一天，他突然回来了，在中学时搬到遥远城镇的同学，变成不合时节的转学生再次相会，伴随着某种不确定的感情、转变开始的信号微弱的发出了声响……",
+      "name": "Just Because!",
+      "name_cn": "",
+      "tags": [
+        {
+          "name": "恋爱",
+          "count": 1752,
+          "total_cont": 0
+        },
+        {
+          "name": "原创",
+          "count": 1473,
+          "total_cont": 0
+        },
+        {
+          "name": "校园",
+          "count": 1071,
+          "total_cont": 0
+        },
+        {
+          "name": "2017年10月",
+          "count": 973,
+          "total_cont": 0
+        },
+        {
+          "name": "鸭志田一",
+          "count": 926,
+          "total_cont": 0
+        },
+        {
+          "name": "青春",
+          "count": 838,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
+          "count": 754,
+          "total_cont": 0
+        },
+        {
+          "name": "PINEJAM",
+          "count": 548,
+          "total_cont": 0
+        },
+        {
+          "name": "2017",
+          "count": 458,
+          "total_cont": 0
+        },
+        {
+          "name": "比村奇石",
+          "count": 413,
+          "total_cont": 0
+        },
+        {
+          "name": "胃药",
+          "count": 200,
+          "total_cont": 0
+        },
+        {
+          "name": "小林敦",
+          "count": 168,
+          "total_cont": 0
+        },
+        {
+          "name": "比村乳业",
+          "count": 127,
+          "total_cont": 0
+        },
+        {
+          "name": "原创动画",
+          "count": 102,
+          "total_cont": 0
+        },
+        {
+          "name": "PINE_JAM",
+          "count": 79,
+          "total_cont": 0
+        },
+        {
+          "name": "胃疼",
+          "count": 35,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 23,
+          "total_cont": 0
+        },
+        {
+          "name": "治愈",
+          "count": 21,
+          "total_cont": 0
+        },
+        {
+          "name": "日常",
+          "count": 21,
+          "total_cont": 0
+        },
+        {
+          "name": "2017年",
+          "count": 20,
+          "total_cont": 0
+        },
+        {
+          "name": "党争",
+          "count": 18,
+          "total_cont": 0
+        },
+        {
+          "name": "扭曲",
+          "count": 15,
+          "total_cont": 0
+        },
+        {
+          "name": "鴨志田一",
+          "count": 15,
+          "total_cont": 0
+        },
+        {
+          "name": "just",
+          "count": 14,
+          "total_cont": 0
+        },
+        {
+          "name": "2017年十月番",
+          "count": 11,
+          "total_cont": 0
+        },
+        {
+          "name": "やなぎなぎ",
+          "count": 10,
+          "total_cont": 0
+        },
+        {
+          "name": "爱情",
+          "count": 9,
+          "total_cont": 0
+        },
+        {
+          "name": "季番",
+          "count": 8,
+          "total_cont": 0
+        },
+        {
+          "name": "Because",
+          "count": 8,
+          "total_cont": 0
+        },
+        {
+          "name": "2017秋",
+          "count": 7,
+          "total_cont": 0
+        }
+      ],
+      "infobox": [
+        {
+          "key": "别名",
+          "value": [
+            {
+              "v": "仅仅因为！"
+            },
+            {
+              "v": "只是因为！"
+            },
+            {
+              "v": "ジャストビコーズ！"
+            }
+          ]
+        },
+        {
+          "key": "话数",
+          "value": "12"
+        },
+        {
+          "key": "放送开始",
+          "value": "2017年10月5日"
+        },
+        {
+          "key": "放送星期",
+          "value": "星期四"
+        },
+        {
+          "key": "官方网站",
+          "value": "http://justbecause.jp/"
+        },
+        {
+          "key": "播放电视台",
+          "value": "AT-X"
+        },
+        {
+          "key": "其他电视台",
+          "value": "TOKYO MX / テレビ神奈川 / MBS / BSフジ"
+        },
+        {
+          "key": "播放结束",
+          "value": "2017年12月28日"
+        },
+        {
+          "key": "导演",
+          "value": "小林敦"
+        },
+        {
+          "key": "音乐",
+          "value": "深澤恵梨香"
+        },
+        {
+          "key": "Copyright",
+          "value": "©鴨志田一・比村奇石／JB製作委員会"
+        },
+        {
+          "key": "原作",
+          "value": "FOA"
+        },
+        {
+          "key": "脚本",
+          "value": "鴨志田一"
+        },
+        {
+          "key": "人物原案",
+          "value": "比村奇石"
+        },
+        {
+          "key": "人物设定",
+          "value": "吉井弘幸"
+        },
+        {
+          "key": "动画制作",
+          "value": "PINE JAM"
+        },
+        {
+          "key": "制片人",
+          "value": "福永佳祐、大上裕真、岡村武真、金子広孝、大森慎司"
+        },
+        {
+          "key": "製作",
+          "value": "Just Because!製作委員会（NBCユニバーサル・エンターテイメント、月鈴舎、PINE JAM、創通、TOKYO MX、AT-X、BSフジ）"
+        },
+        {
+          "key": "摄影监督",
+          "value": "小川克人（chiptune）"
+        },
+        {
+          "key": "总作画监督",
+          "value": "寺尾憲治（ランチ・BOX）、髙田晃、平山寛菜、中野圭哉"
+        },
+        {
+          "key": "制作协力",
+          "value": "YAL(横浜アニメーションラボ)/アルボアニメーション（3）、NUT（4）、ラパントラック（7）"
+        },
+        {
+          "key": "系列构成",
+          "value": "鴨志田一"
+        },
+        {
+          "key": "企画",
+          "value": "田中信作、鈴木康友、難波秀行、尾山仁康、山崎明日香、伊藤幸弘"
+        },
+        {
+          "key": "OP・ED 分镜",
+          "value": "竹下良平(OP)／比村奇石(ED插图)、10GAUGE[依田伸隆、松木大祐、小林敦史、竹田睦美、高久美知子](ED制作)"
+        }
+      ],
+      "rating": {
+        "rank": 1306,
+        "total": 5771,
+        "count": {
+          "1": 10,
+          "2": 7,
+          "3": 17,
+          "4": 59,
+          "5": 174,
+          "6": 713,
+          "7": 2218,
+          "8": 2003,
+          "9": 396,
+          "10": 174
+        },
+        "score": 7.3
+      },
+      "total_episodes": 14,
+      "collection": {
+        "on_hold": 477,
+        "dropped": 265,
+        "wish": 2523,
+        "collect": 8616,
+        "doing": 539
+      },
+      "id": 212278,
+      "eps": 12,
+      "meta_tags": [
+        "校园",
+        "TV",
+        "恋爱",
+        "日本",
+        "原创"
+      ],
+      "volumes": 0,
+      "series": false,
+      "locked": false,
+      "nsfw": false,
+      "type": 2
+    },
     {
       "date": "2017-10-05",
       "platform": "TV",
@@ -5373,19 +5685,19 @@
           "5": 130,
           "6": 613,
           "7": 2371,
-          "8": 5840,
+          "8": 5841,
           "9": 3300,
-          "10": 1204
+          "10": 1203
         },
         "score": 8.1
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 1569,
+        "on_hold": 1570,
         "dropped": 410,
         "wish": 5112,
         "collect": 19403,
-        "doing": 1801
+        "doing": 1803
       },
       "id": 218707,
       "eps": 12,
@@ -6687,11 +6999,11 @@
       },
       "total_episodes": 13,
       "collection": {
-        "on_hold": 185,
+        "on_hold": 186,
         "dropped": 64,
         "wish": 932,
         "collect": 3826,
-        "doing": 204
+        "doing": 203
       },
       "id": 195937,
       "eps": 12,
@@ -7201,7 +7513,286 @@
       "nsfw": false,
       "type": 2
     },
-    {},
+    {
+      "date": "2017-10-07",
+      "platform": "TV",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/97/51/144043_fFhxX.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/97/51/144043_fFhxX.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/97/51/144043_fFhxX.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/97/51/144043_fFhxX.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/97/51/144043_fFhxX.jpg"
+      },
+      "summary": "我想要触碰你。想要感受你的温暖。\r\n\r\n全身带有能将触碰到的东西溶解的剧毒的少女·卡尔迪娅。她被当成怪物受人畏惧，过着与周围隔绝的日子。某天夜里，她遇到了眼看要被英国军逮捕、自称为盗贼绅士的男人亚森·鲁邦。\r\n\r\n在他的引导下，少女前往机钢都市·伦敦，与各种各样的人物相遇，展开了意想不到的冒险。\r\n\r\n之后，她在与鲁邦等人共同行动的过程中，逐渐逼近自己的身体与失去的记忆之谜。\r\n\r\n被称为怪物的少女所抵达的真实，以及愿望是—— ",
+      "name": "Code:Realize 〜創世の姫君〜",
+      "name_cn": "Code:Realize ～创世的姬君～",
+      "tags": [
+        {
+          "name": "游戏改",
+          "count": 115,
+          "total_cont": 0
+        },
+        {
+          "name": "乙女向",
+          "count": 109,
+          "total_cont": 0
+        },
+        {
+          "name": "2017年10月",
+          "count": 103,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
+          "count": 55,
+          "total_cont": 0
+        },
+        {
+          "name": "2017",
+          "count": 43,
+          "total_cont": 0
+        },
+        {
+          "name": "M.S.C",
+          "count": 34,
+          "total_cont": 0
+        },
+        {
+          "name": "恋爱",
+          "count": 32,
+          "total_cont": 0
+        },
+        {
+          "name": "早見沙織",
+          "count": 29,
+          "total_cont": 0
+        },
+        {
+          "name": "～创世的姬君～",
+          "count": 26,
+          "total_cont": 0
+        },
+        {
+          "name": "山本秀世",
+          "count": 13,
+          "total_cont": 0
+        },
+        {
+          "name": "女性向",
+          "count": 10,
+          "total_cont": 0
+        },
+        {
+          "name": "前野智昭",
+          "count": 10,
+          "total_cont": 0
+        },
+        {
+          "name": "早见沙织",
+          "count": 8,
+          "total_cont": 0
+        },
+        {
+          "name": "游戏改编",
+          "count": 6,
+          "total_cont": 0
+        },
+        {
+          "name": "柿原徹也",
+          "count": 5,
+          "total_cont": 0
+        },
+        {
+          "name": "乙女",
+          "count": 5,
+          "total_cont": 0
+        },
+        {
+          "name": "2017年",
+          "count": 4,
+          "total_cont": 0
+        },
+        {
+          "name": "蒸汽朋克",
+          "count": 3,
+          "total_cont": 0
+        },
+        {
+          "name": "日本动画",
+          "count": 3,
+          "total_cont": 0
+        },
+        {
+          "name": "Code:Realize",
+          "count": 2,
+          "total_cont": 0
+        },
+        {
+          "name": "早见纱织",
+          "count": 2,
+          "total_cont": 0
+        },
+        {
+          "name": "诹访部顺一",
+          "count": 2,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 2,
+          "total_cont": 0
+        },
+        {
+          "name": "森久保祥太郎",
+          "count": 2,
+          "total_cont": 0
+        },
+        {
+          "name": "科幻",
+          "count": 2,
+          "total_cont": 0
+        },
+        {
+          "name": "梶裕貴",
+          "count": 2,
+          "total_cont": 0
+        },
+        {
+          "name": "冒险",
+          "count": 2,
+          "total_cont": 0
+        },
+        {
+          "name": "エム・エス・シー",
+          "count": 1,
+          "total_cont": 0
+        },
+        {
+          "name": "a.Anime",
+          "count": 1,
+          "total_cont": 0
+        },
+        {
+          "name": "2017年十月番",
+          "count": 1,
+          "total_cont": 0
+        }
+      ],
+      "infobox": [
+        {
+          "key": "中文名",
+          "value": "Code:Realize ～创世的姬君～"
+        },
+        {
+          "key": "别名",
+          "value": [
+            {
+              "v": "Code:Realize ～创世的姬君～"
+            },
+            {
+              "v": "コード： リアライズ"
+            }
+          ]
+        },
+        {
+          "key": "话数",
+          "value": "12"
+        },
+        {
+          "key": "放送开始",
+          "value": "2017年10月7日"
+        },
+        {
+          "key": "放送星期",
+          "value": "星期六"
+        },
+        {
+          "key": "官方网站",
+          "value": "http://coderealize-anime.com"
+        },
+        {
+          "key": "播放电视台",
+          "value": "AT-X"
+        },
+        {
+          "key": "其他电视台",
+          "value": "TOKYO MX / サンテレビ / テレビ愛知 / BS11"
+        },
+        {
+          "key": "播放结束",
+          "value": "2017年12月23日"
+        },
+        {
+          "key": "音乐",
+          "value": "高橋諒"
+        },
+        {
+          "key": "Copyright",
+          "value": "©IDEA FACTORY／DESIGN FACTORY・Code:Realize PROJECT"
+        },
+        {
+          "key": "原作",
+          "value": "オトメイト(アイディアファクトリー/Design Factory)"
+        },
+        {
+          "key": "脚本监修",
+          "value": "一ジョー"
+        },
+        {
+          "key": "美术监督",
+          "value": "皆谷透"
+        },
+        {
+          "key": "摄影监督",
+          "value": "斉藤朋美"
+        },
+        {
+          "key": "动画制作",
+          "value": "M.S.C(エム・エス・シー)"
+        },
+        {
+          "key": "製作",
+          "value": "Code:Realize PROJECT（フロンティアワークス、KADOKAWA、博報堂DYミュージック&ピクチャーズ、アスミック・エースエンタテインメント、ランティス、アニメシアターX、ソニー・ミュージックコミュニケーションズ、エム・エス・シー、中外鉱業、ドラマ）"
+        }
+      ],
+      "rating": {
+        "rank": 7003,
+        "total": 298,
+        "count": {
+          "1": 1,
+          "2": 1,
+          "3": 6,
+          "4": 19,
+          "5": 53,
+          "6": 140,
+          "7": 59,
+          "8": 17,
+          "9": 0,
+          "10": 2
+        },
+        "score": 5.9
+      },
+      "total_episodes": 13,
+      "collection": {
+        "on_hold": 93,
+        "dropped": 140,
+        "wish": 242,
+        "collect": 439,
+        "doing": 98
+      },
+      "id": 144043,
+      "eps": 12,
+      "meta_tags": [
+        "TV",
+        "日本",
+        "游戏改"
+      ],
+      "volumes": 0,
+      "series": false,
+      "locked": false,
+      "nsfw": false,
+      "type": 2
+    },
     {
       "date": "2017-10-07",
       "platform": "TV",
@@ -7218,7 +7809,7 @@
       "tags": [
         {
           "name": "漫画改",
-          "count": 1769,
+          "count": 1768,
           "total_cont": 0
         },
         {
@@ -7438,7 +8029,7 @@
       ],
       "rating": {
         "rank": 585,
-        "total": 10006,
+        "total": 10005,
         "count": {
           "1": 7,
           "2": 7,
@@ -7447,7 +8038,7 @@
           "5": 169,
           "6": 719,
           "7": 3026,
-          "8": 4548,
+          "8": 4547,
           "9": 1144,
           "10": 339
         },
@@ -8954,12 +9545,12 @@
         },
         {
           "name": "漫画改",
-          "count": 610,
+          "count": 609,
           "total_cont": 0
         },
         {
           "name": "TV",
-          "count": 477,
+          "count": 476,
           "total_cont": 0
         },
         {
@@ -9212,14 +9803,14 @@
       ],
       "rating": {
         "rank": 1680,
-        "total": 3410,
+        "total": 3409,
         "count": {
           "1": 5,
           "2": 1,
           "3": 5,
           "4": 38,
           "5": 118,
-          "6": 554,
+          "6": 553,
           "7": 1346,
           "8": 1063,
           "9": 196,
@@ -9491,8 +10082,8 @@
           "5": 84,
           "6": 498,
           "7": 1865,
-          "8": 2510,
-          "9": 471,
+          "8": 2511,
+          "9": 470,
           "10": 163
         },
         "score": 7.5
@@ -10797,7 +11388,7 @@
         "on_hold": 483,
         "dropped": 455,
         "wish": 683,
-        "collect": 13511,
+        "collect": 13512,
         "doing": 468
       },
       "id": 212775,
@@ -11390,12 +11981,12 @@
         },
         {
           "name": "漫画改",
-          "count": 394,
+          "count": 395,
           "total_cont": 0
         },
         {
           "name": "节操",
-          "count": 325,
+          "count": 324,
           "total_cont": 0
         },
         {
@@ -11608,7 +12199,7 @@
         "dropped": 575,
         "wish": 759,
         "collect": 3546,
-        "doing": 186
+        "doing": 187
       },
       "id": 216570,
       "eps": 10,
@@ -12211,7 +12802,7 @@
         },
         {
           "name": "漫画改",
-          "count": 1119,
+          "count": 1120,
           "total_cont": 0
         },
         {
@@ -12221,7 +12812,7 @@
         },
         {
           "name": "羽海野千花",
-          "count": 935,
+          "count": 936,
           "total_cont": 0
         },
         {
@@ -12509,7 +13100,7 @@
       ],
       "rating": {
         "rank": 10,
-        "total": 8722,
+        "total": 8724,
         "count": {
           "1": 24,
           "2": 8,
@@ -12518,7 +13109,7 @@
           "5": 58,
           "6": 164,
           "7": 626,
-          "8": 2091,
+          "8": 2093,
           "9": 3035,
           "10": 2695
         },
@@ -12528,9 +13119,9 @@
       "collection": {
         "on_hold": 643,
         "dropped": 175,
-        "wish": 5483,
-        "collect": 12575,
-        "doing": 1001
+        "wish": 5485,
+        "collect": 12578,
+        "doing": 1002
       },
       "id": 211567,
       "eps": 22,
@@ -12782,8 +13373,8 @@
           "1": 2,
           "2": 4,
           "3": 4,
-          "4": 26,
-          "5": 129,
+          "4": 27,
+          "5": 128,
           "6": 474,
           "7": 616,
           "8": 168,
@@ -12815,5 +13406,6 @@
       "nsfw": false,
       "type": 2
     }
-  ]
+  ],
+  "last_update_time": "2025-04-05T16:51:54.659777"
 }

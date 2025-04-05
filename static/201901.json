@@ -306,7 +306,7 @@
       ],
       "rating": {
         "rank": 1363,
-        "total": 3109,
+        "total": 3110,
         "count": {
           "1": 11,
           "2": 5,
@@ -315,7 +315,7 @@
           "5": 85,
           "6": 396,
           "7": 1275,
-          "8": 997,
+          "8": 998,
           "9": 185,
           "10": 124
         },
@@ -326,7 +326,7 @@
         "on_hold": 175,
         "dropped": 131,
         "wish": 726,
-        "collect": 5049,
+        "collect": 5050,
         "doing": 400
       },
       "id": 246429,
@@ -380,7 +380,7 @@
         },
         {
           "name": "机战",
-          "count": 165,
+          "count": 166,
           "total_cont": 0
         },
         {
@@ -435,7 +435,7 @@
         },
         {
           "name": "科幻",
-          "count": 9,
+          "count": 10,
           "total_cont": 0
         },
         {
@@ -455,7 +455,7 @@
         },
         {
           "name": "战争",
-          "count": 3,
+          "count": 4,
           "total_cont": 0
         },
         {
@@ -625,8 +625,8 @@
         "rank": 9143,
         "total": 988,
         "count": {
-          "1": 121,
-          "2": 140,
+          "1": 120,
+          "2": 141,
           "3": 206,
           "4": 228,
           "5": 157,
@@ -964,7 +964,7 @@
       ],
       "rating": {
         "rank": 1375,
-        "total": 5210,
+        "total": 5211,
         "count": {
           "1": 7,
           "2": 6,
@@ -973,7 +973,7 @@
           "5": 164,
           "6": 755,
           "7": 1935,
-          "8": 1665,
+          "8": 1666,
           "9": 461,
           "10": 144
         },
@@ -984,7 +984,7 @@
         "on_hold": 1157,
         "dropped": 565,
         "wish": 2739,
-        "collect": 7384,
+        "collect": 7386,
         "doing": 1080
       },
       "id": 240039,
@@ -2024,9 +2024,9 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 352,
-        "dropped": 413,
-        "wish": 820,
+        "on_hold": 351,
+        "dropped": 414,
+        "wish": 821,
         "collect": 5618,
         "doing": 401
       },
@@ -2863,7 +2863,7 @@
       ],
       "rating": {
         "rank": 161,
-        "total": 12232,
+        "total": 12233,
         "count": {
           "1": 16,
           "2": 2,
@@ -2872,7 +2872,7 @@
           "5": 83,
           "6": 388,
           "7": 1992,
-          "8": 5937,
+          "8": 5938,
           "9": 2880,
           "10": 918
         },
@@ -2883,7 +2883,7 @@
         "on_hold": 369,
         "dropped": 123,
         "wish": 1696,
-        "collect": 19571,
+        "collect": 19574,
         "doing": 728
       },
       "id": 240760,
@@ -3761,7 +3761,7 @@
         "on_hold": 915,
         "dropped": 498,
         "wish": 2015,
-        "collect": 15327,
+        "collect": 15328,
         "doing": 843
       },
       "id": 249637,
@@ -5040,7 +5040,7 @@
         "on_hold": 283,
         "dropped": 116,
         "wish": 1138,
-        "collect": 6642,
+        "collect": 6645,
         "doing": 370
       },
       "id": 234778,
@@ -5378,7 +5378,7 @@
         },
         {
           "name": "TV",
-          "count": 483,
+          "count": 484,
           "total_cont": 0
         },
         {
@@ -5388,7 +5388,7 @@
         },
         {
           "name": "2019",
-          "count": 343,
+          "count": 344,
           "total_cont": 0
         },
         {
@@ -5585,7 +5585,7 @@
       "collection": {
         "on_hold": 550,
         "dropped": 264,
-        "wish": 2272,
+        "wish": 2273,
         "collect": 4448,
         "doing": 519
       },
@@ -5604,7 +5604,278 @@
       "nsfw": false,
       "type": 2
     },
-    {},
+    {
+      "date": "2019-01-09",
+      "platform": "TV",
+      "images": {
+        "small": "https://lain.bgm.tv/r/200/pic/cover/l/7f/44/256528_L1mli.jpg",
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/7f/44/256528_L1mli.jpg",
+        "large": "https://lain.bgm.tv/pic/cover/l/7f/44/256528_L1mli.jpg",
+        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/7f/44/256528_L1mli.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/7f/44/256528_L1mli.jpg"
+      },
+      "summary": "不擅长跟人接触，怕生的小说家·朏素晴与被人抛弃，过着残酷的流浪生活的猫。由于偶然的契机下一个人和一只猫开始了同居生活……？\r\n以人的视角和猫的视角来描绘每天的生活，各自的思绪互相交织在一起。\r\n故事以“温暖人心”为话题。\r\n随着琐碎时光的积累，我们成为了“家人”——\r\n两者找到了幸福的同居生活。",
+      "name": "同居人はひざ、時々、頭のうえ。",
+      "name_cn": "同居人时而在腿上、时而跑到脑袋上",
+      "tags": [
+        {
+          "name": "治愈",
+          "count": 226,
+          "total_cont": 0
+        },
+        {
+          "name": "2019年1月",
+          "count": 198,
+          "total_cont": 0
+        },
+        {
+          "name": "漫画改",
+          "count": 136,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
+          "count": 127,
+          "total_cont": 0
+        },
+        {
+          "name": "日常",
+          "count": 126,
+          "total_cont": 0
+        },
+        {
+          "name": "猫",
+          "count": 100,
+          "total_cont": 0
+        },
+        {
+          "name": "撸猫",
+          "count": 95,
+          "total_cont": 0
+        },
+        {
+          "name": "ZERO-G",
+          "count": 82,
+          "total_cont": 0
+        },
+        {
+          "name": "2019",
+          "count": 81,
+          "total_cont": 0
+        },
+        {
+          "name": "漫改",
+          "count": 58,
+          "total_cont": 0
+        },
+        {
+          "name": "小野賢章",
+          "count": 24,
+          "total_cont": 0
+        },
+        {
+          "name": "鈴木薫",
+          "count": 14,
+          "total_cont": 0
+        },
+        {
+          "name": "2019年",
+          "count": 13,
+          "total_cont": 0
+        },
+        {
+          "name": "山崎はるか",
+          "count": 9,
+          "total_cont": 0
+        },
+        {
+          "name": "日本",
+          "count": 7,
+          "total_cont": 0
+        },
+        {
+          "name": "下野紘",
+          "count": 6,
+          "total_cont": 0
+        },
+        {
+          "name": "ゼロジー",
+          "count": 6,
+          "total_cont": 0
+        },
+        {
+          "name": "村瀬歩",
+          "count": 5,
+          "total_cont": 0
+        },
+        {
+          "name": "日本动画",
+          "count": 5,
+          "total_cont": 0
+        },
+        {
+          "name": "1月",
+          "count": 4,
+          "total_cont": 0
+        },
+        {
+          "name": "2019冬",
+          "count": 4,
+          "total_cont": 0
+        },
+        {
+          "name": "动画",
+          "count": 3,
+          "total_cont": 0
+        },
+        {
+          "name": "TVA",
+          "count": 3,
+          "total_cont": 0
+        },
+        {
+          "name": "同居人是猫",
+          "count": 3,
+          "total_cont": 0
+        },
+        {
+          "name": "宠物",
+          "count": 2,
+          "total_cont": 0
+        },
+        {
+          "name": "安済知佳",
+          "count": 2,
+          "total_cont": 0
+        },
+        {
+          "name": "铃木薰",
+          "count": 2,
+          "total_cont": 0
+        },
+        {
+          "name": "赤尾でこ",
+          "count": 2,
+          "total_cont": 0
+        },
+        {
+          "name": "动物",
+          "count": 2,
+          "total_cont": 0
+        },
+        {
+          "name": "杉田智和",
+          "count": 2,
+          "total_cont": 0
+        }
+      ],
+      "infobox": [
+        {
+          "key": "中文名",
+          "value": "同居人时而在腿上、时而跑到脑袋上"
+        },
+        {
+          "key": "别名",
+          "value": [
+            {
+              "v": "Doukyonin wa Hiza, Tokidoki, Atama no Ue."
+            },
+            {
+              "v": "My Roommate Is a Cat"
+            },
+            {
+              "v": "同居人是猫"
+            }
+          ]
+        },
+        {
+          "key": "话数",
+          "value": "12"
+        },
+        {
+          "key": "放送开始",
+          "value": "2019年1月9日"
+        },
+        {
+          "key": "放送星期",
+          "value": "星期三"
+        },
+        {
+          "key": "官方网站",
+          "value": "https://hizaue.com/"
+        },
+        {
+          "key": "播放电视台",
+          "value": "AT-X"
+        },
+        {
+          "key": "其他电视台",
+          "value": "ABC朝日放送 / TOKYO MX / BS11"
+        },
+        {
+          "key": "播放结束",
+          "value": "2019年3月27日"
+        },
+        {
+          "key": "导演",
+          "value": "鈴木薫"
+        },
+        {
+          "key": "Copyright",
+          "value": "©みなつき・二ツ家あす・COMICポラリス/ひざうえ製作委員会"
+        },
+        {
+          "key": "原作",
+          "value": "みなつき / 二ツ家あす（COMICポラリス）"
+        },
+        {
+          "key": "系列构成",
+          "value": "赤尾でこ（三重野瞳）"
+        },
+        {
+          "key": "人物设定",
+          "value": "北尾勝；副人设：西野美沙樹"
+        }
+      ],
+      "rating": {
+        "rank": 3179,
+        "total": 864,
+        "count": {
+          "1": 2,
+          "2": 0,
+          "3": 5,
+          "4": 12,
+          "5": 51,
+          "6": 225,
+          "7": 369,
+          "8": 164,
+          "9": 19,
+          "10": 17
+        },
+        "score": 6.8
+      },
+      "total_episodes": 12,
+      "collection": {
+        "on_hold": 108,
+        "dropped": 140,
+        "wish": 314,
+        "collect": 1373,
+        "doing": 136
+      },
+      "id": 256528,
+      "eps": 12,
+      "meta_tags": [
+        "TV",
+        "日本",
+        "漫画改",
+        "日常"
+      ],
+      "volumes": 0,
+      "series": false,
+      "locked": false,
+      "nsfw": false,
+      "type": 2
+    },
     {
       "date": "2019-01-09",
       "platform": "TV",
@@ -7269,13 +7540,13 @@
       ],
       "rating": {
         "rank": 742,
-        "total": 10066,
+        "total": 10067,
         "count": {
           "1": 8,
           "2": 14,
           "3": 17,
           "4": 41,
-          "5": 169,
+          "5": 170,
           "6": 852,
           "7": 3198,
           "8": 4539,
@@ -7289,7 +7560,7 @@
         "on_hold": 657,
         "dropped": 539,
         "wish": 1789,
-        "collect": 15617,
+        "collect": 15620,
         "doing": 704
       },
       "id": 243916,
@@ -7577,7 +7848,7 @@
         "on_hold": 585,
         "dropped": 1084,
         "wish": 1066,
-        "collect": 13697,
+        "collect": 13698,
         "doing": 701
       },
       "id": 256114,
@@ -8153,7 +8424,7 @@
         "on_hold": 306,
         "dropped": 523,
         "wish": 696,
-        "collect": 9091,
+        "collect": 9092,
         "doing": 316
       },
       "id": 228254,
@@ -8723,7 +8994,7 @@
       ],
       "rating": {
         "rank": 6193,
-        "total": 4616,
+        "total": 4617,
         "count": {
           "1": 35,
           "2": 49,
@@ -8731,7 +9002,7 @@
           "4": 233,
           "5": 614,
           "6": 1546,
-          "7": 1434,
+          "7": 1435,
           "8": 465,
           "9": 77,
           "10": 88
@@ -8743,7 +9014,7 @@
         "on_hold": 492,
         "dropped": 489,
         "wish": 1392,
-        "collect": 6853,
+        "collect": 6855,
         "doing": 485
       },
       "id": 253628,
@@ -9618,7 +9889,7 @@
       ],
       "rating": {
         "rank": 375,
-        "total": 21344,
+        "total": 21347,
         "count": {
           "1": 27,
           "2": 10,
@@ -9626,8 +9897,8 @@
           "4": 65,
           "5": 247,
           "6": 1066,
-          "7": 5230,
-          "8": 10905,
+          "7": 5231,
+          "8": 10907,
           "9": 2711,
           "10": 1058
         },
@@ -9637,9 +9908,9 @@
       "collection": {
         "on_hold": 532,
         "dropped": 405,
-        "wish": 1371,
-        "collect": 34187,
-        "doing": 1173
+        "wish": 1373,
+        "collect": 34192,
+        "doing": 1174
       },
       "id": 248175,
       "eps": 12,
@@ -11392,5 +11663,6 @@
       "nsfw": false,
       "type": 2
     }
-  ]
+  ],
+  "last_update_time": "2025-04-05T16:47:36.732917"
 }

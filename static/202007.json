@@ -922,7 +922,7 @@
       "collection": {
         "on_hold": 342,
         "dropped": 283,
-        "wish": 1066,
+        "wish": 1067,
         "collect": 5982,
         "doing": 434
       },
@@ -2188,14 +2188,14 @@
       ],
       "rating": {
         "rank": 6146,
-        "total": 5459,
+        "total": 5460,
         "count": {
           "1": 21,
           "2": 23,
           "3": 71,
           "4": 218,
           "5": 748,
-          "6": 1984,
+          "6": 1985,
           "7": 1830,
           "8": 429,
           "9": 52,
@@ -2206,9 +2206,9 @@
       "total_episodes": 13,
       "collection": {
         "on_hold": 255,
-        "dropped": 380,
+        "dropped": 381,
         "wish": 728,
-        "collect": 8648,
+        "collect": 8649,
         "doing": 387
       },
       "id": 292222,
@@ -2481,7 +2481,7 @@
       "tags": [
         {
           "name": "MAPPA",
-          "count": 328,
+          "count": 329,
           "total_cont": 0
         },
         {
@@ -2491,16 +2491,16 @@
         },
         {
           "name": "战斗",
-          "count": 233,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 166,
+          "count": 234,
           "total_cont": 0
         },
         {
           "name": "韩漫改",
+          "count": 167,
+          "total_cont": 0
+        },
+        {
+          "name": "TV",
           "count": 166,
           "total_cont": 0
         },
@@ -2515,12 +2515,12 @@
           "total_cont": 0
         },
         {
-          "name": "漫改",
-          "count": 99,
+          "name": "热血",
+          "count": 100,
           "total_cont": 0
         },
         {
-          "name": "热血",
+          "name": "漫改",
           "count": 99,
           "total_cont": 0
         },
@@ -2570,6 +2570,11 @@
           "total_cont": 0
         },
         {
+          "name": "校园",
+          "count": 4,
+          "total_cont": 0
+        },
+        {
           "name": "TVA",
           "count": 4,
           "total_cont": 0
@@ -2580,17 +2585,7 @@
           "total_cont": 0
         },
         {
-          "name": "校园",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
           "name": "格斗",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "季番",
           "count": 3,
           "total_cont": 0
         },
@@ -2600,7 +2595,12 @@
           "total_cont": 0
         },
         {
-          "name": "橘龍丸",
+          "name": "季番",
+          "count": 3,
+          "total_cont": 0
+        },
+        {
+          "name": "佐藤利幸",
           "count": 2,
           "total_cont": 0
         },
@@ -2615,7 +2615,7 @@
           "total_cont": 0
         },
         {
-          "name": "佐藤利幸",
+          "name": "渡邊啓一郎",
           "count": 2,
           "total_cont": 0
         },
@@ -2625,7 +2625,7 @@
           "total_cont": 0
         },
         {
-          "name": "2020年",
+          "name": "竞技",
           "count": 2,
           "total_cont": 0
         }
@@ -2678,14 +2678,14 @@
       ],
       "rating": {
         "rank": 7167,
-        "total": 1103,
+        "total": 1104,
         "count": {
           "1": 6,
           "2": 10,
           "3": 20,
           "4": 72,
           "5": 186,
-          "6": 466,
+          "6": 467,
           "7": 258,
           "8": 66,
           "9": 10,
@@ -2698,7 +2698,7 @@
         "on_hold": 132,
         "dropped": 279,
         "wish": 326,
-        "collect": 1540,
+        "collect": 1541,
         "doing": 119
       },
       "id": 305511,
@@ -3340,7 +3340,7 @@
         },
         {
           "name": "奇幻",
-          "count": 1297,
+          "count": 1298,
           "total_cont": 0
         },
         {
@@ -3582,8 +3582,8 @@
       "collection": {
         "on_hold": 573,
         "dropped": 268,
-        "wish": 1535,
-        "collect": 19335,
+        "wish": 1536,
+        "collect": 19339,
         "doing": 914
       },
       "id": 278826,
@@ -3882,7 +3882,7 @@
         "on_hold": 157,
         "dropped": 432,
         "wish": 424,
-        "collect": 1675,
+        "collect": 1676,
         "doing": 108
       },
       "id": 292382,
@@ -4242,7 +4242,7 @@
       "tags": [
         {
           "name": "恋爱",
-          "count": 2001,
+          "count": 2002,
           "total_cont": 0
         },
         {
@@ -4517,7 +4517,7 @@
       ],
       "rating": {
         "rank": 4186,
-        "total": 8949,
+        "total": 8950,
         "count": {
           "1": 54,
           "2": 44,
@@ -4525,7 +4525,7 @@
           "4": 354,
           "5": 840,
           "6": 2472,
-          "7": 2969,
+          "7": 2970,
           "8": 1440,
           "9": 348,
           "10": 331
@@ -4535,9 +4535,9 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 849,
-        "dropped": 520,
-        "wish": 1890,
-        "collect": 14109,
+        "dropped": 521,
+        "wish": 1889,
+        "collect": 14111,
         "doing": 907
       },
       "id": 277954,
@@ -4854,9 +4854,9 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 349,
-        "dropped": 573,
+        "dropped": 574,
         "wish": 613,
-        "collect": 5557,
+        "collect": 5558,
         "doing": 371
       },
       "id": 299498,
@@ -5174,8 +5174,8 @@
       "collection": {
         "on_hold": 447,
         "dropped": 857,
-        "wish": 1051,
-        "collect": 7682,
+        "wish": 1050,
+        "collect": 7683,
         "doing": 468
       },
       "id": 296076,
@@ -5442,8 +5442,8 @@
         "on_hold": 202,
         "dropped": 378,
         "wish": 524,
-        "collect": 2833,
-        "doing": 209
+        "collect": 2834,
+        "doing": 208
       },
       "id": 291195,
       "eps": 12,
@@ -5976,7 +5976,7 @@
         "on_hold": 298,
         "dropped": 537,
         "wish": 633,
-        "collect": 9659,
+        "collect": 9660,
         "doing": 488
       },
       "id": 292238,
@@ -6273,7 +6273,7 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 193,
-        "dropped": 331,
+        "dropped": 332,
         "wish": 566,
         "collect": 2390,
         "doing": 223
@@ -7203,5 +7203,6 @@
       "nsfw": false,
       "type": 2
     }
-  ]
+  ],
+  "last_update_time": "2025-04-05T16:42:34.542714"
 }

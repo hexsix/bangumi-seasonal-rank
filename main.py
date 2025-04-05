@@ -396,56 +396,77 @@ def update_frontend_seasons_list():
         # 获取最新的2个季度用于预加载
         preload_seasons = season_files[:2] if len(season_files) >= 2 else season_files
         
-        # 需要更新的文件
-        files_to_update = [
-            "plugins/public-files.js",
-            "store/index.js"
-        ]
-        
-        for file_path in files_to_update:
-            if not os.path.exists(file_path):
-                logger.warning(f"文件不存在，跳过更新: {file_path}")
-                continue
+        # 1. 首先更新 plugins/public-files.js
+        file_path = "plugins/public-files.js"
+        if os.path.exists(file_path):
+            # 尝试直接拼接字符串方式替换
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+                
+            # 使用字符串查找替换方式
+            start_marker = "let seasons = ["
+            end_marker = "]"
             
+            start_pos = content.find(start_marker)
+            end_pos = content.find(end_marker, start_pos + len(start_marker))
+            
+            if start_pos != -1 and end_pos != -1:
+                # 准备新的seasons数组内容
+                seasons_formatted = ",\n    ".join([f"'{code}'" for code in season_files])
+                
+                new_content = (
+                    content[:start_pos + len(start_marker)] + 
+                    "\n    " + seasons_formatted + "\n  " + 
+                    content[end_pos:]
+                )
+                
+                # 写入更新后的内容
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(new_content)
+                
+                logger.info(f"已更新季度列表到文件: {file_path}")
+            else:
+                logger.error(f"无法在 {file_path} 中找到季度数组位置")
+        else:
+            logger.warning(f"文件不存在，跳过更新: {file_path}")
+        
+        # 2. 更新 store/index.js
+        file_path = "store/index.js"
+        if os.path.exists(file_path):
             # 读取文件内容
             with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
             
-            # 将季度列表格式化为适合JavaScript的字符串
-            seasons_formatted = ",\n    ".join([f"'{code}'" for code in season_files])
-            seasons_block = f"[\n    {seasons_formatted}\n  ]"
-            
-            # 使用正则表达式替换seasons数组
-            import re
-            pattern = r'seasons: *\[([\s\S]*?)\]'
+            # 更新seasons数组
+            pattern = r'seasons: \[([\s\S]*?)\]'
             replacement = f'seasons: {seasons_block}'
             
             new_content = re.sub(pattern, replacement, content)
             
-            # 如果是store/index.js文件，还需要更新预加载数据部分
-            if file_path == "store/index.js":
-                # 1. 更新导入语句
-                import_block = "\n".join([f"import data{season} from '@/static/{season}.json'" for season in preload_seasons])
-                pattern = r'// 导入预加载的数据\s*import [^\n]*\s*(?:import [^\n]*\s*)*'
-                replacement = f"// 导入预加载的数据\n{import_block}\n\n"
-                new_content = re.sub(pattern, replacement, new_content)
-                
-                # 2. 更新animeData初始化
-                anime_data_formatted = ",\n    ".join([f"'{season}': data{season}" for season in preload_seasons])
-                anime_data_block = f"{{\n    {anime_data_formatted}\n  }}"
-                pattern = r'animeData: *\{[^}]*\}'
-                replacement = f"animeData: {anime_data_block}"
-                new_content = re.sub(pattern, replacement, new_content)
-                
-                logger.info(f"已更新预加载数据为最新的 {len(preload_seasons)} 个季度: {', '.join(preload_seasons)}")
+            # 更新预加载数据
+            # 1. 更新导入语句
+            import_block = "\n".join([f"import data{season} from '@/static/{season}.json'" for season in preload_seasons])
+            pattern = r'// 导入预加载的数据\s*import [^\n]*\s*(?:import [^\n]*\s*)*'
+            replacement = f"// 导入预加载的数据\n{import_block}\n\n"
+            new_content = re.sub(pattern, replacement, new_content)
+            
+            # 2. 更新animeData初始化
+            anime_data_formatted = ",\n    ".join([f"'{season}': data{season}" for season in preload_seasons])
+            anime_data_block = f"{{\n    {anime_data_formatted}\n  }}"
+            pattern = r'animeData: *\{[^}]*\}'
+            replacement = f"animeData: {anime_data_block}"
+            new_content = re.sub(pattern, replacement, new_content)
             
             # 写入更新后的内容
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(new_content)
             
+            logger.info(f"已更新预加载数据为最新的 {len(preload_seasons)} 个季度: {', '.join(preload_seasons)}")
             logger.info(f"已更新季度列表到文件: {file_path}")
+        else:
+            logger.warning(f"文件不存在，跳过更新: {file_path}")
         
-        # 更新index.vue中的默认选择季度
+        # 3. 更新index.vue中的默认选择季度
         index_vue_path = "pages/index.vue"
         if os.path.exists(index_vue_path) and latest_season:
             try:
