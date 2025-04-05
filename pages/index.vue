@@ -241,7 +241,9 @@ export default {
     getMetaTags(anime) {
       // 使用meta_tags字段，它是一个字符串数组
       if (!anime.meta_tags || !Array.isArray(anime.meta_tags)) return []
-      return anime.meta_tags.slice(0, 5).map(tag => ({ name: tag }))
+      // 使用Set去重
+      const uniqueTags = [...new Set(anime.meta_tags)]
+      return uniqueTags.slice(0, 5).map(tag => ({ name: tag }))
     },
     sortBy(field) {
       if (this.sortField === field) {

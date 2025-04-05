@@ -51,7 +51,8 @@ export default {
   computed: {
     topTags() {
       if (!this.anime.meta_tags || !Array.isArray(this.anime.meta_tags)) return []
-      return this.anime.meta_tags.slice(0, 5).map(tag => ({ name: tag }))
+      const uniqueTags = [...new Set(this.anime.meta_tags)]
+      return uniqueTags.slice(0, 5).map(tag => ({ name: tag }))
     },
     getTotalRatingCount() {
       if (!this.anime.rating || !this.anime.rating.count) return 0
