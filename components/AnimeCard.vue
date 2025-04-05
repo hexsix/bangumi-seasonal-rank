@@ -30,6 +30,11 @@
       </div>
       <div class="flex flex-wrap gap-1 mt-2">
         <span 
+          v-if="broadcastDay" 
+          :class="['text-xs px-2 py-1 rounded', getBroadcastDayColorClass]">
+          {{ broadcastDay }}
+        </span>
+        <span 
           v-for="tag in topTags" 
           :key="tag.name" 
           class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
@@ -66,6 +71,17 @@ export default {
              this.anime.collection.wish + 
              (this.anime.collection.on_hold || 0) + 
              (this.anime.collection.dropped || 0)
+    },
+    broadcastDay() {
+      if (!this.anime.infobox || !Array.isArray(this.anime.infobox)) return null
+      const broadcastInfo = this.anime.infobox.find(info => info.key === '放送星期')
+      return broadcastInfo ? broadcastInfo.value : null
+    },
+    getBroadcastDayColorClass() {
+      if (!this.broadcastDay) return 'bg-gray-100 text-gray-800'
+      
+      // 使用统一的颜色
+      return 'bg-green-100 text-green-800'
     }
   }
 }

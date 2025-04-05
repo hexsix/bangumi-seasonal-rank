@@ -99,6 +99,11 @@
               <td class="py-3 px-4 border-b">
                 <div class="flex flex-wrap gap-1">
                   <span 
+                    v-if="getBroadcastDay(anime)" 
+                    :class="['text-xs px-2 py-1 rounded', getBroadcastDayColorClass(anime)]">
+                    {{ getBroadcastDay(anime) }}
+                  </span>
+                  <span 
                     v-for="tag in getMetaTags(anime)" 
                     :key="tag.name" 
                     class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
@@ -244,6 +249,18 @@ export default {
       // 使用Set去重
       const uniqueTags = [...new Set(anime.meta_tags)]
       return uniqueTags.slice(0, 5).map(tag => ({ name: tag }))
+    },
+    getBroadcastDay(anime) {
+      if (!anime.infobox || !Array.isArray(anime.infobox)) return null
+      const broadcastInfo = anime.infobox.find(info => info.key === '放送星期')
+      return broadcastInfo ? broadcastInfo.value : null
+    },
+    getBroadcastDayColorClass(anime) {
+      const broadcastDay = this.getBroadcastDay(anime)
+      if (!broadcastDay) return 'bg-gray-100 text-gray-800'
+      
+      // 使用统一的颜色
+      return 'bg-green-100 text-green-800'
     },
     sortBy(field) {
       if (this.sortField === field) {
