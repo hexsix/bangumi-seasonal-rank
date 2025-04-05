@@ -135,8 +135,8 @@ export default {
       seasonTitle: '',
       loading: true,
       viewMode: 'table', // table 或 cards
-      sortField: 'score', // 默认按评分排序
-      sortOrder: 'desc', // 默认降序
+      sortField: 'rank', // 默认按rank排序
+      sortOrder: 'asc', // 对于rank是升序（数字越小排名越高）
       largeImageShow: false,
       largeImageUrl: '',
       largeImageAlt: ''
@@ -157,8 +157,10 @@ export default {
         if (this.sortField === 'score') {
           comparison = a.rating.score - b.rating.score;
         } else if (this.sortField === 'rank') {
-          // 注意：rank更小表示排名更高
-          comparison = a.rating.rank - b.rating.rank;
+          // 处理rank为0的情况，将其视为无限大
+          const rankA = a.rating.rank === 0 ? Infinity : a.rating.rank;
+          const rankB = b.rating.rank === 0 ? Infinity : b.rating.rank;
+          comparison = rankA - rankB;
         } else if (this.sortField === 'ratingCount') {
           comparison = this.getTotalRatingCount(a) - this.getTotalRatingCount(b);
         } else if (this.sortField === 'collectionCount') {
@@ -219,9 +221,9 @@ export default {
              (anime.collection.dropped || 0)
     },
     getMetaTags(anime) {
-      // 使用meta_tags而不是tags
+      // 使用meta_tags字段，它是一个字符串数组
       if (!anime.meta_tags || !Array.isArray(anime.meta_tags)) return []
-      return anime.meta_tags.slice(0, 5)
+      return anime.meta_tags.slice(0, 5).map(tag => ({ name: tag }))
     },
     sortBy(field) {
       if (this.sortField === field) {

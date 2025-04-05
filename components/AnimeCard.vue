@@ -2,7 +2,7 @@
   <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
     <div class="relative pb-[140%]">
       <img 
-        :src="anime.images.common" 
+        :src="anime.images.grid" 
         :alt="anime.name" 
         class="absolute inset-0 w-full h-full object-cover cursor-pointer"
         loading="lazy"
@@ -51,7 +51,7 @@ export default {
   computed: {
     topTags() {
       if (!this.anime.meta_tags || !Array.isArray(this.anime.meta_tags)) return []
-      return this.anime.meta_tags.slice(0, 5)
+      return this.anime.meta_tags.slice(0, 5).map(tag => ({ name: tag }))
     },
     getTotalRatingCount() {
       if (!this.anime.rating || !this.anime.rating.count) return 0
