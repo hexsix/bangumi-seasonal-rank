@@ -1,0 +1,13 @@
+services:
+  rank-api:
+    build: .
+    container_name: rank-rinshankaiho-fun
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./logs:/app/logs
+      - ./static:/app/static
+      - ./.env:/app/.env
+    environment:
+      - TZ=Asia/Shanghai 
