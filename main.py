@@ -351,9 +351,127 @@ def save_to_json(data: Dict, year: str, month: str) -> bool:
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
         logger.info(f"数据已成功保存到 {file_path}")
+        
+        # 保存成功后更新前端文件中的季度列表
+        update_frontend_seasons_list()
+        
         return True
     except Exception as e:
         logger.error(f"保存数据到 {file_path} 失败: {str(e)}")
+        return False
+
+def update_frontend_seasons_list():
+    """更新前端文件中的季度列表
+    通过扫描static目录中的JSON文件，生成最新的季度列表，并更新到前端文件中"""
+    try:
+        logger.info("正在更新前端文件中的季度列表...")
+        
+        # 扫描static目录中的所有文件
+        static_dir = "static"
+        if not os.path.exists(static_dir):
+            logger.warning(f"static目录不存在: {static_dir}")
+            return False
+        
+        # 获取所有符合YYYYMM.json格式的文件
+        season_files = []
+        for file in os.listdir(static_dir):
+            if file.endswith(".json") and len(file) == 11:  # YYYYMM.json长度为11
+                try:
+                    season_code = file[:-5]  # 移除.json后缀
+                    if len(season_code) == 6 and season_code.isdigit():
+                        season_files.append(season_code)
+                except Exception as e:
+                    logger.error(f"处理季度文件名出错: {file}, {str(e)}")
+        
+        # 按降序排序季度列表（最新的在前）
+        season_files.sort(reverse=True)
+        logger.info(f"找到 {len(season_files)} 个季度数据: {season_files}")
+        
+        if not season_files:
+            logger.warning("没有找到任何季度数据文件，跳过更新前端文件")
+            return False
+        
+        # 获取最新的季度代码（排序后的第一个）
+        latest_season = season_files[0] if season_files else ""
+        # 获取最新的2个季度用于预加载
+        preload_seasons = season_files[:2] if len(season_files) >= 2 else season_files
+        
+        # 需要更新的文件
+        files_to_update = [
+            "plugins/public-files.js",
+            "store/index.js"
+        ]
+        
+        for file_path in files_to_update:
+            if not os.path.exists(file_path):
+                logger.warning(f"文件不存在，跳过更新: {file_path}")
+                continue
+            
+            # 读取文件内容
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            # 将季度列表格式化为适合JavaScript的字符串
+            seasons_formatted = ",\n    ".join([f"'{code}'" for code in season_files])
+            seasons_block = f"[\n    {seasons_formatted}\n  ]"
+            
+            # 使用正则表达式替换seasons数组
+            import re
+            pattern = r'seasons: *\[([\s\S]*?)\]'
+            replacement = f'seasons: {seasons_block}'
+            
+            new_content = re.sub(pattern, replacement, content)
+            
+            # 如果是store/index.js文件，还需要更新预加载数据部分
+            if file_path == "store/index.js":
+                # 1. 更新导入语句
+                import_block = "\n".join([f"import data{season} from '@/static/{season}.json'" for season in preload_seasons])
+                pattern = r'// 导入预加载的数据\s*import [^\n]*\s*(?:import [^\n]*\s*)*'
+                replacement = f"// 导入预加载的数据\n{import_block}\n\n"
+                new_content = re.sub(pattern, replacement, new_content)
+                
+                # 2. 更新animeData初始化
+                anime_data_formatted = ",\n    ".join([f"'{season}': data{season}" for season in preload_seasons])
+                anime_data_block = f"{{\n    {anime_data_formatted}\n  }}"
+                pattern = r'animeData: *\{[^}]*\}'
+                replacement = f"animeData: {anime_data_block}"
+                new_content = re.sub(pattern, replacement, new_content)
+                
+                logger.info(f"已更新预加载数据为最新的 {len(preload_seasons)} 个季度: {', '.join(preload_seasons)}")
+            
+            # 写入更新后的内容
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(new_content)
+            
+            logger.info(f"已更新季度列表到文件: {file_path}")
+        
+        # 更新index.vue中的默认选择季度
+        index_vue_path = "pages/index.vue"
+        if os.path.exists(index_vue_path) and latest_season:
+            try:
+                # 读取文件内容
+                with open(index_vue_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                # 使用正则表达式替换默认选择的季度
+                pattern = r"selectedSeason: '[0-9]{6}'"
+                replacement = f"selectedSeason: '{latest_season}'"
+                
+                new_content = re.sub(pattern, replacement, content)
+                
+                # 写入更新后的内容
+                with open(index_vue_path, 'w', encoding='utf-8') as f:
+                    f.write(new_content)
+                
+                logger.info(f"已更新pages/index.vue默认选择的季度为 {latest_season}")
+            except Exception as e:
+                logger.error(f"更新pages/index.vue默认选择季度失败: {str(e)}")
+        else:
+            logger.warning(f"index.vue文件不存在或没有最新季度信息，跳过更新默认选择季度")
+        
+        return True
+    except Exception as e:
+        logger.error(f"更新前端季度列表失败: {str(e)}")
         return False
 
 def process_season(index: Dict, force: bool = False) -> Dict:
@@ -547,6 +665,32 @@ async def get_seasons():
         logger.error(f"获取季度列表失败: {str(e)}")
         raise HTTPException(status_code=500, detail=f"获取季度列表失败: {str(e)}")
 
+@app.get("/seasons/list")
+async def get_seasons_list():
+    """获取简化的季度列表，按照YYYYMM格式排序"""
+    try:
+        # 获取static目录下的所有.json文件
+        static_dir = "static"
+        json_files = []
+        
+        if os.path.exists(static_dir):
+            for file in os.listdir(static_dir):
+                if file.endswith(".json") and len(file) == 11:  # 形如YYYYMM.json的文件长度为11
+                    try:
+                        season_code = file[:-5]  # 移除.json后缀
+                        if len(season_code) == 6 and season_code.isdigit():
+                            json_files.append(season_code)
+                    except:
+                        pass
+        
+        # 按降序排序（最新的季度在前）
+        json_files.sort(reverse=True)
+        
+        return {"seasons": json_files}
+    except Exception as e:
+        logger.error(f"获取季度列表失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"获取季度列表失败: {str(e)}")
+
 @app.get("/scheduler/status")
 async def get_scheduler_status():
     """获取调度器状态"""
@@ -589,4 +733,15 @@ def shutdown_scheduler():
         logger.info("调度器已关闭")
 
 if __name__ == "__main__":
+    # 检查是否有命令行参数
+    import sys
+    if len(sys.argv) > 1:
+        # 处理命令行参数
+        if sys.argv[1] == "--update-seasons":
+            # 仅更新季度列表
+            logger.info("执行季度列表更新操作")
+            update_frontend_seasons_list()
+            sys.exit(0)
+            
+    # 默认运行FastAPI应用
     uvicorn.run(app, host="0.0.0.0", port=8000)
