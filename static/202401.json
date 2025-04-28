@@ -17,7 +17,7 @@
       "tags": [
         {
           "name": "2024年1月",
-          "count": 338,
+          "count": 339,
           "total_cont": 0
         },
         {
@@ -302,15 +302,15 @@
         }
       ],
       "rating": {
-        "rank": 7975,
-        "total": 1378,
+        "rank": 7979,
+        "total": 1380,
         "count": {
           "1": 25,
           "2": 14,
           "3": 43,
-          "4": 115,
+          "4": 116,
           "5": 277,
-          "6": 577,
+          "6": 578,
           "7": 235,
           "8": 57,
           "9": 12,
@@ -323,8 +323,8 @@
         "on_hold": 190,
         "dropped": 239,
         "wish": 535,
-        "collect": 1918,
-        "doing": 349
+        "collect": 1924,
+        "doing": 350
       },
       "id": 365572,
       "eps": 13,
@@ -377,7 +377,7 @@
         },
         {
           "name": "TV",
-          "count": 448,
+          "count": 449,
           "total_cont": 0
         },
         {
@@ -387,7 +387,7 @@
         },
         {
           "name": "Lerche",
-          "count": 344,
+          "count": 345,
           "total_cont": 0
         },
         {
@@ -397,12 +397,12 @@
         },
         {
           "name": "轻改",
-          "count": 289,
+          "count": 290,
           "total_cont": 0
         },
         {
           "name": "2024",
-          "count": 272,
+          "count": 273,
           "total_cont": 0
         },
         {
@@ -451,7 +451,7 @@
           "total_cont": 0
         },
         {
-          "name": "未定档",
+          "name": "岸诚二",
           "count": 10,
           "total_cont": 0
         },
@@ -461,8 +461,13 @@
           "total_cont": 0
         },
         {
-          "name": "岸诚二",
+          "name": "未定档",
           "count": 10,
+          "total_cont": 0
+        },
+        {
+          "name": "战斗",
+          "count": 9,
           "total_cont": 0
         },
         {
@@ -472,11 +477,6 @@
         },
         {
           "name": "党争",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "战斗",
           "count": 9,
           "total_cont": 0
         },
@@ -491,17 +491,17 @@
           "total_cont": 0
         },
         {
-          "name": "第三季",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "橋本裕之",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
           "name": "2024年",
+          "count": 5,
+          "total_cont": 0
+        },
+        {
+          "name": "衣笠彰梧",
+          "count": 5,
+          "total_cont": 0
+        },
+        {
+          "name": "第三季",
           "count": 5,
           "total_cont": 0
         }
@@ -627,29 +627,29 @@
         }
       ],
       "rating": {
-        "rank": 7458,
-        "total": 3785,
+        "rank": 7473,
+        "total": 3794,
         "count": {
           "1": 20,
           "2": 29,
           "3": 71,
-          "4": 243,
-          "5": 733,
-          "6": 1646,
-          "7": 764,
+          "4": 246,
+          "5": 736,
+          "6": 1648,
+          "7": 765,
           "8": 192,
           "9": 34,
           "10": 53
         },
-        "score": 6
+        "score": 5.9
       },
       "total_episodes": 13,
       "collection": {
-        "on_hold": 309,
-        "dropped": 265,
-        "wish": 1126,
-        "collect": 5902,
-        "doing": 604
+        "on_hold": 310,
+        "dropped": 266,
+        "wish": 1127,
+        "collect": 5917,
+        "doing": 603
       },
       "id": 373266,
       "eps": 13,
@@ -681,22 +681,22 @@
       "tags": [
         {
           "name": "2024年1月",
-          "count": 463,
+          "count": 464,
           "total_cont": 0
         },
         {
           "name": "战斗",
-          "count": 435,
+          "count": 437,
           "total_cont": 0
         },
         {
           "name": "轻小说改",
-          "count": 339,
+          "count": 340,
           "total_cont": 0
         },
         {
           "name": "奇幻",
-          "count": 316,
+          "count": 317,
           "total_cont": 0
         },
         {
@@ -706,7 +706,7 @@
         },
         {
           "name": "TV",
-          "count": 254,
+          "count": 255,
           "total_cont": 0
         },
         {
@@ -721,17 +721,17 @@
         },
         {
           "name": "异世界",
-          "count": 158,
+          "count": 160,
           "total_cont": 0
         },
         {
           "name": "轻改",
-          "count": 135,
+          "count": 136,
           "total_cont": 0
         },
         {
           "name": "小说改",
-          "count": 70,
+          "count": 71,
           "total_cont": 0
         },
         {
@@ -766,7 +766,7 @@
         },
         {
           "name": "热血",
-          "count": 8,
+          "count": 9,
           "total_cont": 0
         },
         {
@@ -790,28 +790,18 @@
           "total_cont": 0
         },
         {
-          "name": "动漫",
+          "name": "斗蛐蛐",
           "count": 4,
           "total_cont": 0
         },
         {
-          "name": "斗蛐蛐",
+          "name": "动漫",
           "count": 4,
           "total_cont": 0
         },
         {
           "name": "大乱斗",
           "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "战争",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "2024冬",
-          "count": 3,
           "total_cont": 0
         },
         {
@@ -825,7 +815,17 @@
           "total_cont": 0
         },
         {
-          "name": "血腥",
+          "name": "长剧集",
+          "count": 3,
+          "total_cont": 0
+        },
+        {
+          "name": "2024冬",
+          "count": 3,
+          "total_cont": 0
+        },
+        {
+          "name": "战争",
           "count": 3,
           "total_cont": 0
         }
@@ -953,17 +953,17 @@
         }
       ],
       "rating": {
-        "rank": 7004,
-        "total": 1695,
+        "rank": 6991,
+        "total": 1700,
         "count": {
           "1": 12,
           "2": 14,
           "3": 30,
           "4": 77,
           "5": 274,
-          "6": 652,
-          "7": 526,
-          "8": 93,
+          "6": 655,
+          "7": 527,
+          "8": 94,
           "9": 9,
           "10": 8
         },
@@ -971,11 +971,11 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 196,
-        "dropped": 353,
+        "on_hold": 194,
+        "dropped": 354,
         "wish": 591,
-        "collect": 2245,
-        "doing": 442
+        "collect": 2252,
+        "doing": 444
       },
       "id": 420084,
       "eps": 12,
@@ -1008,12 +1008,12 @@
       "tags": [
         {
           "name": "百合",
-          "count": 3215,
+          "count": 3217,
           "total_cont": 0
         },
         {
           "name": "卖肉",
-          "count": 2797,
+          "count": 2799,
           "total_cont": 0
         },
         {
@@ -1033,12 +1033,12 @@
         },
         {
           "name": "漫画改",
-          "count": 1430,
+          "count": 1432,
           "total_cont": 0
         },
         {
           "name": "TV",
-          "count": 997,
+          "count": 998,
           "total_cont": 0
         },
         {
@@ -1063,7 +1063,7 @@
         },
         {
           "name": "肉番",
-          "count": 573,
+          "count": 572,
           "total_cont": 0
         },
         {
@@ -1142,12 +1142,12 @@
           "total_cont": 0
         },
         {
-          "name": "木村暢",
+          "name": "大规敦史",
           "count": 12,
           "total_cont": 0
         },
         {
-          "name": "大规敦史",
+          "name": "木村暢",
           "count": 12,
           "total_cont": 0
         },
@@ -1278,29 +1278,29 @@
         }
       ],
       "rating": {
-        "rank": 2417,
-        "total": 9959,
+        "rank": 2420,
+        "total": 9970,
         "count": {
           "1": 27,
           "2": 14,
           "3": 54,
           "4": 122,
           "5": 498,
-          "6": 1900,
-          "7": 4289,
-          "8": 2372,
-          "9": 398,
+          "6": 1903,
+          "7": 4295,
+          "8": 2373,
+          "9": 399,
           "10": 285
         },
         "score": 7
       },
       "total_episodes": 13,
       "collection": {
-        "on_hold": 908,
-        "dropped": 786,
-        "wish": 2074,
-        "collect": 13535,
-        "doing": 3161
+        "on_hold": 911,
+        "dropped": 788,
+        "wish": 2077,
+        "collect": 13555,
+        "doing": 3159
       },
       "id": 424663,
       "eps": 13,
@@ -1343,7 +1343,7 @@
         },
         {
           "name": "奇幻",
-          "count": 2510,
+          "count": 2511,
           "total_cont": 0
         },
         {
@@ -1353,22 +1353,22 @@
         },
         {
           "name": "2024年1月",
-          "count": 2396,
+          "count": 2397,
           "total_cont": 0
         },
         {
           "name": "冒险",
-          "count": 2150,
+          "count": 2151,
           "total_cont": 0
         },
         {
           "name": "搞笑",
-          "count": 1859,
+          "count": 1860,
           "total_cont": 0
         },
         {
           "name": "TV",
-          "count": 1351,
+          "count": 1352,
           "total_cont": 0
         },
         {
@@ -1403,7 +1403,7 @@
         },
         {
           "name": "日本",
-          "count": 154,
+          "count": 155,
           "total_cont": 0
         },
         {
@@ -1423,7 +1423,7 @@
         },
         {
           "name": "迷宫饭",
-          "count": 37,
+          "count": 38,
           "total_cont": 0
         },
         {
@@ -1457,12 +1457,12 @@
           "total_cont": 0
         },
         {
-          "name": "扳机社",
+          "name": "光田康典",
           "count": 14,
           "total_cont": 0
         },
         {
-          "name": "光田康典",
+          "name": "扳机社",
           "count": 14,
           "total_cont": 0
         },
@@ -1624,8 +1624,8 @@
         }
       ],
       "rating": {
-        "rank": 358,
-        "total": 13030,
+        "rank": 368,
+        "total": 13045,
         "count": {
           "1": 6,
           "2": 10,
@@ -1633,9 +1633,9 @@
           "4": 35,
           "5": 148,
           "6": 651,
-          "7": 3042,
-          "8": 6773,
-          "9": 1792,
+          "7": 3044,
+          "8": 6783,
+          "9": 1795,
           "10": 562
         },
         "score": 7.8
@@ -1643,10 +1643,10 @@
       "total_episodes": 24,
       "collection": {
         "on_hold": 1284,
-        "dropped": 566,
-        "wish": 3047,
-        "collect": 16866,
-        "doing": 4889
+        "dropped": 568,
+        "wish": 3054,
+        "collect": 16896,
+        "doing": 4888
       },
       "id": 395378,
       "eps": 24,
@@ -1706,7 +1706,7 @@
         },
         {
           "name": "TV",
-          "count": 501,
+          "count": 500,
           "total_cont": 0
         },
         {
@@ -1731,7 +1731,7 @@
         },
         {
           "name": "2024",
-          "count": 309,
+          "count": 308,
           "total_cont": 0
         },
         {
@@ -1800,7 +1800,17 @@
           "total_cont": 0
         },
         {
+          "name": "惨遭动画化",
+          "count": 6,
+          "total_cont": 0
+        },
+        {
           "name": "热血",
+          "count": 6,
+          "total_cont": 0
+        },
+        {
+          "name": "中西やすひろ",
           "count": 6,
           "total_cont": 0
         },
@@ -1811,16 +1821,6 @@
         },
         {
           "name": "日本动画",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "中西やすひろ",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "惨遭动画化",
           "count": 6,
           "total_cont": 0
         },
@@ -1956,13 +1956,13 @@
         }
       ],
       "rating": {
-        "rank": 7335,
-        "total": 3760,
+        "rank": 7346,
+        "total": 3762,
         "count": {
           "1": 9,
           "2": 18,
-          "3": 53,
-          "4": 213,
+          "3": 54,
+          "4": 214,
           "5": 724,
           "6": 1678,
           "7": 803,
@@ -1975,10 +1975,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 437,
-        "dropped": 674,
-        "wish": 1396,
-        "collect": 5149,
-        "doing": 1088
+        "dropped": 676,
+        "wish": 1398,
+        "collect": 5156,
+        "doing": 1090
       },
       "id": 357962,
       "eps": 12,
@@ -2012,7 +2012,7 @@
       "tags": [
         {
           "name": "异世界",
-          "count": 936,
+          "count": 937,
           "total_cont": 0
         },
         {
@@ -2287,17 +2287,17 @@
         }
       ],
       "rating": {
-        "rank": 8539,
-        "total": 3346,
+        "rank": 8530,
+        "total": 3350,
         "count": {
           "1": 36,
           "2": 64,
           "3": 149,
-          "4": 370,
+          "4": 371,
           "5": 907,
-          "6": 1231,
+          "6": 1233,
           "7": 441,
-          "8": 99,
+          "8": 100,
           "9": 21,
           "10": 28
         },
@@ -2305,11 +2305,11 @@
       },
       "total_episodes": 14,
       "collection": {
-        "on_hold": 151,
+        "on_hold": 150,
         "dropped": 498,
-        "wish": 425,
-        "collect": 4578,
-        "doing": 544
+        "wish": 426,
+        "collect": 4587,
+        "doing": 542
       },
       "id": 409441,
       "eps": 12,
@@ -2610,14 +2610,14 @@
         }
       ],
       "rating": {
-        "rank": 8897,
-        "total": 2446,
+        "rank": 8901,
+        "total": 2447,
         "count": {
           "1": 16,
           "2": 49,
           "3": 165,
           "4": 462,
-          "5": 822,
+          "5": 823,
           "6": 681,
           "7": 186,
           "8": 53,
@@ -2628,11 +2628,11 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 283,
-        "dropped": 864,
+        "on_hold": 282,
+        "dropped": 865,
         "wish": 510,
-        "collect": 2892,
-        "doing": 574
+        "collect": 2896,
+        "doing": 575
       },
       "id": 393038,
       "eps": 12,
@@ -3199,7 +3199,7 @@
         }
       ],
       "rating": {
-        "rank": 8730,
+        "rank": 8737,
         "total": 138,
         "count": {
           "1": 5,
@@ -3253,7 +3253,7 @@
       "tags": [
         {
           "name": "异世界",
-          "count": 622,
+          "count": 623,
           "total_cont": 0
         },
         {
@@ -3313,7 +3313,7 @@
         },
         {
           "name": "小说改",
-          "count": 51,
+          "count": 52,
           "total_cont": 0
         },
         {
@@ -3536,17 +3536,17 @@
         }
       ],
       "rating": {
-        "rank": 5764,
-        "total": 2116,
+        "rank": 5741,
+        "total": 2118,
         "count": {
           "1": 2,
           "2": 8,
           "3": 20,
           "4": 52,
           "5": 265,
-          "6": 761,
+          "6": 762,
           "7": 820,
-          "8": 152,
+          "8": 153,
           "9": 14,
           "10": 22
         },
@@ -3556,8 +3556,8 @@
       "collection": {
         "on_hold": 149,
         "dropped": 276,
-        "wish": 435,
-        "collect": 2933,
+        "wish": 436,
+        "collect": 2941,
         "doing": 496
       },
       "id": 346426,
@@ -3883,10 +3883,10 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 138,
+        "on_hold": 137,
         "dropped": 436,
         "wish": 224,
-        "collect": 945,
+        "collect": 947,
         "doing": 208
       },
       "id": 437206,
@@ -3946,7 +3946,7 @@
         },
         {
           "name": "异世界",
-          "count": 121,
+          "count": 122,
           "total_cont": 0
         },
         {
@@ -3961,7 +3961,7 @@
         },
         {
           "name": "奇幻",
-          "count": 86,
+          "count": 87,
           "total_cont": 0
         },
         {
@@ -3976,7 +3976,7 @@
         },
         {
           "name": "战斗",
-          "count": 43,
+          "count": 44,
           "total_cont": 0
         },
         {
@@ -4196,14 +4196,14 @@
         }
       ],
       "rating": {
-        "rank": 9028,
-        "total": 719,
+        "rank": 9034,
+        "total": 720,
         "count": {
           "1": 17,
           "2": 33,
           "3": 72,
           "4": 175,
-          "5": 229,
+          "5": 230,
           "6": 145,
           "7": 28,
           "8": 9,
@@ -4216,8 +4216,8 @@
       "collection": {
         "on_hold": 82,
         "dropped": 321,
-        "wish": 285,
-        "collect": 953,
+        "wish": 284,
+        "collect": 954,
         "doing": 203
       },
       "id": 415772,
@@ -4256,7 +4256,7 @@
         },
         {
           "name": "2024年1月",
-          "count": 283,
+          "count": 284,
           "total_cont": 0
         },
         {
@@ -4522,7 +4522,7 @@
         }
       ],
       "rating": {
-        "rank": 4613,
+        "rank": 4641,
         "total": 900,
         "count": {
           "1": 4,
@@ -4540,11 +4540,11 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 164,
+        "on_hold": 165,
         "dropped": 302,
-        "wish": 506,
-        "collect": 1039,
-        "doing": 277
+        "wish": 507,
+        "collect": 1041,
+        "doing": 278
       },
       "id": 444334,
       "eps": 12,
@@ -4842,8 +4842,8 @@
         }
       ],
       "rating": {
-        "rank": 7204,
-        "total": 1522,
+        "rank": 7191,
+        "total": 1523,
         "count": {
           "1": 5,
           "2": 15,
@@ -4851,7 +4851,7 @@
           "4": 77,
           "5": 279,
           "6": 679,
-          "7": 342,
+          "7": 343,
           "8": 71,
           "9": 18,
           "10": 17
@@ -4860,11 +4860,11 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 95,
+        "on_hold": 96,
         "dropped": 123,
         "wish": 295,
-        "collect": 2417,
-        "doing": 264
+        "collect": 2419,
+        "doing": 263
       },
       "id": 443493,
       "eps": 12,
@@ -4897,32 +4897,32 @@
       "tags": [
         {
           "name": "战斗",
-          "count": 1514,
+          "count": 1516,
           "total_cont": 0
         },
         {
           "name": "2024年1月",
-          "count": 1311,
+          "count": 1313,
           "total_cont": 0
         },
         {
           "name": "A-1Pictures",
-          "count": 1234,
+          "count": 1236,
           "total_cont": 0
         },
         {
           "name": "漫画改",
-          "count": 1103,
+          "count": 1105,
           "total_cont": 0
         },
         {
           "name": "爽文",
-          "count": 978,
+          "count": 980,
           "total_cont": 0
         },
         {
           "name": "龙傲天",
-          "count": 917,
+          "count": 918,
           "total_cont": 0
         },
         {
@@ -4932,12 +4932,12 @@
         },
         {
           "name": "奇幻",
-          "count": 771,
+          "count": 773,
           "total_cont": 0
         },
         {
           "name": "TV",
-          "count": 771,
+          "count": 772,
           "total_cont": 0
         },
         {
@@ -4952,12 +4952,12 @@
         },
         {
           "name": "韩国",
-          "count": 298,
+          "count": 299,
           "total_cont": 0
         },
         {
           "name": "日本",
-          "count": 186,
+          "count": 187,
           "total_cont": 0
         },
         {
@@ -5194,17 +5194,17 @@
         }
       ],
       "rating": {
-        "rank": 5347,
-        "total": 7107,
+        "rank": 5367,
+        "total": 7120,
         "count": {
           "1": 33,
           "2": 17,
           "3": 69,
           "4": 194,
-          "5": 708,
-          "6": 2453,
-          "7": 2763,
-          "8": 689,
+          "5": 709,
+          "6": 2457,
+          "7": 2770,
+          "8": 690,
           "9": 79,
           "10": 102
         },
@@ -5212,11 +5212,11 @@
       },
       "total_episodes": 13,
       "collection": {
-        "on_hold": 262,
-        "dropped": 522,
-        "wish": 1187,
-        "collect": 10705,
-        "doing": 1345
+        "on_hold": 263,
+        "dropped": 524,
+        "wish": 1191,
+        "collect": 10733,
+        "doing": 1347
       },
       "id": 390353,
       "eps": 12,
@@ -5484,7 +5484,7 @@
         }
       ],
       "rating": {
-        "rank": 1256,
+        "rank": 1257,
         "total": 239,
         "count": {
           "1": 2,
@@ -5803,7 +5803,7 @@
         }
       ],
       "rating": {
-        "rank": 7780,
+        "rank": 7781,
         "total": 459,
         "count": {
           "1": 1,
@@ -5821,10 +5821,10 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 79,
+        "on_hold": 80,
         "dropped": 89,
         "wish": 341,
-        "collect": 658,
+        "collect": 660,
         "doing": 210
       },
       "id": 411450,
@@ -5856,17 +5856,17 @@
       "tags": [
         {
           "name": "恋爱",
-          "count": 3349,
+          "count": 3351,
           "total_cont": 0
         },
         {
           "name": "校园",
-          "count": 2493,
+          "count": 2494,
           "total_cont": 0
         },
         {
           "name": "纯爱",
-          "count": 1913,
+          "count": 1915,
           "total_cont": 0
         },
         {
@@ -5881,12 +5881,12 @@
         },
         {
           "name": "牛尾宪辅",
-          "count": 1119,
+          "count": 1118,
           "total_cont": 0
         },
         {
           "name": "TV",
-          "count": 932,
+          "count": 933,
           "total_cont": 0
         },
         {
@@ -5901,12 +5901,12 @@
         },
         {
           "name": "2024",
-          "count": 585,
+          "count": 586,
           "total_cont": 0
         },
         {
           "name": "漫改",
-          "count": 535,
+          "count": 536,
           "total_cont": 0
         },
         {
@@ -5960,12 +5960,12 @@
           "total_cont": 0
         },
         {
-          "name": "神作",
+          "name": "羊宮妃那",
           "count": 20,
           "total_cont": 0
         },
         {
-          "name": "羊宮妃那",
+          "name": "神作",
           "count": 20,
           "total_cont": 0
         },
@@ -5990,12 +5990,12 @@
           "total_cont": 0
         },
         {
-          "name": "狗粮",
+          "name": "季番",
           "count": 11,
           "total_cont": 0
         },
         {
-          "name": "季番",
+          "name": "狗粮",
           "count": 11,
           "total_cont": 0
         },
@@ -6126,27 +6126,27 @@
       ],
       "rating": {
         "rank": 98,
-        "total": 10022,
+        "total": 10035,
         "count": {
           "1": 63,
           "2": 33,
           "3": 19,
           "4": 45,
-          "5": 122,
+          "5": 121,
           "6": 452,
-          "7": 1381,
-          "8": 3343,
-          "9": 2817,
-          "10": 1747
+          "7": 1380,
+          "8": 3349,
+          "9": 2823,
+          "10": 1750
         },
         "score": 8.3
       },
       "total_episodes": 15,
       "collection": {
-        "on_hold": 413,
+        "on_hold": 414,
         "dropped": 220,
-        "wish": 2839,
-        "collect": 13628,
+        "wish": 2846,
+        "collect": 13655,
         "doing": 1856
       },
       "id": 441795,
@@ -6419,7 +6419,7 @@
         }
       ],
       "rating": {
-        "rank": 9090,
+        "rank": 9095,
         "total": 786,
         "count": {
           "1": 9,
@@ -6439,8 +6439,8 @@
       "collection": {
         "on_hold": 88,
         "dropped": 325,
-        "wish": 165,
-        "collect": 1053,
+        "wish": 166,
+        "collect": 1055,
         "doing": 216
       },
       "id": 458047,
@@ -6748,7 +6748,7 @@
         }
       ],
       "rating": {
-        "rank": 9042,
+        "rank": 9041,
         "total": 417,
         "count": {
           "1": 13,
@@ -6769,7 +6769,7 @@
         "on_hold": 51,
         "dropped": 214,
         "wish": 135,
-        "collect": 541,
+        "collect": 542,
         "doing": 107
       },
       "id": 391117,
@@ -6861,7 +6861,7 @@
         },
         {
           "name": "后宫",
-          "count": 48,
+          "count": 47,
           "total_cont": 0
         },
         {
@@ -7078,15 +7078,15 @@
         }
       ],
       "rating": {
-        "rank": 8569,
-        "total": 1384,
+        "rank": 8573,
+        "total": 1387,
         "count": {
           "1": 15,
           "2": 27,
           "3": 49,
           "4": 136,
           "5": 479,
-          "6": 480,
+          "6": 483,
           "7": 147,
           "8": 32,
           "9": 11,
@@ -7099,7 +7099,7 @@
         "on_hold": 170,
         "dropped": 260,
         "wish": 399,
-        "collect": 2054,
+        "collect": 2060,
         "doing": 417
       },
       "id": 406628,
@@ -7415,7 +7415,7 @@
         }
       ],
       "rating": {
-        "rank": 6697,
+        "rank": 6761,
         "total": 1717,
         "count": {
           "1": 7,
@@ -7436,7 +7436,7 @@
         "on_hold": 126,
         "dropped": 243,
         "wish": 363,
-        "collect": 2371,
+        "collect": 2376,
         "doing": 396
       },
       "id": 450695,
@@ -7745,8 +7745,8 @@
       "collection": {
         "on_hold": 56,
         "dropped": 128,
-        "wish": 274,
-        "collect": 1131,
+        "wish": 275,
+        "collect": 1133,
         "doing": 143
       },
       "id": 469072,
@@ -7779,7 +7779,7 @@
       "tags": [
         {
           "name": "日常",
-          "count": 139,
+          "count": 140,
           "total_cont": 0
         },
         {
@@ -7789,12 +7789,12 @@
         },
         {
           "name": "漫画改",
-          "count": 111,
+          "count": 112,
           "total_cont": 0
         },
         {
           "name": "治愈",
-          "count": 76,
+          "count": 77,
           "total_cont": 0
         },
         {
@@ -7819,7 +7819,7 @@
         },
         {
           "name": "搞笑",
-          "count": 39,
+          "count": 40,
           "total_cont": 0
         },
         {
@@ -8026,8 +8026,8 @@
         }
       ],
       "rating": {
-        "rank": 7889,
-        "total": 378,
+        "rank": 7891,
+        "total": 379,
         "count": {
           "1": 2,
           "2": 4,
@@ -8035,7 +8035,7 @@
           "4": 35,
           "5": 111,
           "6": 134,
-          "7": 64,
+          "7": 65,
           "8": 13,
           "9": 2,
           "10": 3
@@ -8047,7 +8047,7 @@
         "on_hold": 76,
         "dropped": 173,
         "wish": 173,
-        "collect": 462,
+        "collect": 463,
         "doing": 134
       },
       "id": 421677,
@@ -8336,7 +8336,7 @@
         }
       ],
       "rating": {
-        "rank": 8875,
+        "rank": 8877,
         "total": 248,
         "count": {
           "1": 6,
@@ -8671,15 +8671,15 @@
         }
       ],
       "rating": {
-        "rank": 6748,
-        "total": 1803,
+        "rank": 6784,
+        "total": 1805,
         "count": {
           "1": 3,
           "2": 6,
           "3": 18,
           "4": 61,
           "5": 289,
-          "6": 822,
+          "6": 824,
           "7": 500,
           "8": 77,
           "9": 10,
@@ -8691,8 +8691,8 @@
       "collection": {
         "on_hold": 115,
         "dropped": 184,
-        "wish": 387,
-        "collect": 2672,
+        "wish": 389,
+        "collect": 2676,
         "doing": 352
       },
       "id": 378298,
@@ -8974,8 +8974,8 @@
         }
       ],
       "rating": {
-        "rank": 7845,
-        "total": 1259,
+        "rank": 7851,
+        "total": 1260,
         "count": {
           "1": 3,
           "2": 11,
@@ -8983,7 +8983,7 @@
           "4": 115,
           "5": 302,
           "6": 508,
-          "7": 207,
+          "7": 208,
           "8": 54,
           "9": 12,
           "10": 17
@@ -8995,7 +8995,7 @@
         "on_hold": 99,
         "dropped": 171,
         "wish": 443,
-        "collect": 1934,
+        "collect": 1936,
         "doing": 402
       },
       "id": 350235,
@@ -9039,7 +9039,7 @@
         },
         {
           "name": "日常",
-          "count": 710,
+          "count": 711,
           "total_cont": 0
         },
         {
@@ -9049,7 +9049,7 @@
         },
         {
           "name": "美食",
-          "count": 608,
+          "count": 609,
           "total_cont": 0
         },
         {
@@ -9059,7 +9059,7 @@
         },
         {
           "name": "TV",
-          "count": 431,
+          "count": 432,
           "total_cont": 0
         },
         {
@@ -9323,16 +9323,16 @@
         }
       ],
       "rating": {
-        "rank": 3774,
-        "total": 3269,
+        "rank": 3781,
+        "total": 3274,
         "count": {
           "1": 2,
           "2": 9,
           "3": 19,
           "4": 56,
           "5": 231,
-          "6": 843,
-          "7": 1491,
+          "6": 846,
+          "7": 1493,
           "8": 535,
           "9": 54,
           "10": 29
@@ -9341,11 +9341,11 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 591,
+        "on_hold": 590,
         "dropped": 668,
-        "wish": 1155,
-        "collect": 4088,
-        "doing": 999
+        "wish": 1157,
+        "collect": 4098,
+        "doing": 997
       },
       "id": 443112,
       "eps": 12,
@@ -9657,7 +9657,7 @@
         }
       ],
       "rating": {
-        "rank": 8264,
+        "rank": 8272,
         "total": 632,
         "count": {
           "1": 4,
@@ -9675,8 +9675,8 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 61,
-        "dropped": 87,
+        "on_hold": 62,
+        "dropped": 86,
         "wish": 172,
         "collect": 805,
         "doing": 133
@@ -9989,7 +9989,7 @@
         }
       ],
       "rating": {
-        "rank": 8528,
+        "rank": 8526,
         "total": 1289,
         "count": {
           "1": 9,
@@ -10007,10 +10007,10 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 206,
+        "on_hold": 205,
         "dropped": 487,
-        "wish": 504,
-        "collect": 1572,
+        "wish": 506,
+        "collect": 1574,
         "doing": 388
       },
       "id": 406119,
@@ -10319,15 +10319,15 @@
         }
       ],
       "rating": {
-        "rank": 8489,
+        "rank": 8501,
         "total": 1370,
         "count": {
           "1": 5,
           "2": 22,
           "3": 55,
           "4": 157,
-          "5": 408,
-          "6": 531,
+          "5": 409,
+          "6": 530,
           "7": 143,
           "8": 27,
           "9": 6,
@@ -10338,9 +10338,9 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 225,
-        "dropped": 532,
+        "dropped": 533,
         "wish": 522,
-        "collect": 1793,
+        "collect": 1798,
         "doing": 392
       },
       "id": 431839,
@@ -10648,7 +10648,7 @@
         }
       ],
       "rating": {
-        "rank": 8505,
+        "rank": 8498,
         "total": 1841,
         "count": {
           "1": 11,
@@ -10666,11 +10666,11 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 105,
+        "on_hold": 104,
         "dropped": 305,
-        "wish": 317,
-        "collect": 2535,
-        "doing": 369
+        "wish": 319,
+        "collect": 2540,
+        "doing": 367
       },
       "id": 425910,
       "eps": 12,
@@ -11266,12 +11266,12 @@
         }
       ],
       "rating": {
-        "rank": 8713,
+        "rank": 8716,
         "total": 564,
         "count": {
           "1": 7,
-          "2": 18,
-          "3": 23,
+          "2": 17,
+          "3": 24,
           "4": 92,
           "5": 184,
           "6": 179,
@@ -11287,7 +11287,7 @@
         "on_hold": 49,
         "dropped": 156,
         "wish": 120,
-        "collect": 818,
+        "collect": 819,
         "doing": 128
       },
       "id": 422153,
@@ -11592,7 +11592,7 @@
         }
       ],
       "rating": {
-        "rank": 4280,
+        "rank": 4306,
         "total": 953,
         "count": {
           "1": 1,
@@ -11611,10 +11611,10 @@
       "total_episodes": 13,
       "collection": {
         "on_hold": 150,
-        "dropped": 193,
-        "wish": 421,
-        "collect": 1159,
-        "doing": 329
+        "dropped": 194,
+        "wish": 422,
+        "collect": 1160,
+        "doing": 328
       },
       "id": 449725,
       "eps": 13,
@@ -11721,18 +11721,13 @@
           "total_cont": 0
         },
         {
-          "name": "日本",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
           "name": "2024冬",
           "count": 4,
           "total_cont": 0
         },
         {
-          "name": "日本动画",
-          "count": 3,
+          "name": "日本",
+          "count": 4,
           "total_cont": 0
         },
         {
@@ -11741,7 +11736,7 @@
           "total_cont": 0
         },
         {
-          "name": "动画",
+          "name": "日本动画",
           "count": 3,
           "total_cont": 0
         },
@@ -11751,8 +11746,8 @@
           "total_cont": 0
         },
         {
-          "name": "サテライト",
-          "count": 2,
+          "name": "动画",
+          "count": 3,
           "total_cont": 0
         },
         {
@@ -11761,8 +11756,13 @@
           "total_cont": 0
         },
         {
-          "name": "长剧集",
-          "count": 1,
+          "name": "サテライト",
+          "count": 2,
+          "total_cont": 0
+        },
+        {
+          "name": "20年代",
+          "count": 2,
           "total_cont": 0
         },
         {
@@ -11771,7 +11771,12 @@
           "total_cont": 0
         },
         {
-          "name": "轻耽",
+          "name": "穷且不愿安利",
+          "count": 1,
+          "total_cont": 0
+        },
+        {
+          "name": "长剧集",
           "count": 1,
           "total_cont": 0
         },
@@ -11787,11 +11792,6 @@
         },
         {
           "name": "6？",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "到了30岁还是处男，似乎会变成魔法师",
           "count": 1,
           "total_cont": 0
         }
@@ -11882,7 +11882,7 @@
         }
       ],
       "rating": {
-        "rank": 8418,
+        "rank": 8424,
         "total": 308,
         "count": {
           "1": 6,
@@ -11902,9 +11902,9 @@
       "collection": {
         "on_hold": 43,
         "dropped": 184,
-        "wish": 163,
+        "wish": 164,
         "collect": 424,
-        "doing": 89
+        "doing": 88
       },
       "id": 445708,
       "eps": 12,
@@ -12192,12 +12192,12 @@
         }
       ],
       "rating": {
-        "rank": 9198,
-        "total": 2348,
+        "rank": 9200,
+        "total": 2349,
         "count": {
           "1": 145,
           "2": 265,
-          "3": 515,
+          "3": 516,
           "4": 661,
           "5": 413,
           "6": 235,
@@ -12210,10 +12210,10 @@
       },
       "total_episodes": 13,
       "collection": {
-        "on_hold": 319,
-        "dropped": 1778,
+        "on_hold": 320,
+        "dropped": 1779,
         "wish": 577,
-        "collect": 2045,
+        "collect": 2047,
         "doing": 547
       },
       "id": 425595,
@@ -12498,12 +12498,12 @@
         }
       ],
       "rating": {
-        "rank": 9211,
-        "total": 290,
+        "rank": 9213,
+        "total": 291,
         "count": {
           "1": 52,
           "2": 76,
-          "3": 59,
+          "3": 60,
           "4": 39,
           "5": 28,
           "6": 23,
@@ -12517,7 +12517,7 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 31,
-        "dropped": 273,
+        "dropped": 274,
         "wish": 74,
         "collect": 282,
         "doing": 51
@@ -12578,7 +12578,7 @@
         },
         {
           "name": "搞笑",
-          "count": 417,
+          "count": 419,
           "total_cont": 0
         },
         {
@@ -12588,7 +12588,7 @@
         },
         {
           "name": "TV",
-          "count": 374,
+          "count": 375,
           "total_cont": 0
         },
         {
@@ -12603,7 +12603,7 @@
         },
         {
           "name": "科幻",
-          "count": 265,
+          "count": 266,
           "total_cont": 0
         },
         {
@@ -12672,6 +12672,11 @@
           "total_cont": 0
         },
         {
+          "name": "男同",
+          "count": 4,
+          "total_cont": 0
+        },
+        {
           "name": "TVA",
           "count": 4,
           "total_cont": 0
@@ -12694,11 +12699,6 @@
         {
           "name": "腐",
           "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "南通",
-          "count": 3,
           "total_cont": 0
         }
       ],
@@ -12827,15 +12827,15 @@
         }
       ],
       "rating": {
-        "rank": 5511,
-        "total": 2918,
+        "rank": 5537,
+        "total": 2920,
         "count": {
           "1": 13,
           "2": 18,
           "3": 25,
           "4": 98,
-          "5": 308,
-          "6": 998,
+          "5": 309,
+          "6": 999,
           "7": 1045,
           "8": 353,
           "9": 38,
@@ -12846,10 +12846,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 229,
-        "dropped": 375,
+        "dropped": 376,
         "wish": 638,
-        "collect": 3678,
-        "doing": 674
+        "collect": 3683,
+        "doing": 675
       },
       "id": 438187,
       "eps": 12,
@@ -12883,7 +12883,7 @@
       "tags": [
         {
           "name": "泡面番",
-          "count": 272,
+          "count": 273,
           "total_cont": 0
         },
         {
@@ -12893,7 +12893,7 @@
         },
         {
           "name": "异世界",
-          "count": 190,
+          "count": 192,
           "total_cont": 0
         },
         {
@@ -12933,7 +12933,7 @@
         },
         {
           "name": "肉番",
-          "count": 33,
+          "count": 34,
           "total_cont": 0
         },
         {
@@ -13163,12 +13163,12 @@
       ],
       "rating": {
         "rank": 9092,
-        "total": 701,
+        "total": 702,
         "count": {
           "1": 10,
           "2": 35,
           "3": 77,
-          "4": 220,
+          "4": 221,
           "5": 231,
           "6": 103,
           "7": 13,
@@ -13182,9 +13182,9 @@
       "collection": {
         "on_hold": 78,
         "dropped": 240,
-        "wish": 240,
-        "collect": 1009,
-        "doing": 180
+        "wish": 242,
+        "collect": 1013,
+        "doing": 179
       },
       "id": 467083,
       "eps": 12,
@@ -13523,7 +13523,7 @@
         }
       ],
       "rating": {
-        "rank": 7064,
+        "rank": 7081,
         "total": 909,
         "count": {
           "1": 1,
@@ -13543,8 +13543,8 @@
       "collection": {
         "on_hold": 135,
         "dropped": 299,
-        "wish": 447,
-        "collect": 1199,
+        "wish": 449,
+        "collect": 1201,
         "doing": 271
       },
       "id": 396595,
@@ -13578,17 +13578,17 @@
       "tags": [
         {
           "name": "恋爱",
-          "count": 343,
+          "count": 344,
           "total_cont": 0
         },
         {
           "name": "搞笑",
-          "count": 316,
+          "count": 317,
           "total_cont": 0
         },
         {
           "name": "TV",
-          "count": 311,
+          "count": 312,
           "total_cont": 0
         },
         {
@@ -13603,7 +13603,7 @@
         },
         {
           "name": "漫画改",
-          "count": 268,
+          "count": 269,
           "total_cont": 0
         },
         {
@@ -13623,7 +13623,7 @@
         },
         {
           "name": "校园",
-          "count": 141,
+          "count": 142,
           "total_cont": 0
         },
         {
@@ -13658,7 +13658,7 @@
         },
         {
           "name": "日本",
-          "count": 12,
+          "count": 13,
           "total_cont": 0
         },
         {
@@ -13829,8 +13829,8 @@
         }
       ],
       "rating": {
-        "rank": 851,
-        "total": 1236,
+        "rank": 860,
+        "total": 1237,
         "count": {
           "1": 4,
           "2": 3,
@@ -13838,7 +13838,7 @@
           "4": 10,
           "5": 29,
           "6": 106,
-          "7": 375,
+          "7": 376,
           "8": 562,
           "9": 108,
           "10": 38
@@ -13847,10 +13847,10 @@
       },
       "total_episodes": 23,
       "collection": {
-        "on_hold": 127,
+        "on_hold": 126,
         "dropped": 72,
-        "wish": 855,
-        "collect": 1569,
+        "wish": 856,
+        "collect": 1573,
         "doing": 411
       },
       "id": 413635,
@@ -14187,16 +14187,16 @@
         }
       ],
       "rating": {
-        "rank": 6731,
-        "total": 1427,
+        "rank": 6732,
+        "total": 1428,
         "count": {
           "1": 4,
           "2": 11,
           "3": 29,
-          "4": 74,
-          "5": 217,
+          "4": 75,
+          "5": 216,
           "6": 546,
-          "7": 415,
+          "7": 416,
           "8": 97,
           "9": 16,
           "10": 18
@@ -14208,7 +14208,7 @@
         "on_hold": 156,
         "dropped": 317,
         "wish": 373,
-        "collect": 1840,
+        "collect": 1843,
         "doing": 396
       },
       "id": 407697,
@@ -14542,7 +14542,7 @@
         }
       ],
       "rating": {
-        "rank": 5195,
+        "rank": 5199,
         "total": 71,
         "count": {
           "1": 2,
@@ -14609,12 +14609,12 @@
         },
         {
           "name": "战斗",
-          "count": 226,
+          "count": 227,
           "total_cont": 0
         },
         {
           "name": "TV",
-          "count": 223,
+          "count": 224,
           "total_cont": 0
         },
         {
@@ -14624,7 +14624,7 @@
         },
         {
           "name": "校园",
-          "count": 158,
+          "count": 159,
           "total_cont": 0
         },
         {
@@ -14634,12 +14634,12 @@
         },
         {
           "name": "不良",
-          "count": 144,
+          "count": 145,
           "total_cont": 0
         },
         {
           "name": "奇幻",
-          "count": 127,
+          "count": 128,
           "total_cont": 0
         },
         {
@@ -14830,14 +14830,14 @@
         }
       ],
       "rating": {
-        "rank": 8747,
-        "total": 1377,
+        "rank": 8750,
+        "total": 1379,
         "count": {
           "1": 13,
           "2": 21,
           "3": 67,
-          "4": 233,
-          "5": 440,
+          "4": 234,
+          "5": 441,
           "6": 422,
           "7": 140,
           "8": 29,
@@ -14849,9 +14849,9 @@
       "total_episodes": 13,
       "collection": {
         "on_hold": 117,
-        "dropped": 317,
+        "dropped": 318,
         "wish": 269,
-        "collect": 1734,
+        "collect": 1735,
         "doing": 242
       },
       "id": 436745,
@@ -15151,7 +15151,7 @@
         },
         {
           "name": "小说改",
-          "count": 130,
+          "count": 131,
           "total_cont": 0
         },
         {
@@ -15383,7 +15383,7 @@
         }
       ],
       "rating": {
-        "rank": 9078,
+        "rank": 9080,
         "total": 447,
         "count": {
           "1": 13,
@@ -15404,7 +15404,7 @@
         "on_hold": 62,
         "dropped": 138,
         "wish": 167,
-        "collect": 549,
+        "collect": 550,
         "doing": 107
       },
       "id": 425129,
@@ -15423,5 +15423,5 @@
       "type": 2
     }
   ],
-  "last_update_time": "2025-04-28T03:37:31.743163"
+  "last_update_time": "2025-04-29T03:38:01.344231"
 }
