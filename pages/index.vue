@@ -1,5 +1,8 @@
 <template>
-  <div class="container mx-auto p-4">
+  <div :class="[
+    'container mx-auto p-4',
+    viewMode === 'rank' ? 'max-w-screen-2xl' : ''
+  ]">
     <h1 class="text-3xl font-bold mb-6 text-center">Bangumi 动画季度排行榜</h1>
     <p class="text-sm text-gray-600 mb-6 text-center">
       不含TVSP，不含OVA/OAD，不含国产动画。感谢 <a href="https://bgm.tv/user/lilyurey/index" target="_blank" class="text-blue-500 hover:underline">lilyurey@bgm</a> 编纂的目录。
@@ -26,6 +29,12 @@
             :class="['px-4 py-2 flex-1', viewMode === 'table' ? 'bg-blue-500 text-white' : 'bg-gray-100']"
           >
             表格
+          </button>
+          <button 
+            @click="setViewMode('rank')" 
+            :class="['px-4 py-2 flex-1', viewMode === 'rank' ? 'bg-blue-500 text-white' : 'bg-gray-100']"
+          >
+            榜单
           </button>
           <button 
             @click="setViewMode('cards')" 
@@ -116,6 +125,23 @@
         </table>
       </div>
       
+      <!-- 榜单视图 -->
+      <div v-else-if="viewMode === 'rank'" class="max-w-full">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <button 
+            v-for="option in [{field: 'rank', label: 'Rank'}, {field: 'score', label: '评分'}, {field: 'ratingCount', label: '评分人数'}, {field: 'collectionCount', label: '收藏人数'}]" 
+            :key="option.field"
+            @click="sortBy(option.field)"
+            :class="['px-2 py-1 sm:px-3 sm:py-1 text-xs sm:text-sm rounded border', sortField === option.field ? 'bg-blue-500 text-white' : 'bg-gray-100']"
+          >
+            {{ option.label }} 
+            <span v-if="sortField === option.field">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
+          </button>
+        </div>
+        
+        <anime-list :anime-list="sortedAnimeList" @show-image="showLargeImage" />
+      </div>
+      
       <!-- 卡片视图 -->
       <div v-else>
         <div class="flex flex-wrap gap-2 mb-4">
@@ -156,11 +182,13 @@
 import { mapGetters } from 'vuex'
 import LoadingSpinner from '~/components/LoadingSpinner.vue'
 import AnimeCard from '~/components/AnimeCard.vue'
+import AnimeList from '~/components/AnimeList.vue'
 
 export default {
   components: {
     LoadingSpinner,
-    AnimeCard
+    AnimeCard,
+    AnimeList
   },
   data() {
     return {
@@ -168,7 +196,7 @@ export default {
       animeList: [],
       seasonTitle: '',
       loading: true,
-      viewMode: 'table', // 默认为表格视图，将在mounted中根据UA更改
+      viewMode: 'rank', // 默认为榜单视图
       sortField: 'rank', // 默认按rank排序
       sortOrder: 'asc', // 对于rank是升序（数字越小排名越高）
       largeImageShow: false,
@@ -226,7 +254,7 @@ export default {
           const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
             navigator.userAgent
           )
-          this.viewMode = isMobile ? 'cards' : 'table'
+          this.viewMode = isMobile ? 'rank' : 'table'
         }
       }
     },
