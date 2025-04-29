@@ -22,13 +22,13 @@
         <label class="block mb-2">显示模式：</label>
         <div class="flex border rounded overflow-hidden">
           <button 
-            @click="viewMode = 'table'" 
+            @click="setViewMode('table')" 
             :class="['px-4 py-2', viewMode === 'table' ? 'bg-blue-500 text-white' : 'bg-gray-100']"
           >
             表格
           </button>
           <button 
-            @click="viewMode = 'cards'" 
+            @click="setViewMode('cards')" 
             :class="['px-4 py-2', viewMode === 'cards' ? 'bg-blue-500 text-white' : 'bg-gray-100']"
           >
             卡片
@@ -155,7 +155,7 @@ export default {
       animeList: [],
       seasonTitle: '',
       loading: true,
-      viewMode: 'table', // table 或 cards
+      viewMode: 'table', // 默认为表格视图，将在mounted中根据UA更改
       sortField: 'rank', // 默认按rank排序
       sortOrder: 'asc', // 对于rank是升序（数字越小排名越高）
       largeImageShow: false,
@@ -194,9 +194,29 @@ export default {
     }
   },
   async mounted() {
+    // 根据UA设置默认视图
+    this.detectDeviceAndSetViewMode()
     await this.loadSeasonData()
   },
   methods: {
+    detectDeviceAndSetViewMode() {
+      // 确保代码只在客户端执行
+      if (process.client) {
+        // 先检查localStorage中是否有保存的视图模式偏好
+        const savedViewMode = localStorage.getItem('viewMode')
+        
+        if (savedViewMode) {
+          // 如果存在保存的偏好，使用保存的偏好
+          this.viewMode = savedViewMode
+        } else {
+          // 否则根据设备类型设置默认视图
+          const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+          )
+          this.viewMode = isMobile ? 'cards' : 'table'
+        }
+      }
+    },
     async loadSeasonData() {
       this.loading = true
       
@@ -289,6 +309,15 @@ export default {
         minute: '2-digit',
         second: '2-digit'
       })
+    },
+    // 修改视图模式方法，添加保存到localStorage的逻辑
+    setViewMode(mode) {
+      this.viewMode = mode
+      // 确保代码只在客户端执行
+      if (process.client) {
+        // 将视图模式保存到localStorage
+        localStorage.setItem('viewMode', mode)
+      }
     }
   }
 }
