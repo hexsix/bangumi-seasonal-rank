@@ -10,10 +10,10 @@
       </a>
     </p>
     
-    <div class="flex justify-between mb-6">
+    <div class="flex flex-col sm:flex-row sm:justify-between mb-4 sm:mb-6 gap-4 sm:gap-0">
       <div>
         <label class="block mb-2">选择季度：</label>
-        <select v-model="selectedSeason" class="p-2 border rounded w-64" @change="loadSeasonData">
+        <select v-model="selectedSeason" class="p-2 border rounded w-full sm:w-64" @change="loadSeasonData">
           <option v-for="season in seasons" :key="season" :value="season">{{ formatSeason(season) }}</option>
         </select>
       </div>
@@ -23,13 +23,13 @@
         <div class="flex border rounded overflow-hidden">
           <button 
             @click="setViewMode('table')" 
-            :class="['px-4 py-2', viewMode === 'table' ? 'bg-blue-500 text-white' : 'bg-gray-100']"
+            :class="['px-4 py-2 flex-1', viewMode === 'table' ? 'bg-blue-500 text-white' : 'bg-gray-100']"
           >
             表格
           </button>
           <button 
             @click="setViewMode('cards')" 
-            :class="['px-4 py-2', viewMode === 'cards' ? 'bg-blue-500 text-white' : 'bg-gray-100']"
+            :class="['px-4 py-2 flex-1', viewMode === 'cards' ? 'bg-blue-500 text-white' : 'bg-gray-100']"
           >
             卡片
           </button>
@@ -41,9 +41,9 @@
 
     <div v-else>
       <div class="flex justify-between items-center mb-4">
-        <h2 class="text-2xl font-bold">{{ seasonTitle }}</h2>
-        <div v-if="lastUpdateTime" class="text-sm text-gray-600 flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <h2 class="text-xl sm:text-2xl font-bold">{{ seasonTitle }}</h2>
+        <div v-if="lastUpdateTime" class="text-xs sm:text-sm text-gray-600 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 sm:h-4 sm:w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           数据更新时间: {{ formatDateTime(lastUpdateTime) }}
@@ -118,20 +118,20 @@
       
       <!-- 卡片视图 -->
       <div v-else>
-        <div class="flex flex-wrap gap-3 mb-4">
+        <div class="flex flex-wrap gap-2 mb-4">
           <button 
             v-for="option in [{field: 'rank', label: 'Rank'}, {field: 'score', label: '评分'}, {field: 'ratingCount', label: '评分人数'}, {field: 'collectionCount', label: '收藏人数'}]" 
             :key="option.field"
             @click="sortBy(option.field)"
-            :class="['px-3 py-1 rounded border', sortField === option.field ? 'bg-blue-500 text-white' : 'bg-gray-100']"
+            :class="['px-2 py-1 sm:px-3 sm:py-1 text-xs sm:text-sm rounded border', sortField === option.field ? 'bg-blue-500 text-white' : 'bg-gray-100']"
           >
             {{ option.label }} 
             <span v-if="sortField === option.field">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
           </button>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-6">
           <div v-for="(anime, index) in sortedAnimeList" :key="anime.id" class="relative">
-            <div class="absolute -top-3 -left-3 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-md">
+            <div class="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 w-6 h-6 sm:w-8 sm:h-8 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-md text-xs sm:text-base">
               {{ index + 1 }}
             </div>
             <anime-card :anime="anime" @show-image="showLargeImage" />
