@@ -117,12 +117,25 @@
       </div>
       
       <!-- 卡片视图 -->
-      <div v-else class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-        <div v-for="(anime, index) in sortedAnimeList" :key="anime.id" class="relative">
-          <div class="absolute -top-3 -left-3 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-md">
-            {{ index + 1 }}
+      <div v-else>
+        <div class="flex flex-wrap gap-3 mb-4">
+          <button 
+            v-for="option in [{field: 'rank', label: 'Rank'}, {field: 'score', label: '评分'}, {field: 'ratingCount', label: '评分人数'}, {field: 'collectionCount', label: '收藏人数'}]" 
+            :key="option.field"
+            @click="sortBy(option.field)"
+            :class="['px-3 py-1 rounded border', sortField === option.field ? 'bg-blue-500 text-white' : 'bg-gray-100']"
+          >
+            {{ option.label }} 
+            <span v-if="sortField === option.field">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
+          </button>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+          <div v-for="(anime, index) in sortedAnimeList" :key="anime.id" class="relative">
+            <div class="absolute -top-3 -left-3 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-md">
+              {{ index + 1 }}
+            </div>
+            <anime-card :anime="anime" @show-image="showLargeImage" />
           </div>
-          <anime-card :anime="anime" @show-image="showLargeImage" />
         </div>
       </div>
     </div>
