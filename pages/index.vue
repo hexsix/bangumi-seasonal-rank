@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto p-4 max-w-screen-2xl">
+  <div class="container mx-auto p-4 max-w-screen-lg">
     <h1 class="text-3xl font-bold mb-6 text-center">Bangumi 动画季度排行榜</h1>
     <p class="text-sm text-gray-600 mb-6 text-center">
       不含TVSP，不含OVA/OAD，不含国产动画。感谢 <a href="https://bgm.tv/user/lilyurey/index" target="_blank" class="text-blue-500 hover:underline">lilyurey@bgm</a> 编纂的目录。
@@ -10,31 +10,26 @@
       </a>
     </p>
     
-    <div class="flex flex-col sm:flex-row sm:justify-between mb-4 sm:mb-6 gap-4 sm:gap-0">
+    <div class="flex flex-col sm:flex-row sm:justify-between mb-4 sm:mb-6 gap-4 sm:gap-0 items-start">
+      <!-- 选择季度 -->
       <div>
         <label class="block mb-2">选择季度：</label>
         <select v-model="selectedSeason" class="p-2 border rounded w-full sm:w-64" @change="loadSeasonData">
           <option v-for="season in seasons" :key="season" :value="season">{{ formatSeason(season) }}</option>
         </select>
       </div>
-    </div>
 
-    <loading-spinner v-if="loading" message="加载数据中..." />
-
-    <div v-else>
-      <div class="flex justify-between items-center mb-4">
-        <h2 class="text-xl sm:text-2xl font-bold">{{ seasonTitle }}</h2>
-        <div v-if="lastUpdateTime" class="text-xs sm:text-sm text-gray-600 flex items-center">
+      <div class="flex flex-col gap-2 sm:items-end w-full sm:w-auto">
+        <!-- 更新时间 -->
+        <div v-if="lastUpdateTime" class="text-xs sm:text-sm text-gray-600 flex items-center self-end">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 sm:h-4 sm:w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           数据更新时间: {{ formatDateTime(lastUpdateTime) }}
         </div>
-      </div>
-      
-      <!-- 榜单视图 -->
-      <div class="max-w-full">
-        <div class="flex flex-wrap gap-2 mb-4">
+        
+        <!-- 排序选项 -->
+        <div class="flex flex-wrap gap-2 justify-end mt-2">
           <button 
             v-for="option in [{field: 'rank', label: 'Rank'}, {field: 'score', label: '评分'}, {field: 'ratingCount', label: '评分人数'}, {field: 'collectionCount', label: '收藏人数'}]" 
             :key="option.field"
@@ -45,7 +40,13 @@
             <span v-if="sortField === option.field">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
           </button>
         </div>
-        
+      </div>
+    </div>
+
+    <loading-spinner v-if="loading" message="加载数据中..." />
+
+    <div v-else>
+      <div class="max-w-full">
         <anime-list :anime-list="sortedAnimeList" @show-image="showLargeImage" />
       </div>
     </div>
