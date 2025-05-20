@@ -40,7 +40,7 @@
           <!-- 评分 - 移动端显示 -->
           <div class="flex flex-col mt-1">
             <div class="text-base font-bold">
-              {{ anime.rating.score.toFixed(1) }}
+              {{ calculateWeightedScore(anime).toFixed(4) }}
             </div>
             <div class="text-xs text-gray-600">
               <span>Rank: {{ anime.rating.rank }}</span>
@@ -105,7 +105,7 @@
         <div class="flex-shrink-0 items-end">
           <div class="flex flex-col items-end">
             <div class="text-lg font-bold">
-              {{ anime.rating.score.toFixed(1) }}
+              {{ calculateWeightedScore(anime).toFixed(4) }}
             </div>
             <div class="text-xs text-gray-600">
               <div>Rank: {{ anime.rating.rank }}</div>
@@ -186,6 +186,18 @@ export default {
     getTotalRatingCount(anime) {
       if (!anime.rating || !anime.rating.count) return 0
       return Object.values(anime.rating.count).reduce((sum, count) => sum + count, 0)
+    },
+    calculateWeightedScore(anime) {
+      if (!anime.rating || !anime.rating.count) return 0
+      let totalScore = 0
+      let totalCount = 0
+      
+      Object.entries(anime.rating.count).forEach(([score, count]) => {
+        totalScore += parseInt(score) * count
+        totalCount += count
+      })
+      
+      return totalCount > 0 ? totalScore / totalCount : 0
     },
     getTotalCollectionCount(anime) {
       if (!anime.collection) return 0
