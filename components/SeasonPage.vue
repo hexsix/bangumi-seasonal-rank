@@ -31,7 +31,7 @@
         <!-- 排序选项 -->
         <div class="flex flex-wrap gap-2 justify-end mt-2">
           <button 
-            v-for="option in sortOptions" 
+            v-for="option in [{field: 'rank', label: 'Rank'}, {field: 'score', label: '评分'}, {field: 'ratingCount', label: '评分人数'}, {field: 'collectionCount', label: '收藏人数'}]" 
             :key="option.field"
             @click="sortBy(option.field)"
             :class="['px-2 py-1 sm:px-3 sm:py-1 text-xs sm:text-sm rounded border', sortField === option.field ? 'bg-blue-500 text-white' : 'bg-gray-100']"
@@ -90,13 +90,7 @@ export default {
       largeImageShow: false,
       largeImageUrl: '',
       largeImageAlt: '',
-      lastUpdateTime: null,
-      sortOptions: [
-        { field: 'rank', label: 'Rank' },
-        { field: 'score', label: '评分' },
-        { field: 'ratingCount', label: '评分人数' },
-        { field: 'collectionCount', label: '收藏人数' }
-      ]
+      lastUpdateTime: null
     }
   },
   computed: {
@@ -150,15 +144,7 @@ export default {
         if (data && data.subjects) {
           this.animeList = data.subjects
           this.seasonTitle = data.title
-          
-          // 以统一方式处理日期，确保SSR和客户端一致
-          if (data.last_update_time) {
-            // 使用ISO标准格式
-            const date = new Date(data.last_update_time);
-            this.lastUpdateTime = date.toISOString();
-          } else {
-            this.lastUpdateTime = null;
-          }
+          this.lastUpdateTime = data.last_update_time
         } else {
           throw new Error('Invalid data format')
         }
@@ -166,7 +152,6 @@ export default {
         console.error(`Failed to load data for season ${this.selectedSeason}:`, error)
         this.animeList = []
         this.seasonTitle = '数据加载失败'
-        this.lastUpdateTime = null
       } finally {
         this.loading = false
       }
@@ -208,22 +193,15 @@ export default {
     formatDateTime(timestamp) {
       if (!timestamp) return '未知时间'
       const date = new Date(timestamp)
-      
-      // 使用更简单的格式，避免服务端和客户端格式化差异
-      const year = date.getFullYear()
-      const month = String(date.getMonth() + 1).padStart(2, '0')
-      const day = String(date.getDate()).padStart(2, '0')
-      const hours = String(date.getHours()).padStart(2, '0')
-      const minutes = String(date.getMinutes()).padStart(2, '0')
-      const seconds = String(date.getSeconds()).padStart(2, '0')
-      
-      return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
+      return date.toLocaleString('zh-CN', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      })
     }
-  },
-  created() {
-    // 明确设置初始排序，确保SSR和客户端一致
-    this.sortField = 'rank'
-    this.sortOrder = 'asc'
   }
 }
 </script> 
