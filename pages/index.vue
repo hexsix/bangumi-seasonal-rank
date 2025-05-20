@@ -27,6 +27,26 @@
           </svg>
           数据更新时间: {{ formatDateTime(lastUpdateTime) }}
         </div>
+
+        <!-- 显示选项 -->
+        <div class="flex items-center gap-2 mb-2 self-end">
+          <span class="text-xs sm:text-sm text-gray-600">仅显示有排名的作品</span>
+          <button 
+            @click="showOnlyRanked = !showOnlyRanked"
+            :class="[
+              'relative inline-flex h-6 w-11 items-center shrink-0 cursor-pointer rounded-full transition-all duration-300 ease-in-out focus:outline-none',
+              showOnlyRanked ? 'bg-blue-500' : 'bg-gray-200'
+            ]"
+          >
+            <span 
+              class="absolute pointer-events-none h-5 w-5 transform rounded-full bg-white shadow-md transition-all duration-200 ease-in-out"
+              :style="{
+                transform: showOnlyRanked ? 'translate3d(20px, -50%, 0)' : 'translate3d(2px, -50%, 0)',
+                top: '50%'
+              }"
+            ></span>
+          </button>
+        </div>
         
         <!-- 排序选项 -->
         <div class="flex flex-wrap gap-2 justify-end mt-2">
@@ -84,7 +104,8 @@ export default {
       largeImageShow: false,
       largeImageUrl: '',
       largeImageAlt: '',
-      lastUpdateTime: null
+      lastUpdateTime: null,
+      showOnlyRanked: true // 默认只显示有排名的作品
     }
   },
   computed: {
@@ -96,7 +117,14 @@ export default {
       return this.getSeasons
     },
     sortedAnimeList() {
-      return [...this.animeList].sort((a, b) => {
+      let filteredList = [...this.animeList];
+      
+      // 如果开启只显示有排名的作品，过滤掉rank为0的作品
+      if (this.showOnlyRanked) {
+        filteredList = filteredList.filter(anime => anime.rating.rank !== 0);
+      }
+      
+      return filteredList.sort((a, b) => {
         let comparison = 0;
         
         if (this.sortField === 'score') {
