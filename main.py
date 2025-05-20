@@ -460,6 +460,52 @@ def update_frontend_seasons_list():
     logger.info("跳过更新前端文件中的季度列表")
     pass
 
+def filter_subject_detail(subject_detail: Dict) -> Dict:
+    """过滤条目详情，删除不需要的字段以减小JSON文件体积
+    
+    需要删除的字段:
+    - date
+    - platform
+    - images.small, images.large, images.medium
+    - summary
+    - tags
+    - infobox(但保留"key": "放送星期")
+    - eps
+    - volumes
+    - series
+    - locked
+    - type
+    """
+    filtered_detail = subject_detail.copy()
+    
+    # 删除顶层字段
+    fields_to_remove = [
+        "date", "platform", "summary", "tags", 
+        "eps", "volumes", "series", "locked", "type"
+    ]
+    for field in fields_to_remove:
+        if field in filtered_detail:
+            del filtered_detail[field]
+    
+    # 处理images字段
+    if "images" in filtered_detail:
+        images = filtered_detail["images"].copy()
+        image_fields_to_remove = ["small", "large", "medium"]
+        for field in image_fields_to_remove:
+            if field in images:
+                del images[field]
+        filtered_detail["images"] = images
+    
+    # 处理infobox字段，仅保留"放送星期"
+    if "infobox" in filtered_detail:
+        infobox = []
+        for item in filtered_detail["infobox"]:
+            if item.get("key") == "放送星期":
+                infobox.append(item)
+        filtered_detail["infobox"] = infobox
+    
+    return filtered_detail
+
 def process_season(index: Dict, force: bool = False) -> Dict:
     """处理单个季度数据并返回结果"""
     result = {
@@ -508,6 +554,9 @@ def process_season(index: Dict, force: bool = False) -> Dict:
         subject_id = subject['id']
         subject_detail = get_subject_detail(str(subject_id))
         if subject_detail:
+            # 过滤条目详情，删除不需要的字段
+            subject_detail = filter_subject_detail(subject_detail)
+            
             # 获取剧集评论数信息
             episodes_summary = get_episodes_summary(str(subject_id))
             # 将剧集评论数信息添加到条目详情中
