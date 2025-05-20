@@ -31,7 +31,7 @@
         <!-- 排序选项 -->
         <div class="flex flex-wrap gap-2 justify-end mt-2">
           <button 
-            v-for="option in [{field: 'rank', label: 'Rank'}, {field: 'score', label: '评分'}, {field: 'collectionCount', label: '收藏人数'}, {field: 'commentPerEpisode', label: '话均评论'}]" 
+            v-for="option in [{field: 'rank', label: 'Rank'}, {field: 'score', label: '评分'}, {field: 'collectionCount', label: '收藏人数'}, {field: 'commentPerEpisode', label: '话均评论'}, {field: 'dropRate', label: '抛弃率'}]" 
             :key="option.field"
             @click="sortBy(option.field)"
             :class="['px-2 py-1 sm:px-3 sm:py-1 text-xs sm:text-sm rounded border', sortField === option.field ? 'bg-blue-500 text-white' : 'bg-gray-100']"
@@ -112,6 +112,10 @@ export default {
           const commentPerEpisodeA = this.getCommentPerEpisode(a);
           const commentPerEpisodeB = this.getCommentPerEpisode(b);
           comparison = commentPerEpisodeA - commentPerEpisodeB;
+        } else if (this.sortField === 'dropRate') {
+          const dropRateA = this.calculateDropRate(a);
+          const dropRateB = this.calculateDropRate(b);
+          comparison = dropRateA - dropRateB;
         }
         
         return this.sortOrder === 'asc' ? comparison : -comparison;
@@ -218,6 +222,12 @@ export default {
     getCommentPerEpisode(anime) {
       if (!anime.episodes_summary || !anime.episodes_summary.aired_episodes || anime.episodes_summary.aired_episodes === 0) return 0;
       return anime.episodes_summary.total_comments / anime.episodes_summary.aired_episodes;
+    },
+    calculateDropRate(anime) {
+      if (!anime.collection) return 0;
+      const totalCollection = this.getTotalCollectionCount(anime);
+      if (totalCollection === 0) return 0;
+      return ((anime.collection.dropped || 0) / totalCollection * 100);
     }
   }
 }
