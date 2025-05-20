@@ -55,32 +55,5 @@ export default {
   // 静态文件配置
   static: {
     prefix: false
-  },
-
-  // 路由配置
-  router: {
-    extendRoutes(routes, resolve) {
-      routes.push({
-        name: 'season',
-        path: '/season/:id',
-        component: resolve(__dirname, 'pages/season/[id].vue')
-      })
-    }
-  },
-
-  // 生成配置
-  generate: {
-    fallback: true, // 添加 fallback 页面
-    routes: async () => {
-      // 生成从 2020 年到 2030 年的所有季度路由
-      const routes = []
-      for (let year = 2020; year <= 2030; year++) {
-        for (let month = 1; month <= 12; month += 3) {
-          const season = `${year}${month.toString().padStart(2, '0')}`
-          routes.push(`/season/${season}`)
-        }
-      }
-      return routes
-    }
   }
-}
+} 
