@@ -38,11 +38,11 @@
           </p>
           
           <!-- 评分 - 移动端显示 -->
-          <div class="flex items-center mt-1">
+          <div class="flex flex-col mt-1">
             <div class="text-base font-bold">
               {{ anime.rating.score.toFixed(1) }}
             </div>
-            <div class="ml-2 text-xs text-gray-600">
+            <div class="text-xs text-gray-600">
               <span>Rank: {{ anime.rating.rank }}</span>
             </div>
           </div>
@@ -103,11 +103,11 @@
         
         <!-- 右侧信息：评分 - 删除了中间的收藏信息区域 -->
         <div class="flex-shrink-0 items-end">
-          <div class="flex items-center">
+          <div class="flex flex-col items-end">
             <div class="text-lg font-bold">
               {{ anime.rating.score.toFixed(1) }}
             </div>
-            <div class="ml-2 text-xs text-gray-600">
+            <div class="text-xs text-gray-600">
               <div>Rank: {{ anime.rating.rank }}</div>
             </div>
           </div>
