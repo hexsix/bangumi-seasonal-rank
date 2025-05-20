@@ -44,7 +44,6 @@
           <!-- 收藏信息 -->
           <div class="text-xs text-gray-600 mb-2">
             <div class="flex justify-between">
-              <span>{{ getTotalRatingCount }}人评分</span>
               <span>收藏: {{ getTotalCollectionCount }}人</span>
             </div>
           </div>

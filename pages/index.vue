@@ -31,7 +31,7 @@
         <!-- 排序选项 -->
         <div class="flex flex-wrap gap-2 justify-end mt-2">
           <button 
-            v-for="option in [{field: 'rank', label: 'Rank'}, {field: 'score', label: '评分'}, {field: 'ratingCount', label: '评分人数'}, {field: 'collectionCount', label: '收藏人数'}]" 
+            v-for="option in [{field: 'rank', label: 'Rank'}, {field: 'score', label: '评分'}, {field: 'collectionCount', label: '收藏人数'}]" 
             :key="option.field"
             @click="sortBy(option.field)"
             :class="['px-2 py-1 sm:px-3 sm:py-1 text-xs sm:text-sm rounded border', sortField === option.field ? 'bg-blue-500 text-white' : 'bg-gray-100']"
@@ -106,8 +106,6 @@ export default {
           const rankA = a.rating.rank === 0 ? Infinity : a.rating.rank;
           const rankB = b.rating.rank === 0 ? Infinity : b.rating.rank;
           comparison = rankA - rankB;
-        } else if (this.sortField === 'ratingCount') {
-          comparison = this.getTotalRatingCount(a) - this.getTotalRatingCount(b);
         } else if (this.sortField === 'collectionCount') {
           comparison = this.getTotalCollectionCount(a) - this.getTotalCollectionCount(b);
         }
