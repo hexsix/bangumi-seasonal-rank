@@ -178,11 +178,19 @@ export default {
   },
   methods: {
     handleImageError(e) {
-      e.target.classList.add('bg-gray-300')
-      const textNode = document.createElement('div')
-      textNode.className = 'absolute inset-0 flex items-center justify-center text-gray-500 text-sm'
-      textNode.textContent = '图片加载失败'
-      e.target.parentNode.appendChild(textNode)
+      if (!e.target || !e.target.parentNode) return;
+      
+      e.target.classList.add('bg-gray-300');
+      e.target.style.display = 'none';
+      
+      const container = e.target.parentNode;
+      // 检查是否已经有错误消息
+      if (container.querySelector('.image-error-message')) return;
+      
+      const errorDiv = document.createElement('div');
+      errorDiv.className = 'w-full h-full flex items-center justify-center text-gray-500 text-sm image-error-message';
+      errorDiv.textContent = '图片加载失败';
+      container.appendChild(errorDiv);
     },
     getTopTags(anime) {
       if (!anime.meta_tags || !Array.isArray(anime.meta_tags)) return []

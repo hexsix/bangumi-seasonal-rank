@@ -84,33 +84,72 @@ export const actions = {
     }
     
     try {
-      // 在静态生成的环境中，我们需要使用动态导入而不是axios请求
-      let data
+      let data = null;
+      let error = null;
+      
+      // 在SSR期间，为防止hydration不匹配，确保使用相同的日期格式化处理
+      const handleDataFormatting = (rawData) => {
+        if (!rawData || !rawData.last_update_time) return rawData;
+        
+        // 克隆数据防止修改原始引用
+        const processedData = JSON.parse(JSON.stringify(rawData));
+        
+        // 确保使用一致的日期格式
+        if (processedData.last_update_time) {
+          const date = new Date(processedData.last_update_time);
+          // 存储ISO格式的日期字符串
+          processedData.last_update_time = date.toISOString();
+        }
+        
+        return processedData;
+      };
       
       // 静态部署环境下使用动态导入
       if (process.static) {
         try {
           // 动态导入JSON文件
           const module = await import(`@/static/${season}.json`);
-          data = module.default
+          data = handleDataFormatting(module.default);
         } catch (importError) {
-          console.error(`Failed to import data for season ${season}:`, importError)
-          // 导入失败回退到axios请求
-          const response = await this.$axios.get(`/${season}.json`)
-          data = response.data
+          console.error(`Failed to import data for season ${season}:`, importError);
+          error = importError;
         }
-      } else {
-        // 开发环境下使用axios请求
-        const response = await this.$axios.get(`/${season}.json`)
-        data = response.data
+      }
+      
+      // 如果动态导入失败或者不是静态环境，尝试使用axios
+      if (!data) {
+        try {
+          const response = await this.$axios.get(`/${season}.json`);
+          data = handleDataFormatting(response.data);
+        } catch (axiosError) {
+          console.error(`Failed to fetch data for season ${season}:`, axiosError);
+          if (error) {
+            console.error('Previous error:', error);
+          }
+          throw axiosError;
+        }
+      }
+      
+      // 确保数据格式正确
+      if (!data || !data.subjects || !Array.isArray(data.subjects)) {
+        const formatError = new Error(`Invalid data format for season ${season}`);
+        console.error(formatError);
+        throw formatError;
       }
       
       // 保存到状态中
-      commit('SET_ANIME_DATA', { season, data })
-      return data
+      commit('SET_ANIME_DATA', { season, data });
+      return data;
     } catch (error) {
-      console.error(`Failed to load data for season ${season}:`, error)
-      throw error
+      console.error(`Failed to load data for season ${season}:`, error);
+      // 返回一个基本的空数据结构而不是抛出错误
+      const emptyData = {
+        subjects: [],
+        title: `${season} (数据加载失败)`,
+        last_update_time: new Date().toISOString()
+      };
+      commit('SET_ANIME_DATA', { season, data: emptyData });
+      return emptyData;
     }
   }
 }
