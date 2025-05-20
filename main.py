@@ -279,6 +279,100 @@ def get_subject_detail(subject_id: str) -> Dict:
     
     return {}
 
+def get_episodes(subject_id: str, episode_type: int = 0, limit: int = 100, offset: int = 0) -> Dict:
+    """获取条目的剧集列表
+    
+    参数:
+    - subject_id: 条目ID
+    - episode_type: 剧集类型，默认为0
+    - limit: 每页数量，默认100
+    - offset: 偏移量，默认0
+    
+    返回:
+    - 包含剧集列表的字典
+    """
+    url = f"{BASE_URL}/v0/episodes"
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "application/json",
+        "Authorization": f"Bearer {TOKEN}"
+    }
+    
+    params = {
+        "subject_id": subject_id,
+        "type": episode_type,
+        "limit": limit,
+        "offset": offset
+    }
+    
+    logger.debug(f"正在获取条目 {subject_id} 的剧集列表")
+    session = create_session()
+    max_retries = 3
+    retry_count = 0
+    
+    while retry_count < max_retries:
+        try:
+            response = session.get(url, headers=headers, params=params, timeout=(10, 30))
+            response.raise_for_status()
+            return response.json()
+        except (requests.RequestException, json.JSONDecodeError) as e:
+            retry_count += 1
+            logger.warning(f"获取条目 {subject_id} 剧集列表失败(第{retry_count}次): {str(e)}")
+            if retry_count < max_retries:
+                wait_time = 2 ** retry_count
+                logger.info(f"等待 {wait_time} 秒后重试...")
+                time.sleep(wait_time)
+            else:
+                logger.error(f"获取条目 {subject_id} 剧集列表失败，已达最大重试次数: {str(e)}")
+    
+    return {"data": [], "total": 0, "limit": limit, "offset": offset}
+
+def get_episodes_summary(subject_id: str) -> Dict:
+    """获取条目的剧集概要信息（已播出集数和评论数）
+    
+    参数:
+    - subject_id: 条目ID
+    
+    返回:
+    - 包含已播出集数和评论数的字典
+    """
+    episodes_data = get_episodes(subject_id)
+    if not episodes_data or "data" not in episodes_data:
+        return {
+            "aired_episodes": 0,
+            "total_comments": 0,
+            "episodes": []
+        }
+    
+    current_date = datetime.now().date()
+    aired_episodes = []
+    total_comments = 0
+    
+    for episode in episodes_data["data"]:
+        # 检查是否有播出日期
+        if episode.get("airdate"):
+            try:
+                airdate = datetime.strptime(episode["airdate"], "%Y-%m-%d").date()
+                # 只统计已播出的集数
+                if airdate <= current_date:
+                    episode_info = {
+                        "ep": episode.get("ep", 0),
+                        "comments": episode.get("comment", 0),
+                    }
+                    aired_episodes.append(episode_info)
+                    total_comments += episode.get("comment", 0)
+            except ValueError:
+                logger.warning(f"无效的播出日期格式: {episode.get('airdate')}")
+    
+    # 按集数排序
+    aired_episodes.sort(key=lambda x: x["ep"])
+    
+    return {
+        "aired_episodes": len(aired_episodes),
+        "total_comments": total_comments,
+        "episodes": aired_episodes
+    }
+
 def get_json_path(year: str, month: str) -> str:
     """获取JSON文件路径"""
     # 确保static目录存在
@@ -414,6 +508,10 @@ def process_season(index: Dict, force: bool = False) -> Dict:
         subject_id = subject['id']
         subject_detail = get_subject_detail(str(subject_id))
         if subject_detail:
+            # 获取剧集评论数信息
+            episodes_summary = get_episodes_summary(str(subject_id))
+            # 将剧集评论数信息添加到条目详情中
+            subject_detail['episodes_summary'] = episodes_summary
             subjects.append(subject_detail)
         # 添加短暂延迟，避免请求过于频繁
         time.sleep(0.5)
@@ -623,6 +721,42 @@ def shutdown_scheduler():
     if scheduler.running:
         scheduler.shutdown()
         logger.info("调度器已关闭")
+
+@app.get("/episodes")
+async def get_episodes_endpoint(
+    subject_id: int,
+    episode_type: int = 0,
+    limit: int = 100,
+    offset: int = 0
+):
+    """获取条目的剧集列表
+    
+    参数:
+    - subject_id: 条目ID
+    - episode_type: 剧集类型，默认为0
+    - limit: 每页数量，默认100
+    - offset: 偏移量，默认0
+    """
+    try:
+        result = get_episodes(str(subject_id), episode_type, limit, offset)
+        return result
+    except Exception as e:
+        logger.error(f"获取剧集列表失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"获取剧集列表失败: {str(e)}")
+
+@app.get("/episodes/summary")
+async def get_episodes_summary_endpoint(subject_id: int):
+    """获取条目的剧集概要信息（已播出集数和评论数）
+    
+    参数:
+    - subject_id: 条目ID
+    """
+    try:
+        result = get_episodes_summary(str(subject_id))
+        return result
+    except Exception as e:
+        logger.error(f"获取剧集概要信息失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"获取剧集概要信息失败: {str(e)}")
 
 if __name__ == "__main__":
     # 检查是否有命令行参数
