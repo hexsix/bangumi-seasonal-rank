@@ -15,17 +15,17 @@
         }
       ],
       "rating": {
-        "rank": 7503,
-        "total": 344,
+        "rank": 7496,
+        "total": 348,
         "count": {
           "1": 21,
           "2": 16,
           "3": 17,
-          "4": 20,
-          "5": 42,
+          "4": 21,
+          "5": 41,
           "6": 64,
-          "7": 113,
-          "8": 39,
+          "7": 116,
+          "8": 40,
           "9": 4,
           "10": 8
         },
@@ -33,11 +33,11 @@
       },
       "total_episodes": 24,
       "collection": {
-        "on_hold": 40,
+        "on_hold": 43,
         "dropped": 111,
-        "wish": 237,
+        "wish": 234,
         "collect": 52,
-        "doing": 871
+        "doing": 875
       },
       "id": 404753,
       "meta_tags": [
@@ -48,7 +48,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 9,
-        "total_comments": 426,
+        "total_comments": 427,
         "episodes": [
           {
             "ep": 1,
@@ -84,7 +84,7 @@
           },
           {
             "ep": 9,
-            "comments": 50
+            "comments": 51
           }
         ]
       }
@@ -103,16 +103,16 @@
         }
       ],
       "rating": {
-        "rank": 7482,
-        "total": 1177,
+        "rank": 7485,
+        "total": 1179,
         "count": {
           "1": 3,
           "2": 5,
           "3": 11,
-          "4": 68,
-          "5": 256,
-          "6": 550,
-          "7": 223,
+          "4": 69,
+          "5": 254,
+          "6": 554,
+          "7": 222,
           "8": 46,
           "9": 6,
           "10": 9
@@ -122,10 +122,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 205,
-        "dropped": 523,
+        "dropped": 532,
         "wish": 1094,
         "collect": 162,
-        "doing": 3813
+        "doing": 3817
       },
       "id": 501702,
       "meta_tags": [
@@ -138,7 +138,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 9,
-        "total_comments": 819,
+        "total_comments": 824,
         "episodes": [
           {
             "ep": 1,
@@ -170,11 +170,11 @@
           },
           {
             "ep": 8,
-            "comments": 72
+            "comments": 73
           },
           {
             "ep": 9,
-            "comments": 66
+            "comments": 70
           }
         ]
       }
@@ -193,29 +193,29 @@
         }
       ],
       "rating": {
-        "rank": 4295,
-        "total": 733,
+        "rank": 4304,
+        "total": 734,
         "count": {
           "1": 2,
           "2": 2,
           "3": 3,
           "4": 6,
-          "5": 50,
-          "6": 234,
-          "7": 349,
+          "5": 49,
+          "6": 235,
+          "7": 351,
           "8": 74,
           "9": 7,
-          "10": 6
+          "10": 5
         },
         "score": 6.6
       },
       "total_episodes": 12,
       "collection": {
         "on_hold": 51,
-        "dropped": 84,
-        "wish": 376,
-        "collect": 90,
-        "doing": 2240
+        "dropped": 85,
+        "wish": 375,
+        "collect": 93,
+        "doing": 2248
       },
       "id": 524123,
       "meta_tags": [
@@ -231,7 +231,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 9,
-        "total_comments": 437,
+        "total_comments": 439,
         "episodes": [
           {
             "ep": 1,
@@ -259,7 +259,7 @@
           },
           {
             "ep": 7,
-            "comments": 37
+            "comments": 38
           },
           {
             "ep": 8,
@@ -267,7 +267,7 @@
           },
           {
             "ep": 9,
-            "comments": 21
+            "comments": 22
           }
         ]
       }
@@ -366,14 +366,14 @@
         }
       ],
       "rating": {
-        "rank": 9177,
-        "total": 708,
+        "rank": 9175,
+        "total": 710,
         "count": {
           "1": 32,
           "2": 47,
           "3": 101,
-          "4": 182,
-          "5": 186,
+          "4": 183,
+          "5": 187,
           "6": 100,
           "7": 31,
           "8": 18,
@@ -385,10 +385,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 141,
-        "dropped": 643,
-        "wish": 961,
+        "dropped": 645,
+        "wish": 964,
         "collect": 143,
-        "doing": 2352
+        "doing": 2359
       },
       "id": 506407,
       "meta_tags": [
@@ -400,7 +400,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 9,
-        "total_comments": 407,
+        "total_comments": 413,
         "episodes": [
           {
             "ep": 1,
@@ -432,11 +432,11 @@
           },
           {
             "ep": 8,
-            "comments": 25
+            "comments": 26
           },
           {
             "ep": 9,
-            "comments": 10
+            "comments": 15
           }
         ]
       }
@@ -473,11 +473,11 @@
       },
       "total_episodes": 13,
       "collection": {
-        "on_hold": 181,
-        "dropped": 692,
-        "wish": 575,
+        "on_hold": 183,
+        "dropped": 695,
+        "wish": 576,
         "collect": 84,
-        "doing": 1540
+        "doing": 1536
       },
       "id": 445826,
       "meta_tags": [
@@ -490,7 +490,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 9,
-        "total_comments": 540,
+        "total_comments": 546,
         "episodes": [
           {
             "ep": 1,
@@ -526,7 +526,7 @@
           },
           {
             "ep": 9,
-            "comments": 36
+            "comments": 42
           }
         ]
       }
@@ -537,7 +537,7 @@
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/0d/8f/520559_sbEB4.jpg"
       },
       "name": "最強の王様、二度目の人生は何をする？",
-      "name_cn": "最强的国王，第二次的人生要做什么？",
+      "name_cn": "终末起点",
       "infobox": [
         {
           "key": "放送星期",
@@ -545,14 +545,14 @@
         }
       ],
       "rating": {
-        "rank": 9198,
+        "rank": 9200,
         "total": 288,
         "count": {
           "1": 35,
           "2": 22,
-          "3": 37,
+          "3": 36,
           "4": 77,
-          "5": 63,
+          "5": 64,
           "6": 37,
           "7": 10,
           "8": 3,
@@ -564,10 +564,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 31,
-        "dropped": 182,
-        "wish": 167,
-        "collect": 51,
-        "doing": 839
+        "dropped": 183,
+        "wish": 168,
+        "collect": 52,
+        "doing": 844
       },
       "id": 520559,
       "meta_tags": [
@@ -578,7 +578,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 9,
-        "total_comments": 161,
+        "total_comments": 162,
         "episodes": [
           {
             "ep": 1,
@@ -614,7 +614,7 @@
           },
           {
             "ep": 9,
-            "comments": 3
+            "comments": 4
           }
         ]
       }
@@ -633,7 +633,7 @@
         }
       ],
       "rating": {
-        "rank": 8907,
+        "rank": 8922,
         "total": 74,
         "count": {
           "1": 5,
@@ -652,10 +652,10 @@
       "total_episodes": 5,
       "collection": {
         "on_hold": 11,
-        "dropped": 62,
+        "dropped": 64,
         "wish": 105,
         "collect": 67,
-        "doing": 90
+        "doing": 89
       },
       "id": 442128,
       "meta_tags": [
@@ -726,9 +726,9 @@
       "collection": {
         "on_hold": 6,
         "dropped": 7,
-        "wish": 21,
+        "wish": 22,
         "collect": 14,
-        "doing": 35
+        "doing": 34
       },
       "id": 545695,
       "meta_tags": [
@@ -798,15 +798,15 @@
         }
       ],
       "rating": {
-        "rank": 8954,
-        "total": 381,
+        "rank": 8955,
+        "total": 383,
         "count": {
           "1": 10,
           "2": 22,
           "3": 31,
           "4": 62,
-          "5": 118,
-          "6": 95,
+          "5": 119,
+          "6": 96,
           "7": 34,
           "8": 4,
           "9": 3,
@@ -818,9 +818,9 @@
       "collection": {
         "on_hold": 55,
         "dropped": 199,
-        "wish": 355,
-        "collect": 63,
-        "doing": 1309
+        "wish": 358,
+        "collect": 64,
+        "doing": 1321
       },
       "id": 484402,
       "meta_tags": [
@@ -831,7 +831,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 9,
-        "total_comments": 266,
+        "total_comments": 274,
         "episodes": [
           {
             "ep": 1,
@@ -867,7 +867,7 @@
           },
           {
             "ep": 9,
-            "comments": 4
+            "comments": 12
           }
         ]
       }
@@ -886,29 +886,29 @@
         }
       ],
       "rating": {
-        "rank": 4357,
-        "total": 2421,
+        "rank": 4386,
+        "total": 2443,
         "count": {
           "1": 14,
-          "2": 2,
-          "3": 17,
+          "2": 3,
+          "3": 21,
           "4": 45,
-          "5": 174,
-          "6": 725,
-          "7": 1057,
-          "8": 335,
+          "5": 182,
+          "6": 738,
+          "7": 1062,
+          "8": 327,
           "9": 26,
-          "10": 26
+          "10": 25
         },
         "score": 6.6
       },
       "total_episodes": 13,
       "collection": {
-        "on_hold": 287,
-        "dropped": 469,
-        "wish": 1419,
-        "collect": 286,
-        "doing": 7773
+        "on_hold": 293,
+        "dropped": 478,
+        "wish": 1422,
+        "collect": 295,
+        "doing": 7785
       },
       "id": 504678,
       "meta_tags": [
@@ -920,7 +920,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 9,
-        "total_comments": 1191,
+        "total_comments": 1259,
         "episodes": [
           {
             "ep": 1,
@@ -952,11 +952,11 @@
           },
           {
             "ep": 8,
-            "comments": 79
+            "comments": 82
           },
           {
             "ep": 9,
-            "comments": 34
+            "comments": 99
           }
         ]
       }
@@ -975,15 +975,15 @@
         }
       ],
       "rating": {
-        "rank": 7760,
-        "total": 246,
+        "rank": 7765,
+        "total": 248,
         "count": {
           "1": 5,
           "2": 5,
           "3": 14,
           "4": 18,
-          "5": 52,
-          "6": 99,
+          "5": 56,
+          "6": 97,
           "7": 36,
           "8": 7,
           "9": 3,
@@ -993,8 +993,8 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 32,
-        "dropped": 87,
+        "on_hold": 31,
+        "dropped": 88,
         "wish": 177,
         "collect": 56,
         "doing": 769
@@ -1010,7 +1010,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 9,
-        "total_comments": 166,
+        "total_comments": 178,
         "episodes": [
           {
             "ep": 1,
@@ -1046,7 +1046,7 @@
           },
           {
             "ep": 9,
-            "comments": 0
+            "comments": 12
           }
         ]
       }
@@ -1098,7 +1098,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 9,
-        "total_comments": 21,
+        "total_comments": 23,
         "episodes": [
           {
             "ep": 1,
@@ -1134,7 +1134,7 @@
           },
           {
             "ep": 9,
-            "comments": 0
+            "comments": 2
           }
         ]
       }
@@ -1169,11 +1169,11 @@
         },
         "score": 4.8
       },
-      "total_episodes": 8,
+      "total_episodes": 9,
       "collection": {
         "on_hold": 8,
         "dropped": 8,
-        "wish": 14,
+        "wish": 15,
         "collect": 3,
         "doing": 12
       },
@@ -1185,7 +1185,7 @@
       ],
       "nsfw": false,
       "episodes_summary": {
-        "aired_episodes": 8,
+        "aired_episodes": 9,
         "total_comments": 0,
         "episodes": [
           {
@@ -1218,6 +1218,10 @@
           },
           {
             "ep": 8,
+            "comments": 0
+          },
+          {
+            "ep": 9,
             "comments": 0
           }
         ]
@@ -1257,9 +1261,9 @@
       "collection": {
         "on_hold": 13,
         "dropped": 25,
-        "wish": 77,
-        "collect": 7,
-        "doing": 84
+        "wish": 76,
+        "collect": 8,
+        "doing": 83
       },
       "id": 544082,
       "meta_tags": [
@@ -1270,7 +1274,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 9,
-        "total_comments": 18,
+        "total_comments": 19,
         "episodes": [
           {
             "ep": 1,
@@ -1306,7 +1310,7 @@
           },
           {
             "ep": 9,
-            "comments": 0
+            "comments": 1
           }
         ]
       }
@@ -1407,29 +1411,29 @@
         }
       ],
       "rating": {
-        "rank": 8540,
-        "total": 1420,
+        "rank": 8549,
+        "total": 1430,
         "count": {
           "1": 25,
-          "2": 21,
-          "3": 70,
+          "2": 22,
+          "3": 73,
           "4": 186,
-          "5": 360,
-          "6": 467,
-          "7": 221,
-          "8": 44,
+          "5": 364,
+          "6": 469,
+          "7": 223,
+          "8": 43,
           "9": 7,
-          "10": 19
+          "10": 18
         },
         "score": 5.5
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 159,
-        "dropped": 512,
-        "wish": 1011,
-        "collect": 227,
-        "doing": 4212
+        "on_hold": 162,
+        "dropped": 519,
+        "wish": 1015,
+        "collect": 234,
+        "doing": 4221
       },
       "id": 395493,
       "meta_tags": [
@@ -1442,7 +1446,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 9,
-        "total_comments": 947,
+        "total_comments": 978,
         "episodes": [
           {
             "ep": 1,
@@ -1470,15 +1474,15 @@
           },
           {
             "ep": 7,
-            "comments": 89
+            "comments": 93
           },
           {
             "ep": 8,
-            "comments": 84
+            "comments": 85
           },
           {
             "ep": 9,
-            "comments": 0
+            "comments": 26
           }
         ]
       }
@@ -1497,15 +1501,15 @@
         }
       ],
       "rating": {
-        "rank": 8359,
-        "total": 368,
+        "rank": 8367,
+        "total": 367,
         "count": {
           "1": 7,
           "2": 5,
           "3": 10,
           "4": 39,
           "5": 122,
-          "6": 126,
+          "6": 125,
           "7": 44,
           "8": 10,
           "9": 2,
@@ -1516,10 +1520,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 90,
-        "dropped": 320,
-        "wish": 372,
+        "dropped": 321,
+        "wish": 371,
         "collect": 59,
-        "doing": 1100
+        "doing": 1103
       },
       "id": 525642,
       "meta_tags": [
@@ -1606,7 +1610,7 @@
       "collection": {
         "on_hold": 11,
         "dropped": 23,
-        "wish": 90,
+        "wish": 91,
         "collect": 9,
         "doing": 95
       },
@@ -1620,7 +1624,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 9,
-        "total_comments": 35,
+        "total_comments": 37,
         "episodes": [
           {
             "ep": 1,
@@ -1656,7 +1660,7 @@
           },
           {
             "ep": 9,
-            "comments": 0
+            "comments": 2
           }
         ]
       }
@@ -1675,15 +1679,15 @@
         }
       ],
       "rating": {
-        "rank": 6078,
-        "total": 137,
+        "rank": 6077,
+        "total": 138,
         "count": {
           "1": 3,
           "2": 0,
           "3": 1,
           "4": 3,
           "5": 20,
-          "6": 71,
+          "6": 72,
           "7": 31,
           "8": 5,
           "9": 1,
@@ -1694,10 +1698,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 8,
-        "dropped": 29,
+        "dropped": 30,
         "wish": 74,
-        "collect": 29,
-        "doing": 485
+        "collect": 32,
+        "doing": 486
       },
       "id": 529078,
       "meta_tags": [
@@ -1763,7 +1767,7 @@
         }
       ],
       "rating": {
-        "rank": 5159,
+        "rank": 5182,
         "total": 247,
         "count": {
           "1": 1,
@@ -1785,7 +1789,7 @@
         "dropped": 58,
         "wish": 558,
         "collect": 99,
-        "doing": 1325
+        "doing": 1329
       },
       "id": 382126,
       "meta_tags": [
@@ -1798,7 +1802,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 9,
-        "total_comments": 157,
+        "total_comments": 159,
         "episodes": [
           {
             "ep": 1,
@@ -1834,7 +1838,7 @@
           },
           {
             "ep": 9,
-            "comments": 0
+            "comments": 2
           }
         ]
       }
@@ -2019,7 +2023,7 @@
         }
       ],
       "rating": {
-        "rank": 1662,
+        "rank": 1652,
         "total": 727,
         "count": {
           "1": 10,
@@ -2027,9 +2031,9 @@
           "3": 6,
           "4": 15,
           "5": 27,
-          "6": 102,
+          "6": 103,
           "7": 240,
-          "8": 228,
+          "8": 227,
           "9": 50,
           "10": 47
         },
@@ -2037,10 +2041,10 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 85,
-        "dropped": 203,
-        "wish": 401,
-        "collect": 109,
+        "on_hold": 86,
+        "dropped": 204,
+        "wish": 405,
+        "collect": 111,
         "doing": 2162
       },
       "id": 492881,
@@ -2051,7 +2055,7 @@
       ],
       "nsfw": false,
       "episodes_summary": {
-        "aired_episodes": 8,
+        "aired_episodes": 9,
         "total_comments": 467,
         "episodes": [
           {
@@ -2085,6 +2089,10 @@
           {
             "ep": 8,
             "comments": 24
+          },
+          {
+            "ep": 9,
+            "comments": 0
           }
         ]
       }
@@ -2103,7 +2111,7 @@
         }
       ],
       "rating": {
-        "rank": 2375,
+        "rank": 2376,
         "total": 516,
         "count": {
           "1": 9,
@@ -2121,11 +2129,11 @@
       },
       "total_episodes": 24,
       "collection": {
-        "on_hold": 79,
-        "dropped": 102,
-        "wish": 583,
+        "on_hold": 83,
+        "dropped": 104,
+        "wish": 584,
         "collect": 62,
-        "doing": 1716
+        "doing": 1712
       },
       "id": 524801,
       "meta_tags": [
@@ -2135,8 +2143,8 @@
       ],
       "nsfw": false,
       "episodes_summary": {
-        "aired_episodes": 8,
-        "total_comments": 412,
+        "aired_episodes": 9,
+        "total_comments": 416,
         "episodes": [
           {
             "ep": 1,
@@ -2168,7 +2176,11 @@
           },
           {
             "ep": 8,
-            "comments": 27
+            "comments": 31
+          },
+          {
+            "ep": 9,
+            "comments": 0
           }
         ]
       }
@@ -2187,7 +2199,7 @@
         }
       ],
       "rating": {
-        "rank": 8936,
+        "rank": 8935,
         "total": 122,
         "count": {
           "1": 10,
@@ -2206,10 +2218,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 20,
-        "dropped": 114,
+        "dropped": 115,
         "wish": 184,
-        "collect": 50,
-        "doing": 270
+        "collect": 51,
+        "doing": 273
       },
       "id": 499140,
       "meta_tags": [
@@ -2220,8 +2232,8 @@
       ],
       "nsfw": false,
       "episodes_summary": {
-        "aired_episodes": 8,
-        "total_comments": 70,
+        "aired_episodes": 9,
+        "total_comments": 71,
         "episodes": [
           {
             "ep": 1,
@@ -2254,6 +2266,10 @@
           {
             "ep": 8,
             "comments": 9
+          },
+          {
+            "ep": 9,
+            "comments": 1
           }
         ]
       }
@@ -2272,8 +2288,8 @@
         }
       ],
       "rating": {
-        "rank": 6641,
-        "total": 747,
+        "rank": 6650,
+        "total": 748,
         "count": {
           "1": 5,
           "2": 1,
@@ -2281,7 +2297,7 @@
           "4": 23,
           "5": 132,
           "6": 336,
-          "7": 176,
+          "7": 177,
           "8": 42,
           "9": 10,
           "10": 13
@@ -2291,10 +2307,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 135,
-        "dropped": 167,
-        "wish": 1069,
+        "dropped": 168,
+        "wish": 1072,
         "collect": 401,
-        "doing": 2617
+        "doing": 2624
       },
       "id": 364844,
       "meta_tags": [
@@ -2311,8 +2327,8 @@
       ],
       "nsfw": false,
       "episodes_summary": {
-        "aired_episodes": 8,
-        "total_comments": 299,
+        "aired_episodes": 9,
+        "total_comments": 300,
         "episodes": [
           {
             "ep": 1,
@@ -2345,6 +2361,10 @@
           {
             "ep": 8,
             "comments": 24
+          },
+          {
+            "ep": 9,
+            "comments": 1
           }
         ]
       }
@@ -2363,29 +2383,29 @@
         }
       ],
       "rating": {
-        "rank": 3124,
-        "total": 1570,
+        "rank": 3153,
+        "total": 1575,
         "count": {
           "1": 15,
           "2": 2,
           "3": 11,
-          "4": 26,
-          "5": 71,
+          "4": 27,
+          "5": 72,
           "6": 301,
-          "7": 773,
-          "8": 327,
+          "7": 778,
+          "8": 325,
           "9": 27,
           "10": 17
         },
-        "score": 6.9
+        "score": 6.8
       },
       "total_episodes": 13,
       "collection": {
-        "on_hold": 187,
-        "dropped": 312,
-        "wish": 1486,
-        "collect": 186,
-        "doing": 5943
+        "on_hold": 189,
+        "dropped": 315,
+        "wish": 1491,
+        "collect": 190,
+        "doing": 5953
       },
       "id": 518090,
       "meta_tags": [
@@ -2398,8 +2418,8 @@
       ],
       "nsfw": false,
       "episodes_summary": {
-        "aired_episodes": 8,
-        "total_comments": 1012,
+        "aired_episodes": 9,
+        "total_comments": 1013,
         "episodes": [
           {
             "ep": 1,
@@ -2431,7 +2451,11 @@
           },
           {
             "ep": 8,
-            "comments": 89
+            "comments": 90
+          },
+          {
+            "ep": 9,
+            "comments": 0
           }
         ]
       }
@@ -2450,15 +2474,15 @@
         }
       ],
       "rating": {
-        "rank": 8070,
-        "total": 765,
+        "rank": 8077,
+        "total": 768,
         "count": {
           "1": 7,
           "2": 6,
           "3": 17,
           "4": 56,
           "5": 199,
-          "6": 328,
+          "6": 331,
           "7": 128,
           "8": 17,
           "9": 3,
@@ -2469,10 +2493,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 111,
-        "dropped": 333,
-        "wish": 577,
-        "collect": 120,
-        "doing": 2706
+        "dropped": 343,
+        "wish": 580,
+        "collect": 121,
+        "doing": 2707
       },
       "id": 506258,
       "meta_tags": [
@@ -2483,7 +2507,7 @@
       ],
       "nsfw": false,
       "episodes_summary": {
-        "aired_episodes": 8,
+        "aired_episodes": 9,
         "total_comments": 517,
         "episodes": [
           {
@@ -2517,6 +2541,10 @@
           {
             "ep": 8,
             "comments": 40
+          },
+          {
+            "ep": 9,
+            "comments": 0
           }
         ]
       }
@@ -2535,7 +2563,7 @@
         }
       ],
       "rating": {
-        "rank": 3556,
+        "rank": 3553,
         "total": 94,
         "count": {
           "1": 2,
@@ -2557,7 +2585,7 @@
         "dropped": 17,
         "wish": 203,
         "collect": 35,
-        "doing": 416
+        "doing": 417
       },
       "id": 502875,
       "meta_tags": [
@@ -2568,7 +2596,7 @@
       ],
       "nsfw": false,
       "episodes_summary": {
-        "aired_episodes": 8,
+        "aired_episodes": 9,
         "total_comments": 127,
         "episodes": [
           {
@@ -2602,6 +2630,10 @@
           {
             "ep": 8,
             "comments": 11
+          },
+          {
+            "ep": 9,
+            "comments": 0
           }
         ]
       }
@@ -2620,7 +2652,7 @@
         }
       ],
       "rating": {
-        "rank": 8424,
+        "rank": 8434,
         "total": 65,
         "count": {
           "1": 5,
@@ -2639,8 +2671,8 @@
       "total_episodes": 13,
       "collection": {
         "on_hold": 6,
-        "dropped": 67,
-        "wish": 59,
+        "dropped": 68,
+        "wish": 61,
         "collect": 17,
         "doing": 120
       },
@@ -2653,7 +2685,7 @@
       ],
       "nsfw": false,
       "episodes_summary": {
-        "aired_episodes": 8,
+        "aired_episodes": 9,
         "total_comments": 60,
         "episodes": [
           {
@@ -2687,14 +2719,18 @@
           {
             "ep": 8,
             "comments": 7
+          },
+          {
+            "ep": 9,
+            "comments": 0
           }
         ]
       }
     },
     {
       "images": {
-        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/e3/4e/513018_15Bd1.jpg",
-        "common": "https://lain.bgm.tv/r/400/pic/cover/l/e3/4e/513018_15Bd1.jpg"
+        "grid": "https://lain.bgm.tv/r/100/pic/cover/l/e3/4e/513018_3E8Bu.jpg",
+        "common": "https://lain.bgm.tv/r/400/pic/cover/l/e3/4e/513018_3E8Bu.jpg"
       },
       "name": "小市民シリーズ 第2期",
       "name_cn": "小市民系列 第二季",
@@ -2705,8 +2741,8 @@
         }
       ],
       "rating": {
-        "rank": 2167,
-        "total": 1090,
+        "rank": 2162,
+        "total": 1093,
         "count": {
           "1": 14,
           "2": 3,
@@ -2714,8 +2750,8 @@
           "4": 10,
           "5": 35,
           "6": 152,
-          "7": 490,
-          "8": 317,
+          "7": 491,
+          "8": 319,
           "9": 39,
           "10": 25
         },
@@ -2724,10 +2760,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 59,
-        "dropped": 48,
-        "wish": 887,
-        "collect": 153,
-        "doing": 4136
+        "dropped": 50,
+        "wish": 896,
+        "collect": 157,
+        "doing": 4150
       },
       "id": 513018,
       "meta_tags": [
@@ -2739,8 +2775,8 @@
       ],
       "nsfw": false,
       "episodes_summary": {
-        "aired_episodes": 8,
-        "total_comments": 1465,
+        "aired_episodes": 9,
+        "total_comments": 1473,
         "episodes": [
           {
             "ep": 1,
@@ -2772,7 +2808,11 @@
           },
           {
             "ep": 8,
-            "comments": 126
+            "comments": 130
+          },
+          {
+            "ep": 9,
+            "comments": 4
           }
         ]
       }
@@ -2791,16 +2831,16 @@
         }
       ],
       "rating": {
-        "rank": 9064,
-        "total": 348,
+        "rank": 9075,
+        "total": 351,
         "count": {
-          "1": 41,
+          "1": 42,
           "2": 19,
-          "3": 21,
-          "4": 62,
+          "3": 22,
+          "4": 61,
           "5": 86,
-          "6": 71,
-          "7": 32,
+          "6": 72,
+          "7": 33,
           "8": 7,
           "9": 3,
           "10": 6
@@ -2810,10 +2850,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 37,
-        "dropped": 143,
-        "wish": 280,
+        "dropped": 149,
+        "wish": 282,
         "collect": 54,
-        "doing": 1088
+        "doing": 1097
       },
       "id": 520645,
       "meta_tags": [
@@ -2830,8 +2870,8 @@
       ],
       "nsfw": false,
       "episodes_summary": {
-        "aired_episodes": 8,
-        "total_comments": 312,
+        "aired_episodes": 9,
+        "total_comments": 313,
         "episodes": [
           {
             "ep": 1,
@@ -2864,6 +2904,10 @@
           {
             "ep": 8,
             "comments": 30
+          },
+          {
+            "ep": 9,
+            "comments": 1
           }
         ]
       }
@@ -2902,7 +2946,7 @@
       "collection": {
         "on_hold": 6,
         "dropped": 19,
-        "wish": 35,
+        "wish": 34,
         "collect": 80,
         "doing": 12
       },
@@ -3044,9 +3088,9 @@
       "collection": {
         "on_hold": 8,
         "dropped": 14,
-        "wish": 77,
+        "wish": 78,
         "collect": 20,
-        "doing": 69
+        "doing": 70
       },
       "id": 529143,
       "meta_tags": [
@@ -3108,7 +3152,7 @@
         }
       ],
       "rating": {
-        "rank": 7103,
+        "rank": 7106,
         "total": 149,
         "count": {
           "1": 3,
@@ -3126,11 +3170,11 @@
       },
       "total_episodes": 48,
       "collection": {
-        "on_hold": 42,
-        "dropped": 84,
+        "on_hold": 43,
+        "dropped": 85,
         "wish": 208,
         "collect": 21,
-        "doing": 541
+        "doing": 540
       },
       "id": 499169,
       "meta_tags": [
@@ -3281,29 +3325,29 @@
         }
       ],
       "rating": {
-        "rank": 307,
-        "total": 3039,
+        "rank": 292,
+        "total": 3051,
         "count": {
           "1": 9,
           "2": 4,
           "3": 3,
-          "4": 8,
+          "4": 7,
           "5": 17,
           "6": 99,
-          "7": 635,
-          "8": 1679,
-          "9": 400,
-          "10": 185
+          "7": 640,
+          "8": 1682,
+          "9": 404,
+          "10": 186
         },
         "score": 7.9
       },
       "total_episodes": 13,
       "collection": {
         "on_hold": 89,
-        "dropped": 68,
-        "wish": 2216,
-        "collect": 457,
-        "doing": 10187
+        "dropped": 69,
+        "wish": 2228,
+        "collect": 468,
+        "doing": 10223
       },
       "id": 509297,
       "meta_tags": [
@@ -3315,7 +3359,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 8,
-        "total_comments": 1586,
+        "total_comments": 1588,
         "episodes": [
           {
             "ep": 1,
@@ -3347,7 +3391,7 @@
           },
           {
             "ep": 8,
-            "comments": 107
+            "comments": 109
           }
         ]
       }
@@ -3366,29 +3410,29 @@
         }
       ],
       "rating": {
-        "rank": 1864,
-        "total": 2386,
+        "rank": 1844,
+        "total": 2394,
         "count": {
-          "1": 13,
+          "1": 7,
           "2": 2,
           "3": 9,
           "4": 20,
           "5": 64,
-          "6": 303,
-          "7": 1083,
-          "8": 788,
-          "9": 64,
-          "10": 40
+          "6": 304,
+          "7": 1089,
+          "8": 792,
+          "9": 65,
+          "10": 42
         },
         "score": 7.2
       },
       "total_episodes": 26,
       "collection": {
-        "on_hold": 155,
-        "dropped": 255,
-        "wish": 1727,
-        "collect": 298,
-        "doing": 8452
+        "on_hold": 157,
+        "dropped": 259,
+        "wish": 1738,
+        "collect": 304,
+        "doing": 8476
       },
       "id": 506672,
       "meta_tags": [
@@ -3402,7 +3446,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 8,
-        "total_comments": 1271,
+        "total_comments": 1274,
         "episodes": [
           {
             "ep": 1,
@@ -3430,11 +3474,11 @@
           },
           {
             "ep": 7,
-            "comments": 133
+            "comments": 134
           },
           {
             "ep": 8,
-            "comments": 131
+            "comments": 133
           }
         ]
       }
@@ -3453,14 +3497,14 @@
         }
       ],
       "rating": {
-        "rank": 8782,
+        "rank": 8775,
         "total": 322,
         "count": {
-          "1": 8,
+          "1": 9,
           "2": 15,
           "3": 20,
           "4": 51,
-          "5": 96,
+          "5": 95,
           "6": 93,
           "7": 29,
           "8": 3,
@@ -3472,10 +3516,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 47,
-        "dropped": 138,
-        "wish": 217,
+        "dropped": 139,
+        "wish": 218,
         "collect": 56,
-        "doing": 1014
+        "doing": 1015
       },
       "id": 520284,
       "meta_tags": [
@@ -3537,29 +3581,29 @@
         }
       ],
       "rating": {
-        "rank": 5941,
-        "total": 772,
+        "rank": 5885,
+        "total": 780,
         "count": {
-          "1": 6,
+          "1": 7,
           "2": 13,
           "3": 17,
           "4": 49,
           "5": 136,
-          "6": 190,
-          "7": 184,
-          "8": 128,
-          "9": 23,
+          "6": 186,
+          "7": 191,
+          "8": 131,
+          "9": 24,
           "10": 26
         },
         "score": 6.3
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 104,
-        "dropped": 256,
-        "wish": 452,
-        "collect": 80,
-        "doing": 2078
+        "on_hold": 105,
+        "dropped": 257,
+        "wish": 454,
+        "collect": 81,
+        "doing": 2091
       },
       "id": 511207,
       "meta_tags": [
@@ -3571,7 +3615,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 8,
-        "total_comments": 1097,
+        "total_comments": 1100,
         "episodes": [
           {
             "ep": 1,
@@ -3599,11 +3643,11 @@
           },
           {
             "ep": 7,
-            "comments": 164
+            "comments": 165
           },
           {
             "ep": 8,
-            "comments": 117
+            "comments": 119
           }
         ]
       }
@@ -3622,15 +3666,15 @@
         }
       ],
       "rating": {
-        "rank": 8679,
-        "total": 165,
+        "rank": 8686,
+        "total": 164,
         "count": {
           "1": 4,
-          "2": 6,
-          "3": 16,
+          "2": 8,
+          "3": 14,
           "4": 28,
           "5": 54,
-          "6": 43,
+          "6": 42,
           "7": 8,
           "8": 2,
           "9": 2,
@@ -3643,8 +3687,8 @@
         "on_hold": 26,
         "dropped": 116,
         "wish": 102,
-        "collect": 37,
-        "doing": 423
+        "collect": 38,
+        "doing": 424
       },
       "id": 514997,
       "meta_tags": [
@@ -3706,29 +3750,29 @@
         }
       ],
       "rating": {
-        "rank": 7501,
-        "total": 2089,
+        "rank": 7510,
+        "total": 2100,
         "count": {
-          "1": 25,
-          "2": 32,
+          "1": 30,
+          "2": 34,
           "3": 67,
-          "4": 186,
-          "5": 363,
-          "6": 665,
-          "7": 513,
-          "8": 191,
+          "4": 191,
+          "5": 364,
+          "6": 668,
+          "7": 510,
+          "8": 190,
           "9": 23,
-          "10": 24
+          "10": 23
         },
         "score": 5.9
       },
       "total_episodes": 13,
       "collection": {
-        "on_hold": 273,
-        "dropped": 682,
-        "wish": 1990,
-        "collect": 232,
-        "doing": 6984
+        "on_hold": 279,
+        "dropped": 696,
+        "wish": 1991,
+        "collect": 235,
+        "doing": 6981
       },
       "id": 446296,
       "meta_tags": [
@@ -3740,7 +3784,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 8,
-        "total_comments": 1762,
+        "total_comments": 1764,
         "episodes": [
           {
             "ep": 1,
@@ -3772,7 +3816,7 @@
           },
           {
             "ep": 8,
-            "comments": 199
+            "comments": 201
           }
         ]
       }
@@ -3792,13 +3836,13 @@
       ],
       "rating": {
         "rank": 0,
-        "total": 18,
+        "total": 19,
         "count": {
           "1": 1,
           "2": 1,
           "3": 2,
           "4": 0,
-          "5": 8,
+          "5": 9,
           "6": 4,
           "7": 0,
           "8": 0,
@@ -3811,9 +3855,9 @@
       "collection": {
         "on_hold": 8,
         "dropped": 25,
-        "wish": 56,
+        "wish": 57,
         "collect": 15,
-        "doing": 77
+        "doing": 78
       },
       "id": 495633,
       "meta_tags": [
@@ -3867,16 +3911,16 @@
         }
       ],
       "rating": {
-        "rank": 9094,
-        "total": 319,
+        "rank": 9098,
+        "total": 320,
         "count": {
           "1": 9,
-          "2": 15,
-          "3": 37,
+          "2": 16,
+          "3": 36,
           "4": 90,
           "5": 108,
           "6": 47,
-          "7": 5,
+          "7": 6,
           "8": 3,
           "9": 2,
           "10": 3
@@ -3886,9 +3930,9 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 79,
-        "dropped": 308,
-        "wish": 559,
-        "collect": 71,
+        "dropped": 312,
+        "wish": 562,
+        "collect": 72,
         "doing": 1077
       },
       "id": 511264,
@@ -3953,15 +3997,15 @@
         }
       ],
       "rating": {
-        "rank": 8018,
-        "total": 528,
+        "rank": 8023,
+        "total": 529,
         "count": {
           "1": 5,
           "2": 9,
           "3": 10,
           "4": 46,
           "5": 135,
-          "6": 212,
+          "6": 213,
           "7": 85,
           "8": 17,
           "9": 7,
@@ -3972,10 +4016,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 81,
-        "dropped": 304,
-        "wish": 647,
+        "dropped": 307,
+        "wish": 650,
         "collect": 99,
-        "doing": 2189
+        "doing": 2196
       },
       "id": 493813,
       "meta_tags": [
@@ -4037,16 +4081,16 @@
         }
       ],
       "rating": {
-        "rank": 4475,
-        "total": 486,
+        "rank": 4523,
+        "total": 487,
         "count": {
           "1": 1,
           "2": 1,
           "3": 2,
-          "4": 7,
+          "4": 8,
           "5": 37,
-          "6": 175,
-          "7": 209,
+          "6": 174,
+          "7": 210,
           "8": 40,
           "9": 6,
           "10": 8
@@ -4055,11 +4099,11 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 92,
-        "dropped": 80,
-        "wish": 749,
+        "on_hold": 91,
+        "dropped": 82,
+        "wish": 755,
         "collect": 116,
-        "doing": 2190
+        "doing": 2195
       },
       "id": 506922,
       "meta_tags": [
@@ -4072,11 +4116,11 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 8,
-        "total_comments": 286,
+        "total_comments": 288,
         "episodes": [
           {
             "ep": 1,
-            "comments": 48
+            "comments": 49
           },
           {
             "ep": 2,
@@ -4100,7 +4144,7 @@
           },
           {
             "ep": 7,
-            "comments": 34
+            "comments": 35
           },
           {
             "ep": 8,
@@ -4123,28 +4167,28 @@
         }
       ],
       "rating": {
-        "rank": 6050,
-        "total": 1105,
+        "rank": 6056,
+        "total": 1109,
         "count": {
           "1": 3,
           "2": 1,
           "3": 9,
           "4": 27,
-          "5": 145,
-          "6": 463,
-          "7": 366,
+          "5": 149,
+          "6": 462,
+          "7": 368,
           "8": 70,
           "9": 10,
-          "10": 11
+          "10": 10
         },
         "score": 6.3
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 183,
-        "dropped": 357,
-        "wish": 1028,
-        "collect": 124,
+        "on_hold": 187,
+        "dropped": 363,
+        "wish": 1035,
+        "collect": 127,
         "doing": 3759
       },
       "id": 437593,
@@ -4157,7 +4201,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 8,
-        "total_comments": 696,
+        "total_comments": 700,
         "episodes": [
           {
             "ep": 1,
@@ -4189,7 +4233,7 @@
           },
           {
             "ep": 8,
-            "comments": 56
+            "comments": 60
           }
         ]
       }
@@ -4208,7 +4252,7 @@
         }
       ],
       "rating": {
-        "rank": 8066,
+        "rank": 8068,
         "total": 65,
         "count": {
           "1": 15,
@@ -4227,7 +4271,7 @@
       "total_episodes": 13,
       "collection": {
         "on_hold": 8,
-        "dropped": 48,
+        "dropped": 49,
         "wish": 60,
         "collect": 14,
         "doing": 168
@@ -4292,16 +4336,16 @@
         }
       ],
       "rating": {
-        "rank": 4743,
-        "total": 404,
+        "rank": 4731,
+        "total": 405,
         "count": {
           "1": 3,
           "2": 1,
           "3": 2,
           "4": 5,
-          "5": 37,
-          "6": 146,
-          "7": 159,
+          "5": 38,
+          "6": 145,
+          "7": 160,
           "8": 38,
           "9": 7,
           "10": 6
@@ -4312,9 +4356,9 @@
       "collection": {
         "on_hold": 48,
         "dropped": 115,
-        "wish": 426,
+        "wish": 428,
         "collect": 79,
-        "doing": 1954
+        "doing": 1960
       },
       "id": 526567,
       "meta_tags": [
@@ -4325,7 +4369,7 @@
       ],
       "nsfw": false,
       "episodes_summary": {
-        "aired_episodes": 8,
+        "aired_episodes": 9,
         "total_comments": 246,
         "episodes": [
           {
@@ -4359,6 +4403,10 @@
           {
             "ep": 8,
             "comments": 17
+          },
+          {
+            "ep": 9,
+            "comments": 0
           }
         ]
       }
@@ -4377,29 +4425,29 @@
         }
       ],
       "rating": {
-        "rank": 1175,
-        "total": 3009,
+        "rank": 1190,
+        "total": 3018,
         "count": {
           "1": 24,
           "2": 4,
           "3": 8,
           "4": 24,
-          "5": 110,
-          "6": 384,
-          "7": 1079,
-          "8": 959,
-          "9": 216,
-          "10": 201
+          "5": 112,
+          "6": 386,
+          "7": 1085,
+          "8": 960,
+          "9": 215,
+          "10": 200
         },
         "score": 7.4
       },
       "total_episodes": 26,
       "collection": {
-        "on_hold": 215,
+        "on_hold": 218,
         "dropped": 192,
-        "wish": 3605,
-        "collect": 473,
-        "doing": 10991
+        "wish": 3623,
+        "collect": 481,
+        "doing": 11016
       },
       "id": 363957,
       "meta_tags": [
@@ -4411,7 +4459,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 8,
-        "total_comments": 2477,
+        "total_comments": 2486,
         "episodes": [
           {
             "ep": 1,
@@ -4439,11 +4487,11 @@
           },
           {
             "ep": 7,
-            "comments": 368
+            "comments": 369
           },
           {
             "ep": 8,
-            "comments": 152
+            "comments": 160
           }
         ]
       }
@@ -4462,7 +4510,7 @@
         }
       ],
       "rating": {
-        "rank": 7444,
+        "rank": 7412,
         "total": 58,
         "count": {
           "1": 3,
@@ -4481,9 +4529,9 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 16,
-        "dropped": 77,
+        "dropped": 78,
         "wish": 128,
-        "collect": 15,
+        "collect": 16,
         "doing": 122
       },
       "id": 409682,
@@ -4547,12 +4595,12 @@
         }
       ],
       "rating": {
-        "rank": 8183,
+        "rank": 8200,
         "total": 233,
         "count": {
           "1": 2,
-          "2": 3,
-          "3": 7,
+          "2": 4,
+          "3": 6,
           "4": 26,
           "5": 68,
           "6": 100,
@@ -4566,10 +4614,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 59,
-        "dropped": 177,
+        "dropped": 178,
         "wish": 237,
         "collect": 43,
-        "doing": 722
+        "doing": 724
       },
       "id": 516227,
       "meta_tags": [
@@ -4652,10 +4700,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 2,
-        "dropped": 10,
+        "dropped": 11,
         "wish": 8,
         "collect": 3,
-        "doing": 13
+        "doing": 12
       },
       "id": 544872,
       "meta_tags": [
@@ -4717,29 +4765,29 @@
         }
       ],
       "rating": {
-        "rank": 6752,
-        "total": 933,
+        "rank": 6762,
+        "total": 928,
         "count": {
           "1": 6,
           "2": 5,
           "3": 15,
-          "4": 45,
-          "5": 137,
-          "6": 402,
+          "4": 46,
+          "5": 136,
+          "6": 404,
           "7": 252,
-          "8": 45,
+          "8": 44,
           "9": 5,
-          "10": 21
+          "10": 15
         },
         "score": 6.1
       },
       "total_episodes": 12,
       "collection": {
         "on_hold": 92,
-        "dropped": 237,
-        "wish": 944,
-        "collect": 142,
-        "doing": 3422
+        "dropped": 239,
+        "wish": 948,
+        "collect": 143,
+        "doing": 3436
       },
       "id": 480545,
       "meta_tags": [
@@ -4752,7 +4800,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 8,
-        "total_comments": 767,
+        "total_comments": 771,
         "episodes": [
           {
             "ep": 1,
@@ -4780,11 +4828,11 @@
           },
           {
             "ep": 7,
-            "comments": 120
+            "comments": 121
           },
           {
             "ep": 8,
-            "comments": 48
+            "comments": 51
           }
         ]
       }
@@ -4803,29 +4851,29 @@
         }
       ],
       "rating": {
-        "rank": 2617,
-        "total": 2759,
+        "rank": 2636,
+        "total": 2773,
         "count": {
-          "1": 42,
+          "1": 37,
           "2": 12,
           "3": 23,
-          "4": 72,
-          "5": 133,
-          "6": 424,
-          "7": 1060,
-          "8": 816,
-          "9": 100,
+          "4": 73,
+          "5": 134,
+          "6": 427,
+          "7": 1069,
+          "8": 820,
+          "9": 101,
           "10": 77
         },
         "score": 7
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 152,
-        "dropped": 193,
-        "wish": 1934,
-        "collect": 331,
-        "doing": 10322
+        "on_hold": 153,
+        "dropped": 195,
+        "wish": 1937,
+        "collect": 337,
+        "doing": 10369
       },
       "id": 526816,
       "meta_tags": [
@@ -4840,7 +4888,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 8,
-        "total_comments": 2861,
+        "total_comments": 2878,
         "episodes": [
           {
             "ep": 1,
@@ -4868,11 +4916,11 @@
           },
           {
             "ep": 7,
-            "comments": 472
+            "comments": 473
           },
           {
             "ep": 8,
-            "comments": 324
+            "comments": 340
           }
         ]
       }
@@ -4891,29 +4939,29 @@
         }
       ],
       "rating": {
-        "rank": 245,
-        "total": 3385,
+        "rank": 242,
+        "total": 3412,
         "count": {
-          "1": 11,
+          "1": 5,
           "2": 4,
           "3": 3,
           "4": 7,
-          "5": 26,
-          "6": 119,
-          "7": 566,
-          "8": 1812,
-          "9": 672,
-          "10": 165
+          "5": 27,
+          "6": 124,
+          "7": 575,
+          "8": 1819,
+          "9": 680,
+          "10": 168
         },
         "score": 8
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 107,
-        "dropped": 85,
-        "wish": 2233,
-        "collect": 394,
-        "doing": 10561
+        "on_hold": 108,
+        "dropped": 89,
+        "wish": 2266,
+        "collect": 407,
+        "doing": 10637
       },
       "id": 509986,
       "meta_tags": [
@@ -4926,11 +4974,11 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 8,
-        "total_comments": 2113,
+        "total_comments": 2146,
         "episodes": [
           {
             "ep": 1,
-            "comments": 252
+            "comments": 253
           },
           {
             "ep": 2,
@@ -4938,11 +4986,11 @@
           },
           {
             "ep": 3,
-            "comments": 256
+            "comments": 258
           },
           {
             "ep": 4,
-            "comments": 227
+            "comments": 229
           },
           {
             "ep": 5,
@@ -4950,15 +4998,15 @@
           },
           {
             "ep": 6,
-            "comments": 372
+            "comments": 374
           },
           {
             "ep": 7,
-            "comments": 247
+            "comments": 249
           },
           {
             "ep": 8,
-            "comments": 239
+            "comments": 263
           }
         ]
       }
@@ -5061,7 +5109,7 @@
         }
       ],
       "rating": {
-        "rank": 7414,
+        "rank": 7406,
         "total": 254,
         "count": {
           "1": 3,
@@ -5070,8 +5118,8 @@
           "4": 16,
           "5": 51,
           "6": 123,
-          "7": 41,
-          "8": 4,
+          "7": 42,
+          "8": 3,
           "9": 3,
           "10": 4
         },
@@ -5080,10 +5128,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 53,
-        "dropped": 165,
+        "dropped": 167,
         "wish": 230,
         "collect": 33,
-        "doing": 726
+        "doing": 728
       },
       "id": 526043,
       "meta_tags": [
@@ -5097,7 +5145,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 8,
-        "total_comments": 229,
+        "total_comments": 232,
         "episodes": [
           {
             "ep": 1,
@@ -5129,7 +5177,7 @@
           },
           {
             "ep": 8,
-            "comments": 21
+            "comments": 24
           }
         ]
       }
@@ -5148,15 +5196,15 @@
         }
       ],
       "rating": {
-        "rank": 7698,
-        "total": 466,
+        "rank": 7730,
+        "total": 469,
         "count": {
           "1": 4,
           "2": 3,
-          "3": 13,
-          "4": 34,
-          "5": 109,
-          "6": 205,
+          "3": 14,
+          "4": 36,
+          "5": 108,
+          "6": 206,
           "7": 74,
           "8": 12,
           "9": 4,
@@ -5167,10 +5215,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 59,
-        "dropped": 121,
+        "dropped": 123,
         "wish": 309,
-        "collect": 69,
-        "doing": 1547
+        "collect": 70,
+        "doing": 1554
       },
       "id": 520672,
       "meta_tags": [
@@ -5232,7 +5280,7 @@
         }
       ],
       "rating": {
-        "rank": 9152,
+        "rank": 9155,
         "total": 246,
         "count": {
           "1": 7,
@@ -5251,15 +5299,18 @@
       "total_episodes": 18,
       "collection": {
         "on_hold": 56,
-        "dropped": 200,
-        "wish": 378,
-        "collect": 230,
+        "dropped": 201,
+        "wish": 375,
+        "collect": 231,
         "doing": 284
       },
       "id": 386728,
       "meta_tags": [
         "日本",
+        "日本",
         "原创",
+        "原创",
+        "WEB",
         "WEB"
       ],
       "nsfw": false,
@@ -5356,29 +5407,29 @@
         }
       ],
       "rating": {
-        "rank": 2728,
-        "total": 1964,
+        "rank": 2682,
+        "total": 1973,
         "count": {
-          "1": 65,
+          "1": 59,
           "2": 20,
           "3": 20,
-          "4": 35,
+          "4": 36,
           "5": 75,
-          "6": 257,
-          "7": 703,
-          "8": 632,
-          "9": 97,
-          "10": 60
+          "6": 254,
+          "7": 697,
+          "8": 650,
+          "9": 100,
+          "10": 62
         },
         "score": 7
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 106,
-        "dropped": 268,
-        "wish": 991,
-        "collect": 249,
-        "doing": 5640
+        "on_hold": 105,
+        "dropped": 270,
+        "wish": 1001,
+        "collect": 251,
+        "doing": 5668
       },
       "id": 491569,
       "meta_tags": [
@@ -5391,7 +5442,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 8,
-        "total_comments": 1705,
+        "total_comments": 1776,
         "episodes": [
           {
             "ep": 1,
@@ -5407,11 +5458,11 @@
           },
           {
             "ep": 4,
-            "comments": 145
+            "comments": 146
           },
           {
             "ep": 5,
-            "comments": 411
+            "comments": 412
           },
           {
             "ep": 6,
@@ -5419,11 +5470,11 @@
           },
           {
             "ep": 7,
-            "comments": 256
+            "comments": 259
           },
           {
             "ep": 8,
-            "comments": 81
+            "comments": 147
           }
         ]
       }
@@ -5442,14 +5493,14 @@
         }
       ],
       "rating": {
-        "rank": 7821,
-        "total": 108,
+        "rank": 7822,
+        "total": 107,
         "count": {
           "1": 3,
           "2": 1,
           "3": 7,
-          "4": 13,
-          "5": 37,
+          "4": 14,
+          "5": 35,
           "6": 28,
           "7": 15,
           "8": 1,
@@ -5461,10 +5512,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 20,
-        "dropped": 74,
+        "dropped": 75,
         "wish": 98,
         "collect": 20,
-        "doing": 293
+        "doing": 294
       },
       "id": 488460,
       "meta_tags": [
@@ -5476,7 +5527,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 8,
-        "total_comments": 101,
+        "total_comments": 103,
         "episodes": [
           {
             "ep": 1,
@@ -5508,7 +5559,7 @@
           },
           {
             "ep": 8,
-            "comments": 0
+            "comments": 2
           }
         ]
       }
@@ -5527,29 +5578,29 @@
         }
       ],
       "rating": {
-        "rank": 687,
-        "total": 2921,
+        "rank": 697,
+        "total": 2933,
         "count": {
-          "1": 14,
+          "1": 8,
           "2": 3,
           "3": 9,
           "4": 14,
-          "5": 47,
-          "6": 217,
-          "7": 837,
-          "8": 1413,
-          "9": 275,
-          "10": 92
+          "5": 48,
+          "6": 224,
+          "7": 845,
+          "8": 1417,
+          "9": 270,
+          "10": 95
         },
         "score": 7.6
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 136,
-        "dropped": 161,
-        "wish": 2317,
-        "collect": 332,
-        "doing": 10187
+        "on_hold": 142,
+        "dropped": 168,
+        "wish": 2332,
+        "collect": 337,
+        "doing": 10220
       },
       "id": 485936,
       "meta_tags": [
@@ -5561,8 +5612,8 @@
       ],
       "nsfw": false,
       "episodes_summary": {
-        "aired_episodes": 7,
-        "total_comments": 1616,
+        "aired_episodes": 8,
+        "total_comments": 1633,
         "episodes": [
           {
             "ep": 1,
@@ -5586,11 +5637,15 @@
           },
           {
             "ep": 6,
-            "comments": 144
+            "comments": 145
           },
           {
             "ep": 7,
-            "comments": 237
+            "comments": 245
+          },
+          {
+            "ep": 8,
+            "comments": 8
           }
         ]
       }
@@ -5609,29 +5664,29 @@
         }
       ],
       "rating": {
-        "rank": 442,
-        "total": 2936,
+        "rank": 439,
+        "total": 2961,
         "count": {
           "1": 10,
           "2": 1,
           "3": 1,
           "4": 6,
           "5": 27,
-          "6": 144,
-          "7": 712,
-          "8": 1594,
-          "9": 340,
-          "10": 101
+          "6": 147,
+          "7": 715,
+          "8": 1602,
+          "9": 347,
+          "10": 105
         },
         "score": 7.8
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 100,
-        "dropped": 81,
-        "wish": 2125,
-        "collect": 337,
-        "doing": 10425
+        "on_hold": 102,
+        "dropped": 82,
+        "wish": 2147,
+        "collect": 353,
+        "doing": 10485
       },
       "id": 531159,
       "meta_tags": [
@@ -5643,8 +5698,8 @@
       ],
       "nsfw": false,
       "episodes_summary": {
-        "aired_episodes": 7,
-        "total_comments": 1680,
+        "aired_episodes": 8,
+        "total_comments": 1689,
         "episodes": [
           {
             "ep": 1,
@@ -5664,15 +5719,19 @@
           },
           {
             "ep": 5,
-            "comments": 287
+            "comments": 288
           },
           {
             "ep": 6,
-            "comments": 216
+            "comments": 217
           },
           {
             "ep": 7,
-            "comments": 218
+            "comments": 222
+          },
+          {
+            "ep": 8,
+            "comments": 3
           }
         ]
       }
@@ -5691,17 +5750,17 @@
         }
       ],
       "rating": {
-        "rank": 6248,
-        "total": 203,
+        "rank": 6274,
+        "total": 205,
         "count": {
           "1": 2,
           "2": 0,
           "3": 1,
           "4": 12,
           "5": 24,
-          "6": 99,
-          "7": 55,
-          "8": 7,
+          "6": 101,
+          "7": 54,
+          "8": 8,
           "9": 1,
           "10": 2
         },
@@ -5710,10 +5769,10 @@
       "total_episodes": 12,
       "collection": {
         "on_hold": 26,
-        "dropped": 32,
-        "wish": 282,
-        "collect": 47,
-        "doing": 856
+        "dropped": 33,
+        "wish": 281,
+        "collect": 49,
+        "doing": 858
       },
       "id": 501919,
       "meta_tags": [
@@ -5725,7 +5784,7 @@
       "nsfw": false,
       "episodes_summary": {
         "aired_episodes": 7,
-        "total_comments": 186,
+        "total_comments": 187,
         "episodes": [
           {
             "ep": 1,
@@ -5753,7 +5812,7 @@
           },
           {
             "ep": 7,
-            "comments": 28
+            "comments": 29
           }
         ]
       }
@@ -5772,29 +5831,29 @@
         }
       ],
       "rating": {
-        "rank": 2037,
-        "total": 2197,
+        "rank": 2063,
+        "total": 2235,
         "count": {
           "1": 11,
           "2": 3,
           "3": 5,
-          "4": 17,
+          "4": 18,
           "5": 74,
-          "6": 361,
-          "7": 1033,
-          "8": 546,
+          "6": 364,
+          "7": 1057,
+          "8": 555,
           "9": 69,
-          "10": 78
+          "10": 79
         },
         "score": 7.1
       },
       "total_episodes": 6,
       "collection": {
-        "on_hold": 41,
-        "dropped": 41,
-        "wish": 1066,
-        "collect": 2838,
-        "doing": 2421
+        "on_hold": 40,
+        "dropped": 42,
+        "wish": 1073,
+        "collect": 2919,
+        "doing": 2384
       },
       "id": 504950,
       "meta_tags": [
@@ -5836,5 +5895,5 @@
       }
     }
   ],
-  "last_update_time": "2025-05-30T03:34:11.380186"
+  "last_update_time": "2025-05-31T03:34:14.108305"
 }
