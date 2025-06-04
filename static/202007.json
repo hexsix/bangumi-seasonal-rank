@@ -2,293 +2,44 @@
   "title": "2020年07月（共24部）",
   "subjects": [
     {
-      "date": "2020-07-08",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/96/1a/285813_mpzM4.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/96/1a/285813_mpzM4.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/96/1a/285813_mpzM4.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/96/1a/285813_mpzM4.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/96/1a/285813_mpzM4.jpg"
       },
-      "summary": "在东京以欺诈为生的狡猾年轻人枝村真人，某日遇上了法国人罗兰。被罗兰不骗不相识的真人，决定和罗兰前往洛杉矶做一单大的。两人的目标是好莱坞制作人兼帮派头目埃迪·卡萨诺，在罗兰的计划里，美少女阿比，性感美女辛西娅，老奸巨猾的席翁先后加入，一场最大的欺诈游戏即将开始。",
       "name": "GREAT PRETENDER",
       "name_cn": "大欺诈师",
-      "tags": [
-        {
-          "name": "原创",
-          "count": 1008,
-          "total_cont": 0
-        },
-        {
-          "name": "WITSTUDIO",
-          "count": 1007,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 671,
-          "total_cont": 0
-        },
-        {
-          "name": "Netflix",
-          "count": 568,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 511,
-          "total_cont": 0
-        },
-        {
-          "name": "悬疑",
-          "count": 457,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 379,
-          "total_cont": 0
-        },
-        {
-          "name": "智斗",
-          "count": 344,
-          "total_cont": 0
-        },
-        {
-          "name": "贞本义行",
-          "count": 247,
-          "total_cont": 0
-        },
-        {
-          "name": "古沢良太",
-          "count": 187,
-          "total_cont": 0
-        },
-        {
-          "name": "貞本義行",
-          "count": 113,
-          "total_cont": 0
-        },
-        {
-          "name": "犯罪",
-          "count": 93,
-          "total_cont": 0
-        },
-        {
-          "name": "镝木宏",
-          "count": 78,
-          "total_cont": 0
-        },
-        {
-          "name": "鏑木ひろ",
-          "count": 66,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 40,
-          "total_cont": 0
-        },
-        {
-          "name": "剧情",
-          "count": 21,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 19,
-          "total_cont": 0
-        },
-        {
-          "name": "搞笑",
-          "count": 18,
-          "total_cont": 0
-        },
-        {
-          "name": "大欺诈师",
-          "count": 18,
-          "total_cont": 0
-        },
-        {
-          "name": "WIT_STUDIO",
-          "count": 10,
-          "total_cont": 0
-        },
-        {
-          "name": "やまだ豊",
-          "count": 10,
-          "total_cont": 0
-        },
-        {
-          "name": "动画",
-          "count": 10,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "古泽良太",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "半年番",
-          "count": 8,
-          "total_cont": 0
-        },
-        {
-          "name": "諏訪部順一",
-          "count": 7,
-          "total_cont": 0
-        },
-        {
-          "name": "小林千晃",
-          "count": 7,
-          "total_cont": 0
-        },
-        {
-          "name": "7月",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "诹访部顺一",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "欺诈",
-          "count": 5,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "大欺诈师"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "顶级欺诈师"
-            },
-            {
-              "v": "グレートプリテンダー"
-            },
-            {
-              "v": "グレプリ"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "23"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月8日"
-        },
         {
           "key": "放送星期",
           "value": "星期三"
-        },
-        {
-          "key": "官方网站",
-          "value": "http://www.greatpretender.jp/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "フジテレビ「＋Ultra」"
-        },
-        {
-          "key": "其他电视台",
-          "value": "BSフジ"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年12月16日"
-        },
-        {
-          "key": "导演",
-          "value": "鏑木ひろ"
-        },
-        {
-          "key": "Copyright",
-          "value": "©WIT STUDIO/Great Pretenders"
-        },
-        {
-          "key": "网络配信",
-          "value": "2020年6月2日（Netflix・先行）"
-        },
-        {
-          "key": "原作",
-          "value": "WIT STUDIO"
-        },
-        {
-          "key": "人物设定",
-          "value": "貞本義行"
-        },
-        {
-          "key": "设计工作",
-          "value": "奥田明世、清水慶太、石橋翔祐"
-        },
-        {
-          "key": "概念设计",
-          "value": "丹地陽子"
-        },
-        {
-          "key": "音乐剪辑",
-          "value": "千田耕平"
-        },
-        {
-          "key": "製作",
-          "value": "Great Pretenders（Production I.G、フジテレビ、WIT STUDIO、博報堂DYメディアパートナーズ、東宝、BSフジ）石川光久、宇津井隆（フジテレビ）、和田丈嗣、野村明男、大田圭二、小杉雅博"
-        },
-        {
-          "key": "总制片人",
-          "value": "伊藤整、 高瀬透子（フジテレビ）；企画统括：郡司幹雄"
-        },
-        {
-          "key": "制片人",
-          "value": "和田丈嗣、宋京舟、尾崎紀子（フジテレビ）、齋藤雅哉"
-        },
-        {
-          "key": "动画制片人",
-          "value": "岡田麻衣子"
         }
       ],
       "rating": {
-        "rank": 1751,
-        "total": 3875,
+        "rank": 1779,
+        "total": 3919,
         "count": {
-          "1": 6,
-          "2": 2,
-          "3": 22,
-          "4": 51,
-          "5": 169,
-          "6": 546,
-          "7": 1475,
-          "8": 1326,
+          "1": 7,
+          "2": 3,
+          "3": 23,
+          "4": 50,
+          "5": 170,
+          "6": 553,
+          "7": 1495,
+          "8": 1339,
           "9": 214,
-          "10": 64
+          "10": 65
         },
         "score": 7.2
       },
       "total_episodes": 24,
       "collection": {
-        "on_hold": 538,
-        "dropped": 374,
-        "wish": 1867,
-        "collect": 5279,
-        "doing": 659
+        "on_hold": 551,
+        "dropped": 379,
+        "wish": 1895,
+        "collect": 5357,
+        "doing": 662
       },
       "id": 285813,
-      "eps": 23,
       "meta_tags": [
         "悬疑",
         "TV",
@@ -296,638 +47,244 @@
         "原创",
         "剧情"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 23,
+        "total_comments": 905,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 61
+          },
+          {
+            "ep": 2,
+            "comments": 37
+          },
+          {
+            "ep": 3,
+            "comments": 28
+          },
+          {
+            "ep": 4,
+            "comments": 19
+          },
+          {
+            "ep": 5,
+            "comments": 65
+          },
+          {
+            "ep": 6,
+            "comments": 35
+          },
+          {
+            "ep": 7,
+            "comments": 50
+          },
+          {
+            "ep": 8,
+            "comments": 19
+          },
+          {
+            "ep": 9,
+            "comments": 20
+          },
+          {
+            "ep": 10,
+            "comments": 52
+          },
+          {
+            "ep": 11,
+            "comments": 40
+          },
+          {
+            "ep": 12,
+            "comments": 34
+          },
+          {
+            "ep": 13,
+            "comments": 54
+          },
+          {
+            "ep": 14,
+            "comments": 92
+          },
+          {
+            "ep": 15,
+            "comments": 27
+          },
+          {
+            "ep": 16,
+            "comments": 21
+          },
+          {
+            "ep": 17,
+            "comments": 35
+          },
+          {
+            "ep": 18,
+            "comments": 26
+          },
+          {
+            "ep": 19,
+            "comments": 26
+          },
+          {
+            "ep": 20,
+            "comments": 32
+          },
+          {
+            "ep": 21,
+            "comments": 24
+          },
+          {
+            "ep": 22,
+            "comments": 31
+          },
+          {
+            "ep": 23,
+            "comments": 77
+          }
+        ]
+      }
     },
     {
-      "date": "2020-06-04",
-      "platform": "WEB",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/86/44/278202_qPPW8.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/86/44/278202_qPPW8.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/86/44/278202_qPPW8.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/86/44/278202_qPPW8.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/86/44/278202_qPPW8.jpg"
       },
-      "summary": "新たな海皇を決める中国最大の武術大会、大擂台賽(だいらいたいさい)開幕! 毒に侵された体で出場を決めた刃牙を、中国全土から集まった猛者たちが待ち受ける。",
       "name": "バキ 大擂台賽編",
       "name_cn": "刃牙 大擂台赛篇",
-      "tags": [
-        {
-          "name": "热血",
-          "count": 103,
-          "total_cont": 0
-        },
-        {
-          "name": "漫改",
-          "count": 99,
-          "total_cont": 0
-        },
-        {
-          "name": "战斗",
-          "count": 86,
-          "total_cont": 0
-        },
-        {
-          "name": "刃牙",
-          "count": 82,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 81,
-          "total_cont": 0
-        },
-        {
-          "name": "漫画改",
-          "count": 60,
-          "total_cont": 0
-        },
-        {
-          "name": "格斗",
-          "count": 58,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 43,
-          "total_cont": 0
-        },
-        {
-          "name": "WEB",
-          "count": 42,
-          "total_cont": 0
-        },
-        {
-          "name": "搞笑",
-          "count": 36,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 35,
-          "total_cont": 0
-        },
-        {
-          "name": "TMS",
-          "count": 24,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 19,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 11,
-          "total_cont": 0
-        },
-        {
-          "name": "平野俊貴",
-          "count": 7,
-          "total_cont": 0
-        },
-        {
-          "name": "Netflix",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "6月",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年6月",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "伪",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "续作",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "便宜动画",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "トムス・エンタテインメント",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年4月",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "反华",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "2020春",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "大塚明夫",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "板垣恵介",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "島﨑信長",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "TMSEntertainment",
-          "count": 2,
-          "total_cont": 0
-        }
-      ],
-      "infobox": [
-        {
-          "key": "中文名",
-          "value": "刃牙 大擂台赛篇"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "バキ 第2期"
-            },
-            {
-              "v": "刃牙 第2期"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "13"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年6月4日"
-        },
-        {
-          "key": "官方网站",
-          "value": "https://baki-anime.jp/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "Netflix"
-        },
-        {
-          "key": "Copyright",
-          "value": "©板垣恵介(秋田書店)／バキッッ製作委員会"
-        },
-        {
-          "key": "原作",
-          "value": "板垣恵介（秋田書店「週刊少年チャンピオン」連載）"
-        },
-        {
-          "key": "导演",
-          "value": "平野俊貴"
-        },
-        {
-          "key": "系列构成",
-          "value": "浦畑達彦"
-        },
-        {
-          "key": "人物设定",
-          "value": "鈴木藤雄、石川晋吾"
-        },
-        {
-          "key": "色彩设计",
-          "value": "宮脇裕美"
-        },
-        {
-          "key": "美术监督",
-          "value": "西山正紀"
-        },
-        {
-          "key": "摄影监督",
-          "value": "野口龍生"
-        },
-        {
-          "key": "剪辑",
-          "value": "佐野由里子"
-        },
-        {
-          "key": "音乐",
-          "value": "藤澤健至"
-        },
-        {
-          "key": "音响监督",
-          "value": "浦上靖之、浦上慶子"
-        },
-        {
-          "key": "动画制作",
-          "value": "トムス・エンタテインメント"
-        },
-        {
-          "key": "製作",
-          "value": "バキッッ製作委員会"
-        },
-        {
-          "key": "主题歌演出",
-          "value": "GRANRODEO、藤田恵名"
-        }
-      ],
+      "infobox": [],
       "rating": {
-        "rank": 6532,
-        "total": 665,
+        "rank": 6486,
+        "total": 675,
         "count": {
           "1": 4,
           "2": 3,
           "3": 17,
           "4": 19,
-          "5": 87,
-          "6": 294,
-          "7": 181,
+          "5": 89,
+          "6": 298,
+          "7": 184,
           "8": 45,
-          "9": 7,
+          "9": 8,
           "10": 8
         },
         "score": 6.2
       },
       "total_episodes": 13,
       "collection": {
-        "on_hold": 23,
-        "dropped": 31,
-        "wish": 102,
-        "collect": 1107,
-        "doing": 30
+        "on_hold": 24,
+        "dropped": 30,
+        "wish": 104,
+        "collect": 1131,
+        "doing": 32
       },
       "id": 278202,
-      "eps": 13,
       "meta_tags": [
         "漫画改",
         "战斗",
         "WEB"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 13,
+        "total_comments": 20,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 2
+          },
+          {
+            "ep": 2,
+            "comments": 1
+          },
+          {
+            "ep": 3,
+            "comments": 3
+          },
+          {
+            "ep": 4,
+            "comments": 1
+          },
+          {
+            "ep": 5,
+            "comments": 2
+          },
+          {
+            "ep": 6,
+            "comments": 0
+          },
+          {
+            "ep": 7,
+            "comments": 1
+          },
+          {
+            "ep": 8,
+            "comments": 2
+          },
+          {
+            "ep": 9,
+            "comments": 2
+          },
+          {
+            "ep": 10,
+            "comments": 3
+          },
+          {
+            "ep": 11,
+            "comments": 1
+          },
+          {
+            "ep": 12,
+            "comments": 1
+          },
+          {
+            "ep": 13,
+            "comments": 1
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-08",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/ff/65/285879_l1lG6.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/ff/65/285879_l1lG6.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/ff/65/285879_l1lG6.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/ff/65/285879_l1lG6.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/ff/65/285879_l1lG6.jpg"
       },
-      "summary": "面对突然出现的未知生命体“葛多尔”，人类突然面临灭亡危机，而后经过了漫长的岁月。幸存下来的人们为了摆脱“葛多尔”的威胁和侵害，建造了高度为3000M的巨大移动要塞“DECA-DENCE”，过上了平稳的日子。\r\n住在“DECA-DENCE”里的分为两种人，日夜与“葛多尔”战斗的战士“齿轮（Gear）”以及不具有战斗能力的“油轮（Tanker）”。非常憧憬与“葛多尔”战斗的战士“齿轮”，梦想着自己也能成为“齿轮”的“油轮”少女·夏芽，在某天与态度冷淡的“DECA-DENCE”修理工·镝木相遇。\r\n没有放弃梦想的积极少女与放弃了梦想的现实主义男子。乍看之下性格似乎完全相反的两人之间的相遇，终将对这个世界的未来产生重大影响。",
       "name": "デカダンス",
       "name_cn": "没落要塞",
-      "tags": [
-        {
-          "name": "原创",
-          "count": 1225,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 783,
-          "total_cont": 0
-        },
-        {
-          "name": "科幻",
-          "count": 731,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 632,
-          "total_cont": 0
-        },
-        {
-          "name": "蒸汽朋克",
-          "count": 562,
-          "total_cont": 0
-        },
-        {
-          "name": "战斗",
-          "count": 540,
-          "total_cont": 0
-        },
-        {
-          "name": "NUT",
-          "count": 495,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 365,
-          "total_cont": 0
-        },
-        {
-          "name": "立川让",
-          "count": 254,
-          "total_cont": 0
-        },
-        {
-          "name": "瀬古浩司",
-          "count": 164,
-          "total_cont": 0
-        },
-        {
-          "name": "立川譲",
-          "count": 93,
-          "total_cont": 0
-        },
-        {
-          "name": "热血",
-          "count": 89,
-          "total_cont": 0
-        },
-        {
-          "name": "没落要塞",
-          "count": 86,
-          "total_cont": 0
-        },
-        {
-          "name": "SF",
-          "count": 69,
-          "total_cont": 0
-        },
-        {
-          "name": "小西克幸",
-          "count": 66,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 22,
-          "total_cont": 0
-        },
-        {
-          "name": "末世",
-          "count": 19,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 17,
-          "total_cont": 0
-        },
-        {
-          "name": "奇幻",
-          "count": 13,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 13,
-          "total_cont": 0
-        },
-        {
-          "name": "废土",
-          "count": 11,
-          "total_cont": 0
-        },
-        {
-          "name": "濑古浩司",
-          "count": 11,
-          "total_cont": 0
-        },
-        {
-          "name": "异世界",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "冒险",
-          "count": 8,
-          "total_cont": 0
-        },
-        {
-          "name": "2020夏",
-          "count": 7,
-          "total_cont": 0
-        },
-        {
-          "name": "得田真裕",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "待上映",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "楠木ともり",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "游戏",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "TVA",
-          "count": 4,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "没落要塞"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "DECA-DENCE"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "12"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月8日"
-        },
         {
           "key": "放送星期",
           "value": "星期三"
-        },
-        {
-          "key": "官方网站",
-          "value": "http://decadence-anime.com/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "AT-X"
-        },
-        {
-          "key": "其他电视台",
-          "value": "TOKYO MX、テレビ愛知、KBS京都、サンテレビ、BS11"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月23日"
-        },
-        {
-          "key": "导演",
-          "value": "立川譲"
-        },
-        {
-          "key": "音乐",
-          "value": "得田真裕"
-        },
-        {
-          "key": "Copyright",
-          "value": "©DECA-DENCE PROJECT"
-        },
-        {
-          "key": "原作",
-          "value": "DECA-DENCE PROJECT"
-        },
-        {
-          "key": "系列构成",
-          "value": "瀬古浩司"
-        },
-        {
-          "key": "脚本",
-          "value": "瀬古浩司"
-        },
-        {
-          "key": "人物设定",
-          "value": "栗田新一、[次要人物设定]谷口宏美 、緒方歩惟"
-        },
-        {
-          "key": "总作画监督",
-          "value": "栗田新一"
-        },
-        {
-          "key": "人物原案",
-          "value": "pomodorosa[人物概念设定]"
-        },
-        {
-          "key": "设定",
-          "value": "押山清高[赛博格设计]、周浩嵩[DECA-DENCE设计]、松浦聖[Gadoll设计]"
-        },
-        {
-          "key": "道具设计",
-          "value": "月田文律、秋篠Denforword日和 (Aki Production)"
-        },
-        {
-          "key": "视觉概念",
-          "value": "村上泉、増田哲弥"
-        },
-        {
-          "key": "美术监督",
-          "value": "市倉敬"
-        },
-        {
-          "key": "色彩设计",
-          "value": "中村千穂"
-        },
-        {
-          "key": "摄影监督",
-          "value": "魚山真志"
-        },
-        {
-          "key": "CG 导演",
-          "value": "高橋将人"
-        },
-        {
-          "key": "剪辑",
-          "value": "神宮司由美"
-        },
-        {
-          "key": "音响监督",
-          "value": "郷文裕貴"
-        },
-        {
-          "key": "动画制作",
-          "value": "NUT"
-        },
-        {
-          "key": "制片人",
-          "value": "菊島憲文、宇都宮裕人、飯塚彩、大和田智之、尾形光広"
-        },
-        {
-          "key": "总制片人",
-          "value": "田中翔、角木卓哉"
-        },
-        {
-          "key": "製作",
-          "value": "DECA-DENCE PROJECT(KADOKAWA、ニューギン、AT-X、日本BS放送、角川メディアハウス、NUT)；新井宏明、山田昇、太田勝士、篠崎文彦、奈良井昌幸"
-        },
-        {
-          "key": "主题歌演出",
-          "value": "鈴木このみ / 伊東歌詞太郎"
-        },
-        {
-          "key": "企画",
-          "value": "菊池剛、工藤大丈；企画协力：中山卓也、西前朱加"
-        },
-        {
-          "key": "OP・ED 分镜",
-          "value": "木村智(OP) / 梁博雅(ED)"
         }
       ],
       "rating": {
-        "rank": 2836,
-        "total": 4057,
+        "rank": 2811,
+        "total": 4112,
         "count": {
-          "1": 3,
-          "2": 6,
+          "1": 2,
+          "2": 7,
           "3": 9,
           "4": 37,
-          "5": 204,
-          "6": 879,
-          "7": 1885,
-          "8": 902,
-          "9": 88,
+          "5": 208,
+          "6": 890,
+          "7": 1909,
+          "8": 916,
+          "9": 90,
           "10": 44
         },
         "score": 6.9
       },
       "total_episodes": 13,
       "collection": {
-        "on_hold": 351,
-        "dropped": 288,
-        "wish": 1094,
-        "collect": 6108,
-        "doing": 441
+        "on_hold": 362,
+        "dropped": 294,
+        "wish": 1110,
+        "collect": 6203,
+        "doing": 445
       },
       "id": 285879,
-      "eps": 12,
       "meta_tags": [
         "科幻",
         "TV",
@@ -935,303 +292,87 @@
         "原创",
         "战斗"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 12,
+        "total_comments": 801,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 77
+          },
+          {
+            "ep": 2,
+            "comments": 114
+          },
+          {
+            "ep": 3,
+            "comments": 61
+          },
+          {
+            "ep": 4,
+            "comments": 57
+          },
+          {
+            "ep": 5,
+            "comments": 72
+          },
+          {
+            "ep": 6,
+            "comments": 55
+          },
+          {
+            "ep": 7,
+            "comments": 77
+          },
+          {
+            "ep": 8,
+            "comments": 38
+          },
+          {
+            "ep": 9,
+            "comments": 70
+          },
+          {
+            "ep": 10,
+            "comments": 63
+          },
+          {
+            "ep": 11,
+            "comments": 55
+          },
+          {
+            "ep": 12,
+            "comments": 62
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-03",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/be/48/293648_87fQL.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/be/48/293648_87fQL.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/be/48/293648_87fQL.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/be/48/293648_87fQL.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/be/48/293648_87fQL.jpg"
       },
-      "summary": "HERO是由H与ERO所组成的——\r\n夺取并规制色情，企图使人类缓慢灭绝的侵略种族·规制虫。\r\n而面对这些恐怖怪人的，是“最色的！？”5名高中生！\r\n青少年·炎城烈人与美少女们所带来的青春期“H”ERO喜剧，开幕！",
       "name": "ド級編隊エグゼロス",
       "name_cn": "弩级战队HXEROS",
-      "tags": [
-        {
-          "name": "卖肉",
-          "count": 414,
-          "total_cont": 0
-        },
-        {
-          "name": "后宫",
-          "count": 360,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 317,
-          "total_cont": 0
-        },
-        {
-          "name": "漫画改",
-          "count": 237,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 228,
-          "total_cont": 0
-        },
-        {
-          "name": "projectNo.9",
-          "count": 191,
-          "total_cont": 0
-        },
-        {
-          "name": "肉番",
-          "count": 156,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 123,
-          "total_cont": 0
-        },
-        {
-          "name": "校园",
-          "count": 109,
-          "total_cont": 0
-        },
-        {
-          "name": "松岡禎丞",
-          "count": 105,
-          "total_cont": 0
-        },
-        {
-          "name": "漫改",
-          "count": 79,
-          "total_cont": 0
-        },
-        {
-          "name": "搞笑",
-          "count": 72,
-          "total_cont": 0
-        },
-        {
-          "name": "战斗",
-          "count": 60,
-          "total_cont": 0
-        },
-        {
-          "name": "茅野愛衣",
-          "count": 50,
-          "total_cont": 0
-        },
-        {
-          "name": "神保昌登",
-          "count": 25,
-          "total_cont": 0
-        },
-        {
-          "name": "肉",
-          "count": 20,
-          "total_cont": 0
-        },
-        {
-          "name": "加隈亜衣",
-          "count": 16,
-          "total_cont": 0
-        },
-        {
-          "name": "恋爱",
-          "count": 13,
-          "total_cont": 0
-        },
-        {
-          "name": "奇幻",
-          "count": 12,
-          "total_cont": 0
-        },
-        {
-          "name": "福利",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "弩级战队HXEROS",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "纯爱",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "露点",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "表番",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "7月",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "2020夏",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "project_No.9",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 3,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "弩级战队HXEROS"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "ド級変態エグゼロス"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "12"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月3日"
-        },
         {
           "key": "放送星期",
           "value": "星期五"
-        },
-        {
-          "key": "官方网站",
-          "value": "https://hxeros.com/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "TOKYO MX、BS11、群馬テレビ、とちぎテレビ"
-        },
-        {
-          "key": "其他电视台",
-          "value": "MBS、テレビ愛知、AT-X"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月25日"
-        },
-        {
-          "key": "导演",
-          "value": "神保昌登"
-        },
-        {
-          "key": "音乐",
-          "value": "吟"
-        },
-        {
-          "key": "Copyright",
-          "value": "©きただりょうま／集英社"
-        },
-        {
-          "key": "原作",
-          "value": "きただりょうま『ド級編隊エグゼロス』（集英社「ジャンプSQ.」連載）"
-        },
-        {
-          "key": "系列构成",
-          "value": "神保昌登"
-        },
-        {
-          "key": "人物设定",
-          "value": "山本亮友"
-        },
-        {
-          "key": "道具设计",
-          "value": "山本月穂"
-        },
-        {
-          "key": "服装设计",
-          "value": "廣冨麻由"
-        },
-        {
-          "key": "美术监督",
-          "value": "益田健太"
-        },
-        {
-          "key": "美术设计",
-          "value": "平良亜似子"
-        },
-        {
-          "key": "色彩设计",
-          "value": "鈴木ようこ"
-        },
-        {
-          "key": "CG导演",
-          "value": "濱村敏郎"
-        },
-        {
-          "key": "摄影监督",
-          "value": "葉山大輝"
-        },
-        {
-          "key": "剪辑",
-          "value": "近藤勇二"
-        },
-        {
-          "key": "音响监督",
-          "value": "土屋雅紀"
-        },
-        {
-          "key": "音响",
-          "value": "スタジオマウス"
-        },
-        {
-          "key": "动画制作",
-          "value": "project No.9"
-        },
-        {
-          "key": "主题歌演出",
-          "value": "HXEROS SYNDROMES（BURNOUT SYNDROMES、炎城烈人(CV:松岡禎丞)）、星乃雲母 (CV:加隈亜衣)"
         }
       ],
       "rating": {
-        "rank": 8172,
-        "total": 1376,
+        "rank": 8215,
+        "total": 1394,
         "count": {
-          "1": 10,
-          "2": 21,
+          "1": 9,
+          "2": 22,
           "3": 46,
-          "4": 113,
-          "5": 347,
-          "6": 554,
+          "4": 115,
+          "5": 354,
+          "6": 562,
           "7": 211,
-          "8": 48,
+          "8": 49,
           "9": 11,
           "10": 15
         },
@@ -1239,14 +380,13 @@
       },
       "total_episodes": 13,
       "collection": {
-        "on_hold": 221,
-        "dropped": 318,
-        "wish": 660,
-        "collect": 2132,
-        "doing": 270
+        "on_hold": 228,
+        "dropped": 319,
+        "wish": 667,
+        "collect": 2170,
+        "doing": 279
       },
       "id": 293648,
-      "eps": 12,
       "meta_tags": [
         "校园",
         "后宫",
@@ -1254,328 +394,101 @@
         "日本",
         "漫画改"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 12,
+        "total_comments": 295,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 66
+          },
+          {
+            "ep": 2,
+            "comments": 36
+          },
+          {
+            "ep": 3,
+            "comments": 27
+          },
+          {
+            "ep": 4,
+            "comments": 24
+          },
+          {
+            "ep": 5,
+            "comments": 18
+          },
+          {
+            "ep": 6,
+            "comments": 14
+          },
+          {
+            "ep": 7,
+            "comments": 25
+          },
+          {
+            "ep": 8,
+            "comments": 14
+          },
+          {
+            "ep": 9,
+            "comments": 20
+          },
+          {
+            "ep": 10,
+            "comments": 20
+          },
+          {
+            "ep": 11,
+            "comments": 21
+          },
+          {
+            "ep": 12,
+            "comments": 10
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-03",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/b9/67/297342_2gxJk.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/b9/67/297342_2gxJk.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/b9/67/297342_2gxJk.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/b9/67/297342_2gxJk.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/b9/67/297342_2gxJk.jpg"
       },
-      "summary": "この「国」は、何かを隠している──。\r\n“地下（ネザー）”での激戦を終え、 シンラたちは「伝導者」の野望を知る。\r\nその目的は、特殊な炎「アドラバースト」の 使い手を集めて弐佰伍拾年前の大災害を 再び起こし、\r\n世界を滅ぼすことだった。\r\n自らもアドラバーストを持つシンラは、 伝導者に追われる身ながら、 その策略を潰すべく奔走を続ける。\r\n新たなアドラバーストを持つ少女との出会い、\r\nそして、ひた隠しにされてきた皇国の要たる 天照＜アマテラス＞の大いなる秘密。\r\n炎に狂わされ、炎に導かれし少年は、一歩ずつ、 真実へと近づいていく。",
       "name": "炎炎ノ消防隊 弐ノ章",
       "name_cn": "炎炎消防队 二之章",
-      "tags": [
-        {
-          "name": "战斗",
-          "count": 420,
-          "total_cont": 0
-        },
-        {
-          "name": "热血",
-          "count": 378,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 348,
-          "total_cont": 0
-        },
-        {
-          "name": "davidproduction",
-          "count": 270,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 260,
-          "total_cont": 0
-        },
-        {
-          "name": "漫改",
-          "count": 213,
-          "total_cont": 0
-        },
-        {
-          "name": "漫画改",
-          "count": 207,
-          "total_cont": 0
-        },
-        {
-          "name": "炎炎消防队",
-          "count": 171,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 155,
-          "total_cont": 0
-        },
-        {
-          "name": "奇幻",
-          "count": 131,
-          "total_cont": 0
-        },
-        {
-          "name": "大卫社",
-          "count": 70,
-          "total_cont": 0
-        },
-        {
-          "name": "南川達馬",
-          "count": 25,
-          "total_cont": 0
-        },
-        {
-          "name": "续作",
-          "count": 20,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 16,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 12,
-          "total_cont": 0
-        },
-        {
-          "name": "david_production",
-          "count": 11,
-          "total_cont": 0
-        },
-        {
-          "name": "搞笑",
-          "count": 10,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "南川达马",
-          "count": 7,
-          "total_cont": 0
-        },
-        {
-          "name": "超能力",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "梶原岳人",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "守岡英行",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "末廣健一郎",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "悠木碧",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "david.production",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "大久保篤",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "设定",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "新番",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "undefined",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "作画",
-          "count": 2,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "炎炎消防队 二之章"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "En`en no Shouboutai Ni no Shou"
-            },
-            {
-              "v": "Fire Force (2020)"
-            },
-            {
-              "v": "炎炎消防队 第二季"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "24"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月3日"
-        },
         {
           "key": "放送星期",
           "value": "星期五"
-        },
-        {
-          "key": "官方网站",
-          "value": "https://fireforce-anime.jp/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "TBS、MBS、HBC、TBC、TUF、BSN、RCC、TYS、ITV、RKB、RBC"
-        },
-        {
-          "key": "其他电视台",
-          "value": "BS-TBS、MRT、SBC、OBS、SBS、RSK、TVA、IBC、RKK"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年12月11日"
-        },
-        {
-          "key": "导演",
-          "value": "南川達馬"
-        },
-        {
-          "key": "音乐",
-          "value": "末廣健一郎"
-        },
-        {
-          "key": "Copyright",
-          "value": "©大久保篤・講談社／特殊消防隊動画広報課"
-        },
-        {
-          "key": "原作",
-          "value": "大久保篤（講談社「週刊少年マガジン」連載）"
-        },
-        {
-          "key": "系列构成",
-          "value": "南川達馬"
-        },
-        {
-          "key": "人物设定",
-          "value": "守岡英行"
-        },
-        {
-          "key": "总作画监督",
-          "value": "守岡英行、小堺能夫、徳田夢之介"
-        },
-        {
-          "key": "色彩设计",
-          "value": "佐藤直子"
-        },
-        {
-          "key": "美术监督",
-          "value": "高峯義人、宮里和誉"
-        },
-        {
-          "key": "摄影监督",
-          "value": "元木洋介"
-        },
-        {
-          "key": "CG 导演",
-          "value": "高野慎也"
-        },
-        {
-          "key": "VFX",
-          "value": "大橋遼"
-        },
-        {
-          "key": "剪辑",
-          "value": "廣瀬清志"
-        },
-        {
-          "key": "音响监督",
-          "value": "明田川仁"
-        },
-        {
-          "key": "主题歌演出",
-          "value": "Aimer、サイダーガール"
-        },
-        {
-          "key": "动画制作",
-          "value": "david production"
-        },
-        {
-          "key": "企画",
-          "value": "鶴田直一、角田真敏、李旎、丸山博雄、武田智哉、Gen Fukunaga"
-        },
-        {
-          "key": "製作",
-          "value": "特殊消防隊動画広報課（DMM.com、講談社、bilibili、アサツー ディ・ケイ、Funimation）棚田泰啓、五十嵐秀幸、Ming H. Chan、丸山裕之、Colin Decker"
-        },
-        {
-          "key": "制片人",
-          "value": "藤野麻耶、栃倉千穂、杜伊、亀井博司、飯島江美子"
         }
       ],
       "rating": {
-        "rank": 4671,
-        "total": 1901,
+        "rank": 4679,
+        "total": 1943,
         "count": {
           "1": 4,
-          "2": 5,
+          "2": 6,
           "3": 12,
-          "4": 44,
-          "5": 145,
-          "6": 611,
-          "7": 814,
-          "8": 227,
-          "9": 19,
-          "10": 20
+          "4": 48,
+          "5": 147,
+          "6": 622,
+          "7": 834,
+          "8": 229,
+          "9": 20,
+          "10": 21
         },
         "score": 6.6
       },
       "total_episodes": 24,
       "collection": {
-        "on_hold": 220,
-        "dropped": 187,
-        "wish": 485,
-        "collect": 3225,
-        "doing": 289
+        "on_hold": 223,
+        "dropped": 189,
+        "wish": 498,
+        "collect": 3322,
+        "doing": 298
       },
       "id": 297342,
-      "eps": 24,
       "meta_tags": [
         "TV",
         "日本",
@@ -1583,636 +496,250 @@
         "漫画改",
         "战斗"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 24,
+        "total_comments": 567,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 37
+          },
+          {
+            "ep": 2,
+            "comments": 29
+          },
+          {
+            "ep": 3,
+            "comments": 29
+          },
+          {
+            "ep": 4,
+            "comments": 35
+          },
+          {
+            "ep": 5,
+            "comments": 30
+          },
+          {
+            "ep": 6,
+            "comments": 25
+          },
+          {
+            "ep": 7,
+            "comments": 18
+          },
+          {
+            "ep": 8,
+            "comments": 20
+          },
+          {
+            "ep": 9,
+            "comments": 23
+          },
+          {
+            "ep": 10,
+            "comments": 8
+          },
+          {
+            "ep": 11,
+            "comments": 17
+          },
+          {
+            "ep": 12,
+            "comments": 35
+          },
+          {
+            "ep": 13,
+            "comments": 18
+          },
+          {
+            "ep": 14,
+            "comments": 14
+          },
+          {
+            "ep": 15,
+            "comments": 21
+          },
+          {
+            "ep": 16,
+            "comments": 34
+          },
+          {
+            "ep": 17,
+            "comments": 32
+          },
+          {
+            "ep": 18,
+            "comments": 30
+          },
+          {
+            "ep": 19,
+            "comments": 12
+          },
+          {
+            "ep": 20,
+            "comments": 30
+          },
+          {
+            "ep": 21,
+            "comments": 16
+          },
+          {
+            "ep": 22,
+            "comments": 18
+          },
+          {
+            "ep": 23,
+            "comments": 21
+          },
+          {
+            "ep": 24,
+            "comments": 15
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-04",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/8b/fd/241185_qfFR2.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/8b/fd/241185_qfFR2.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/8b/fd/241185_qfFR2.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/8b/fd/241185_qfFR2.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/8b/fd/241185_qfFR2.jpg"
       },
-      "summary": "故事发生于普遍使用“辉砂”以及其结晶体“辉石”作为动力的城市·玛姆盖斯提尔。\r\n运用辉砂与辉石、以咒语或旋律来发动魔法的少女被称为“魔女”，进行着歌唱活动以及驱除怪兽，被人们所敬仰着。\r\n晓之魔女所创设，齐聚了见习魔女们的学校，芙劳拉女子学院。\r\n梦想成为出色魔女的少女·缇亚拉来到了这所学院的门前。",
       "name": "Lapis Re:LiGHTs ラピスリライツ",
       "name_cn": "宝石幻想 光芒重现",
-      "tags": [
-        {
-          "name": "偶像",
-          "count": 360,
-          "total_cont": 0
-        },
-        {
-          "name": "原创",
-          "count": 331,
-          "total_cont": 0
-        },
-        {
-          "name": "百合",
-          "count": 266,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 243,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 211,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 170,
-          "total_cont": 0
-        },
-        {
-          "name": "音乐",
-          "count": 151,
-          "total_cont": 0
-        },
-        {
-          "name": "横滨AnimationLABO",
-          "count": 127,
-          "total_cont": 0
-        },
-        {
-          "name": "奇幻",
-          "count": 118,
-          "total_cont": 0
-        },
-        {
-          "name": "畑博之",
-          "count": 63,
-          "total_cont": 0
-        },
-        {
-          "name": "校园",
-          "count": 60,
-          "total_cont": 0
-        },
-        {
-          "name": "横浜アニメーションラボ",
-          "count": 27,
-          "total_cont": 0
-        },
-        {
-          "name": "魔法",
-          "count": 14,
-          "total_cont": 0
-        },
-        {
-          "name": "轻百合",
-          "count": 13,
-          "total_cont": 0
-        },
-        {
-          "name": "游戏改",
-          "count": 12,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 8,
-          "total_cont": 0
-        },
-        {
-          "name": "土田霞",
-          "count": 7,
-          "total_cont": 0
-        },
-        {
-          "name": "日常",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "TVA",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "あさのハジメ",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "2020夏",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "已下载",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "魔法少女",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "萌",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "搞笑",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "宝石幻想",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "TV动画",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "异世界",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "群像",
-          "count": 2,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "宝石幻想 光芒重现"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "Lapis Re:Lights"
-            },
-            {
-              "v": "宝石幻想 光芒重现 ～这个世界的偶像会魔法～"
-            },
-            {
-              "v": "ラピスリライツ ～この世界のアイドルは魔法が使える～"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "12"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月4日"
-        },
         {
           "key": "放送星期",
           "value": "星期六"
-        },
-        {
-          "key": "官方网站",
-          "value": "https://www.lapisrelights.com/anime/"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月19日"
-        },
-        {
-          "key": "导演",
-          "value": "畑博之"
-        },
-        {
-          "key": "音乐",
-          "value": "宝野聡史"
-        },
-        {
-          "key": "Copyright",
-          "value": "© KLabGames・KADOKAWA/TEAM Lapis Re:LiGHTs"
-        },
-        {
-          "key": "系列构成",
-          "value": "土田霞、あさのハジメ"
-        },
-        {
-          "key": "人物原案",
-          "value": "U35"
-        },
-        {
-          "key": "人物设定",
-          "value": "池上たろう(池上太郎)"
-        },
-        {
-          "key": "总作画监督",
-          "value": "池上たろう(池上太郎)"
-        },
-        {
-          "key": "美术监督",
-          "value": "山本陽一朗"
-        },
-        {
-          "key": "色彩设计",
-          "value": "古市裕一"
-        },
-        {
-          "key": "CG 导演",
-          "value": "五島卓二（トライスラッシュ）"
-        },
-        {
-          "key": "摄影监督",
-          "value": "岩井和也（スタジオシャムロック）"
-        },
-        {
-          "key": "剪辑",
-          "value": "坪根健太郎（リアル・ティ）"
-        },
-        {
-          "key": "音响监督",
-          "value": "納谷僚介"
-        },
-        {
-          "key": "主题歌编曲",
-          "value": "南田健吾 / 秋浦智裕"
-        },
-        {
-          "key": "主题歌作曲",
-          "value": "南田健吾 / 秋浦智裕"
-        },
-        {
-          "key": "主题歌作词",
-          "value": "松原さらり / 秋浦智裕"
-        },
-        {
-          "key": "主题歌演出",
-          "value": "LiGHTs[ティアラ(CV:安齋由香里)、ロゼッタ(CV:久保田梨沙)、ラヴィ(CV:向井莉生)、アシュレイ(CV:佐伯伊織)、リネット(CV:山本瑞稀)]"
-        },
-        {
-          "key": "OP・ED 分镜",
-          "value": "畑博之 / 安部元宏"
-        },
-        {
-          "key": "动画制作",
-          "value": "横浜アニメーションラボ"
-        },
-        {
-          "key": "製作",
-          "value": "NBCユニバーサル・エンターテイメント、KLab株式会社、KADOKAWA、株式会社JVCケンウッド・ ビクターエンタテインメント、スタジオマウス、株式会社レッグス、JY Animation"
         }
       ],
       "rating": {
-        "rank": 3165,
-        "total": 1132,
+        "rank": 3155,
+        "total": 1144,
         "count": {
           "1": 3,
           "2": 0,
           "3": 3,
           "4": 19,
-          "5": 58,
-          "6": 287,
-          "7": 499,
-          "8": 221,
-          "9": 26,
-          "10": 16
+          "5": 60,
+          "6": 288,
+          "7": 507,
+          "8": 222,
+          "9": 27,
+          "10": 15
         },
-        "score": 6.9
+        "score": 6.8
       },
       "total_episodes": 13,
       "collection": {
-        "on_hold": 166,
-        "dropped": 155,
-        "wish": 661,
-        "collect": 1689,
-        "doing": 226
+        "on_hold": 172,
+        "dropped": 157,
+        "wish": 675,
+        "collect": 1703,
+        "doing": 228
       },
       "id": 241185,
-      "eps": 12,
       "meta_tags": [
         "百合",
         "TV",
         "日本",
         "原创"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 12,
+        "total_comments": 412,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 39
+          },
+          {
+            "ep": 2,
+            "comments": 37
+          },
+          {
+            "ep": 3,
+            "comments": 36
+          },
+          {
+            "ep": 4,
+            "comments": 40
+          },
+          {
+            "ep": 5,
+            "comments": 35
+          },
+          {
+            "ep": 6,
+            "comments": 32
+          },
+          {
+            "ep": 7,
+            "comments": 23
+          },
+          {
+            "ep": 8,
+            "comments": 38
+          },
+          {
+            "ep": 9,
+            "comments": 26
+          },
+          {
+            "ep": 10,
+            "comments": 37
+          },
+          {
+            "ep": 11,
+            "comments": 29
+          },
+          {
+            "ep": 12,
+            "comments": 40
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-04",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/3b/ad/292222_Jgflx.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/3b/ad/292222_Jgflx.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/3b/ad/292222_Jgflx.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/3b/ad/292222_Jgflx.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/3b/ad/292222_Jgflx.jpg"
       },
-      "summary": "历经两千年的时光，苏醒了的暴虐魔王——\r\n但他在培育魔王候补的学院中的适性却是——《不适任》！？\r\n尽管具备能毁灭人类、精灵，甚至是众神的力量，暴虐魔王“阿诺斯·波鲁迪戈乌多”却厌倦了永无止尽的斗争，梦想着和平的世界进行转生。然而在两千年后，转生后的他所迎来的，却是适应和平生活而变得过于弱小的子孙们，以及各种衰退至极的魔法。\r\n阿诺斯虽然进入了对被视作魔王转世之人进行集中教育的“魔王学院”，但学院却无法看出他的实力，使得他被刻上不适任者这一烙印。不仅如此，传说中的魔王还变成了和自己完全不同的其他人。\r\n在众人都瞧不起他的环境里，他将唯一亲切对待自己的少女米夏纳为部下， 作为不适任者（魔王），在魔族的等级制度上迈向巅峰！！\r\n“不论天理、命运还是奇迹，在我的眼前只有俯首受戮一途而已。”",
       "name": "魔王学院の不適合者 ～史上最強の魔王の始祖、転生して子孫たちの学校へ通う～",
       "name_cn": "魔王学院的不适任者～史上最强的魔王始祖，转生就读子孙们的学校～",
-      "tags": [
-        {
-          "name": "龙傲天",
-          "count": 1403,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 945,
-          "total_cont": 0
-        },
-        {
-          "name": "轻小说改",
-          "count": 885,
-          "total_cont": 0
-        },
-        {
-          "name": "后宫",
-          "count": 840,
-          "total_cont": 0
-        },
-        {
-          "name": "SILVERLINK.",
-          "count": 672,
-          "total_cont": 0
-        },
-        {
-          "name": "爽片",
-          "count": 574,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 538,
-          "total_cont": 0
-        },
-        {
-          "name": "奇幻",
-          "count": 451,
-          "total_cont": 0
-        },
-        {
-          "name": "大沼心",
-          "count": 405,
-          "total_cont": 0
-        },
-        {
-          "name": "异世界",
-          "count": 367,
-          "total_cont": 0
-        },
-        {
-          "name": "轻改",
-          "count": 343,
-          "total_cont": 0
-        },
-        {
-          "name": "战斗",
-          "count": 338,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 335,
-          "total_cont": 0
-        },
-        {
-          "name": "小说改",
-          "count": 102,
-          "total_cont": 0
-        },
-        {
-          "name": "田村正文",
-          "count": 64,
-          "total_cont": 0
-        },
-        {
-          "name": "校园",
-          "count": 45,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 35,
-          "total_cont": 0
-        },
-        {
-          "name": "装逼",
-          "count": 25,
-          "total_cont": 0
-        },
-        {
-          "name": "楠木ともり",
-          "count": 22,
-          "total_cont": 0
-        },
-        {
-          "name": "厕纸",
-          "count": 20,
-          "total_cont": 0
-        },
-        {
-          "name": "搞笑",
-          "count": 17,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 13,
-          "total_cont": 0
-        },
-        {
-          "name": "魔法",
-          "count": 12,
-          "total_cont": 0
-        },
-        {
-          "name": "SILVER_LINK.",
-          "count": 10,
-          "total_cont": 0
-        },
-        {
-          "name": "热血",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "恋爱",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "转生",
-          "count": 8,
-          "total_cont": 0
-        },
-        {
-          "name": "穿越",
-          "count": 7,
-          "total_cont": 0
-        },
-        {
-          "name": "田中仁",
-          "count": 6,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "魔王学院的不适任者～史上最强的魔王始祖，转生就读子孙们的学校～"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "魔王学院的不适合者"
-            },
-            {
-              "v": "The Misfit of Demon King Academy: History’s Strongest Demon King Reincarnates and Goes to School with His Descendants"
-            },
-            {
-              "v": "Maou Gakuin no Futekigousha: Shijou Saikyou no Maou no Shiso, Tensei shite Shison-tachi no Gakkou e Kayou"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "13"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月4日"
-        },
         {
           "key": "放送星期",
           "value": "星期六"
-        },
-        {
-          "key": "官方网站",
-          "value": "https://maohgakuin.com/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "TOKYO MX"
-        },
-        {
-          "key": "其他电视台",
-          "value": "とちぎテレビ / 群馬テレビ / BS11 / 読売テレビ / テレビ愛知 / AT-X"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月26日"
-        },
-        {
-          "key": "导演",
-          "value": "田村正文"
-        },
-        {
-          "key": "音乐",
-          "value": "井内啓二"
-        },
-        {
-          "key": "Copyright",
-          "value": "©2019 秋/KADOKAWA/Demon King Academy"
-        },
-        {
-          "key": "原作",
-          "value": "秋（電擊文庫 刊）"
-        },
-        {
-          "key": "总导演",
-          "value": "大沼心"
-        },
-        {
-          "key": "副导演",
-          "value": "湊未來"
-        },
-        {
-          "key": "人物设定",
-          "value": "山吉一幸"
-        },
-        {
-          "key": "系列构成",
-          "value": "田中仁"
-        },
-        {
-          "key": "音响监督",
-          "value": "納谷僚介"
-        },
-        {
-          "key": "动画制作",
-          "value": "SILVER LINK."
-        },
-        {
-          "key": "製作",
-          "value": "Demon King Academy（Aniplex、KADOKAWA、アスキー・メディアワークス、AT-X、日本BS放送、ドコモ・アニメストア、TOKYO MX、ムービック）"
-        },
-        {
-          "key": "企画",
-          "value": "岩上敦宏、山田昇、安藤晃義、北澤晋一郎、國枝信吾、古迫智典、徳田直巳、太田勝士、納谷僚介、武田智哉、大塚則和、林ちどり"
-        },
-        {
-          "key": "制片人",
-          "value": "中山信宏、吉岡雄介、飯塚彩、大和田智之、山岡勇輝、北澤史隆、長谷川嘉範、石田悟朗、石垣毅、伊藤拓己"
-        },
-        {
-          "key": "动画制片人",
-          "value": "金子逸人、進藤雄昨"
-        },
-        {
-          "key": "总制片人",
-          "value": "三宅将典、湯浅隆明"
         }
       ],
       "rating": {
-        "rank": 6238,
-        "total": 5586,
+        "rank": 6275,
+        "total": 5677,
         "count": {
-          "1": 21,
+          "1": 22,
           "2": 24,
-          "3": 73,
-          "4": 230,
-          "5": 763,
-          "6": 2039,
-          "7": 1862,
-          "8": 438,
-          "9": 52,
-          "10": 84
+          "3": 72,
+          "4": 238,
+          "5": 780,
+          "6": 2075,
+          "7": 1883,
+          "8": 443,
+          "9": 54,
+          "10": 86
         },
         "score": 6.3
       },
       "total_episodes": 13,
       "collection": {
-        "on_hold": 262,
-        "dropped": 391,
-        "wish": 742,
-        "collect": 8972,
-        "doing": 391
+        "on_hold": 274,
+        "dropped": 395,
+        "wish": 766,
+        "collect": 9155,
+        "doing": 403
       },
       "id": 292222,
-      "eps": 13,
       "meta_tags": [
         "后宫",
         "TV",
@@ -2220,219 +747,87 @@
         "奇幻",
         "小说改"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 13,
+        "total_comments": 957,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 121
+          },
+          {
+            "ep": 2,
+            "comments": 106
+          },
+          {
+            "ep": 3,
+            "comments": 54
+          },
+          {
+            "ep": 4,
+            "comments": 87
+          },
+          {
+            "ep": 5,
+            "comments": 56
+          },
+          {
+            "ep": 6,
+            "comments": 45
+          },
+          {
+            "ep": 7,
+            "comments": 62
+          },
+          {
+            "ep": 8,
+            "comments": 75
+          },
+          {
+            "ep": 9,
+            "comments": 50
+          },
+          {
+            "ep": 10,
+            "comments": 67
+          },
+          {
+            "ep": 11,
+            "comments": 71
+          },
+          {
+            "ep": 12,
+            "comments": 77
+          },
+          {
+            "ep": 13,
+            "comments": 86
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-05",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/1f/14/306993_9fVyg.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/1f/14/306993_9fVyg.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/1f/14/306993_9fVyg.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/1f/14/306993_9fVyg.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/1f/14/306993_9fVyg.jpg"
       },
-      "summary": "",
       "name": "巨人族の花嫁",
       "name_cn": "巨人族的新娘",
-      "tags": [
-        {
-          "name": "BL",
-          "count": 80,
-          "total_cont": 0
-        },
-        {
-          "name": "泡面番",
-          "count": 68,
-          "total_cont": 0
-        },
-        {
-          "name": "里番",
-          "count": 52,
-          "total_cont": 0
-        },
-        {
-          "name": "耽美",
-          "count": 41,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 36,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 27,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 25,
-          "total_cont": 0
-        },
-        {
-          "name": "泡面里番",
-          "count": 17,
-          "total_cont": 0
-        },
-        {
-          "name": "漫改",
-          "count": 16,
-          "total_cont": 0
-        },
-        {
-          "name": "彗星社",
-          "count": 14,
-          "total_cont": 0
-        },
-        {
-          "name": "漫画改",
-          "count": 14,
-          "total_cont": 0
-        },
-        {
-          "name": "异世界",
-          "count": 11,
-          "total_cont": 0
-        },
-        {
-          "name": "studioHōKIBOSHI",
-          "count": 8,
-          "total_cont": 0
-        },
-        {
-          "name": "studio_HōKIBOSHI",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "泡面",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "僧侣档",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "R18",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "2020夏",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "里",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "穿越",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "小推",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "HōKIBOSHI",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "m.一集可弃（或未看完暂时搁置）",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "特定人群向",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "BL漫画改",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "体型差",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "2D里番",
-          "count": 1,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "巨人族的新娘"
-        },
-        {
-          "key": "话数",
-          "value": "9"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月5日"
-        },
         {
           "key": "放送星期",
           "value": "星期日"
-        },
-        {
-          "key": "官方网站",
-          "value": "https://kyojinzoku.cf-anime.com/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "TOKYO MX"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年8月30日"
-        },
-        {
-          "key": "Copyright",
-          "value": "© ITKZ/Suiseisha Inc."
         }
       ],
       "rating": {
-        "rank": 9041,
-        "total": 185,
+        "rank": 9097,
+        "total": 187,
         "count": {
           "1": 10,
-          "2": 12,
+          "2": 13,
           "3": 27,
-          "4": 49,
+          "4": 50,
           "5": 44,
           "6": 34,
           "7": 6,
@@ -2445,13 +840,12 @@
       "total_episodes": 9,
       "collection": {
         "on_hold": 17,
-        "dropped": 104,
-        "wish": 58,
-        "collect": 292,
+        "dropped": 106,
+        "wish": 59,
+        "collect": 299,
         "doing": 19
       },
       "id": 306993,
-      "eps": 9,
       "meta_tags": [
         "R18",
         "TV",
@@ -2459,234 +853,74 @@
         "BL",
         "漫画改"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": true,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 9,
+        "total_comments": 56,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 9
+          },
+          {
+            "ep": 2,
+            "comments": 10
+          },
+          {
+            "ep": 3,
+            "comments": 10
+          },
+          {
+            "ep": 4,
+            "comments": 6
+          },
+          {
+            "ep": 5,
+            "comments": 2
+          },
+          {
+            "ep": 6,
+            "comments": 5
+          },
+          {
+            "ep": 7,
+            "comments": 7
+          },
+          {
+            "ep": 8,
+            "comments": 3
+          },
+          {
+            "ep": 9,
+            "comments": 4
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-06",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/83/94/305511_U7Ndh.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/83/94/305511_U7Ndh.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/83/94/305511_U7Ndh.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/83/94/305511_U7Ndh.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/83/94/305511_U7Ndh.jpg"
       },
-      "summary": "自称最強の高校生「ジン･モリ」。\r\n彼の人生は、最強の高校生を決める大会、「ゴッドオブハイスクール」に招待されることで一変する。\r\n優勝すればどんな願いも叶えられるという・・・それぞれの願いを胸に出場する強敵手たち。\r\n闘いの果てに待ち受けるものとは？\r\nハンパない高校生たちのハチャメチャバトル開幕!!",
       "name": "THE GOD OF HIGH SCHOOL ゴッド・オブ・ハイスクール",
       "name_cn": "高校之神",
-      "tags": [
-        {
-          "name": "MAPPA",
-          "count": 332,
-          "total_cont": 0
-        },
-        {
-          "name": "战斗",
-          "count": 240,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 239,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 169,
-          "total_cont": 0
-        },
-        {
-          "name": "韩漫改",
-          "count": 168,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 131,
-          "total_cont": 0
-        },
-        {
-          "name": "漫画改",
-          "count": 105,
-          "total_cont": 0
-        },
-        {
-          "name": "热血",
-          "count": 105,
-          "total_cont": 0
-        },
-        {
-          "name": "漫改",
-          "count": 100,
-          "total_cont": 0
-        },
-        {
-          "name": "朴性厚",
-          "count": 98,
-          "total_cont": 0
-        },
-        {
-          "name": "高校之神",
-          "count": 47,
-          "total_cont": 0
-        },
-        {
-          "name": "奇幻",
-          "count": 47,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 25,
-          "total_cont": 0
-        },
-        {
-          "name": "韩漫",
-          "count": 25,
-          "total_cont": 0
-        },
-        {
-          "name": "作画",
-          "count": 11,
-          "total_cont": 0
-        },
-        {
-          "name": "韩国",
-          "count": 11,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "熊谷健太郎",
-          "count": 8,
-          "total_cont": 0
-        },
-        {
-          "name": "校园",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "TVA",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "格斗",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "2020夏",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "竞技",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "吉村清子",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "动作",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "季番",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "桶狭間ありさ",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "大橋彩香",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "秋田学",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "渡邊啓一郎",
-          "count": 2,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "高校之神"
-        },
-        {
-          "key": "话数",
-          "value": "13"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月6日"
-        },
         {
           "key": "放送星期",
           "value": "星期一"
-        },
-        {
-          "key": "官方网站",
-          "value": "http://goh-anime.com/"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月28日"
-        },
-        {
-          "key": "导演",
-          "value": "朴性厚"
-        },
-        {
-          "key": "Copyright",
-          "value": "©2020 Crunchy Onigiri, LLC"
-        },
-        {
-          "key": "原作",
-          "value": "Yongje Park(박용제)（LINEマンガ連載）"
-        },
-        {
-          "key": "人物设定",
-          "value": "秋田学；副人设：朴性厚"
-        },
-        {
-          "key": "企画",
-          "value": "企画プロデュース：SOLA ENTERTAINMENT"
         }
       ],
       "rating": {
-        "rank": 7218,
-        "total": 1119,
+        "rank": 7272,
+        "total": 1137,
         "count": {
           "1": 6,
           "2": 10,
-          "3": 19,
-          "4": 73,
-          "5": 187,
-          "6": 474,
-          "7": 263,
+          "3": 20,
+          "4": 72,
+          "5": 193,
+          "6": 483,
+          "7": 266,
           "8": 68,
           "9": 10,
           "10": 9
@@ -2695,14 +929,13 @@
       },
       "total_episodes": 13,
       "collection": {
-        "on_hold": 133,
+        "on_hold": 134,
         "dropped": 281,
-        "wish": 330,
-        "collect": 1576,
-        "doing": 120
+        "wish": 336,
+        "collect": 1611,
+        "doing": 122
       },
       "id": 305511,
-      "eps": 13,
       "meta_tags": [
         "TV",
         "日本",
@@ -2710,270 +943,90 @@
         "战斗",
         "韩国"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 13,
+        "total_comments": 439,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 61
+          },
+          {
+            "ep": 2,
+            "comments": 46
+          },
+          {
+            "ep": 3,
+            "comments": 40
+          },
+          {
+            "ep": 4,
+            "comments": 45
+          },
+          {
+            "ep": 5,
+            "comments": 43
+          },
+          {
+            "ep": 6,
+            "comments": 17
+          },
+          {
+            "ep": 7,
+            "comments": 33
+          },
+          {
+            "ep": 8,
+            "comments": 12
+          },
+          {
+            "ep": 9,
+            "comments": 26
+          },
+          {
+            "ep": 10,
+            "comments": 35
+          },
+          {
+            "ep": 11,
+            "comments": 19
+          },
+          {
+            "ep": 12,
+            "comments": 28
+          },
+          {
+            "ep": 13,
+            "comments": 34
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-07",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/ef/ea/284838_4uYqw.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/ef/ea/284838_4uYqw.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/ef/ea/284838_4uYqw.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/ef/ea/284838_4uYqw.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/ef/ea/284838_4uYqw.jpg"
       },
-      "summary": "人間に危害を加えたり、事件を起こす悪霊や死霊に対して刑を下し、あの世へ送る能力を持つ天才的な魔法律の執行人・六氷 透（ムヒョ）とその助手を務める草野次郎（ロージー）。\r\n彼らの元にはいつも霊に悩める人々が訪れていた。\r\n円宙継（エンチュー）との戦いから数日。\r\nムヒョとロージーは魔監獄から戻り、日常を取り戻していた。\r\nそんなムヒョたちの前に、執行人・五嶺陀羅尼丸（ゴリョー）が姿を現し、新たな戦いへと巻き込まれていく―――。",
       "name": "ムヒョとロージーの魔法律相談事務所 第2期",
       "name_cn": "魔法律事务所 第二季",
-      "tags": [
-        {
-          "name": "2020年7月",
-          "count": 20,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 18,
-          "total_cont": 0
-        },
-        {
-          "name": "studiodeen",
-          "count": 18,
-          "total_cont": 0
-        },
-        {
-          "name": "漫画改",
-          "count": 16,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 16,
-          "total_cont": 0
-        },
-        {
-          "name": "奇幻",
-          "count": 10,
-          "total_cont": 0
-        },
-        {
-          "name": "林勇",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "神谷浩史",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "漫改",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "柿原徹也",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "战斗",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "魔法",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "村濑步",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "近藤信宏",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "屹青",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "8？",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "鈴木やすゆき",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "异态",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "懒得看",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "村瀬歩",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "TVA",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "神话",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "魔幻",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "妖怪",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "超能",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "暧昧",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "漫画改编",
-          "count": 1,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "魔法律事务所 第二季"
-        },
-        {
-          "key": "话数",
-          "value": "12"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月7日"
-        },
         {
           "key": "放送星期",
           "value": "星期二"
-        },
-        {
-          "key": "官方网站",
-          "value": "https://mahouritsu.com/index.php#index"
-        },
-        {
-          "key": "播放电视台",
-          "value": "アニマックス"
-        },
-        {
-          "key": "其他电视台",
-          "value": "BSスカパー！、J:テレ「アニおび」"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月22日"
-        },
-        {
-          "key": "导演",
-          "value": "近藤信宏"
-        },
-        {
-          "key": "音乐",
-          "value": "川﨑龍"
-        },
-        {
-          "key": "Copyright",
-          "value": "©西義之／集英社・ムヒョロジ製作委員会"
-        },
-        {
-          "key": "脚本",
-          "value": "鈴木やすゆき"
-        },
-        {
-          "key": "人物设定",
-          "value": "河野紘一郎"
-        },
-        {
-          "key": "总作画监督",
-          "value": "只野和子、松下浩美"
-        },
-        {
-          "key": "动画制作",
-          "value": "スタジオディーン"
-        },
-        {
-          "key": "企划制作人",
-          "value": "成毛克憲"
-        },
-        {
-          "key": "制片人",
-          "value": "園部幸夫、西啓、加藤冠、Adam Zehner、吉江輝成、今井聖也、林信仁"
-        },
-        {
-          "key": "动画制片人",
-          "value": "佐久間智紀、牧野公翔"
-        },
-        {
-          "key": "助理制片人",
-          "value": "増山淳一、常世田成美、石川哲也、坂本麻子、山本満由美、天野成祥、赤﨑薫"
-        },
-        {
-          "key": "製作",
-          "value": "ムヒョロジ製作委員会2【アニマックスブロードキャスト・ジャパン、アスミック・エース、スカパー!、Funimation Production、バンダイナムコアーツ、A3、アミューズメントメディア総合学院 / 佐々木朗、有吉篤、手塚久、飯島江美子、櫻井優香、松本章、浦野太】滝山雅夫、遊佐和彦、小川正人、Colin Decker、井上俊次、小澤隆史、吉田尚剛"
         }
       ],
       "rating": {
-        "rank": 6036,
-        "total": 58,
+        "rank": 6055,
+        "total": 60,
         "count": {
           "1": 0,
           "2": 0,
           "3": 2,
           "4": 3,
-          "5": 18,
+          "5": 19,
           "6": 25,
-          "7": 9,
+          "7": 10,
           "8": 0,
           "9": 0,
           "10": 1
@@ -2982,301 +1035,99 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 16,
+        "on_hold": 17,
         "dropped": 33,
-        "wish": 68,
-        "collect": 119,
+        "wish": 67,
+        "collect": 121,
         "doing": 20
       },
       "id": 284838,
-      "eps": 12,
       "meta_tags": [
         "TV",
         "日本",
         "漫画改"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 12,
+        "total_comments": 3,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 2
+          },
+          {
+            "ep": 2,
+            "comments": 0
+          },
+          {
+            "ep": 3,
+            "comments": 1
+          },
+          {
+            "ep": 4,
+            "comments": 0
+          },
+          {
+            "ep": 5,
+            "comments": 0
+          },
+          {
+            "ep": 6,
+            "comments": 0
+          },
+          {
+            "ep": 7,
+            "comments": 0
+          },
+          {
+            "ep": 8,
+            "comments": 0
+          },
+          {
+            "ep": 9,
+            "comments": 0
+          },
+          {
+            "ep": 10,
+            "comments": 0
+          },
+          {
+            "ep": 11,
+            "comments": 0
+          },
+          {
+            "ep": 12,
+            "comments": 0
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-07",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/58/85/269389_vhLZ0.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/58/85/269389_vhLZ0.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/58/85/269389_vhLZ0.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/58/85/269389_vhLZ0.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/58/85/269389_vhLZ0.jpg"
       },
-      "summary": "本作是「赛马娘 Pretty Derby」的衍生作品，全篇将以原创故事展开。赛马娘们魅力四射的宝藏泡面番。不仅有竞速、演唱会，更有各具特色的赛马娘们的可爱校园日常。那么，冲呀！",
       "name": "うまよん",
       "name_cn": "赛马娘四格",
-      "tags": [
-        {
-          "name": "泡面番",
-          "count": 603,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 312,
-          "total_cont": 0
-        },
-        {
-          "name": "搞笑",
-          "count": 273,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 263,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 213,
-          "total_cont": 0
-        },
-        {
-          "name": "cygames",
-          "count": 197,
-          "total_cont": 0
-        },
-        {
-          "name": "百合",
-          "count": 186,
-          "total_cont": 0
-        },
-        {
-          "name": "DMM.futureworks",
-          "count": 172,
-          "total_cont": 0
-        },
-        {
-          "name": "漫画改",
-          "count": 140,
-          "total_cont": 0
-        },
-        {
-          "name": "赛马娘",
-          "count": 72,
-          "total_cont": 0
-        },
-        {
-          "name": "原创",
-          "count": 70,
-          "total_cont": 0
-        },
-        {
-          "name": "漫改",
-          "count": 67,
-          "total_cont": 0
-        },
-        {
-          "name": "泡面",
-          "count": 45,
-          "total_cont": 0
-        },
-        {
-          "name": "W-toonStudio",
-          "count": 35,
-          "total_cont": 0
-        },
-        {
-          "name": "日常",
-          "count": 32,
-          "total_cont": 0
-        },
-        {
-          "name": "宮嶋星矢",
-          "count": 21,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 15,
-          "total_cont": 0
-        },
-        {
-          "name": "ダブトゥーンスタジオ",
-          "count": 15,
-          "total_cont": 0
-        },
-        {
-          "name": "宫岛星矢",
-          "count": 13,
-          "total_cont": 0
-        },
-        {
-          "name": "游戏改",
-          "count": 11,
-          "total_cont": 0
-        },
-        {
-          "name": "偶像",
-          "count": 11,
-          "total_cont": 0
-        },
-        {
-          "name": "W_toon_Studio",
-          "count": 10,
-          "total_cont": 0
-        },
-        {
-          "name": "运动",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "校园",
-          "count": 8,
-          "total_cont": 0
-        },
-        {
-          "name": "轻百合",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "W-Toon_Studio",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "马娘",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "番外",
-          "count": 5,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "赛马娘四格"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "马娘四格"
-            },
-            {
-              "v": "Umayon"
-            },
-            {
-              "v": "Девушки-пони: Ёнкома"
-            },
-            {
-              "v": "馬娘四格"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "12"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月7日"
-        },
         {
           "key": "放送星期",
           "value": "星期二"
-        },
-        {
-          "key": "官方网站",
-          "value": "https://umamusume.jp/umayon/"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月22日"
-        },
-        {
-          "key": "导演",
-          "value": "宮嶋星矢"
-        },
-        {
-          "key": "音乐",
-          "value": "Cygames"
-        },
-        {
-          "key": "Copyright",
-          "value": "© Cygames, Inc."
-        },
-        {
-          "key": "原作",
-          "value": "Cygames、熊ジェット(作画)、伊藤仁(脚本)(サイコミ連載)"
-        },
-        {
-          "key": "分镜",
-          "value": "伊藤仁、宮嶋星矢"
-        },
-        {
-          "key": "人物设定",
-          "value": "宮嶋星矢"
-        },
-        {
-          "key": "总作画监督",
-          "value": "宮嶋星矢"
-        },
-        {
-          "key": "美术监督",
-          "value": "山口雅範"
-        },
-        {
-          "key": "摄影监督",
-          "value": "林昌宏"
-        },
-        {
-          "key": "音响监督",
-          "value": "森田祐一"
-        },
-        {
-          "key": "音乐制作人",
-          "value": "内田哲也"
-        },
-        {
-          "key": "动画制作",
-          "value": "DMM.futureworks/ダブトゥーンスタジオ"
-        },
-        {
-          "key": "主题歌演出",
-          "value": "スペシャルウィーク(CV:和氣あず未)、セイウンスカイ(CV:鬼頭明里)、キングヘイロー(CV:佐伯伊織)、エルコンドルパサー(CV:高橋未奈美(髙橋ミナミ))、グラスワンダー(CV:前田玲奈)"
-        },
-        {
-          "key": "製作",
-          "value": "Cygames"
         }
       ],
       "rating": {
-        "rank": 4920,
-        "total": 1641,
+        "rank": 4992,
+        "total": 1672,
         "count": {
           "1": 1,
-          "2": 4,
+          "2": 5,
           "3": 6,
-          "4": 26,
-          "5": 150,
-          "6": 590,
-          "7": 675,
-          "8": 156,
+          "4": 25,
+          "5": 155,
+          "6": 612,
+          "7": 678,
+          "8": 157,
           "9": 13,
           "10": 20
         },
@@ -3284,310 +1135,114 @@
       },
       "total_episodes": 24,
       "collection": {
-        "on_hold": 73,
-        "dropped": 59,
-        "wish": 250,
-        "collect": 3009,
-        "doing": 146
+        "on_hold": 77,
+        "dropped": 58,
+        "wish": 258,
+        "collect": 3072,
+        "doing": 152
       },
       "id": 269389,
-      "eps": 12,
       "meta_tags": [
         "百合",
         "TV",
         "日本",
         "漫画改"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 12,
+        "total_comments": 156,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 14
+          },
+          {
+            "ep": 2,
+            "comments": 9
+          },
+          {
+            "ep": 3,
+            "comments": 7
+          },
+          {
+            "ep": 4,
+            "comments": 30
+          },
+          {
+            "ep": 5,
+            "comments": 18
+          },
+          {
+            "ep": 6,
+            "comments": 8
+          },
+          {
+            "ep": 7,
+            "comments": 8
+          },
+          {
+            "ep": 8,
+            "comments": 14
+          },
+          {
+            "ep": 9,
+            "comments": 10
+          },
+          {
+            "ep": 10,
+            "comments": 9
+          },
+          {
+            "ep": 11,
+            "comments": 14
+          },
+          {
+            "ep": 12,
+            "comments": 15
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-08",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/16/79/278826_w85gd.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/16/79/278826_w85gd.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/16/79/278826_w85gd.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/16/79/278826_w85gd.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/16/79/278826_w85gd.jpg"
       },
-      "summary": "我一定会拯救你的。\r\n打倒了担任「怠惰」的魔女教大罪司教，贝特鲁吉乌斯·罗曼尼康帝后，菜月昴和爱蜜莉雅又再度相遇了。在跨越了痛苦的诀别，两人终于和解，而新的篇章却又开始了。\r\n超乎想象九死一生的危机，以及冷酷无情的现实。少年将再次起身，面对残酷的命运。",
       "name": "Re:ゼロから始める異世界生活 2nd season",
       "name_cn": "Re：从零开始的异世界生活 第二季",
-      "tags": [
-        {
-          "name": "异世界",
-          "count": 2860,
-          "total_cont": 0
-        },
-        {
-          "name": "轻小说改",
-          "count": 2340,
-          "total_cont": 0
-        },
-        {
-          "name": "WHITEFOX",
-          "count": 1798,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 1496,
-          "total_cont": 0
-        },
-        {
-          "name": "奇幻",
-          "count": 1350,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 1195,
-          "total_cont": 0
-        },
-        {
-          "name": "Re:ゼロから始める異世界生活",
-          "count": 939,
-          "total_cont": 0
-        },
-        {
-          "name": "轮回",
-          "count": 719,
-          "total_cont": 0
-        },
-        {
-          "name": "轻改",
-          "count": 715,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 638,
-          "total_cont": 0
-        },
-        {
-          "name": "战斗",
-          "count": 583,
-          "total_cont": 0
-        },
-        {
-          "name": "后宫",
-          "count": 353,
-          "total_cont": 0
-        },
-        {
-          "name": "小说改",
-          "count": 176,
-          "total_cont": 0
-        },
-        {
-          "name": "穿越",
-          "count": 153,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 102,
-          "total_cont": 0
-        },
-        {
-          "name": "恋爱",
-          "count": 97,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年4月",
-          "count": 70,
-          "total_cont": 0
-        },
-        {
-          "name": "续作",
-          "count": 69,
-          "total_cont": 0
-        },
-        {
-          "name": "Re:从零开始异世界生活",
-          "count": 63,
-          "total_cont": 0
-        },
-        {
-          "name": "渡边政治",
-          "count": 43,
-          "total_cont": 0
-        },
-        {
-          "name": "渡邊政治",
-          "count": 42,
-          "total_cont": 0
-        },
-        {
-          "name": "悬疑",
-          "count": 37,
-          "total_cont": 0
-        },
-        {
-          "name": "冒险",
-          "count": 36,
-          "total_cont": 0
-        },
-        {
-          "name": "re0",
-          "count": 27,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 23,
-          "total_cont": 0
-        },
-        {
-          "name": "Re：从零开始的异世界生活",
-          "count": 22,
-          "total_cont": 0
-        },
-        {
-          "name": "热血",
-          "count": 21,
-          "total_cont": 0
-        },
-        {
-          "name": "WHITE_FOX",
-          "count": 19,
-          "total_cont": 0
-        },
-        {
-          "name": "横谷昌宏",
-          "count": 16,
-          "total_cont": 0
-        },
-        {
-          "name": "长月达平",
-          "count": 16,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "Re：从零开始的异世界生活 第二季"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "Re:Zero kara Hajimeru Isekai Seikatsu (2020)"
-            },
-            {
-              "v": "Re0 第二季"
-            },
-            {
-              "v": "Re:ゼロから始める異世界生活2"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "13"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月8日"
-        },
         {
           "key": "放送星期",
           "value": "星期三"
-        },
-        {
-          "key": "官方网站",
-          "value": "http://re-zero-anime.jp/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "テレビ東京"
-        },
-        {
-          "key": "其他电视台",
-          "value": "AT-X"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月30日"
-        },
-        {
-          "key": "导演",
-          "value": "渡邊政治"
-        },
-        {
-          "key": "Copyright",
-          "value": "© 長月達平・株式会社KADOKAWA刊／Re:ゼロから始める異世界生活2製作委員会"
-        },
-        {
-          "key": "原作",
-          "value": "長月達平（MF文庫J「Re:ゼロから始める異世界生活」/KADOKAWA刊）"
-        },
-        {
-          "key": "人物设定",
-          "value": "坂井久太"
-        },
-        {
-          "key": "企画",
-          "value": "菊池剛、三坂泰二"
-        },
-        {
-          "key": "执行制片人",
-          "value": "工藤大丈、万木壮、山崎史紀、山田昇、岡庭幸春、國府田英則、篠崎文彦"
-        },
-        {
-          "key": "制片人",
-          "value": "田中翔、池本昌仁、深尾聡志、飯塚彩、鈴木健、青木絵理子、尾形光広"
-        },
-        {
-          "key": "动画制片人",
-          "value": "吉川綱樹"
-        },
-        {
-          "key": "总制片人",
-          "value": "制作概括：岩佐岳"
-        },
-        {
-          "key": "监修",
-          "value": "長月達平（剧本监修）"
-        },
-        {
-          "key": "製作",
-          "value": "Re:ゼロから始める異世界生活2製作委員会（KADOKAWA、博報堂DYミュージック&ピクチャーズ、AT-X、メモリーテック、角川メディアハウス）"
         }
       ],
       "rating": {
-        "rank": 1004,
-        "total": 12024,
+        "rank": 1008,
+        "total": 12298,
         "count": {
-          "1": 23,
-          "2": 16,
+          "1": 24,
+          "2": 17,
           "3": 30,
-          "4": 103,
-          "5": 297,
-          "6": 1357,
-          "7": 4197,
-          "8": 4509,
-          "9": 969,
-          "10": 523
+          "4": 106,
+          "5": 302,
+          "6": 1372,
+          "7": 4301,
+          "8": 4619,
+          "9": 997,
+          "10": 530
         },
         "score": 7.5
       },
       "total_episodes": 13,
       "collection": {
-        "on_hold": 581,
-        "dropped": 278,
-        "wish": 1586,
-        "collect": 20229,
-        "doing": 940
+        "on_hold": 596,
+        "dropped": 285,
+        "wish": 1634,
+        "collect": 20931,
+        "doing": 967
       },
       "id": 278826,
-      "eps": 13,
       "meta_tags": [
         "TV",
         "日本",
@@ -3595,281 +1250,89 @@
         "战斗",
         "小说改"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 13,
+        "total_comments": 1581,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 130
+          },
+          {
+            "ep": 2,
+            "comments": 70
+          },
+          {
+            "ep": 3,
+            "comments": 77
+          },
+          {
+            "ep": 4,
+            "comments": 230
+          },
+          {
+            "ep": 5,
+            "comments": 97
+          },
+          {
+            "ep": 6,
+            "comments": 159
+          },
+          {
+            "ep": 7,
+            "comments": 88
+          },
+          {
+            "ep": 8,
+            "comments": 139
+          },
+          {
+            "ep": 9,
+            "comments": 92
+          },
+          {
+            "ep": 10,
+            "comments": 70
+          },
+          {
+            "ep": 11,
+            "comments": 148
+          },
+          {
+            "ep": 12,
+            "comments": 169
+          },
+          {
+            "ep": 13,
+            "comments": 112
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-09",
-      "platform": "WEB",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/aa/44/292382_VAua4.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/aa/44/292382_VAua4.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/aa/44/292382_VAua4.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/aa/44/292382_VAua4.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/aa/44/292382_VAua4.jpg"
       },
-      "summary": "2020年、東京オリンピックという大きな国家事業を終えたばかりの日本を襲った突然の大地震。都内に住むごく普通の家族、武藤家の歩と剛の姉弟は、大混乱の中、家族4人で東京からの脱出を始めるが、刻々と沈みゆく日本列島は、容赦なく武藤家の面々を追い詰めていく。\r\n極限状態で突きつけられる、生と死、出会いと別れの選択。途方もない現実と向き合う中、武藤家の姉弟、歩と剛は、未来を信じ、懸命に生き抜く強さを身につけていく…",
       "name": "日本沈没2020",
       "name_cn": "日本沉没2020",
-      "tags": [
-        {
-          "name": "汤浅政明",
-          "count": 397,
-          "total_cont": 0
-        },
-        {
-          "name": "Netflix",
-          "count": 299,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 257,
-          "total_cont": 0
-        },
-        {
-          "name": "ScienceSARU",
-          "count": 249,
-          "total_cont": 0
-        },
-        {
-          "name": "小说改",
-          "count": 233,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 179,
-          "total_cont": 0
-        },
-        {
-          "name": "灾难",
-          "count": 163,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 145,
-          "total_cont": 0
-        },
-        {
-          "name": "WEB",
-          "count": 120,
-          "total_cont": 0
-        },
-        {
-          "name": "科幻",
-          "count": 97,
-          "total_cont": 0
-        },
-        {
-          "name": "牛尾憲輔",
-          "count": 81,
-          "total_cont": 0
-        },
-        {
-          "name": "湯浅政明",
-          "count": 52,
-          "total_cont": 0
-        },
-        {
-          "name": "轻改",
-          "count": 28,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 17,
-          "total_cont": 0
-        },
-        {
-          "name": "牛尾宪辅",
-          "count": 17,
-          "total_cont": 0
-        },
-        {
-          "name": "轻小说改",
-          "count": 14,
-          "total_cont": 0
-        },
-        {
-          "name": "吉高寿男",
-          "count": 10,
-          "total_cont": 0
-        },
-        {
-          "name": "サイエンスSARU",
-          "count": 7,
-          "total_cont": 0
-        },
-        {
-          "name": "灾难片",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "2020夏",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "和田直也",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "吉野裕行",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "上田麗奈",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "A站",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "公路片",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "江崎好絵",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "村中知",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "未定档",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "科学猴",
-          "count": 2,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "日本沉没2020"
-        },
-        {
-          "key": "话数",
-          "value": "10"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月9日"
-        },
         {
           "key": "放送星期",
           "value": "星期四"
-        },
-        {
-          "key": "官方网站",
-          "value": "http://japansinks2020.com/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "Netflix"
-        },
-        {
-          "key": "Copyright",
-          "value": "© “JAPAN SINKS : 2020”Project Partners"
-        },
-        {
-          "key": "动画制作",
-          "value": "サイエンスSARU"
-        },
-        {
-          "key": "原作",
-          "value": "小松左京『日本沈没』"
-        },
-        {
-          "key": "製作",
-          "value": "勝股英夫、佐藤光紀、中沢敏明、香田哲朗、湯浅政明、星野晃志、小原康平、高橋武生"
-        },
-        {
-          "key": "共同製作",
-          "value": "大山良、福留俊、山口修平、Buddy Marini"
-        },
-        {
-          "key": "制片人",
-          "value": "厨子健介、上木則安、松村一人、Eunyoung Choi"
-        },
-        {
-          "key": "脚本",
-          "value": "吉高寿男"
-        },
-        {
-          "key": "音乐",
-          "value": "牛尾憲輔"
-        },
-        {
-          "key": "人物设定",
-          "value": "和田直也"
-        },
-        {
-          "key": "色彩设计",
-          "value": "橋本賢"
-        },
-        {
-          "key": "美术监督",
-          "value": "赤井文尚、伊東広道"
-        },
-        {
-          "key": "摄影监督",
-          "value": "久野利和"
-        },
-        {
-          "key": "剪辑",
-          "value": "廣瀬清志"
-        },
-        {
-          "key": "音响监督",
-          "value": "木村絵理子"
-        },
-        {
-          "key": "制作プロデューサー",
-          "value": "Eunyoung Choi"
-        },
-        {
-          "key": "系列监督",
-          "value": "シリーズディレクター：許平康"
-        },
-        {
-          "key": "导演",
-          "value": "湯浅政明"
         }
       ],
       "rating": {
-        "rank": 8988,
-        "total": 1313,
+        "rank": 9042,
+        "total": 1317,
         "count": {
           "1": 42,
           "2": 59,
           "3": 123,
-          "4": 254,
-          "5": 334,
-          "6": 299,
+          "4": 256,
+          "5": 335,
+          "6": 300,
           "7": 132,
           "8": 52,
           "9": 13,
@@ -3879,324 +1342,91 @@
       },
       "total_episodes": 10,
       "collection": {
-        "on_hold": 158,
-        "dropped": 432,
-        "wish": 425,
-        "collect": 1699,
-        "doing": 109
+        "on_hold": 159,
+        "dropped": 434,
+        "wish": 437,
+        "collect": 1707,
+        "doing": 111
       },
       "id": 292382,
-      "eps": 10,
       "meta_tags": [
         "科幻",
         "日本",
         "小说改",
         "WEB"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 10,
+        "total_comments": 542,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 73
+          },
+          {
+            "ep": 2,
+            "comments": 95
+          },
+          {
+            "ep": 3,
+            "comments": 58
+          },
+          {
+            "ep": 4,
+            "comments": 36
+          },
+          {
+            "ep": 5,
+            "comments": 47
+          },
+          {
+            "ep": 6,
+            "comments": 50
+          },
+          {
+            "ep": 7,
+            "comments": 33
+          },
+          {
+            "ep": 8,
+            "comments": 38
+          },
+          {
+            "ep": 9,
+            "comments": 44
+          },
+          {
+            "ep": 10,
+            "comments": 68
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-09",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/1a/78/291479_QDvQt.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/1a/78/291479_QDvQt.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/1a/78/291479_QDvQt.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/1a/78/291479_QDvQt.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/1a/78/291479_QDvQt.jpg"
       },
-      "summary": "ベリューレン社により戦時中開発された新技術「身体機能拡張技術」。\r\nその技術により身体の一部、もしくは全部を機械化された者は、拡張者（エクステンド）と呼ばれていた。\r\n拡張者と生身の人間の非拡張者が混在する社会では常にいざこざが絶えず、それらの問題を解決する「処理屋」を、\r\n乾十三（いぬいじゅうぞう）は生業としていた。\r\nそして、十三自身も、頭部が巨大な銃の「拡張者」だった。\r\nある日、十三は、全身拡張者の大男から一人の少年の保護を依頼される。\r\nその少年の名は荒吐鉄朗（あらはばきてつろう）。ベリューレン社から誘拐された少年だった。\r\nだが、十三は依頼を受けたもののベリューレン社からの追手に、鉄朗を奪われてしまう。\r\n十三はなりゆきで街を牛耳るベリューレン社と事を構えることになるのだが…\r\n鉄朗を誘拐した全身拡張者の男は何者なのか？　\r\nベリューレン社と鉄朗の関係は？",
       "name": "ノー・ガンズ・ライフ 第2クール",
       "name_cn": "非枪人生 第2部分",
-      "tags": [
-        {
-          "name": "MADHouse",
-          "count": 106,
-          "total_cont": 0
-        },
-        {
-          "name": "漫画改",
-          "count": 91,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 86,
-          "total_cont": 0
-        },
-        {
-          "name": "科幻",
-          "count": 81,
-          "total_cont": 0
-        },
-        {
-          "name": "战斗",
-          "count": 76,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 71,
-          "total_cont": 0
-        },
-        {
-          "name": "非枪人生",
-          "count": 48,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 44,
-          "total_cont": 0
-        },
-        {
-          "name": "漫改",
-          "count": 40,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年4月",
-          "count": 24,
-          "total_cont": 0
-        },
-        {
-          "name": "赛博朋克",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "菅原雪絵",
-          "count": 8,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "伊藤尚往",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "漫画改编",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "悬疑",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "朋克",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "赛博",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "2020夏",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "动画",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "2020s",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "无BD",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "懒得看",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年夏番",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "ノー・ガンズ・ライフ",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "搞笑",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "2020-2029",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "科幻https:",
-          "count": 1,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "非枪人生 第2部分"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "NO GUNS LIFE 2nd season"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "12"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月9日"
-        },
         {
           "key": "放送星期",
           "value": "星期四"
-        },
-        {
-          "key": "官方网站",
-          "value": "http://nogunslife.com/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "TBS"
-        },
-        {
-          "key": "其他电视台",
-          "value": "AT-X / サンテレビ / KBS京都 / BS11"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月24日"
-        },
-        {
-          "key": "导演",
-          "value": "伊藤尚往"
-        },
-        {
-          "key": "音乐",
-          "value": "川井憲次"
-        },
-        {
-          "key": "Copyright",
-          "value": "©カラスマタスク／集英社／NGL PROJECT."
-        },
-        {
-          "key": "原作",
-          "value": "カラスマタスク（集英社「ウルトラジャンプ」連載）"
-        },
-        {
-          "key": "系列构成",
-          "value": "菅原雪絵"
-        },
-        {
-          "key": "人物设定",
-          "value": "筱雅律"
-        },
-        {
-          "key": "机械设定",
-          "value": "出雲重機(大久保淳二)"
-        },
-        {
-          "key": "道具设计",
-          "value": "竹内杏子"
-        },
-        {
-          "key": "总作画监督",
-          "value": "筱雅律、土屋圭"
-        },
-        {
-          "key": "色彩设计",
-          "value": "堀川佳典"
-        },
-        {
-          "key": "3DCG",
-          "value": "サイクロングラフィックス"
-        },
-        {
-          "key": "映像演出・VFXスーパーバイザー",
-          "value": "加藤道哉"
-        },
-        {
-          "key": "CG 导演",
-          "value": "設楽友久"
-        },
-        {
-          "key": "摄影监督",
-          "value": "川下裕樹、井関大智"
-        },
-        {
-          "key": "剪辑",
-          "value": "木村佳史子"
-        },
-        {
-          "key": "音响监督",
-          "value": "郷文裕貴"
-        },
-        {
-          "key": "音效",
-          "value": "山谷尚人"
-        },
-        {
-          "key": "音响",
-          "value": "grooove(グルーヴ)"
-        },
-        {
-          "key": "音乐制作",
-          "value": "グッドスマイルフィルム"
-        },
-        {
-          "key": "製作",
-          "value": "NGL PROJECT"
         }
       ],
       "rating": {
-        "rank": 6761,
-        "total": 475,
+        "rank": 6754,
+        "total": 484,
         "count": {
           "1": 0,
           "2": 2,
           "3": 7,
           "4": 32,
           "5": 81,
-          "6": 191,
-          "7": 126,
+          "6": 199,
+          "7": 127,
           "8": 27,
           "9": 1,
           "10": 8
@@ -4205,14 +1435,13 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 91,
-        "dropped": 90,
-        "wish": 201,
-        "collect": 777,
+        "on_hold": 92,
+        "dropped": 92,
+        "wish": 202,
+        "collect": 789,
         "doing": 89
       },
       "id": 291479,
-      "eps": 12,
       "meta_tags": [
         "科幻",
         "TV",
@@ -4220,337 +1449,101 @@
         "漫画改",
         "战斗"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 12,
+        "total_comments": 87,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 9
+          },
+          {
+            "ep": 2,
+            "comments": 8
+          },
+          {
+            "ep": 3,
+            "comments": 6
+          },
+          {
+            "ep": 4,
+            "comments": 10
+          },
+          {
+            "ep": 5,
+            "comments": 10
+          },
+          {
+            "ep": 6,
+            "comments": 6
+          },
+          {
+            "ep": 7,
+            "comments": 4
+          },
+          {
+            "ep": 8,
+            "comments": 7
+          },
+          {
+            "ep": 9,
+            "comments": 7
+          },
+          {
+            "ep": 10,
+            "comments": 6
+          },
+          {
+            "ep": 11,
+            "comments": 9
+          },
+          {
+            "ep": 12,
+            "comments": 5
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-09",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/ba/69/277954_s8qHA.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/ba/69/277954_s8qHA.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/ba/69/277954_s8qHA.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/ba/69/277954_s8qHA.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/ba/69/277954_s8qHA.jpg"
       },
-      "summary": "看似在过去的心理阴影及独自的别扭思考回路之下讴歌着“独自生活”的比企谷八幡，偶然地被生活指导担当教师平冢静带着加入了「侍奉部」。他和同社团所属的令人窒息的完美美少女·雪之下雪乃，以及班级上位阶级所属的时髦女子·由比滨结衣一同，从解决班上的人际关系问题到给学生会帮忙，度过着解决各种事件的每一天。\r\n季节流转，时至春天。八幡与结衣，接受了雪乃最后的委托。在准备3月的毕业典礼过程中，还被彩羽请求协助毕业舞会……\r\n——追求真物的八幡，与3人的关系逐渐改变。究竟他的高中生活将迎来怎样的结局！？",
       "name": "やはり俺の青春ラブコメはまちがっている。完",
       "name_cn": "我的青春恋爱物语果然有问题 完",
-      "tags": [
-        {
-          "name": "恋爱",
-          "count": 2094,
-          "total_cont": 0
-        },
-        {
-          "name": "轻小说改",
-          "count": 1853,
-          "total_cont": 0
-        },
-        {
-          "name": "校园",
-          "count": 1679,
-          "total_cont": 0
-        },
-        {
-          "name": "Feel.",
-          "count": 1276,
-          "total_cont": 0
-        },
-        {
-          "name": "我的青春恋爱物语果然有问题",
-          "count": 1228,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 918,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 915,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 562,
-          "total_cont": 0
-        },
-        {
-          "name": "青春",
-          "count": 503,
-          "total_cont": 0
-        },
-        {
-          "name": "轻改",
-          "count": 452,
-          "total_cont": 0
-        },
-        {
-          "name": "春物",
-          "count": 425,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年4月",
-          "count": 207,
-          "total_cont": 0
-        },
-        {
-          "name": "最终季？",
-          "count": 156,
-          "total_cont": 0
-        },
-        {
-          "name": "小说改",
-          "count": 121,
-          "total_cont": 0
-        },
-        {
-          "name": "党争",
-          "count": 110,
-          "total_cont": 0
-        },
-        {
-          "name": "大老师",
-          "count": 68,
-          "total_cont": 0
-        },
-        {
-          "name": "日常",
-          "count": 66,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 60,
-          "total_cont": 0
-        },
-        {
-          "name": "后宫",
-          "count": 45,
-          "total_cont": 0
-        },
-        {
-          "name": "及川啓",
-          "count": 44,
-          "total_cont": 0
-        },
-        {
-          "name": "渡航",
-          "count": 42,
-          "total_cont": 0
-        },
-        {
-          "name": "续作",
-          "count": 39,
-          "total_cont": 0
-        },
-        {
-          "name": "及川启",
-          "count": 36,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 24,
-          "total_cont": 0
-        },
-        {
-          "name": "东山奈央",
-          "count": 19,
-          "total_cont": 0
-        },
-        {
-          "name": "最终季",
-          "count": 19,
-          "total_cont": 0
-        },
-        {
-          "name": "待上映",
-          "count": 18,
-          "total_cont": 0
-        },
-        {
-          "name": "三季",
-          "count": 18,
-          "total_cont": 0
-        },
-        {
-          "name": "早见沙织",
-          "count": 14,
-          "total_cont": 0
-        },
-        {
-          "name": "大知慶一郎",
-          "count": 12,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "我的青春恋爱物语果然有问题 完"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "Yahari Ore no Seishun Lovecome wa Machigatte Iru. Kan"
-            },
-            {
-              "v": "My Teen Romantic Comedy: SNAFU Climax"
-            },
-            {
-              "v": "My Teen Romantic Comedy: SNAFU 3"
-            },
-            {
-              "v": "果然我的青春恋爱喜剧搞错了。完"
-            },
-            {
-              "v": "我的青春恋爱物语果然有问题 第三季"
-            },
-            {
-              "v": "春物3"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "12"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月9日"
-        },
         {
           "key": "放送星期",
           "value": "星期四"
-        },
-        {
-          "key": "官方网站",
-          "value": "http://www.tbs.co.jp/anime/oregairu"
-        },
-        {
-          "key": "播放电视台",
-          "value": "TBS"
-        },
-        {
-          "key": "其他电视台",
-          "value": "MBS / CBC / BS-TBS / Amazon Prime Video"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月24日"
-        },
-        {
-          "key": "导演",
-          "value": "及川啓"
-        },
-        {
-          "key": "音乐",
-          "value": "石濱翔、高橋邦幸"
-        },
-        {
-          "key": "Copyright",
-          "value": "©渡航、小学館／やはりこの製作委員会はまちがっている。完"
-        },
-        {
-          "key": "原作",
-          "value": "渡航（小学館「ガガガ文庫」）"
-        },
-        {
-          "key": "副导演",
-          "value": "今井翔太"
-        },
-        {
-          "key": "人物原案",
-          "value": "ぽんかん⑧"
-        },
-        {
-          "key": "系列构成",
-          "value": "大知慶一郎"
-        },
-        {
-          "key": "人物设定",
-          "value": "田中雄一；副人设：清水祐実"
-        },
-        {
-          "key": "主动画师",
-          "value": "清水慶太・枡田邦彰・高原修司・谷川亮介・古山瑛一朗・長沼智也"
-        },
-        {
-          "key": "美术监督",
-          "value": "池田繁美、丸山由紀子"
-        },
-        {
-          "key": "背景美术",
-          "value": "アトリエムサ"
-        },
-        {
-          "key": "色彩设计",
-          "value": "岩井田洋"
-        },
-        {
-          "key": "摄影监督",
-          "value": "中村雄太"
-        },
-        {
-          "key": "剪辑",
-          "value": "平木大輔"
-        },
-        {
-          "key": "音响监督",
-          "value": "本山哲"
-        },
-        {
-          "key": "音响",
-          "value": "デルファイサウンド"
-        },
-        {
-          "key": "音乐制作",
-          "value": "NBCユニバーサル・エンターテイメント、マーベラス"
-        },
-        {
-          "key": "动画制作",
-          "value": "feel."
-        },
-        {
-          "key": "主题歌演出",
-          "value": "やなぎなぎ、雪ノ下雪乃(CV:早見沙織)、由比ヶ浜結衣(CV:東山奈央)"
         }
       ],
       "rating": {
-        "rank": 4173,
-        "total": 9305,
+        "rank": 4123,
+        "total": 9561,
         "count": {
-          "1": 55,
-          "2": 45,
-          "3": 103,
-          "4": 363,
-          "5": 865,
-          "6": 2562,
-          "7": 3104,
-          "8": 1499,
-          "9": 355,
-          "10": 354
+          "1": 54,
+          "2": 46,
+          "3": 104,
+          "4": 368,
+          "5": 887,
+          "6": 2631,
+          "7": 3193,
+          "8": 1543,
+          "9": 371,
+          "10": 364
         },
         "score": 6.7
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 872,
-        "dropped": 529,
-        "wish": 1950,
-        "collect": 14882,
-        "doing": 924
+        "on_hold": 903,
+        "dropped": 528,
+        "wish": 2004,
+        "collect": 15501,
+        "doing": 949
       },
       "id": 277954,
-      "eps": 12,
       "meta_tags": [
         "校园",
         "TV",
@@ -4558,318 +1551,101 @@
         "日本",
         "小说改"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 12,
+        "total_comments": 1204,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 184
+          },
+          {
+            "ep": 2,
+            "comments": 101
+          },
+          {
+            "ep": 3,
+            "comments": 87
+          },
+          {
+            "ep": 4,
+            "comments": 161
+          },
+          {
+            "ep": 5,
+            "comments": 82
+          },
+          {
+            "ep": 6,
+            "comments": 73
+          },
+          {
+            "ep": 7,
+            "comments": 91
+          },
+          {
+            "ep": 8,
+            "comments": 94
+          },
+          {
+            "ep": 9,
+            "comments": 74
+          },
+          {
+            "ep": 10,
+            "comments": 63
+          },
+          {
+            "ep": 11,
+            "comments": 110
+          },
+          {
+            "ep": 12,
+            "comments": 84
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-10",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/5a/42/299498_PNyTT.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/5a/42/299498_PNyTT.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/5a/42/299498_PNyTT.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/5a/42/299498_PNyTT.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/5a/42/299498_PNyTT.jpg"
       },
-      "summary": "性格有些孤僻喜爱安静的大学三年级生，樱井真一。总是被小一届，同高中毕业的学妹宇崎花，以各种照顾爱耍孤僻的学长的名义为由，进行各种无厘头的纠缠。虽然一开始觉得有点困扰，但却逐渐习惯起来……",
       "name": "宇崎ちゃんは遊びたい!",
       "name_cn": "宇崎学妹想要玩！",
-      "tags": [
-        {
-          "name": "恋爱",
-          "count": 942,
-          "total_cont": 0
-        },
-        {
-          "name": "搞笑",
-          "count": 937,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 618,
-          "total_cont": 0
-        },
-        {
-          "name": "日常",
-          "count": 555,
-          "total_cont": 0
-        },
-        {
-          "name": "漫画改",
-          "count": 496,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 407,
-          "total_cont": 0
-        },
-        {
-          "name": "校园",
-          "count": 363,
-          "total_cont": 0
-        },
-        {
-          "name": "巨乳",
-          "count": 348,
-          "total_cont": 0
-        },
-        {
-          "name": "Engi",
-          "count": 257,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 237,
-          "total_cont": 0
-        },
-        {
-          "name": "漫改",
-          "count": 220,
-          "total_cont": 0
-        },
-        {
-          "name": "狗粮",
-          "count": 94,
-          "total_cont": 0
-        },
-        {
-          "name": "宇崎酱想要玩耍！系列",
-          "count": 71,
-          "total_cont": 0
-        },
-        {
-          "name": "三浦和也",
-          "count": 40,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 21,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 21,
-          "total_cont": 0
-        },
-        {
-          "name": "大学",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年夏季番",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "7月",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "卖肉",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "宇崎学妹想要玩！",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "宇崎酱想要玩耍！",
-          "count": 8,
-          "total_cont": 0
-        },
-        {
-          "name": "大空直美",
-          "count": 8,
-          "total_cont": 0
-        },
-        {
-          "name": "2020夏",
-          "count": 7,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "喜剧",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "纯爱",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "表番",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "沙雕",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "早見沙織",
-          "count": 4,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "宇崎学妹想要玩！"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "宇崎酱想要玩耍！"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "12"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月10日"
-        },
         {
           "key": "放送星期",
           "value": "星期五"
-        },
-        {
-          "key": "官方网站",
-          "value": "https://uzakichan.com/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "AT-X"
-        },
-        {
-          "key": "其他电视台",
-          "value": "ABCテレビ / TOKYO MX / テレビ愛知 / 山陰放送 / BS11"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月25日"
-        },
-        {
-          "key": "导演",
-          "value": "三浦和也"
-        },
-        {
-          "key": "音乐",
-          "value": "五十嵐聡"
-        },
-        {
-          "key": "Copyright",
-          "value": "©2020 丈／KADOKAWA／宇崎ちゃん製作委員会"
-        },
-        {
-          "key": "原作",
-          "value": "丈（ドラゴンコミックスエイジ『宇崎ちゃんは遊びたい!』/KADOKAWA 刊）"
-        },
-        {
-          "key": "系列构成",
-          "value": "あおしまたかし"
-        },
-        {
-          "key": "人物设定",
-          "value": "栗原学"
-        },
-        {
-          "key": "总作画监督",
-          "value": "栗原学"
-        },
-        {
-          "key": "美术设计",
-          "value": "渡邊聡"
-        },
-        {
-          "key": "美术监督",
-          "value": "渡邊聡"
-        },
-        {
-          "key": "色彩设计",
-          "value": "相原彩子"
-        },
-        {
-          "key": "摄影监督",
-          "value": "松向寿"
-        },
-        {
-          "key": "剪辑",
-          "value": "小口理菜"
-        },
-        {
-          "key": "音响监督",
-          "value": "えびなやすのり"
-        },
-        {
-          "key": "音效",
-          "value": "川田清貴"
-        },
-        {
-          "key": "音乐制作",
-          "value": "インクストゥエンター"
-        },
-        {
-          "key": "动画制作",
-          "value": "ENGI"
-        },
-        {
-          "key": "製作",
-          "value": "宇崎ちゃん製作委員会"
-        },
-        {
-          "key": "主题歌演出",
-          "value": "鹿乃と宇崎ちゃん(CV:大空直美)"
         }
       ],
       "rating": {
-        "rank": 6974,
-        "total": 3482,
+        "rank": 6995,
+        "total": 3551,
         "count": {
           "1": 13,
-          "2": 15,
-          "3": 55,
-          "4": 136,
-          "5": 564,
-          "6": 1516,
-          "7": 928,
-          "8": 205,
+          "2": 18,
+          "3": 58,
+          "4": 135,
+          "5": 575,
+          "6": 1554,
+          "7": 942,
+          "8": 207,
           "9": 19,
-          "10": 31
+          "10": 30
         },
         "score": 6.1
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 364,
-        "dropped": 590,
-        "wish": 642,
-        "collect": 5790,
-        "doing": 382
+        "on_hold": 376,
+        "dropped": 593,
+        "wish": 661,
+        "collect": 5947,
+        "doing": 389
       },
       "id": 299498,
-      "eps": 12,
       "meta_tags": [
         "TV",
         "恋爱",
@@ -4877,318 +1653,101 @@
         "漫画改",
         "日常"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 12,
+        "total_comments": 287,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 56
+          },
+          {
+            "ep": 2,
+            "comments": 23
+          },
+          {
+            "ep": 3,
+            "comments": 22
+          },
+          {
+            "ep": 4,
+            "comments": 21
+          },
+          {
+            "ep": 5,
+            "comments": 25
+          },
+          {
+            "ep": 6,
+            "comments": 25
+          },
+          {
+            "ep": 7,
+            "comments": 14
+          },
+          {
+            "ep": 8,
+            "comments": 16
+          },
+          {
+            "ep": 9,
+            "comments": 25
+          },
+          {
+            "ep": 10,
+            "comments": 34
+          },
+          {
+            "ep": 11,
+            "comments": 15
+          },
+          {
+            "ep": 12,
+            "comments": 11
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-10",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/7a/37/296076_6cP6Q.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/7a/37/296076_6cP6Q.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/7a/37/296076_6cP6Q.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/7a/37/296076_6cP6Q.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/7a/37/296076_6cP6Q.jpg"
       },
-      "summary": "20岁的废柴大学生——木之下和也。和初恋女友仅接吻了一次，可只过了一个月就被甩了。\r\n“啊……不行了……感觉什么都不行了……”\r\n自暴自弃的和也，使用了“某种方法”，和女孩子去约会了。到了碰头的地点——\r\n“你是和也，对吧？”\r\n一边将飘逸的黑发挂于耳后，一边看着和也的脸的美少女水原千鹤露出了微笑。\r\n在仅有一次的租赁中，有着闪耀光辉的真实！恋爱×心动MAX的冒失恋爱故事，揭幕！",
       "name": "彼女、お借りします",
       "name_cn": "租借女友",
-      "tags": [
-        {
-          "name": "恋爱",
-          "count": 1425,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 923,
-          "total_cont": 0
-        },
-        {
-          "name": "漫改",
-          "count": 790,
-          "total_cont": 0
-        },
-        {
-          "name": "校园",
-          "count": 625,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 601,
-          "total_cont": 0
-        },
-        {
-          "name": "漫画改",
-          "count": 583,
-          "total_cont": 0
-        },
-        {
-          "name": "后宫",
-          "count": 567,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 401,
-          "total_cont": 0
-        },
-        {
-          "name": "TMS",
-          "count": 365,
-          "total_cont": 0
-        },
-        {
-          "name": "雨宫天",
-          "count": 334,
-          "total_cont": 0
-        },
-        {
-          "name": "東山奈央",
-          "count": 268,
-          "total_cont": 0
-        },
-        {
-          "name": "悠木碧",
-          "count": 202,
-          "total_cont": 0
-        },
-        {
-          "name": "高橋李依",
-          "count": 144,
-          "total_cont": 0
-        },
-        {
-          "name": "党争",
-          "count": 75,
-          "total_cont": 0
-        },
-        {
-          "name": "古賀一臣",
-          "count": 44,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 42,
-          "total_cont": 0
-        },
-        {
-          "name": "日常",
-          "count": 37,
-          "total_cont": 0
-        },
-        {
-          "name": "搞笑",
-          "count": 36,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 35,
-          "total_cont": 0
-        },
-        {
-          "name": "租借女友",
-          "count": 22,
-          "total_cont": 0
-        },
-        {
-          "name": "古贺一臣",
-          "count": 21,
-          "total_cont": 0
-        },
-        {
-          "name": "TMS_Entertainment",
-          "count": 18,
-          "total_cont": 0
-        },
-        {
-          "name": "堀江瞬",
-          "count": 14,
-          "total_cont": 0
-        },
-        {
-          "name": "青春",
-          "count": 12,
-          "total_cont": 0
-        },
-        {
-          "name": "高桥李依",
-          "count": 11,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 10,
-          "total_cont": 0
-        },
-        {
-          "name": "东山奈央",
-          "count": 10,
-          "total_cont": 0
-        },
-        {
-          "name": "広田光毅",
-          "count": 8,
-          "total_cont": 0
-        },
-        {
-          "name": "トムス・エンタテインメント",
-          "count": 8,
-          "total_cont": 0
-        },
-        {
-          "name": "2020夏",
-          "count": 8,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "租借女友"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "Kanojo, Okarishimasu"
-            },
-            {
-              "v": "Rent-a-Girlfriend"
-            },
-            {
-              "v": "女朋友、借我一下"
-            },
-            {
-              "v": "出租女友"
-            },
-            {
-              "v": "理想女友"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "12"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月10日"
-        },
         {
           "key": "放送星期",
           "value": "星期五"
-        },
-        {
-          "key": "官方网站",
-          "value": "https://kanokari-official.com/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "MBS, TBS"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月25日"
-        },
-        {
-          "key": "导演",
-          "value": "古賀一臣"
-        },
-        {
-          "key": "音乐",
-          "value": "ヒャダイン(前山田健一)、板垣祐介"
-        },
-        {
-          "key": "Copyright",
-          "value": "©宮島礼吏・講談社／「彼女、お借りします」製作委員会"
-        },
-        {
-          "key": "原作",
-          "value": "宮島礼吏（講談社「週刊少年マガジン」連載）"
-        },
-        {
-          "key": "系列构成",
-          "value": "広田光毅"
-        },
-        {
-          "key": "人物设定",
-          "value": "平山寛菜"
-        },
-        {
-          "key": "色彩设计",
-          "value": "石黒文子"
-        },
-        {
-          "key": "美术监督",
-          "value": "秋葉みのる"
-        },
-        {
-          "key": "摄影监督",
-          "value": "坂井慎太郎"
-        },
-        {
-          "key": "剪辑",
-          "value": "中葉由美子"
-        },
-        {
-          "key": "音响监督",
-          "value": "髙桑一"
-        },
-        {
-          "key": "主题歌演出",
-          "value": "the peggies、halca"
-        },
-        {
-          "key": "动画制作",
-          "value": "トムス・エンタテインメント"
-        },
-        {
-          "key": "制作协力",
-          "value": "スタジオコメット"
-        },
-        {
-          "key": "作画监督",
-          "value": "佐藤明日香、加藤壮、堀內優、谷澤泰史、華房泰堂、野本正幸、內藤圭"
-        },
-        {
-          "key": "动画制片人",
-          "value": "山川剛史＆松嵜義之"
         }
       ],
       "rating": {
-        "rank": 8063,
-        "total": 5399,
+        "rank": 8096,
+        "total": 5517,
         "count": {
-          "1": 107,
-          "2": 96,
-          "3": 199,
-          "4": 502,
-          "5": 1026,
-          "6": 1826,
-          "7": 1188,
-          "8": 318,
-          "9": 52,
-          "10": 85
+          "1": 112,
+          "2": 99,
+          "3": 208,
+          "4": 512,
+          "5": 1051,
+          "6": 1866,
+          "7": 1205,
+          "8": 323,
+          "9": 55,
+          "10": 86
         },
         "score": 5.8
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 462,
-        "dropped": 877,
-        "wish": 1082,
-        "collect": 7992,
-        "doing": 474
+        "on_hold": 473,
+        "dropped": 890,
+        "wish": 1098,
+        "collect": 8242,
+        "doing": 487
       },
       "id": 296076,
-      "eps": 12,
       "meta_tags": [
         "校园",
         "TV",
@@ -5196,250 +1755,86 @@
         "日本",
         "漫画改"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 12,
+        "total_comments": 739,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 94
+          },
+          {
+            "ep": 2,
+            "comments": 106
+          },
+          {
+            "ep": 3,
+            "comments": 89
+          },
+          {
+            "ep": 4,
+            "comments": 71
+          },
+          {
+            "ep": 5,
+            "comments": 61
+          },
+          {
+            "ep": 6,
+            "comments": 37
+          },
+          {
+            "ep": 7,
+            "comments": 62
+          },
+          {
+            "ep": 8,
+            "comments": 55
+          },
+          {
+            "ep": 9,
+            "comments": 58
+          },
+          {
+            "ep": 10,
+            "comments": 45
+          },
+          {
+            "ep": 11,
+            "comments": 28
+          },
+          {
+            "ep": 12,
+            "comments": 33
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-10",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/87/f4/291195_i473n.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/87/f4/291195_i473n.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/87/f4/291195_i473n.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/87/f4/291195_i473n.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/87/f4/291195_i473n.jpg"
       },
-      "summary": "这里是，剑与魔法的世界——\r\n自暴自弃战士公会所属的彼得·格里尔，漂亮地在武斗祭上胜出，赢得了地上最强的男人这一称号！\r\n这样一来，他与恋人露薇莉亚的婚事也能得到认可了。\r\n然而，巨大的力量总是伴随着巨大的代价……\r\n鬼人族、精灵族、兽人族。\r\n瞄准地上最强遗传因子的各种各样的异种族的女性们，\r\n以彼得的“种子”为目标，现在正蠢蠢欲动。\r\n为什么人在事后会变得如此冷静呢？\r\n前所未见的地表最强贤者时间要来了！",
       "name": "ピーター・グリルと賢者の時間",
       "name_cn": "彼得·格里尔和贤者的时间",
-      "tags": [
-        {
-          "name": "肉番",
-          "count": 460,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 336,
-          "total_cont": 0
-        },
-        {
-          "name": "搞笑",
-          "count": 320,
-          "total_cont": 0
-        },
-        {
-          "name": "漫画改",
-          "count": 277,
-          "total_cont": 0
-        },
-        {
-          "name": "后宫",
-          "count": 269,
-          "total_cont": 0
-        },
-        {
-          "name": "卖肉",
-          "count": 268,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 213,
-          "total_cont": 0
-        },
-        {
-          "name": "泡面番",
-          "count": 194,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 135,
-          "total_cont": 0
-        },
-        {
-          "name": "漫改",
-          "count": 118,
-          "total_cont": 0
-        },
-        {
-          "name": "Wolfsbane",
-          "count": 91,
-          "total_cont": 0
-        },
-        {
-          "name": "奇幻",
-          "count": 76,
-          "total_cont": 0
-        },
-        {
-          "name": "辰美",
-          "count": 65,
-          "total_cont": 0
-        },
-        {
-          "name": "彼得·格里尔的贤者时间系列",
-          "count": 31,
-          "total_cont": 0
-        },
-        {
-          "name": "异世界",
-          "count": 20,
-          "total_cont": 0
-        },
-        {
-          "name": "下野紘",
-          "count": 19,
-          "total_cont": 0
-        },
-        {
-          "name": "肉",
-          "count": 17,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 10,
-          "total_cont": 0
-        },
-        {
-          "name": "露点",
-          "count": 8,
-          "total_cont": 0
-        },
-        {
-          "name": "战斗",
-          "count": 7,
-          "total_cont": 0
-        },
-        {
-          "name": "ウルフズベイン",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "表番",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "R15",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "2020夏",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "里番",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "5",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "日漫",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "福利",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "彼得·格里尔的贤者时间",
-          "count": 3,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "彼得·格里尔和贤者的时间"
-        },
-        {
-          "key": "话数",
-          "value": "12"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月10日"
-        },
         {
           "key": "放送星期",
           "value": "星期五"
-        },
-        {
-          "key": "官方网站",
-          "value": "http://petergrill-anime.jp/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "TOKYO MX"
-        },
-        {
-          "key": "其他电视台",
-          "value": "AT-X、とちぎテレビ"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月25日"
-        },
-        {
-          "key": "导演",
-          "value": "辰美"
-        },
-        {
-          "key": "Copyright",
-          "value": "©檜山大輔／双葉社・「ピーター・グリルと賢者の時間」製作委員会"
-        },
-        {
-          "key": "原作",
-          "value": "檜山大輔(銀八)（双葉社「月刊アクション」連載）"
-        },
-        {
-          "key": "脚本",
-          "value": "毛利のら"
-        },
-        {
-          "key": "人物设定",
-          "value": "石毛るい"
-        },
-        {
-          "key": "动画制作",
-          "value": "ウルフズベイン"
-        },
-        {
-          "key": "主题歌演出",
-          "value": "ニノミヤユイ(二ノ宮ゆい)、Hilcrhyme"
         }
       ],
       "rating": {
-        "rank": 8675,
-        "total": 1787,
+        "rank": 8731,
+        "total": 1812,
         "count": {
-          "1": 21,
-          "2": 42,
-          "3": 75,
-          "4": 209,
-          "5": 579,
-          "6": 634,
-          "7": 161,
+          "1": 22,
+          "2": 41,
+          "3": 78,
+          "4": 211,
+          "5": 587,
+          "6": 642,
+          "7": 165,
           "8": 38,
           "9": 5,
           "10": 23
@@ -5448,14 +1843,13 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 204,
-        "dropped": 384,
-        "wish": 540,
-        "collect": 2934,
-        "doing": 215
+        "on_hold": 209,
+        "dropped": 390,
+        "wish": 554,
+        "collect": 3005,
+        "doing": 222
       },
       "id": 291195,
-      "eps": 12,
       "meta_tags": [
         "后宫",
         "TV",
@@ -5463,188 +1857,83 @@
         "奇幻",
         "漫画改"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 12,
+        "total_comments": 132,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 28
+          },
+          {
+            "ep": 2,
+            "comments": 11
+          },
+          {
+            "ep": 3,
+            "comments": 14
+          },
+          {
+            "ep": 4,
+            "comments": 13
+          },
+          {
+            "ep": 5,
+            "comments": 11
+          },
+          {
+            "ep": 6,
+            "comments": 8
+          },
+          {
+            "ep": 7,
+            "comments": 7
+          },
+          {
+            "ep": 8,
+            "comments": 7
+          },
+          {
+            "ep": 9,
+            "comments": 6
+          },
+          {
+            "ep": 10,
+            "comments": 8
+          },
+          {
+            "ep": 11,
+            "comments": 11
+          },
+          {
+            "ep": 12,
+            "comments": 8
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-10",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/ff/4b/303173_aiNPr.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/ff/4b/303173_aiNPr.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/ff/4b/303173_aiNPr.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/ff/4b/303173_aiNPr.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/ff/4b/303173_aiNPr.jpg"
       },
-      "summary": "お笑い養成所SSS（スーパースタースクール）で日夜、芸を磨くスターダスト、菊一文字、６-シックス-の3組。\r\nある日突然、講師に呼び出され、視聴者のSNS投票で優勝が決まる人気ネタ番組「バズネタファイル」のオーディションを受けることに。\r\nネタ時間はわずか1分。彼らの命運をわける1分間のお笑いショーが始まる。",
       "name": "GETUP! GETLIVE! #げらげら",
       "name_cn": "",
-      "tags": [
-        {
-          "name": "泡面番",
-          "count": 7,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "エイティーエイト",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "伊福部崇",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "石川界人",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "スペルバウンド",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "豊永利行",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "2020夏",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "花江夏樹",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "偶像",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "子供向",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "动画",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 1,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "GET UP! GET LIVE!"
-            },
-            {
-              "v": "ゲラゲラ"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "10"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月10日"
-        },
         {
           "key": "放送星期",
           "value": "星期五"
-        },
-        {
-          "key": "官方网站",
-          "value": "http://getup-getlive.com/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "MBS・TBS"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月11日"
-        },
-        {
-          "key": "导演",
-          "value": "エイティーエイト"
-        },
-        {
-          "key": "音乐",
-          "value": "TAKA"
-        },
-        {
-          "key": "Copyright",
-          "value": "© MBS／ゲラゲラ製作委員会"
-        },
-        {
-          "key": "企画",
-          "value": "天津向（向清太朗）"
-        },
-        {
-          "key": "人物原案",
-          "value": "由良"
-        },
-        {
-          "key": "系列构成",
-          "value": "伊福部崇"
-        },
-        {
-          "key": "制片人",
-          "value": "前田俊博、麻生一宏、福島一恵"
-        },
-        {
-          "key": "动画制片人",
-          "value": "鹿志村聡"
-        },
-        {
-          "key": "动画制作",
-          "value": "スペルバウンド"
         }
       ],
       "rating": {
         "rank": 0,
-        "total": 7,
+        "total": 8,
         "count": {
           "1": 0,
           "2": 0,
           "3": 0,
-          "4": 0,
+          "4": 1,
           "5": 3,
           "6": 2,
           "7": 0,
@@ -5652,344 +1941,108 @@
           "9": 0,
           "10": 0
         },
-        "score": 6.1
+        "score": 5.9
       },
       "total_episodes": 11,
       "collection": {
         "on_hold": 5,
         "dropped": 13,
-        "wish": 11,
-        "collect": 9,
+        "wish": 10,
+        "collect": 10,
         "doing": 1
       },
       "id": 303173,
-      "eps": 10,
       "meta_tags": [
         "TV",
         "日本"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 10,
+        "total_comments": 6,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 1
+          },
+          {
+            "ep": 2,
+            "comments": 1
+          },
+          {
+            "ep": 3,
+            "comments": 1
+          },
+          {
+            "ep": 4,
+            "comments": 1
+          },
+          {
+            "ep": 5,
+            "comments": 1
+          },
+          {
+            "ep": 6,
+            "comments": 0
+          },
+          {
+            "ep": 7,
+            "comments": 1
+          },
+          {
+            "ep": 8,
+            "comments": 0
+          },
+          {
+            "ep": 9,
+            "comments": 0
+          },
+          {
+            "ep": 10,
+            "comments": 0
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-11",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/21/a1/292238_u43yn.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/21/a1/292238_u43yn.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/21/a1/292238_u43yn.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/21/a1/292238_u43yn.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/21/a1/292238_u43yn.jpg"
       },
-      "summary": "桐人、尤吉欧、爱丽丝。距离两名修剑士和一名整合骑士打败了最高祭司阿多米尼斯多雷特已过去了半年。\r\n\r\n结束了战斗，爱丽丝在故乡卢利特村生活。在她的身旁，是失去了挚友，自己也失去了手臂和心的桐人。献身般支撑着他的爱丽丝，丝毫没有保留像以前一样作为骑士的心。“告诉我，桐人……我究竟该怎么办？”\r\n\r\n然而，通往将 Underworld 全境引向悲剧的“最终压力测试”的倒计时，却毫不留情地推进着。仿佛与之相呼应一般，在“黑暗领域”的深处，暗黑神贝库达复活了。他率领暗黑帝国的军队，为了得到“光之巫女”，开始向“人界”进攻。\r\n\r\n指挥“人界”军队的贝尔库利等人，决心与“黑暗领域”的军队展开前所未有的大战。但在他们身旁，并没有发现爱丽丝，以及拯救了“人界”的两位...",
       "name": "ソードアート・オンライン アリシゼーション War of Underworld -THE LAST SEASON-",
       "name_cn": "刀剑神域 爱丽丝篇 异界战争 -终章-",
-      "tags": [
-        {
-          "name": "A-1Pictures",
-          "count": 1229,
-          "total_cont": 0
-        },
-        {
-          "name": "刀剑神域",
-          "count": 1211,
-          "total_cont": 0
-        },
-        {
-          "name": "轻小说改",
-          "count": 927,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 742,
-          "total_cont": 0
-        },
-        {
-          "name": "战斗",
-          "count": 741,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 651,
-          "total_cont": 0
-        },
-        {
-          "name": "后宫",
-          "count": 549,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 399,
-          "total_cont": 0
-        },
-        {
-          "name": "轻改",
-          "count": 370,
-          "total_cont": 0
-        },
-        {
-          "name": "科幻",
-          "count": 295,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年4月",
-          "count": 179,
-          "total_cont": 0
-        },
-        {
-          "name": "小野学",
-          "count": 177,
-          "total_cont": 0
-        },
-        {
-          "name": "Alicization篇",
-          "count": 159,
-          "total_cont": 0
-        },
-        {
-          "name": "Underworld",
-          "count": 81,
-          "total_cont": 0
-        },
-        {
-          "name": "小说改",
-          "count": 74,
-          "total_cont": 0
-        },
-        {
-          "name": "奇幻",
-          "count": 72,
-          "total_cont": 0
-        },
-        {
-          "name": "异世界",
-          "count": 64,
-          "total_cont": 0
-        },
-        {
-          "name": "恋爱",
-          "count": 41,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 41,
-          "total_cont": 0
-        },
-        {
-          "name": "热血",
-          "count": 41,
-          "total_cont": 0
-        },
-        {
-          "name": "网游",
-          "count": 35,
-          "total_cont": 0
-        },
-        {
-          "name": "续作",
-          "count": 29,
-          "total_cont": 0
-        },
-        {
-          "name": "SAO",
-          "count": 18,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 17,
-          "total_cont": 0
-        },
-        {
-          "name": "松冈祯丞",
-          "count": 13,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 12,
-          "total_cont": 0
-        },
-        {
-          "name": "A-1_Pictures",
-          "count": 11,
-          "total_cont": 0
-        },
-        {
-          "name": "川原砾",
-          "count": 11,
-          "total_cont": 0
-        },
-        {
-          "name": "梶浦由記",
-          "count": 10,
-          "total_cont": 0
-        },
-        {
-          "name": "梶浦由记",
-          "count": 10,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "刀剑神域 爱丽丝篇 异界战争 -终章-"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "Sword Art Online: Alicization - War of Underworld 2nd Season"
-            },
-            {
-              "v": "Sword Art Online: Alicization - War of Underworld - The Last Season"
-            },
-            {
-              "v": "Sword Art Online: Alicization - War of Underworld (2020)"
-            },
-            {
-              "v": "Sword Art Online Alicization War of Underworld Part 2"
-            },
-            {
-              "v": "刀剑神域 第三季 第3部分"
-            },
-            {
-              "v": "刀剑神域 Alicization篇 War of Underworld -THE LAST SEASON-"
-            },
-            {
-              "v": "ソードアート・オンライン アリシゼーション War of Underworld 第2クール"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "11"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月11日"
-        },
         {
           "key": "放送星期",
           "value": "星期六"
-        },
-        {
-          "key": "官方网站",
-          "value": "https://sao-alicization.net"
-        },
-        {
-          "key": "播放电视台",
-          "value": "TOKYO MX / BS11 / とちぎテレビ / 群馬テレビ"
-        },
-        {
-          "key": "其他电视台",
-          "value": "MBS / テレビ愛知 / AT-X"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月19日"
-        },
-        {
-          "key": "导演",
-          "value": "小野学"
-        },
-        {
-          "key": "Copyright",
-          "value": "© 2017 川原 礫／KADOKAWA アスキー・メディアワークス／SAO-A Project"
-        },
-        {
-          "key": "原作",
-          "value": "川原礫（「電撃文庫」刊）"
-        },
-        {
-          "key": "人物原案",
-          "value": "abec(BUNBUN)"
-        },
-        {
-          "key": "人物设定",
-          "value": "足立慎吾、鈴木豪、西口智也、山本由美子、戸谷賢都"
-        },
-        {
-          "key": "企画",
-          "value": "岩上敦宏、徳田直巳、金野徹、三木一馬、大澤信博 企画協力：三宅将典、山本和子、渡辺隆"
-        },
-        {
-          "key": "音响监督",
-          "value": "岩浪美和"
-        },
-        {
-          "key": "音效",
-          "value": "小山恭正"
-        },
-        {
-          "key": "音响",
-          "value": "ソニルード"
-        },
-        {
-          "key": "OP・ED 分镜",
-          "value": "中重俊祐（OP）、大城丈宗（ED）"
-        },
-        {
-          "key": "设定",
-          "value": "怪物设定：河野敏弥"
-        },
-        {
-          "key": "美术设计",
-          "value": "谷内優穂、森岡賢一"
-        },
-        {
-          "key": "总制片人",
-          "value": "三木一馬、大澤信博、中山信宏"
-        },
-        {
-          "key": "制片人",
-          "value": "丹羽将己、平井啓祐、二見鷹介、安達薫、川上竜太郎"
-        },
-        {
-          "key": "制作",
-          "value": "制作統括：柏田真一郎、加藤淳"
-        },
-        {
-          "key": "助理制片人",
-          "value": "橋本渉、黒井瞳、土屋智之、河合泰一、山本佳輝、髙野星来、福田詠章"
         }
       ],
       "rating": {
-        "rank": 9084,
-        "total": 6162,
+        "rank": 9132,
+        "total": 6280,
         "count": {
           "1": 226,
-          "2": 316,
-          "3": 671,
-          "4": 1491,
-          "5": 1408,
-          "6": 1222,
-          "7": 513,
-          "8": 195,
-          "9": 36,
-          "10": 84
+          "2": 322,
+          "3": 683,
+          "4": 1527,
+          "5": 1434,
+          "6": 1243,
+          "7": 521,
+          "8": 200,
+          "9": 38,
+          "10": 86
         },
         "score": 4.8
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 305,
-        "dropped": 547,
-        "wish": 648,
-        "collect": 10016,
-        "doing": 494
+        "on_hold": 310,
+        "dropped": 551,
+        "wish": 661,
+        "collect": 10286,
+        "doing": 492
       },
       "id": 292238,
-      "eps": 11,
       "meta_tags": [
         "后宫",
         "TV",
@@ -5997,298 +2050,97 @@
         "战斗",
         "小说改"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 11,
+        "total_comments": 1078,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 136
+          },
+          {
+            "ep": 2,
+            "comments": 87
+          },
+          {
+            "ep": 3,
+            "comments": 85
+          },
+          {
+            "ep": 4,
+            "comments": 105
+          },
+          {
+            "ep": 5,
+            "comments": 135
+          },
+          {
+            "ep": 6,
+            "comments": 106
+          },
+          {
+            "ep": 7,
+            "comments": 84
+          },
+          {
+            "ep": 8,
+            "comments": 103
+          },
+          {
+            "ep": 9,
+            "comments": 63
+          },
+          {
+            "ep": 10,
+            "comments": 79
+          },
+          {
+            "ep": 11,
+            "comments": 95
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-12",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/dd/0d/294654_ca6tM.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/dd/0d/294654_ca6tM.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/dd/0d/294654_ca6tM.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/dd/0d/294654_ca6tM.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/dd/0d/294654_ca6tM.jpg"
       },
-      "summary": "这里是魔族和人类共同生活的街道“林德沃尔姆”。新人医生·格伦医生，今天也在城镇里繁忙地诊察中—— 给美人鱼的鳃做深度检查、对血肉魔像的大腿进行缝合手术、帮助哈耳庇厄进行产卵，以及对龙的每一块鳞片进行触诊。 为了拯救外表、构造、性质都完全不同的她们，格伦明明只是尽全力给她们检查而已，却不知为何充满了很危险的♥气氛……但是没关系，因为这些都是100%的医疗行为而已！ 虽然也有被拉弥亚族的助手莎妃的尾巴勒住导致差点窒息的时候，但是今天的诊疗所也会照常营业！ 史上首次深入魔物娘生态的医疗幻想冒险谭，开幕！",
       "name": "モンスター娘のお医者さん",
       "name_cn": "魔物娘的医生",
-      "tags": [
-        {
-          "name": "2020年7月",
-          "count": 325,
-          "total_cont": 0
-        },
-        {
-          "name": "魔物娘",
-          "count": 304,
-          "total_cont": 0
-        },
-        {
-          "name": "轻小说改",
-          "count": 281,
-          "total_cont": 0
-        },
-        {
-          "name": "肉番",
-          "count": 246,
-          "total_cont": 0
-        },
-        {
-          "name": "后宫",
-          "count": 243,
-          "total_cont": 0
-        },
-        {
-          "name": "日常",
-          "count": 196,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 189,
-          "total_cont": 0
-        },
-        {
-          "name": "搞笑",
-          "count": 149,
-          "total_cont": 0
-        },
-        {
-          "name": "ARVOANIMATION",
-          "count": 123,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 100,
-          "total_cont": 0
-        },
-        {
-          "name": "轻改",
-          "count": 78,
-          "total_cont": 0
-        },
-        {
-          "name": "人外",
-          "count": 75,
-          "total_cont": 0
-        },
-        {
-          "name": "卖肉",
-          "count": 54,
-          "total_cont": 0
-        },
-        {
-          "name": "奇幻",
-          "count": 49,
-          "total_cont": 0
-        },
-        {
-          "name": "巨乳",
-          "count": 39,
-          "total_cont": 0
-        },
-        {
-          "name": "小说改",
-          "count": 29,
-          "total_cont": 0
-        },
-        {
-          "name": "异世界",
-          "count": 13,
-          "total_cont": 0
-        },
-        {
-          "name": "岩崎良明",
-          "count": 12,
-          "total_cont": 0
-        },
-        {
-          "name": "肉",
-          "count": 10,
-          "total_cont": 0
-        },
-        {
-          "name": "魔物娘的医生",
-          "count": 8,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 7,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 5,
-          "total_cont": 0
-        },
-        {
-          "name": "2020夏",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "アルボアニメーション",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "土岐隼一",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "恋爱",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "大西沙織",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "福利",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "種﨑敦美",
-          "count": 2,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "魔物娘的医生"
-        },
-        {
-          "key": "话数",
-          "value": "12"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月12日"
-        },
         {
           "key": "放送星期",
           "value": "星期日"
-        },
-        {
-          "key": "官方网站",
-          "value": "https://mon-isha-anime.com/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "TOKYO MX"
-        },
-        {
-          "key": "其他电视台",
-          "value": "サンテレビ、KBS京都、BS11"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月27日"
-        },
-        {
-          "key": "导演",
-          "value": "岩崎良明"
-        },
-        {
-          "key": "音乐",
-          "value": "TO-MAS (TO-MAS SOUNDSIGHT FLUORESCENT FOREST)"
-        },
-        {
-          "key": "Copyright",
-          "value": "©折口良乃・Zトン／集英社・リンドヴルム医師会"
-        },
-        {
-          "key": "原作",
-          "value": "折口良乃／イラスト：Zトン『モンスター娘のお医者さん』（集英社ダッシュエックス文庫刊）"
-        },
-        {
-          "key": "系列构成",
-          "value": "白根秀樹"
-        },
-        {
-          "key": "人物设定",
-          "value": "加藤裕美"
-        },
-        {
-          "key": "美术监督",
-          "value": "桑原悟"
-        },
-        {
-          "key": "道具设计",
-          "value": "岩永悦宜"
-        },
-        {
-          "key": "色彩设计",
-          "value": "勝田綾太"
-        },
-        {
-          "key": "摄影监督",
-          "value": "國重元宏"
-        },
-        {
-          "key": "剪辑",
-          "value": "木村祥明"
-        },
-        {
-          "key": "音响监督",
-          "value": "明田川仁"
-        },
-        {
-          "key": "音响",
-          "value": "マジックカプセル"
-        },
-        {
-          "key": "动画制作",
-          "value": "アルボアニメーション"
-        },
-        {
-          "key": "主题歌演出",
-          "value": "ARCANA PROJECT、鈴木愛奈"
         }
       ],
       "rating": {
-        "rank": 7130,
-        "total": 1482,
+        "rank": 7111,
+        "total": 1516,
         "count": {
-          "1": 7,
-          "2": 6,
-          "3": 19,
-          "4": 63,
-          "5": 270,
-          "6": 668,
-          "7": 351,
-          "8": 72,
-          "9": 7,
+          "1": 6,
+          "2": 7,
+          "3": 20,
+          "4": 64,
+          "5": 276,
+          "6": 683,
+          "7": 358,
+          "8": 75,
+          "9": 8,
           "10": 19
         },
         "score": 6.1
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 199,
-        "dropped": 334,
-        "wish": 595,
-        "collect": 2466,
-        "doing": 229
+        "on_hold": 204,
+        "dropped": 337,
+        "wish": 603,
+        "collect": 2530,
+        "doing": 235
       },
       "id": 294654,
-      "eps": 12,
       "meta_tags": [
         "后宫",
         "TV",
@@ -6296,283 +2148,85 @@
         "日常",
         "小说改"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 12,
+        "total_comments": 169,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 26
+          },
+          {
+            "ep": 2,
+            "comments": 23
+          },
+          {
+            "ep": 3,
+            "comments": 14
+          },
+          {
+            "ep": 4,
+            "comments": 12
+          },
+          {
+            "ep": 5,
+            "comments": 22
+          },
+          {
+            "ep": 6,
+            "comments": 8
+          },
+          {
+            "ep": 7,
+            "comments": 11
+          },
+          {
+            "ep": 8,
+            "comments": 12
+          },
+          {
+            "ep": 9,
+            "comments": 13
+          },
+          {
+            "ep": 10,
+            "comments": 9
+          },
+          {
+            "ep": 11,
+            "comments": 9
+          },
+          {
+            "ep": 12,
+            "comments": 10
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-15",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/f5/ae/260736_Ged8M.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/f5/ae/260736_Ged8M.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/f5/ae/260736_Ged8M.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/f5/ae/260736_Ged8M.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/f5/ae/260736_Ged8M.jpg"
       },
-      "summary": "“为了留住公司，必须全力以赴”\r\n跟随着已故父亲的脚步，我担任了小型影视公司“奇迹娱乐”的社长兼制作人，制作了节目《发现奇迹》并为了做好节目每日奋斗着。\r\n出现在我面前的是立场和性格都不同的4人“Evolver（超进化人类）”。被称为天才科学家的许墨、人气绝顶的偶像周棋洛、在Evolver犯罪对策局担任警察的白起、以及我公司的投资人兼华锐集团CEO李泽言。\r\n通过与Evolver的相遇，我逐渐了解了父亲死亡的真相以及自己所失去的记忆，并被卷入了巨大的阴谋中。我和他们全力以赴着，最后所得到的真相是……",
       "name": "恋とプロデューサー～EVOL×LOVE～",
       "name_cn": "恋与制作人",
-      "tags": [
-        {
-          "name": "MAPPA",
-          "count": 67,
-          "total_cont": 0
-        },
-        {
-          "name": "游戏改",
-          "count": 57,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 45,
-          "total_cont": 0
-        },
-        {
-          "name": "乙女向",
-          "count": 44,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 38,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 25,
-          "total_cont": 0
-        },
-        {
-          "name": "境宗久",
-          "count": 16,
-          "total_cont": 0
-        },
-        {
-          "name": "中日合拍",
-          "count": 12,
-          "total_cont": 0
-        },
-        {
-          "name": "中国原作改编",
-          "count": 10,
-          "total_cont": 0
-        },
-        {
-          "name": "日本改编中国作品",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "柿原徹也",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "2020夏",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "杉田智和",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "小野友樹",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "加藤裕介",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "吉村清子",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "女性向",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "乙女",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "金元寿子",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "平川大輔",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "中日",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "番",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "游戏改编",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "悬疑",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "恋与",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "人肉接力棒",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "特定人群向",
-          "count": 1,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "恋与制作人"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "Koi to Producer: Evol x Love"
-            },
-            {
-              "v": "Mr Love: Queen`s Choice"
-            },
-            {
-              "v": "Koi to Producer: EVOL×LOVE"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "12"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月15日"
-        },
         {
           "key": "放送星期",
           "value": "星期三"
-        },
-        {
-          "key": "官方网站",
-          "value": "https://koipro-anime.love/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "TOKYO MX・サンテレビ・BS日テレ"
-        },
-        {
-          "key": "其他电视台",
-          "value": "AT-X"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月30日"
-        },
-        {
-          "key": "导演",
-          "value": "境宗久"
-        },
-        {
-          "key": "Copyright",
-          "value": "©恋とプロデューサー/Paper Pictures/MAPPA"
-        },
-        {
-          "key": "原作",
-          "value": "恋とプロデューサー～EVOL×LOVE～（Papergames(叠纸游戏)）"
-        },
-        {
-          "key": "系列构成",
-          "value": "吉村清子"
-        },
-        {
-          "key": "人物设定",
-          "value": "山口仁七"
-        },
-        {
-          "key": "企画",
-          "value": "郑婕、大塚学"
-        },
-        {
-          "key": "制片人",
-          "value": "陳佳麟、黃智煒"
-        },
-        {
-          "key": "执行制片人",
-          "value": "程夢悦、木村誠"
-        },
-        {
-          "key": "监制",
-          "value": "Emoto Entertainment(崴智娯楽)、CAAnimation[Cyberagent]"
-        },
-        {
-          "key": "製作",
-          "value": "Paper Pictures(叠纸游戏)、MAPPA"
-        },
-        {
-          "key": "动画制作",
-          "value": "MAPPA"
-        },
-        {
-          "key": "主题歌演出",
-          "value": "三浦祐太朗、鈴木このみ"
         }
       ],
       "rating": {
-        "rank": 8680,
-        "total": 138,
+        "rank": 8724,
+        "total": 141,
         "count": {
           "1": 3,
           "2": 8,
           "3": 15,
-          "4": 27,
-          "5": 37,
-          "6": 35,
+          "4": 28,
+          "5": 38,
+          "6": 36,
           "7": 10,
           "8": 2,
           "9": 0,
@@ -6582,268 +2236,95 @@
       },
       "total_episodes": 12,
       "collection": {
-        "on_hold": 34,
+        "on_hold": 35,
         "dropped": 85,
-        "wish": 78,
-        "collect": 203,
+        "wish": 79,
+        "collect": 208,
         "doing": 22
       },
       "id": 260736,
-      "eps": 12,
       "meta_tags": [
         "TV",
         "日本",
         "游戏改"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 12,
+        "total_comments": 81,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 11
+          },
+          {
+            "ep": 2,
+            "comments": 11
+          },
+          {
+            "ep": 3,
+            "comments": 9
+          },
+          {
+            "ep": 4,
+            "comments": 7
+          },
+          {
+            "ep": 5,
+            "comments": 6
+          },
+          {
+            "ep": 6,
+            "comments": 5
+          },
+          {
+            "ep": 7,
+            "comments": 4
+          },
+          {
+            "ep": 8,
+            "comments": 6
+          },
+          {
+            "ep": 9,
+            "comments": 6
+          },
+          {
+            "ep": 10,
+            "comments": 8
+          },
+          {
+            "ep": 11,
+            "comments": 4
+          },
+          {
+            "ep": 12,
+            "comments": 4
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-12",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/f4/74/308997_Ajm9B.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/f4/74/308997_Ajm9B.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/f4/74/308997_Ajm9B.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/f4/74/308997_Ajm9B.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/f4/74/308997_Ajm9B.jpg"
       },
-      "summary": "「闇芝居」スピンオフアニメ。\r\n都市伝説とホラーの要素を引継ぎ、令和の東京を舞台に、都会の闇に紛れ人ならざる闇を斬る忍者集団“討怪衆（とうけしゅう）”を軸に物語が展開される。",
       "name": "忍者コレクション",
       "name_cn": "忍者收藏",
-      "tags": [
-        {
-          "name": "泡面番",
-          "count": 35,
-          "total_cont": 0
-        },
-        {
-          "name": "原创",
-          "count": 28,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 20,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 19,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 16,
-          "total_cont": 0
-        },
-        {
-          "name": "ILCA",
-          "count": 9,
-          "total_cont": 0
-        },
-        {
-          "name": "傻逼动画",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "忍者收藏",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "m.一集可弃（或未看完暂时搁置）",
-          "count": 4,
-          "total_cont": 0
-        },
-        {
-          "name": "恐怖",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "懒得看",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "2020夏",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "迷惑",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "怪谈",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "惊悚",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "忍者",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "DRAWIZ",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "屹青",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "非常的一般",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "迷家正统续作",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "世纪烂片",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "不建议观看",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "离谱",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "阴间动画",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "电波向",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "Tia",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "ppt",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "灵异",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "战斗",
-          "count": 1,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "忍者收藏"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "NINJA COLLECTION"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "13"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月12日"
-        },
         {
           "key": "放送星期",
           "value": "星期日"
-        },
-        {
-          "key": "官方网站",
-          "value": "https://www.tv-tokyo.co.jp/anime/nin_colle/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "テレビ東京"
-        },
-        {
-          "key": "其他电视台",
-          "value": "あにてれ"
-        },
-        {
-          "key": "脚本",
-          "value": "熊本浩武、佐々木充郭、敦賀零"
-        },
-        {
-          "key": "演出",
-          "value": "船田晃"
-        },
-        {
-          "key": "原画",
-          "value": "ツボ浅野"
-        },
-        {
-          "key": "主题歌演出",
-          "value": "バックドロップシンデレラ「忍び足でウンザウンザを踊る」"
-        },
-        {
-          "key": "企画",
-          "value": "山川典夫、岩崎拓矢"
-        },
-        {
-          "key": "制片人",
-          "value": "梅津智史、船田晃"
-        },
-        {
-          "key": "动画制作",
-          "value": "ILCA TIA DRAWIZ"
-        },
-        {
-          "key": "动画制作协力",
-          "value": "アクア"
         }
       ],
       "rating": {
-        "rank": 8749,
-        "total": 93,
+        "rank": 8812,
+        "total": 95,
         "count": {
           "1": 3,
           "2": 11,
           "3": 13,
-          "4": 20,
+          "4": 22,
           "5": 22,
           "6": 19,
           "7": 2,
@@ -6857,331 +2338,86 @@
       "collection": {
         "on_hold": 14,
         "dropped": 56,
-        "wish": 26,
-        "collect": 124,
+        "wish": 25,
+        "collect": 127,
         "doing": 6
       },
       "id": 308997,
-      "eps": 13,
       "meta_tags": [
         "TV",
         "日本",
         "原创"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 10,
+        "total_comments": 29,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 8
+          },
+          {
+            "ep": 2,
+            "comments": 4
+          },
+          {
+            "ep": 3,
+            "comments": 4
+          },
+          {
+            "ep": 4,
+            "comments": 3
+          },
+          {
+            "ep": 5,
+            "comments": 3
+          },
+          {
+            "ep": 6,
+            "comments": 3
+          },
+          {
+            "ep": 7,
+            "comments": 1
+          },
+          {
+            "ep": 8,
+            "comments": 1
+          },
+          {
+            "ep": 9,
+            "comments": 1
+          },
+          {
+            "ep": 10,
+            "comments": 1
+          }
+        ]
+      }
     },
     {
-      "date": "2020-07-15",
-      "platform": "TV",
       "images": {
-        "small": "https://lain.bgm.tv/r/200/pic/cover/l/7d/b5/286109_SyyLe.jpg",
         "grid": "https://lain.bgm.tv/r/100/pic/cover/l/7d/b5/286109_SyyLe.jpg",
-        "large": "https://lain.bgm.tv/pic/cover/l/7d/b5/286109_SyyLe.jpg",
-        "medium": "https://lain.bgm.tv/r/800/pic/cover/l/7d/b5/286109_SyyLe.jpg",
         "common": "https://lain.bgm.tv/r/400/pic/cover/l/7d/b5/286109_SyyLe.jpg"
       },
-      "summary": "　　故事发生在2030年的日本。\r\n　　一种病毒正在全世界范围内蔓延。病毒感染者会突变成怪物，而且根据年龄、性别、种族的不同，会变化出不同形态。因为变化形态的多种多样，这种病毒被称为‘Gibia’（像野生鸟兽富有多样性）。\r\n　　然而，在日本这片废土之上，一对武士与忍者突然出现了。他们二人从江户时代的早期穿越而来，在研究病毒治疗方法的博士的帮助下，共同展开行动。\r\n　　面对着接踵袭来的Gibia，抢夺路人食粮的亡命之徒，以及各种敌人的围攻之下，杀机重重、生死攸关的冒险之旅开始了。",
       "name": "GIBIATE the Animation",
       "name_cn": "猎魔武士",
-      "tags": [
-        {
-          "name": "原创",
-          "count": 92,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年7月",
-          "count": 70,
-          "total_cont": 0
-        },
-        {
-          "name": "TV",
-          "count": 56,
-          "total_cont": 0
-        },
-        {
-          "name": "天野喜孝",
-          "count": 37,
-          "total_cont": 0
-        },
-        {
-          "name": "2020",
-          "count": 33,
-          "total_cont": 0
-        },
-        {
-          "name": "launch・BOX",
-          "count": 29,
-          "total_cont": 0
-        },
-        {
-          "name": "战斗",
-          "count": 22,
-          "total_cont": 0
-        },
-        {
-          "name": "穿越",
-          "count": 19,
-          "total_cont": 0
-        },
-        {
-          "name": "StudioELLE",
-          "count": 18,
-          "total_cont": 0
-        },
-        {
-          "name": "小美野雅彦",
-          "count": 14,
-          "total_cont": 0
-        },
-        {
-          "name": "青木良",
-          "count": 8,
-          "total_cont": 0
-        },
-        {
-          "name": "SF",
-          "count": 6,
-          "total_cont": 0
-        },
-        {
-          "name": "日本",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "2020夏",
-          "count": 3,
-          "total_cont": 0
-        },
-        {
-          "name": "日本动画",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "奇幻",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "藤井ゆきよ",
-          "count": 2,
-          "total_cont": 0
-        },
-        {
-          "name": "2020年",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "a.Anime",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "魔改",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "补看SP",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "f.日本",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "补看",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "不建议观看",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "懒得看",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "202X年",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "屹青",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "l-a-unchBOX×Studioelle",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "古代佑三",
-          "count": 1,
-          "total_cont": 0
-        },
-        {
-          "name": "GIBIATE",
-          "count": 1,
-          "total_cont": 0
-        }
-      ],
       "infobox": [
-        {
-          "key": "中文名",
-          "value": "猎魔武士"
-        },
-        {
-          "key": "别名",
-          "value": [
-            {
-              "v": "ジビエート"
-            }
-          ]
-        },
-        {
-          "key": "话数",
-          "value": "12"
-        },
-        {
-          "key": "放送开始",
-          "value": "2020年7月15日"
-        },
         {
           "key": "放送星期",
           "value": "星期三"
-        },
-        {
-          "key": "官方网站",
-          "value": "https://gibiate.com/anime/jp/"
-        },
-        {
-          "key": "播放电视台",
-          "value": "TOKYO MX"
-        },
-        {
-          "key": "其他电视台",
-          "value": "AT-X、BSフジ"
-        },
-        {
-          "key": "播放结束",
-          "value": "2020年9月30日"
-        },
-        {
-          "key": "导演",
-          "value": "小美野雅彦"
-        },
-        {
-          "key": "音乐",
-          "value": "古代祐三"
-        },
-        {
-          "key": "Copyright",
-          "value": "©「GIBIATE PROJECT」製作委員会"
-        },
-        {
-          "key": "企画",
-          "value": "青木良"
-        },
-        {
-          "key": "原作",
-          "value": "青木良"
-        },
-        {
-          "key": "执行制片人",
-          "value": "青木良"
-        },
-        {
-          "key": "人物设定",
-          "value": "小美野雅彦"
-        },
-        {
-          "key": "总作画监督",
-          "value": "小美野雅彦"
-        },
-        {
-          "key": "副导演",
-          "value": "玉田博"
-        },
-        {
-          "key": "人物原案",
-          "value": "天野喜孝"
-        },
-        {
-          "key": "道具设计",
-          "value": "野澤健太、若山温、國井実可子"
-        },
-        {
-          "key": "美术监督",
-          "value": "大西穣"
-        },
-        {
-          "key": "美术设计",
-          "value": "坂本竜"
-        },
-        {
-          "key": "背景美术",
-          "value": "ビック・スタジオ"
-        },
-        {
-          "key": "色彩设计",
-          "value": "渡部勇輔"
-        },
-        {
-          "key": "摄影监督",
-          "value": "西村徹也"
-        },
-        {
-          "key": "摄影",
-          "value": "スタジオエル"
-        },
-        {
-          "key": "3D导演",
-          "value": "平将人"
-        },
-        {
-          "key": "特效",
-          "value": "太田良之"
-        },
-        {
-          "key": "音响",
-          "value": "神南スタジオ"
-        },
-        {
-          "key": "音响监督",
-          "value": "郷田ほづみ"
-        },
-        {
-          "key": "动画制作",
-          "value": "ランチ・BOX×スタジオエル"
-        },
-        {
-          "key": "製作",
-          "value": "「GIBIATE PROJECT」製作委員会"
         }
       ],
       "rating": {
-        "rank": 9251,
-        "total": 298,
+        "rank": 9305,
+        "total": 300,
         "count": {
-          "1": 61,
+          "1": 62,
           "2": 87,
           "3": 58,
           "4": 44,
-          "5": 24,
+          "5": 25,
           "6": 17,
           "7": 2,
           "8": 1,
@@ -7194,23 +2430,72 @@
       "collection": {
         "on_hold": 41,
         "dropped": 277,
-        "wish": 97,
-        "collect": 293,
+        "wish": 96,
+        "collect": 298,
         "doing": 42
       },
       "id": 286109,
-      "eps": 12,
       "meta_tags": [
         "TV",
         "日本",
         "原创"
       ],
-      "volumes": 0,
-      "series": false,
-      "locked": false,
       "nsfw": false,
-      "type": 2
+      "episodes_summary": {
+        "aired_episodes": 12,
+        "total_comments": 75,
+        "episodes": [
+          {
+            "ep": 1,
+            "comments": 22
+          },
+          {
+            "ep": 2,
+            "comments": 11
+          },
+          {
+            "ep": 3,
+            "comments": 9
+          },
+          {
+            "ep": 4,
+            "comments": 3
+          },
+          {
+            "ep": 5,
+            "comments": 4
+          },
+          {
+            "ep": 6,
+            "comments": 2
+          },
+          {
+            "ep": 7,
+            "comments": 5
+          },
+          {
+            "ep": 8,
+            "comments": 1
+          },
+          {
+            "ep": 9,
+            "comments": 2
+          },
+          {
+            "ep": 10,
+            "comments": 2
+          },
+          {
+            "ep": 11,
+            "comments": 5
+          },
+          {
+            "ep": 12,
+            "comments": 9
+          }
+        ]
+      }
     }
   ],
-  "last_update_time": "2025-05-06T03:48:14.897390"
+  "last_update_time": "2025-06-05T03:52:58.728144"
 }
