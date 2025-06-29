@@ -1,73 +1,20 @@
-// 导入预加载的数据
-import data202504 from '@/static/202504.json'
-import data202501 from '@/static/202501.json'
-
 export const state = () => ({
-  // 季度列表 - 静态列表，在构建时确定
-  seasons: [
-    '202504',
-    '202501',
-    '202410',
-    '202407',
-    '202404',
-    '202401',
-    '202310',
-    '202307',
-    '202304',
-    '202301',
-    '202210',
-    '202207',
-    '202204',
-    '202201',
-    '202110',
-    '202107',
-    '202104',
-    '202101',
-    '202010',
-    '202007',
-    '202004',
-    '202001',
-    '201910',
-    '201907',
-    '201904',
-    '201901',
-    '201810',
-    '201807',
-    '201804',
-    '201801',
-    '201710',
-    '201707',
-    '201704',
-    '201701',
-    '201610',
-    '201607',
-    '201604',
-    '201601',
-    '201510',
-    '201507',
-    '201504',
-    '201501',
-    '201410',
-    '201407',
-    '201404',
-    '201401',
-    '201310',
-    '201307',
-    '201304',
-    '201301',
-    '201210',
-    '201207',
-    '201204'
-  ],
+  // 季度列表 - 从API动态获取
+  seasons: [],
   
-  // 默认预加载当前季度数据
-  animeData: {
-    '202504': data202504,
-    '202501': data202501
-  }
+  // 当前季度ID
+  currentSeasonId: null,
+  
+  // 动画数据缓存
+  animeData: {}
 })
 
 export const mutations = {
+  SET_SEASONS(state, { seasons, currentSeasonId }) {
+    state.seasons = seasons
+    state.currentSeasonId = currentSeasonId
+  },
+  
   SET_ANIME_DATA(state, { season, data }) {
     state.animeData = {
       ...state.animeData,
@@ -77,6 +24,29 @@ export const mutations = {
 }
 
 export const actions = {
+  async loadAvailableSeasons({ commit }) {
+    try {
+      const response = await this.$axios.get('/api/v0/season/available')
+      const { available_seasons, current_season_id } = response.data
+      
+      commit('SET_SEASONS', { 
+        seasons: available_seasons.map(String), // 确保转换成字符串
+        currentSeasonId: String(current_season_id)
+      })
+      
+      return { seasons: available_seasons, currentSeasonId: current_season_id }
+    } catch (error) {
+      console.error('Failed to load available seasons:', error)
+      // 使用fallback数据
+      const fallbackSeasons = ['202504', '202501', '202410', '202407', '202404']
+      commit('SET_SEASONS', { 
+        seasons: fallbackSeasons,
+        currentSeasonId: '202504'
+      })
+      return { seasons: fallbackSeasons, currentSeasonId: '202504' }
+    }
+  },
+
   async loadSeasonData({ commit, state }, season) {
     // 如果数据已经存在，直接返回
     if (state.animeData[season]) {
@@ -84,30 +54,12 @@ export const actions = {
     }
     
     try {
-      // 在静态生成的环境中，我们需要使用动态导入而不是axios请求
-      let data
+      const response = await this.$axios.get(`/api/v0/season/${season}`)
+      const apiData = response.data
       
-      // 静态部署环境下使用动态导入
-      if (process.static) {
-        try {
-          // 动态导入JSON文件
-          const module = await import(`@/static/${season}.json`);
-          data = module.default
-        } catch (importError) {
-          console.error(`Failed to import data for season ${season}:`, importError)
-          // 导入失败回退到axios请求
-          const response = await this.$axios.get(`/${season}.json`)
-          data = response.data
-        }
-      } else {
-        // 开发环境下使用axios请求
-        const response = await this.$axios.get(`/${season}.json`)
-        data = response.data
-      }
-      
-      // 保存到状态中
-      commit('SET_ANIME_DATA', { season, data })
-      return data
+      // 直接使用API数据
+      commit('SET_ANIME_DATA', { season, data: apiData })
+      return apiData
     } catch (error) {
       console.error(`Failed to load data for season ${season}:`, error)
       throw error
@@ -117,5 +69,8 @@ export const actions = {
 
 export const getters = {
   getSeasons: state => state.seasons,
+  getCurrentSeasonId: state => state.currentSeasonId,
   getAnimeData: state => season => state.animeData[season] || null
-} 
+}
+
+ 

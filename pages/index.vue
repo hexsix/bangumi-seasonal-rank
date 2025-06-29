@@ -111,6 +111,7 @@ export default {
   computed: {
     ...mapGetters({
       getSeasons: 'getSeasons',
+      getCurrentSeasonId: 'getCurrentSeasonId',
       getAnimeData: 'getAnimeData'
     }),
     seasons() {
@@ -121,28 +122,32 @@ export default {
       
       // 如果开启只显示有排名的作品，过滤掉rank为0的作品
       if (this.showOnlyRanked) {
-        filteredList = filteredList.filter(anime => anime.rating.rank !== 0);
+        filteredList = filteredList.filter(anime => anime.rank && anime.rank !== 0);
       }
       
       return filteredList.sort((a, b) => {
         let comparison = 0;
         
         if (this.sortField === 'score') {
-          comparison = a.rating.score - b.rating.score;
+          const scoreA = a.score || 0;
+          const scoreB = b.score || 0;
+          comparison = scoreA - scoreB;
         } else if (this.sortField === 'rank') {
           // 处理rank为0的情况，将其视为无限大
-          const rankA = a.rating.rank === 0 ? Infinity : a.rating.rank;
-          const rankB = b.rating.rank === 0 ? Infinity : b.rating.rank;
+          const rankA = (a.rank && a.rank !== 0) ? a.rank : Infinity;
+          const rankB = (b.rank && b.rank !== 0) ? b.rank : Infinity;
           comparison = rankA - rankB;
         } else if (this.sortField === 'collectionCount') {
-          comparison = this.getTotalCollectionCount(a) - this.getTotalCollectionCount(b);
+          const collectionA = a.collection_total || 0;
+          const collectionB = b.collection_total || 0;
+          comparison = collectionA - collectionB;
         } else if (this.sortField === 'commentPerEpisode') {
-          const commentPerEpisodeA = this.getCommentPerEpisode(a);
-          const commentPerEpisodeB = this.getCommentPerEpisode(b);
-          comparison = commentPerEpisodeA - commentPerEpisodeB;
+          const commentA = a.average_comment || 0;
+          const commentB = b.average_comment || 0;
+          comparison = commentA - commentB;
         } else if (this.sortField === 'dropRate') {
-          const dropRateA = this.calculateDropRate(a);
-          const dropRateB = this.calculateDropRate(b);
+          const dropRateA = (a.drop_rate || 0) * 100;
+          const dropRateB = (b.drop_rate || 0) * 100;
           comparison = dropRateA - dropRateB;
         }
         
@@ -151,6 +156,18 @@ export default {
     }
   },
   async mounted() {
+    // 首先加载可用的季度列表
+    try {
+      const { currentSeasonId } = await this.$store.dispatch('loadAvailableSeasons')
+      // 设置默认选中的季度为当前季度
+      if (currentSeasonId) {
+        this.selectedSeason = String(currentSeasonId)
+      }
+    } catch (error) {
+      console.error('Failed to load available seasons:', error)
+    }
+    
+    // 然后加载数据
     await this.loadSeasonData()
   },
   methods: {
@@ -168,8 +185,8 @@ export default {
         
         if (data && data.subjects) {
           this.animeList = data.subjects
-          this.seasonTitle = data.title
-          this.lastUpdateTime = data.last_update_time
+          this.seasonTitle = `${data.season_id || this.selectedSeason}季度`
+          this.lastUpdateTime = data.updated_at
         } else {
           throw new Error('Invalid data format')
         }
@@ -187,30 +204,11 @@ export default {
       const month = season.substring(4, 6)
       return `${year}年${month}月`
     },
-    getTotalRatingCount(anime) {
-      if (!anime.rating || !anime.rating.count) return 0
-      return Object.values(anime.rating.count).reduce((sum, count) => sum + count, 0)
-    },
     getTotalCollectionCount(anime) {
-      if (!anime.collection) return 0
-      // 包括所有收藏状态：在看、看过、想看、搁置、抛弃
-      return anime.collection.doing + 
-             anime.collection.collect + 
-             anime.collection.wish + 
-             (anime.collection.on_hold || 0) + 
-             (anime.collection.dropped || 0)
-    },
-    getMetaTags(anime) {
-      // 使用meta_tags字段，它是一个字符串数组
-      if (!anime.meta_tags || !Array.isArray(anime.meta_tags)) return []
-      // 使用Set去重
-      const uniqueTags = [...new Set(anime.meta_tags)]
-      return uniqueTags.slice(0, 5).map(tag => ({ name: tag }))
+      return anime.collection_total || 0
     },
     getBroadcastDay(anime) {
-      if (!anime.infobox || !Array.isArray(anime.infobox)) return null
-      const broadcastInfo = anime.infobox.find(info => info.key === '放送星期')
-      return broadcastInfo ? broadcastInfo.value : null
+      return anime.air_weekday || null
     },
     getBroadcastDayColorClass(anime) {
       const broadcastDay = this.getBroadcastDay(anime)
@@ -248,14 +246,10 @@ export default {
       })
     },
     getCommentPerEpisode(anime) {
-      if (!anime.episodes_summary || !anime.episodes_summary.aired_episodes || anime.episodes_summary.aired_episodes === 0) return 0;
-      return anime.episodes_summary.total_comments / anime.episodes_summary.aired_episodes;
+      return anime.average_comment || 0;
     },
     calculateDropRate(anime) {
-      if (!anime.collection) return 0;
-      const totalCollection = this.getTotalCollectionCount(anime);
-      if (totalCollection === 0) return 0;
-      return ((anime.collection.dropped || 0) / totalCollection * 100);
+      return (anime.drop_rate || 0) * 100;
     }
   }
 }

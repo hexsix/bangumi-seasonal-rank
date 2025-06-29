@@ -28,11 +28,6 @@ export default {
   css: [
   ],
 
-  // 插件配置
-  plugins: [
-    '~/plugins/public-files.js'
-  ],
-
   // 自动导入组件
   components: true,
 
@@ -44,8 +39,8 @@ export default {
 
   // Axios配置
   axios: {
-    baseURL: '/', // 设置baseURL为相对路径
-    browserBaseURL: '/' // 确保浏览器端也使用相对路径
+    baseURL: 'https://api.rinshankaiho.fun', // 使用新的API base URL
+    browserBaseURL: 'https://api.rinshankaiho.fun' // 确保浏览器端也使用新的API URL
   },
 
   // 构建配置
@@ -56,4 +51,4 @@ export default {
   static: {
     prefix: false
   }
-} 
+}

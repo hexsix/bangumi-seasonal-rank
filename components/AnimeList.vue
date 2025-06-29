@@ -12,10 +12,10 @@
       <!-- 图片和基本信息的容器 - 在移动端横向排列 -->
       <div class="flex w-full sm:w-auto ml-6 sm:ml-8 mb-2 sm:mb-0">
         <!-- 图片 -->
-        <div class="flex-shrink-0 mr-3 sm:mr-4" @click="$emit('show-image', anime.images.common, anime.name_cn || anime.name)">
+        <div class="flex-shrink-0 mr-3 sm:mr-4" @click="$emit('show-image', anime.images_large, anime.name_cn || anime.name)">
           <img 
-            v-if="anime && anime.images && anime.images.grid" 
-            :src="anime.images.grid" 
+            v-if="anime && anime.images_grid" 
+            :src="anime.images_grid" 
             :alt="anime.name" 
             class="w-14 sm:w-16 h-20 sm:h-24 object-cover cursor-pointer rounded"
             loading="lazy"
@@ -40,10 +40,10 @@
           <!-- 评分 - 移动端显示 -->
           <div class="flex flex-col mt-1">
             <div class="text-base font-bold">
-              {{ calculateWeightedScore(anime).toFixed(4) }}
+              {{ anime.score ? anime.score.toFixed(4) : '0.0000' }}
             </div>
             <div class="text-xs text-gray-600">
-              <span>Rank: {{ anime.rating.rank }}</span>
+              <span>Rank: {{ anime.rank || '未排名' }}</span>
             </div>
           </div>
         </div>
@@ -68,15 +68,15 @@
           <div class="mt-2">
             <div class="flex flex-wrap gap-1 items-center">
               <span 
-                v-if="getBroadcastDay(anime)" 
+                v-if="anime.air_weekday" 
                 :class="['text-xs px-1.5 py-0.5 rounded', 'bg-green-100 text-green-800']">
-                {{ getBroadcastDay(anime) }}
+                {{ anime.air_weekday }}
               </span>
               <span 
                 v-for="tag in getTopTags(anime)" 
-                :key="tag.name" 
+                :key="tag" 
                 class="bg-blue-100 text-blue-800 text-xs px-1.5 py-0.5 rounded">
-                {{ tag.name }}
+                {{ tag }}
               </span>
             </div>
             
@@ -86,22 +86,22 @@
                 <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
                 </svg>
-                收藏: {{ getTotalCollectionCount(anime) }}人
+                收藏: {{ anime.collection_total || 0 }}人
               </div>
               <div class="text-xs text-gray-600 flex items-center">
                 <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
                 </svg>
-                话均评论: {{ getCommentPerEpisode(anime).toFixed(1) }}
+                话均评论: {{ (anime.average_comment || 0).toFixed(1) }}
               </div>
               <div class="text-xs text-gray-600 flex items-center">
                 <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
                 </svg>
-                抛弃率: {{ calculateDropRate(anime) }}%
+                抛弃率: {{ ((anime.drop_rate || 0) * 100).toFixed(1) }}%
               </div>
-              <div v-if="anime.air_date" class="text-xs text-gray-500">
-                {{ anime.air_date }}
+              <div v-if="anime.updated_at" class="text-xs text-gray-500">
+                {{ formatDate(anime.updated_at) }}
               </div>
             </div>
           </div>
@@ -111,10 +111,10 @@
         <div class="flex-shrink-0 items-end">
           <div class="flex flex-col items-end">
             <div class="text-lg font-bold">
-              {{ calculateWeightedScore(anime).toFixed(4) }}
+              {{ anime.score ? anime.score.toFixed(4) : '0.0000' }}
             </div>
             <div class="text-xs text-gray-600">
-              <div>Rank: {{ anime.rating.rank }}</div>
+              <div>Rank: {{ anime.rank || '未排名' }}</div>
             </div>
           </div>
         </div>
@@ -125,15 +125,15 @@
         <!-- 播出日和标签 -->
         <div class="flex flex-wrap gap-1 items-center">
           <span 
-            v-if="getBroadcastDay(anime)" 
+            v-if="anime.air_weekday" 
             :class="['text-xs px-1 py-0.5 rounded', 'bg-green-100 text-green-800']">
-            {{ getBroadcastDay(anime) }}
+            {{ anime.air_weekday }}
           </span>
           <span 
             v-for="tag in getMobileTopTags(anime)" 
-            :key="tag.name" 
+            :key="tag" 
             class="bg-blue-100 text-blue-800 text-xs px-1 py-0.5 rounded">
-            {{ tag.name }}
+            {{ tag }}
           </span>
         </div>
         
@@ -144,23 +144,23 @@
               <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
               </svg>
-              收藏: {{ getTotalCollectionCount(anime) }}人
+              收藏: {{ anime.collection_total || 0 }}人
             </div>
             <div class="flex items-center">
               <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
               </svg>
-              话均评论: {{ getCommentPerEpisode(anime).toFixed(1) }}
+              话均评论: {{ (anime.average_comment || 0).toFixed(1) }}
             </div>
             <div class="flex items-center">
               <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
               </svg>
-              抛弃率: {{ calculateDropRate(anime) }}%
+              抛弃率: {{ ((anime.drop_rate || 0) * 100).toFixed(1) }}%
             </div>
           </div>
-          <div v-if="anime.air_date" class="text-xs text-gray-500">
-            {{ anime.air_date }}
+          <div v-if="anime.updated_at" class="text-xs text-gray-500">
+            {{ formatDate(anime.updated_at) }}
           </div>
         </div>
       </div>
@@ -187,52 +187,18 @@ export default {
     getTopTags(anime) {
       if (!anime.meta_tags || !Array.isArray(anime.meta_tags)) return []
       const uniqueTags = [...new Set(anime.meta_tags)]
-      return uniqueTags.slice(0, 5).map(tag => ({ name: tag }))
+      return uniqueTags.slice(0, 5)
     },
     getMobileTopTags(anime) {
       if (!anime.meta_tags || !Array.isArray(anime.meta_tags)) return []
       const uniqueTags = [...new Set(anime.meta_tags)]
       // 移动端显示较少的标签
-      return uniqueTags.slice(0, 3).map(tag => ({ name: tag }))
+      return uniqueTags.slice(0, 3)
     },
-    getTotalRatingCount(anime) {
-      if (!anime.rating || !anime.rating.count) return 0
-      return Object.values(anime.rating.count).reduce((sum, count) => sum + count, 0)
-    },
-    calculateWeightedScore(anime) {
-      if (!anime.rating || !anime.rating.count) return 0
-      let totalScore = 0
-      let totalCount = 0
-      
-      Object.entries(anime.rating.count).forEach(([score, count]) => {
-        totalScore += parseInt(score) * count
-        totalCount += count
-      })
-      
-      return totalCount > 0 ? totalScore / totalCount : 0
-    },
-    getTotalCollectionCount(anime) {
-      if (!anime.collection) return 0
-      return anime.collection.doing + 
-             anime.collection.collect + 
-             anime.collection.wish + 
-             (anime.collection.on_hold || 0) + 
-             (anime.collection.dropped || 0)
-    },
-    calculateDropRate(anime) {
-      if (!anime.collection) return 0
-      const totalCollection = this.getTotalCollectionCount(anime)
-      if (totalCollection === 0) return 0
-      return ((anime.collection.dropped || 0) / totalCollection * 100).toFixed(1)
-    },
-    getBroadcastDay(anime) {
-      if (!anime.infobox || !Array.isArray(anime.infobox)) return null
-      const broadcastInfo = anime.infobox.find(info => info.key === '放送星期')
-      return broadcastInfo ? broadcastInfo.value : null
-    },
-    getCommentPerEpisode(anime) {
-      if (!anime.episodes_summary || !anime.episodes_summary.aired_episodes || anime.episodes_summary.aired_episodes === 0) return 0;
-      return anime.episodes_summary.total_comments / anime.episodes_summary.aired_episodes;
+    formatDate(dateString) {
+      if (!dateString) return '未知时间'
+      const date = new Date(dateString)
+      return date.toLocaleDateString('zh-CN')
     }
   }
 }
