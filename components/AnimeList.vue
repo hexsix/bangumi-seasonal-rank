@@ -100,9 +100,6 @@
                 </svg>
                 抛弃率: {{ ((anime.drop_rate || 0) * 100).toFixed(1) }}%
               </div>
-              <div v-if="anime.updated_at" class="text-xs text-gray-500">
-                {{ formatDate(anime.updated_at) }}
-              </div>
             </div>
           </div>
         </div>
