@@ -1,6 +1,7 @@
 export default {
-  // 目标: 静态站点生成
-  target: 'static',
+  target: 'server',
+
+  ssr: true,
 
   // 全局页面头部
   head: {
