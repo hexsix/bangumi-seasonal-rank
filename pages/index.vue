@@ -93,6 +93,21 @@ export default {
     LoadingSpinner,
     AnimeList
   },
+  head() {
+    return {
+      title: 'Bangumi 新番动画季度排行榜 - 日本动画排名',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Bangumi.tv 新番动画季度排行榜，实时查看日本动画排名、评分、收藏人数。包含最新季度新番动画数据，不含TVSP、OVA/OAD、国产动画。' },
+        { hid: 'keywords', name: 'keywords', content: '新番,动画,日本动画,动漫,季度排行榜,Bangumi,动画排名,新番排名,动画评分,动漫排行榜' },
+        { hid: 'og:title', property: 'og:title', content: 'Bangumi 新番动画季度排行榜' },
+        { hid: 'og:description', property: 'og:description', content: '实时查看日本新番动画排名、评分、收藏人数。最新季度动画数据，专业动画排行榜。' },
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+        { hid: 'twitter:title', name: 'twitter:title', content: 'Bangumi 新番动画季度排行榜' },
+        { hid: 'twitter:description', name: 'twitter:description', content: '实时查看日本新番动画排名、评分、收藏人数。最新季度动画数据，专业动画排行榜。' }
+      ]
+    }
+  },
   data() {
     return {
       selectedSeason: '202504', // 默认选择最新季度
