@@ -1,10 +1,12 @@
 import type { Anime, SortOption, SortDirection, SeasonDetail } from '~/types'
 import { sortAnimeList } from '~/utils/helpers'
+import { getApiBaseUrl } from '~/utils/api'
 
 // 动画列表数据获取逻辑
 export const useAnimeList = (seasonId: string) => {
   // 获取季度详情
-  const { data: seasonData, pending, error, refresh } = useFetch<SeasonDetail>(`https://api.rinshankaiho.fun/api/v0/season/${seasonId}`, {
+  const { data: seasonData, pending, error, refresh } = useFetch<SeasonDetail>(`/api/v0/season/${seasonId}`, {
+    baseURL: getApiBaseUrl(),
     key: `season-${seasonId}`,
     server: true,
     lazy: false

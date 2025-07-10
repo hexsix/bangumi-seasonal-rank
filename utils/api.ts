@@ -1,7 +1,10 @@
 import type { SeasonDetail, AvailableSeasons } from '~/types'
 
-// API基础配置
-const API_BASE_URL = 'https://api.rinshankaiho.fun'
+// 获取API基础URL配置
+function getApiBaseUrl(): string {
+  const config = useRuntimeConfig()
+  return config.public.apiBaseUrl || 'https://api.rinshankaiho.fun'
+}
 
 // 通用API错误处理
 class ApiError extends Error {
@@ -18,7 +21,8 @@ class ApiError extends Error {
 // 通用API请求函数
 async function apiRequest<T>(endpoint: string): Promise<T> {
   try {
-    const response = await $fetch<T>(`${API_BASE_URL}${endpoint}`, {
+    const baseUrl = getApiBaseUrl()
+    const response = await $fetch<T>(`${baseUrl}${endpoint}`, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -60,4 +64,7 @@ export async function getCurrentSeasonId(): Promise<string> {
   }
   // 返回最新的季度ID
   return seasons.seasons[0].season_id
-} 
+}
+
+// 导出API基础URL获取函数，供其他模块使用
+export { getApiBaseUrl } 

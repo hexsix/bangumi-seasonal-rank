@@ -20,12 +20,8 @@
 <script setup lang="ts">
 import type { AvailableSeasons } from '~/types'
 
-// 获取当前季度ID
-const { data: currentSeasonId, pending, error, refresh } = useFetch<AvailableSeasons>('https://api.rinshankaiho.fun/api/v0/season/available', {
-  key: 'current-season-id',
-  server: true,
-  lazy: false
-})
+// 使用composables获取季度数据
+const { seasons: currentSeasonId, pending, error, refresh } = useSeasons()
 
 // 监听当前季度ID变化，进行重定向
 watch(currentSeasonId, (newData) => {

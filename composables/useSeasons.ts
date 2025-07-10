@@ -1,10 +1,12 @@
 import type { Season, AvailableSeasons } from '~/types'
 import { groupSeasonsByYear } from '~/utils/helpers'
+import { getApiBaseUrl } from '~/utils/api'
 
 // 季度数据获取逻辑
 export const useSeasons = () => {
   // 获取可用季度列表
-  const { data: seasonsData, pending, error, refresh } = useFetch<AvailableSeasons>('https://api.rinshankaiho.fun/api/v0/season/available', {
+  const { data: seasonsData, pending, error, refresh } = useFetch<AvailableSeasons>('/api/v0/season/available', {
+    baseURL: getApiBaseUrl(),
     key: 'available-seasons',
     default: () => ({ seasons: [] }),
     server: true,
