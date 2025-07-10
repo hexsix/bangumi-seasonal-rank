@@ -5,7 +5,7 @@
         <p class="flex items-center justify-center space-x-2">
           <span>
             不含TVSP，不含OVA/OAD，不含国产动画。感谢
-            <a href="https://bgm.tv/user/lilyurey/index" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">lilyurey@bgm</a>
+            <a href="https://bgm.tv/user/lilyurey/index" target="_blank" rel="noopener noreferrer" class="text-blue-600">lilyurey@bgm</a>
             编纂的目录。
           </span>
           <a href="https://github.com/hexsix/bangumi-seasonal-rank" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-600">

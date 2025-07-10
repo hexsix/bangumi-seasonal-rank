@@ -4,7 +4,7 @@
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
         <div class="flex items-center">
-          <NuxtLink to="/" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+          <NuxtLink to="/" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors no-underline">
             {{ pageTitle }}
           </NuxtLink>
         </div>
@@ -15,14 +15,14 @@
             v-for="season in recentSeasons"
             :key="season.season_id"
             :to="`/${season.season_id}`"
-            class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors no-underline"
             active-class="text-blue-600 bg-blue-50"
           >
             {{ formatSeasonNameShort(season.season_id) }}
           </NuxtLink>
           <NuxtLink
             to="/list"
-            class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors no-underline"
             active-class="text-blue-600 bg-blue-50"
           >
             更多
@@ -46,7 +46,7 @@
             v-for="season in recentSeasons"
             :key="season.season_id"
             :to="`/${season.season_id}`"
-            class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium no-underline"
             active-class="text-blue-600 bg-blue-50"
             @click="mobileMenuOpen = false"
           >
@@ -54,7 +54,7 @@
           </NuxtLink>
           <NuxtLink
             to="/list"
-            class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium no-underline"
             active-class="text-blue-600 bg-blue-50"
             @click="mobileMenuOpen = false"
           >

@@ -27,7 +27,7 @@
       <!-- 标题区域 - 移动端布局 -->
       <div class="flex-1 sm:hidden">
         <a :href="`https://bgm.tv/subject/${anime.id}`" target="_blank" 
-           class="font-bold text-sm truncate block hover:text-blue-600" 
+           class="font-bold text-sm truncate block text-gray-900 hover:text-blue-600 no-underline" 
            :title="anime.name_cn || anime.name">
           {{ anime.name_cn || anime.name }}
         </a>
@@ -53,7 +53,7 @@
       <div class="flex-grow pr-4 max-w-xl">
         <div>
           <a :href="`https://bgm.tv/subject/${anime.id}`" target="_blank" 
-             class="font-bold text-base truncate block hover:text-blue-600" 
+             class="font-bold text-base truncate block text-gray-900 hover:text-blue-600 no-underline" 
              :title="anime.name_cn || anime.name">
             {{ anime.name_cn || anime.name }}
           </a>

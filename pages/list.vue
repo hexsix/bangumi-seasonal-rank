@@ -28,9 +28,8 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <NuxtLink
 v-for="season in groupedSeasons[year]" :key="season.season_id" :to="`/${season.season_id}`"
-            class="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            class="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors no-underline">
             <div class="text-lg font-medium text-gray-900">{{ formatSeasonName(season.season_id) }}</div>
-            <div class="text-sm text-gray-500 mt-1">{{ season.name }}</div>
           </NuxtLink>
         </div>
       </div>
