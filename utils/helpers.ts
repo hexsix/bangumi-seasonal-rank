@@ -17,7 +17,7 @@ export function convertSeasonIdsToSeasons(seasonIds: number[]): Season[] {
 export function generateSeasonName(seasonId: number): string {
   const year = Math.floor(seasonId / 100)
   const month = seasonId % 100
-  return `${year}年 ${month}月新番表`
+  return `${year}年${month}月`
 }
 
 // 从数字季度ID解析年份和月份
@@ -31,7 +31,13 @@ export function parseSeasonIdToYearMonth(seasonId: number): { year: number; mont
 export function formatSeasonName(seasonId: string): string {
   const year = seasonId.slice(0, 4)
   const month = parseInt(seasonId.slice(4, 6))
-  return `${year}年${month}月新番表`
+  return `${year}年${month}月`
+}
+
+export function formatTitle(seasonId: string): string {
+  const year = seasonId.slice(0, 4)
+  const month = parseInt(seasonId.slice(4, 6))
+  return `Bangumi.tv ${year}年${month}月新番排行`
 }
 
 // 从季度ID解析年份和月份（支持字符串和数字ID）
