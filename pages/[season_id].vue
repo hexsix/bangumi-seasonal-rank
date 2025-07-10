@@ -1,17 +1,27 @@
 <template>
   <div>
-    <!-- 页面标题 -->
-    <div class="mb-8">
-      <h1 class="text-3xl font-bold text-gray-900 mb-2">{{ formatSeasonName(seasonId) }}</h1>
-      <p class="text-gray-600">动画季度排行榜</p>
+    <!-- Sub-header -->
+    <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
+      <div class="text-sm text-gray-500">
+        数据更新时间: {{ lastUpdated }}
+      </div>
+      <div class="flex items-center space-x-2">
+        <label for="show-ranked-only" class="text-sm font-medium text-gray-700">仅显示有排名的作品</label>
+        <div
+          :class="[showRankedOnly ? 'bg-blue-600' : 'bg-gray-200', 'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2']"
+          @click="showRankedOnly = !showRankedOnly"
+        >
+          <span
+            :class="[showRankedOnly ? 'translate-x-5' : 'translate-x-0', 'pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out']"
+          />
+        </div>
+      </div>
     </div>
 
-    <!-- 加载状态 -->
+    <!-- Loading/Error States -->
     <div v-if="pending" class="flex justify-center items-center min-h-64">
       <div class="text-gray-500">正在加载动画数据...</div>
     </div>
-
-    <!-- 错误状态 -->
     <div v-else-if="error" class="flex justify-center items-center min-h-64">
       <div class="text-red-500">
         <p>加载动画数据失败</p>
@@ -21,9 +31,9 @@
       </div>
     </div>
 
-    <!-- 动画列表 -->
-    <div v-else-if="animeList.length > 0">
-      <!-- 排序控制 -->
+    <!-- Anime List -->
+    <div v-else-if="filteredAnimeList.length > 0" class="space-y-4">
+      <!-- Sort Controls -->
       <div class="mb-6 bg-white rounded-lg shadow-sm border border-gray-200 p-4">
         <div class="flex flex-wrap gap-2">
           <button v-for="sortOption in sortOptions" :key="sortOption.value" @click="toggleSort(sortOption.value)"
@@ -40,58 +50,12 @@
           </button>
         </div>
       </div>
-
-      <!-- 动画网格 -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        <div v-for="anime in animeList" :key="anime.id"
-          class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
-          <!-- 动画海报 -->
-          <div class="aspect-[3/4] bg-gray-200 overflow-hidden">
-            <img :src="anime.images_grid" :alt="anime.name_cn || anime.name" class="w-full h-full object-cover"
-              loading="lazy" />
-          </div>
-
-          <!-- 动画信息 -->
-          <div class="p-4">
-            <!-- 排名 -->
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-sm font-medium text-gray-500">排名</span>
-              <span class="text-lg font-bold text-blue-600">#{{ anime.rank }}</span>
-            </div>
-
-            <!-- 标题 -->
-            <h3 class="text-lg font-semibold text-gray-900 mb-1 line-clamp-2">
-              {{ anime.name_cn || anime.name }}
-            </h3>
-            <p v-if="anime.name_cn && anime.name !== anime.name_cn" class="text-sm text-gray-500 mb-3 line-clamp-1">
-              {{ anime.name }}
-            </p>
-
-            <!-- 评分 -->
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-sm text-gray-500">评分</span>
-              <span class="text-lg font-bold text-yellow-600">{{ formatScore(anime.score) }}</span>
-            </div>
-
-            <!-- 收藏数 -->
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-sm text-gray-500">收藏</span>
-              <span class="text-sm font-medium text-gray-700">{{ formatNumber(anime.collection_total) }}</span>
-            </div>
-
-            <!-- 标签 -->
-            <div class="flex flex-wrap gap-1 mt-3">
-              <span v-for="tag in anime.meta_tags.slice(0, 3)" :key="tag"
-                class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
-                {{ tag }}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+      
+      <!-- Anime Items -->
+      <AnimeListItem v-for="anime in filteredAnimeList" :key="anime.id" :anime="anime" />
     </div>
 
-    <!-- 空状态 -->
+    <!-- Empty State -->
     <div v-else class="flex justify-center items-center min-h-64">
       <div class="text-gray-500">该季度暂无动画数据</div>
     </div>
@@ -99,17 +63,32 @@
 </template>
 
 <script setup lang="ts">
-import { formatSeasonName, formatScore, formatNumber } from '~/utils/helpers'
+import AnimeListItem from '~/components/ui/AnimeListItem.vue'
+import { formatSeasonName } from '~/utils/helpers'
+import type { SortOption } from '~/types'
 
-// 获取路由参数
 const route = useRoute()
 const seasonId = route.params.season_id as string
 
-// 获取动画数据
-const { animeList, sortBy, sortDirection, toggleSort, pending, error, refresh } = useAnimeList(seasonId)
+const { seasonData, animeList, sortBy, sortDirection, toggleSort, pending, error, refresh } = useAnimeList(seasonId)
 
-// 排序选项
-const sortOptions = [
+const showRankedOnly = ref(true)
+
+const filteredAnimeList = computed(() => {
+  if (showRankedOnly.value) {
+    return animeList.value.filter(anime => anime.rank > 0)
+  }
+  return animeList.value
+})
+
+const lastUpdated = computed(() => {
+  if (seasonData.value?.updated_at) {
+    return new Date(seasonData.value.updated_at).toLocaleString('zh-CN')
+  }
+  return 'N/A'
+})
+
+const sortOptions: { label: string, value: SortOption }[] = [
   { label: '排名', value: 'rank' },
   { label: '评分', value: 'score' },
   { label: '收藏', value: 'collection_total' },
@@ -117,7 +96,6 @@ const sortOptions = [
   { label: '抛弃率', value: 'drop_rate' }
 ]
 
-// 设置页面元数据
 useHead({
   title: `${formatSeasonName(seasonId)} - Bangumi.tv 动画季度排行榜`
 })

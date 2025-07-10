@@ -5,23 +5,27 @@
         <!-- Logo -->
         <div class="flex items-center">
           <NuxtLink to="/" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-            Bangumi.tv 动画季度排行榜
+            {{ pageTitle }}
           </NuxtLink>
         </div>
 
-        <!-- 导航菜单 -->
-        <nav class="flex space-x-8">
+        <!-- 导航菜单 (桌面) -->
+        <nav class="hidden md:flex space-x-4">
           <NuxtLink
-to="/"
+            v-for="season in recentSeasons"
+            :key="season.season_id"
+            :to="`/${season.season_id}`"
             class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-            active-class="text-blue-600 bg-blue-50">
-            当季排行
+            active-class="text-blue-600 bg-blue-50"
+          >
+            {{ formatSeasonNameShort(season.season_id) }}
           </NuxtLink>
           <NuxtLink
-to="/list"
+            to="/list"
             class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-            active-class="text-blue-600 bg-blue-50">
-            季度列表
+            active-class="text-blue-600 bg-blue-50"
+          >
+            更多
           </NuxtLink>
         </nav>
 
@@ -39,15 +43,22 @@ to="/list"
       <div v-if="mobileMenuOpen" class="md:hidden">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <NuxtLink
-to="/" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-            active-class="text-blue-600 bg-blue-50" @click="mobileMenuOpen = false">
-            当季排行
+            v-for="season in recentSeasons"
+            :key="season.season_id"
+            :to="`/${season.season_id}`"
+            class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            active-class="text-blue-600 bg-blue-50"
+            @click="mobileMenuOpen = false"
+          >
+            {{ formatSeasonNameShort(season.season_id) }}
           </NuxtLink>
           <NuxtLink
-to="/list"
+            to="/list"
             class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-            active-class="text-blue-600 bg-blue-50" @click="mobileMenuOpen = false">
-            季度列表
+            active-class="text-blue-600 bg-blue-50"
+            @click="mobileMenuOpen = false"
+          >
+            更多季度
           </NuxtLink>
         </div>
       </div>
@@ -56,9 +67,33 @@ to="/list"
 </template>
 
 <script setup lang="ts">
+import { formatSeasonName } from '~/utils/helpers'
+
 const mobileMenuOpen = ref(false)
+const route = useRoute()
+const { seasons } = useSeasons()
 
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
+}
+
+const pageTitle = computed(() => {
+  if (route.name === 'season_id' && route.params.season_id) {
+    return formatSeasonName(route.params.season_id as string)
+  }
+  return 'Bangumi.tv 动画季度排行榜'
+})
+
+const recentSeasons = computed(() => {
+  if (seasons.value?.seasons) {
+    return seasons.value.seasons.slice(0, 6)
+  }
+  return []
+})
+
+function formatSeasonNameShort(seasonId: string): string {
+  const year = seasonId.slice(2, 4)
+  const month = parseInt(seasonId.slice(4, 6))
+  return `${year}年${month}月`
 }
 </script>

@@ -68,8 +68,9 @@ export function sortAnimeList(
 
     switch (sortBy) {
       case 'rank':
-        aValue = a.rank
-        bValue = b.rank
+        // 将 rank 为 0 的视为无穷大，以便在升序中排在最后
+        aValue = a.rank === 0 ? Infinity : a.rank
+        bValue = b.rank === 0 ? Infinity : b.rank
         break
       case 'score':
         aValue = a.score
