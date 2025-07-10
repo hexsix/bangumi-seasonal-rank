@@ -5,45 +5,39 @@
       <!-- Sub-header -->
       <div class="mb-6">
         <div class="flex flex-col gap-2 sm:items-end w-full sm:w-auto">
-          <!-- 更新时间 -->
-          <div v-if="lastUpdateTime" class="text-xs sm:text-sm text-gray-600 flex items-center self-end">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 sm:h-4 sm:w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            数据更新时间: {{ formatDateTime(lastUpdateTime) }}
-          </div>
-
-          <!-- 显示选项 -->
-          <div class="flex items-center gap-2 mb-2 self-end">
-            <span class="text-xs sm:text-sm text-gray-600">仅显示有排名的作品</span>
-            <button 
-              @click="showOnlyRanked = !showOnlyRanked"
-              :class="[
-                'relative inline-flex h-6 w-11 items-center shrink-0 cursor-pointer rounded-full transition-all duration-300 ease-in-out focus:outline-none',
-                showOnlyRanked ? 'bg-blue-500' : 'bg-gray-200'
-              ]"
-            >
-              <span 
-                class="absolute pointer-events-none h-5 w-5 transform rounded-full bg-white shadow-md transition-all duration-200 ease-in-out"
-                :style="{
-                  transform: showOnlyRanked ? 'translate3d(20px, -50%, 0)' : 'translate3d(2px, -50%, 0)',
-                  top: '50%'
-                }"
-              ></span>
-            </button>
-          </div>
           
-          <!-- 排序选项 -->
-          <div class="flex flex-wrap gap-2 justify-end mt-2">
-            <button 
-              v-for="option in sortOptions" 
-              :key="option.field"
-              @click="handleSort(option.field)"
-              :class="['px-2 py-1 sm:px-3 sm:py-1 text-xs sm:text-sm rounded border', sortField === option.field ? 'bg-blue-500 text-white' : 'bg-gray-100']"
-            >
-              {{ option.label }} 
-              <span v-if="sortField === option.field">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
-            </button>
+          <!-- 排序选项 + 筛选勾选框响应式纵横排 -->
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-end gap-2 sm:gap-4 mt-2">
+            <!-- 筛选勾选框，移动端在上 -->
+            <div>
+              <label class="flex items-center cursor-pointer select-none text-xs sm:text-sm text-gray-700">
+                <input
+                  type="checkbox"
+                  v-model="showOnlyRanked"
+                  class="accent-blue-500 w-4 h-4 rounded mr-1.5"
+                />
+                仅显示有排名的作品
+              </label>
+            </div>
+            <!-- 排序按钮组，移动端在下 -->
+            <div class="flex gap-1.5 overflow-x-auto no-scrollbar">
+              <!-- no-scrollbar 可选，隐藏横向滚动条 -->
+              <button 
+                v-for="option in sortOptions" 
+                :key="option.field"
+                @click="handleSort(option.field)"
+                :class="[
+                  'px-2.5 py-1 text-xs rounded font-medium transition-colors duration-150 focus:outline-none whitespace-nowrap',
+                  sortField === option.field 
+                    ? 'bg-blue-500 text-white'
+                    : 'bg-gray-100 text-gray-800 hover:bg-blue-50'
+                ]"
+                style="border: none;"
+              >
+                {{ option.label }} 
+                <span v-if="sortField === option.field" class="ml-1">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -70,6 +64,14 @@
       <div v-else class="flex justify-center items-center min-h-64">
         <div class="text-gray-500">该季度暂无动画数据</div>
       </div>
+    </div>
+
+    <!-- 数据更新时间移至底部 Footer 上方 -->
+    <div v-if="lastUpdateTime" class="text-xs sm:text-sm text-gray-600 flex items-center justify-center mt-8 mb-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 sm:h-4 sm:w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      数据更新时间: {{ formatDateTime(lastUpdateTime) }}
     </div>
 
     <!-- 大图查看模态框 -->
@@ -100,8 +102,16 @@ const largeImageUrl = ref('')
 const largeImageAlt = ref('')
 
 // 使用新的变量名以匹配模板
-const sortField = sortBy
-const sortOrder = sortDirection
+const defaultSortDirections: Record<string, 'asc' | 'desc'> = {
+  rank: 'asc',
+  score: 'desc',
+  collection_total: 'desc',
+  average_comment: 'desc',
+  drop_rate: 'desc'
+}
+
+const sortField = ref(sortBy.value)
+const sortOrder = ref(sortDirection.value)
 
 const filteredAnimeList = computed(() => {
   if (showOnlyRanked.value) {
@@ -111,7 +121,14 @@ const filteredAnimeList = computed(() => {
 })
 
 const sortedAnimeList = computed(() => {
-  return filteredAnimeList.value
+  const list = filteredAnimeList.value.slice()
+  const field = sortField.value
+  const order = sortOrder.value
+  return list.sort((a, b) => {
+    if (a[field] === b[field]) return 0
+    if (order === 'asc') return a[field] - b[field]
+    return b[field] - a[field]
+  })
 })
 
 const lastUpdateTime = computed(() => {
@@ -127,7 +144,15 @@ const sortOptions = [
 ]
 
 const handleSort = (field: string) => {
-  toggleSort(field as SortOption)
+  if (sortField.value === field) {
+    // 切换当前字段方向
+    sortOrder.value = sortOrder.value === 'asc' ? 'desc' : 'asc'
+  } else {
+    // 切换字段时采用该字段默认方向
+    sortField.value = field
+    sortOrder.value = defaultSortDirections[field] || 'desc'
+  }
+  toggleSort(field as SortOption, sortOrder.value)
 }
 
 const showLargeImage = (url: string, alt: string) => {

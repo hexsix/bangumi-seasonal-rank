@@ -24,7 +24,6 @@
     <!-- 季度列表 -->
     <div v-else-if="years.length > 0" class="space-y-8">
       <div v-for="year in years" :key="year" class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-4">{{ year }}年</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <NuxtLink
 v-for="season in groupedSeasons[year]" :key="season.season_id" :to="`/${season.season_id}`"
