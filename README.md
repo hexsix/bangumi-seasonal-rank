@@ -21,7 +21,41 @@
 
 ## 开发
 
+### 环境要求
+- Node.js 18+
+- pnpm (推荐) 或 npm
+
+### 安装依赖
+```bash
+pnpm install
+```
+
+### 启动开发服务器
+```bash
+pnpm dev
+```
+
+### 构建生产版本
+```bash
+pnpm build
+```
+
+### 预览生产版本
+```bash
+pnpm preview
+```
+
 ## 部署
+
+### 静态部署
+```bash
+pnpm generate
+```
+
+### 服务端部署
+```bash
+pnpm build
+```
 
 ## API集成
 
