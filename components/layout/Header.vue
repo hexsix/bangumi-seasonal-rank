@@ -1,16 +1,16 @@
 <template>
   <header class="bg-white shadow-sm border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <!-- Logo -->
-        <div class="flex items-center">
-          <NuxtLink to="/" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors no-underline">
+      <div class="flex justify-between items-center h-16 relative">
+        <!-- Logo - 桌面端左侧，移动端居中 -->
+        <div class="flex items-center md:flex-1">
+          <NuxtLink to="/" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors no-underline md:text-left text-center md:w-auto w-full">
             {{ pageTitle }}
           </NuxtLink>
         </div>
 
-        <!-- 导航菜单 (桌面) -->
-        <nav class="hidden md:flex space-x-4">
+        <!-- 导航菜单 (桌面) - 居中 -->
+        <nav class="hidden md:flex space-x-4 flex-1 justify-center">
           <NuxtLink
             v-for="season in recentSeasons"
             :key="season.season_id"
@@ -30,10 +30,17 @@
         </nav>
 
         <!-- 移动端菜单按钮 -->
-        <div class="md:hidden">
-          <button class="text-gray-700 hover:text-blue-600" @click="toggleMobileMenu">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        <div class="md:hidden flex-1 flex justify-end">
+          <button 
+            class="text-gray-700 hover:text-blue-600 transition-colors duration-200 border-none bg-transparent shadow-none outline-none" 
+            @click="toggleMobileMenu"
+            aria-label="菜单"
+          >
+            <!-- Material Design Hamburger Icon -->
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="6" width="16" height="2" rx="1" fill="currentColor"/>
+              <rect x="4" y="11" width="16" height="2" rx="1" fill="currentColor"/>
+              <rect x="4" y="16" width="16" height="2" rx="1" fill="currentColor"/>
             </svg>
           </button>
         </div>
