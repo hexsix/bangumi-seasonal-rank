@@ -117,4 +117,17 @@ export function formatScore(score: number): string {
 // 格式化抛弃率显示
 export function formatDropRate(dropRate: number): string {
   return (dropRate * 100).toFixed(1) + '%'
+}
+
+// 格式化日期时间显示
+export function formatDateTime(dateString: string): string {
+  const date = new Date(dateString)
+  return date.toLocaleString('zh-CN', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  })
 } 
