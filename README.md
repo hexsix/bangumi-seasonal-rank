@@ -1,6 +1,6 @@
 # Bangumi.tv 动画季度排行榜
 
-使用Nuxt.js构建的Bangumi.tv动画季度排行榜展示网站，采用SSR（服务端渲染）架构，通过API获取实时数据。
+使用Nuxt.js构建的Bangumi.tv动画季度排行榜展示网站，通过API获取实时数据。
 
 ## 功能
 
@@ -13,63 +13,15 @@
 
 ## 技术架构
 
-- **前端框架**: Nuxt.js 2.x (SSR模式)
-- **UI框架**: Tailwind CSS
-- **状态管理**: Vuex
+- **前端框架**: Nuxt 3
+- **UI框架**: UnoCSS
+- **状态管理**: 
 - **HTTP客户端**: Axios
 - **后端API**: 外部API服务 (https://api.rinshankaiho.fun)
-- **部署方式**: 支持SSR部署和静态生成
 
 ## 开发
 
-```bash
-# 安装依赖
-npm install
-
-# 开发模式 (SSR)
-npm run dev
-
-# 构建生产版本
-npm run build
-
-# 启动生产服务器
-npm run start
-
-# 静态生成 (可选)
-npm run generate
-```
-
 ## 部署
-
-### SSR部署 (推荐)
-
-项目支持SSR部署，可以部署到支持Node.js的平台：
-
-1. 构建项目：`npm run build`
-2. 启动服务：`npm run start`
-3. 部署到支持Node.js的平台（如Vercel、Netlify Functions、Railway等）
-
-### 静态部署 (可选)
-
-如果需要静态部署，可以使用：
-
-```bash
-npm run generate
-```
-
-构建后会在`dist`目录生成静态文件，可以直接部署到任何静态网站托管平台。
-
-### Vercel部署示例
-
-1. 将代码推送到GitHub仓库
-2. 在Vercel创建新项目
-3. 选择对应的GitHub仓库
-4. 构建设置：
-   - 构建命令：`npm run build`
-   - 输出目录：`.nuxt`
-   - 安装命令：`npm install`
-5. 环境变量（如需要）：配置API相关环境变量
-6. 保存并开始部署
 
 ## API集成
 
