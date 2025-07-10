@@ -4,6 +4,12 @@ export interface ApiResponse<T> {
   error?: string
 }
 
+// 原始API响应类型
+export interface RawAvailableSeasons {
+  current_season_id: number
+  available_seasons: number[]
+}
+
 // 季度信息类型
 export interface Season {
   season_id: string
@@ -36,9 +42,10 @@ export interface SeasonDetail {
   subjects: Anime[]
 }
 
-// 可用季度列表响应类型
+// 转换后的可用季度列表响应类型
 export interface AvailableSeasons {
   seasons: Season[]
+  current_season_id: number
 }
 
 // 排序选项类型

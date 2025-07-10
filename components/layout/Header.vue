@@ -11,12 +11,14 @@
 
         <!-- 导航菜单 -->
         <nav class="flex space-x-8">
-          <NuxtLink to="/"
+          <NuxtLink
+to="/"
             class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
             active-class="text-blue-600 bg-blue-50">
             当季排行
           </NuxtLink>
-          <NuxtLink to="/list"
+          <NuxtLink
+to="/list"
             class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
             active-class="text-blue-600 bg-blue-50">
             季度列表
@@ -25,7 +27,7 @@
 
         <!-- 移动端菜单按钮 -->
         <div class="md:hidden">
-          <button @click="toggleMobileMenu" class="text-gray-700 hover:text-blue-600">
+          <button class="text-gray-700 hover:text-blue-600" @click="toggleMobileMenu">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -36,11 +38,13 @@
       <!-- 移动端菜单 -->
       <div v-if="mobileMenuOpen" class="md:hidden">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <NuxtLink to="/" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+          <NuxtLink
+to="/" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
             active-class="text-blue-600 bg-blue-50" @click="mobileMenuOpen = false">
             当季排行
           </NuxtLink>
-          <NuxtLink to="/list"
+          <NuxtLink
+to="/list"
             class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
             active-class="text-blue-600 bg-blue-50" @click="mobileMenuOpen = false">
             季度列表

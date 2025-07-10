@@ -1,16 +1,27 @@
-import type { Season, AvailableSeasons } from '~/types'
-import { groupSeasonsByYear } from '~/utils/helpers'
+import type { Season, AvailableSeasons, RawAvailableSeasons } from '~/types'
+import { groupSeasonsByYear, convertSeasonIdsToSeasons } from '~/utils/helpers'
 import { getApiBaseUrl } from '~/utils/api'
 
 // 季度数据获取逻辑
 export const useSeasons = () => {
   // 获取可用季度列表
-  const { data: seasonsData, pending, error, refresh } = useFetch<AvailableSeasons>('/api/v0/season/available', {
+  const { data: rawSeasonsData, pending, error, refresh } = useFetch<RawAvailableSeasons>('/api/v0/season/available', {
     baseURL: getApiBaseUrl(),
     key: 'available-seasons',
-    default: () => ({ seasons: [] }),
+    default: () => ({ current_season_id: 0, available_seasons: [] }),
     server: true,
     lazy: false
+  })
+
+  // 转换后的季度数据
+  const seasonsData = computed<AvailableSeasons>(() => {
+    if (!rawSeasonsData.value) {
+      return { seasons: [], current_season_id: 0 }
+    }
+    return {
+      seasons: convertSeasonIdsToSeasons(rawSeasonsData.value.available_seasons),
+      current_season_id: rawSeasonsData.value.current_season_id
+    }
   })
 
   // 按年份分组的季度

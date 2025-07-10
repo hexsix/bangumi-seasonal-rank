@@ -1,14 +1,14 @@
-import type { SeasonDetail, AvailableSeasons } from '~/types'
+import type { SeasonDetail, AvailableSeasons, RawAvailableSeasons } from '~/types'
 import { getAvailableSeasons, getSeasonDetail, getCurrentSeasonId, getApiBaseUrl } from '~/utils/api'
 
 // API调用封装
 export const useApi = () => {
   // 获取可用季度列表
   const fetchAvailableSeasons = () => {
-    return useFetch<AvailableSeasons>('/api/v0/season/available', {
+    return useFetch<RawAvailableSeasons>('/api/v0/season/available', {
       baseURL: getApiBaseUrl(),
       key: 'available-seasons',
-      default: () => ({ seasons: [] }),
+      default: () => ({ current_season_id: 0, available_seasons: [] }),
       server: true,
       lazy: false
     })

@@ -15,7 +15,7 @@
     <div v-else-if="error" class="flex justify-center items-center min-h-64">
       <div class="text-red-500">
         <p>加载季度列表失败</p>
-        <button @click="() => refresh()" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+        <button class="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" @click="() => refresh()">
           重试
         </button>
       </div>
@@ -26,7 +26,8 @@
       <div v-for="year in years" :key="year" class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <h2 class="text-2xl font-semibold text-gray-900 mb-4">{{ year }}年</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <NuxtLink v-for="season in groupedSeasons[year]" :key="season.season_id" :to="`/${season.season_id}`"
+          <NuxtLink
+v-for="season in groupedSeasons[year]" :key="season.season_id" :to="`/${season.season_id}`"
             class="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors">
             <div class="text-lg font-medium text-gray-900">{{ formatSeasonName(season.season_id) }}</div>
             <div class="text-sm text-gray-500 mt-1">{{ season.name }}</div>

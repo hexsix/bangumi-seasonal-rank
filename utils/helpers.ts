@@ -1,15 +1,44 @@
 import type { Season, Anime, SortOption, SortDirection } from '~/types'
 
+// 将季度ID数组转换为Season对象数组
+export function convertSeasonIdsToSeasons(seasonIds: number[]): Season[] {
+  return seasonIds.map(seasonId => {
+    const { year, month } = parseSeasonIdToYearMonth(seasonId)
+    return {
+      season_id: seasonId.toString(),
+      name: generateSeasonName(seasonId),
+      year,
+      month
+    }
+  })
+}
+
+// 根据数字ID生成季度名称
+export function generateSeasonName(seasonId: number): string {
+  const year = Math.floor(seasonId / 100)
+  const month = seasonId % 100
+  return `${year}年 ${month}月新番表`
+}
+
+// 从数字季度ID解析年份和月份
+export function parseSeasonIdToYearMonth(seasonId: number): { year: number; month: number } {
+  const year = Math.floor(seasonId / 100)
+  const month = seasonId % 100
+  return { year, month }
+}
+
 // 格式化季度名称
 export function formatSeasonName(seasonId: string): string {
   const year = seasonId.slice(0, 4)
   const month = parseInt(seasonId.slice(4, 6))
-  const monthNames = ['', '1月', '4月', '7月', '10月']
-  return `${year}年 ${monthNames[month]}新番表`
+  return `${year}年 ${month}月新番表`
 }
 
-// 从季度ID解析年份和月份
-export function parseSeasonId(seasonId: string): { year: number; month: number } {
+// 从季度ID解析年份和月份（支持字符串和数字ID）
+export function parseSeasonId(seasonId: string | number): { year: number; month: number } {
+  if (typeof seasonId === 'number') {
+    return parseSeasonIdToYearMonth(seasonId)
+  }
   const year = parseInt(seasonId.slice(0, 4))
   const month = parseInt(seasonId.slice(4, 6))
   return { year, month }

@@ -2,8 +2,9 @@
   <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
     <!-- 动画海报 -->
     <div class="aspect-[3/4] bg-gray-200 overflow-hidden">
-      <img :src="anime.images_grid" :alt="anime.name_cn || anime.name" class="w-full h-full object-cover"
-        loading="lazy" />
+      <img
+:src="anime.images_grid" :alt="anime.name_cn || anime.name" class="w-full h-full object-cover"
+        loading="lazy" >
     </div>
 
     <!-- 动画信息 -->
@@ -36,7 +37,8 @@
 
       <!-- 标签 -->
       <div class="flex flex-wrap gap-1 mt-3">
-        <span v-for="tag in anime.meta_tags.slice(0, 3)" :key="tag"
+        <span
+v-for="tag in anime.meta_tags.slice(0, 3)" :key="tag"
           class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
           {{ tag }}
         </span>

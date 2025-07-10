@@ -1,4 +1,4 @@
-import type { SeasonDetail, AvailableSeasons } from '~/types'
+import type { SeasonDetail, AvailableSeasons, RawAvailableSeasons } from '~/types'
 
 // 获取API基础URL配置
 function getApiBaseUrl(): string {
@@ -47,8 +47,8 @@ async function apiRequest<T>(endpoint: string): Promise<T> {
 }
 
 // 获取可用季度列表
-export async function getAvailableSeasons(): Promise<AvailableSeasons> {
-  return await apiRequest<AvailableSeasons>('/api/v0/season/available')
+export async function getAvailableSeasons(): Promise<RawAvailableSeasons> {
+  return await apiRequest<RawAvailableSeasons>('/api/v0/season/available')
 }
 
 // 获取指定季度详情
@@ -59,11 +59,11 @@ export async function getSeasonDetail(seasonId: string): Promise<SeasonDetail> {
 // 获取当前季度ID（最新季度）
 export async function getCurrentSeasonId(): Promise<string> {
   const seasons = await getAvailableSeasons()
-  if (seasons.seasons.length === 0) {
+  if (seasons.available_seasons.length === 0) {
     throw new ApiError('没有可用的季度数据', 404, 'Not Found')
   }
   // 返回最新的季度ID
-  return seasons.seasons[0].season_id
+  return seasons.available_seasons[0].toString()
 }
 
 // 导出API基础URL获取函数，供其他模块使用
