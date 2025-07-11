@@ -84,7 +84,7 @@
               <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
               </svg>
-              收藏: {{ anime.collection_total || 0 }}人
+              收藏: {{ anime.collection_total || 0 }}
             </div>
             <div class="text-xs text-gray-600 flex items-center">
               <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -177,11 +177,11 @@ const handleImageError = (event: Event) => {
 }
 
 const getTopTags = (anime: Anime) => {
-  return anime.meta_tags?.slice(0, 4) || []
+  return anime.meta_tags || []
 }
 
 const getMobileTopTags = (anime: Anime) => {
-  return anime.meta_tags?.slice(0, 2) || []
+  return anime.meta_tags || []
 }
 </script>
 <style scoped>
