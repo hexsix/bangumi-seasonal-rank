@@ -8,7 +8,7 @@
     </div>
     
     <!-- 图片和基本信息的容器 - 在移动端横向排列 -->
-    <div class="flex w-full sm:w-auto ml-6 sm:ml-8 mb-2 sm:mb-0">
+    <div class="flex w-[calc(100%-1.5rem)] sm:w-auto ml-6 sm:ml-8 mb-2 sm:mb-0">
       <!-- 图片 -->
       <div class="flex-shrink-0 mr-3 sm:mr-4" @click="$emit('show-image', anime.images_large, anime.name_cn || anime.name)">
         <img 
@@ -25,13 +25,13 @@
       </div>
       
       <!-- 标题区域 - 移动端布局 -->
-      <div class="flex-1 sm:hidden">
+      <div class="flex-1 sm:hidden min-w-0">
         <a :href="`https://bgm.tv/subject/${anime.id}`" target="_blank" 
-           class="font-bold text-sm truncate block text-gray-900 hover:text-blue-600 no-underline mobile-title-clamp" 
+           class="font-bold text-sm block text-gray-900 hover:text-blue-600 no-underline mobile-title-clamp mobile-title-multiline" 
            :title="anime.name_cn || anime.name">
           {{ anime.name_cn || anime.name }}
         </a>
-        <p v-if="anime.name_cn" class="text-xs text-gray-600 truncate mobile-title-clamp" :title="anime.name">
+        <p v-if="anime.name_cn" class="text-xs text-gray-600 truncate mobile-subtitle-tight" :title="anime.name">
           {{ anime.name }}
         </p>
         
@@ -213,12 +213,26 @@ const getMobileTopTags = (anime: Anime) => {
     margin-right: 2px;
   }
   .mobile-title-clamp {
-    font-size: clamp(12px, 5vw, 18px) !important;
-    white-space: nowrap !important;
+    font-size: clamp(14px, 4vw, 16px) !important;
     overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    display: block;
-    line-height: 1.2;
+    display: -webkit-box;
+    line-height: 1.3;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    box-orient: vertical;
+    word-break: break-word;
+  }
+  .mobile-title-multiline {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    line-clamp: 2;
+    box-orient: vertical;
+  }
+  .mobile-subtitle-tight {
+    margin-top: 0.5px !important;
+    margin-bottom: 0.5px !important;
   }
 }
 </style> 

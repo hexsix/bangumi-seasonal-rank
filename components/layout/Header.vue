@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-white shadow-sm border-b border-gray-200">
+  <header class="bg-white shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center min-h-16 relative">
         <!-- Logo - 桌面端左侧，移动端居中 -->
@@ -86,7 +86,7 @@ const toggleMobileMenu = () => {
 
 const pageTitle = computed(() => {
   if (route.name === 'season_id' && route.params.season_id) {
-    return formatTitle(route.params.season_id as string)
+    return formatTitle(String(route.params.season_id))
   }
   return 'Bangumi.tv 动画季度排行榜'
 })
@@ -111,6 +111,8 @@ function formatSeasonNameShort(seasonId: string): string {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
   }
 }
 </style>
