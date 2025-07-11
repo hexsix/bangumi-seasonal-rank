@@ -2,14 +2,26 @@ import type { Anime, SortOption, SortDirection, SeasonDetail } from '~/types'
 import { sortAnimeList } from '~/utils/helpers'
 import { getApiBaseUrl } from '~/utils/api'
 
+// 缓存配置
+const CACHE_DURATION = 30 * 60 * 1000 // 30分钟缓存时间
+
 // 动画列表数据获取逻辑
 export const useAnimeList = (seasonId: string) => {
-  // 获取季度详情
+  // 生成带时间戳的缓存键，确保缓存能够及时更新
+  const cacheKey = computed(() => `season-${seasonId}-${Math.floor(Date.now() / CACHE_DURATION)}`)
+  
+  // 获取季度详情，使用动态缓存键
   const { data: seasonData, pending, error, refresh } = useFetch<SeasonDetail>(`/api/v0/season/${seasonId}`, {
     baseURL: getApiBaseUrl(),
-    key: `season-${seasonId}`,
+    key: cacheKey,
     server: true,
-    lazy: false
+    lazy: false,
+    // 设置默认值
+    default: () => ({
+      season_id: seasonId,
+      updated_at: new Date().toISOString(),
+      subjects: []
+    } as SeasonDetail)
   })
 
   // 排序状态
@@ -32,6 +44,36 @@ export const useAnimeList = (seasonId: string) => {
     }
   }
 
+  // 检查数据新鲜度
+  const isDataFresh = computed(() => {
+    if (!seasonData.value?.updated_at) return false
+    const updateTime = new Date(seasonData.value.updated_at).getTime()
+    const now = Date.now()
+    return (now - updateTime) < CACHE_DURATION
+  })
+
+  // 强制刷新数据
+  const forceRefresh = async () => {
+    await refresh()
+  }
+
+  // 自动刷新机制（每5分钟检查一次）
+  const autoRefreshTimer = ref<NodeJS.Timeout | null>(null)
+  
+  onMounted(() => {
+    autoRefreshTimer.value = setInterval(async () => {
+      if (!isDataFresh.value) {
+        await refresh()
+      }
+    }, 5 * 60 * 1000) // 5分钟
+  })
+
+  onUnmounted(() => {
+    if (autoRefreshTimer.value) {
+      clearInterval(autoRefreshTimer.value)
+    }
+  })
+
   return {
     seasonData,
     animeList: sortedAnimeList,
@@ -40,6 +82,8 @@ export const useAnimeList = (seasonId: string) => {
     toggleSort,
     pending,
     error,
-    refresh
+    refresh,
+    isDataFresh,
+    forceRefresh
   }
 } 

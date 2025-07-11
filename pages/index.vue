@@ -19,7 +19,8 @@
 
 <script setup lang="ts">
 // 使用composables获取季度数据
-const { seasons: currentSeasonId, pending, error, refresh } = useSeasons()
+const seasonsComposable = useSeasons()
+const { seasons: currentSeasonId, pending, error, refresh } = seasonsComposable
 
 // 监听当前季度ID变化，进行重定向
 watch(currentSeasonId, (newData) => {

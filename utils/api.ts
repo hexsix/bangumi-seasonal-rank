@@ -1,9 +1,29 @@
 import type { SeasonDetail, AvailableSeasons, RawAvailableSeasons } from '~/types'
 
+// 缓存配置
+const CACHE_DURATION = 30 * 60 * 1000 // 30分钟缓存时间
+
 // 获取API基础URL配置
 function getApiBaseUrl(): string {
   const config = useRuntimeConfig()
   return config.public.apiBaseUrl || 'https://api.rinshankaiho.fun'
+}
+
+// 检查数据新鲜度
+export function isDataFresh(updatedAt: string): boolean {
+  const updateTime = new Date(updatedAt).getTime()
+  const now = Date.now()
+  return (now - updateTime) < CACHE_DURATION
+}
+
+// 生成动态缓存键
+export function generateCacheKey(baseKey: string): string {
+  return `${baseKey}-${Math.floor(Date.now() / CACHE_DURATION)}`
+}
+
+// 获取缓存过期时间
+export function getCacheExpiryTime(): number {
+  return Date.now() + CACHE_DURATION
 }
 
 // 通用API错误处理

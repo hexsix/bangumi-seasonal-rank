@@ -1,13 +1,21 @@
 import type { SeasonDetail, AvailableSeasons, RawAvailableSeasons } from '~/types'
 import { getAvailableSeasons, getSeasonDetail, getCurrentSeasonId, getApiBaseUrl } from '~/utils/api'
 
+// 缓存配置
+const CACHE_DURATION = 30 * 60 * 1000 // 30分钟缓存时间
+
 // API调用封装
 export const useApi = () => {
+  // 生成动态缓存键
+  const getCacheKey = (baseKey: string) => {
+    return `${baseKey}-${Math.floor(Date.now() / CACHE_DURATION)}`
+  }
+
   // 获取可用季度列表
   const fetchAvailableSeasons = () => {
     return useFetch<RawAvailableSeasons>('/api/v0/season/available', {
       baseURL: getApiBaseUrl(),
-      key: 'available-seasons',
+      key: getCacheKey('available-seasons'),
       default: () => ({ current_season_id: 0, available_seasons: [] }),
       server: true,
       lazy: false
@@ -18,9 +26,14 @@ export const useApi = () => {
   const fetchSeasonDetail = (seasonId: string) => {
     return useFetch<SeasonDetail>(`/api/v0/season/${seasonId}`, {
       baseURL: getApiBaseUrl(),
-      key: `season-${seasonId}`,
+      key: getCacheKey(`season-${seasonId}`),
       server: true,
-      lazy: false
+      lazy: false,
+      default: () => ({
+        season_id: seasonId,
+        updated_at: new Date().toISOString(),
+        subjects: []
+      } as SeasonDetail)
     })
   }
 
@@ -28,15 +41,17 @@ export const useApi = () => {
   const fetchCurrentSeasonId = () => {
     return useFetch<AvailableSeasons>('/api/v0/season/available', {
       baseURL: getApiBaseUrl(),
-      key: 'current-season-id',
+      key: getCacheKey('current-season-id'),
       server: true,
-      lazy: false
+      lazy: false,
+      default: () => ({ seasons: [], current_season_id: 0 })
     })
   }
 
   return {
     fetchAvailableSeasons,
     fetchSeasonDetail,
-    fetchCurrentSeasonId
+    fetchCurrentSeasonId,
+    getCacheKey
   }
 } 

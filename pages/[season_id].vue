@@ -94,7 +94,8 @@ import type { SortOption } from '~/types'
 const route = useRoute()
 const seasonId = route.params.season_id as string
 
-const { seasonData, animeList, sortBy, sortDirection, toggleSort, pending, error, refresh } = useAnimeList(seasonId)
+const animeListComposable = useAnimeList(seasonId)
+const { seasonData, animeList, sortBy, sortDirection, toggleSort, pending, error, refresh, isDataFresh, forceRefresh } = animeListComposable
 
 const showOnlyRanked = ref(true)
 const largeImageShow = ref(false)
@@ -110,8 +111,8 @@ const defaultSortDirections: Record<string, 'asc' | 'desc'> = {
   drop_rate: 'desc'
 }
 
-const sortField = ref(sortBy.value)
-const sortOrder = ref(sortDirection.value)
+const sortField = ref<SortOption>(sortBy.value)
+const sortOrder = ref<'asc' | 'desc'>(sortDirection.value)
 
 const filteredAnimeList = computed(() => {
   if (showOnlyRanked.value) {
@@ -152,7 +153,7 @@ const handleSort = (field: string) => {
     sortField.value = field
     sortOrder.value = defaultSortDirections[field] || 'desc'
   }
-  toggleSort(field as SortOption, sortOrder.value)
+  toggleSort(field as SortOption)
 }
 
 const showLargeImage = (url: string, alt: string) => {
