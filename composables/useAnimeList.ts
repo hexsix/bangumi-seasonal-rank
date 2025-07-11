@@ -16,6 +16,9 @@ const CACHE_DURATION = 30 * 60 * 1000 // 30分钟缓存时间
 
 // 动画列表数据获取逻辑
 export const useAnimeList = (seasonId: string) => {
+  // 共享的时间戳，由插件注入
+  const renderingTimestamp = useState<number>('renderingTimestamp')
+  
   // 重试状态管理
   const retryAttempt = ref(0)
   const isRetrying = ref(false)
@@ -27,7 +30,8 @@ export const useAnimeList = (seasonId: string) => {
     return generateErrorAwareCacheKey(`season-${seasonId}`, {
       isError,
       retryAttempt: retryAttempt.value,
-      useTimeWindow: true
+      useTimeWindow: true,
+      timestamp: renderingTimestamp.value
     })
   })
   

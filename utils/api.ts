@@ -1,9 +1,9 @@
 import type { SeasonDetail, AvailableSeasons, RawAvailableSeasons, ErrorInfo, CacheKeyInfo } from '~/types'
 
 // 缓存配置
-const CACHE_DURATION = 30 * 60 * 1000 // 30分钟缓存时间
-const ERROR_CACHE_DURATION = 5 * 60 * 1000 // 错误响应缓存5分钟
-const UPDATE_DELAY = 30 * 60 * 1000 // 30分钟更新延迟
+const CACHE_DURATION = 1 * 60 * 1000 // 30分钟缓存时间
+const ERROR_CACHE_DURATION = 1 * 60 * 1000 // 错误响应缓存5分钟
+const UPDATE_DELAY = 30 * 1 * 1000 // 30分钟更新延迟
 
 // 获取API基础URL配置
 function getApiBaseUrl(): string {
@@ -43,16 +43,16 @@ export function isErrorResponse(response: any): boolean {
 // 生成错误感知的缓存键
 export function generateErrorAwareCacheKey(
   baseKey: string,
-  options: { isError?: boolean; retryAttempt?: number; useTimeWindow?: boolean } = {}
+  options: { isError?: boolean; retryAttempt?: number; useTimeWindow?: boolean; timestamp?: number } = {}
 ): string {
-  const { isError = false, retryAttempt = 0, useTimeWindow = false } = options
+  const { isError = false, retryAttempt = 0, useTimeWindow = false, timestamp } = options
 
   const errorSuffix = isError ? '-error' : '-success'
   const retrySuffix = retryAttempt > 0 ? `-retry-${retryAttempt}` : ''
   
   // 基于4小时窗口的时间标识，并考虑更新延迟
   const timeWindow = useTimeWindow 
-    ? `-${Math.floor((Date.now() - UPDATE_DELAY) / (4 * 60 * 60 * 1000))}` 
+    ? `-${Math.floor(((timestamp ?? Date.now()) - UPDATE_DELAY) / (1 * 1000))}` 
     : ''
 
   return `${baseKey}${timeWindow}${errorSuffix}${retrySuffix}`
