@@ -41,12 +41,10 @@ export function isErrorResponse(response: any): boolean {
 
 // 生成错误感知的缓存键
 export function generateErrorAwareCacheKey(baseKey: string, isError: boolean = false, retryAttempt: number = 0): string {
-  const cacheDuration = isError ? ERROR_CACHE_DURATION : CACHE_DURATION
-  const timestamp = Math.floor(Date.now() / cacheDuration)
   const errorSuffix = isError ? '-error' : '-success'
   const retrySuffix = retryAttempt > 0 ? `-retry-${retryAttempt}` : ''
   
-  return `${baseKey}${errorSuffix}-${timestamp}${retrySuffix}`
+  return `${baseKey}${errorSuffix}${retrySuffix}`
 }
 
 // 获取缓存过期时间
