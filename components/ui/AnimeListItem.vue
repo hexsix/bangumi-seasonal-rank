@@ -177,11 +177,11 @@ const handleImageError = (event: Event) => {
 }
 
 const getTopTags = (anime: Anime) => {
-  return anime.meta_tags || []
+  return [...new Set(anime.meta_tags || [])]
 }
 
 const getMobileTopTags = (anime: Anime) => {
-  return anime.meta_tags || []
+  return [...new Set(anime.meta_tags || [])]
 }
 </script>
 <style scoped>
