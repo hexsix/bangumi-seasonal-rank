@@ -2,6 +2,15 @@ import type { Anime, SortOption, SortDirection, SeasonDetail } from '~/types'
 import { sortAnimeList } from '~/utils/helpers'
 import { getApiBaseUrl, generateErrorAwareCacheKey, isErrorResponse, getRetryDelay } from '~/utils/api'
 
+// 默认排序方向配置
+const DEFAULT_SORT_DIRECTIONS: Record<SortOption, SortDirection> = {
+  rank: 'asc',
+  score: 'desc',
+  collection_total: 'desc',
+  average_comment: 'desc',
+  drop_rate: 'desc'
+}
+
 // 缓存配置
 const CACHE_DURATION = 30 * 60 * 1000 // 30分钟缓存时间
 
@@ -68,7 +77,7 @@ export const useAnimeList = (seasonId: string) => {
       sortDirection.value = sortDirection.value === 'asc' ? 'desc' : 'asc'
     } else {
       sortBy.value = newSortBy
-      sortDirection.value = 'asc'
+      sortDirection.value = DEFAULT_SORT_DIRECTIONS[newSortBy]
     }
   }
 
