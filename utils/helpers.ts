@@ -37,7 +37,7 @@ export function formatSeasonName(seasonId: string): string {
 export function formatTitle(seasonId: string): string {
   const year = seasonId.slice(0, 4)
   const month = parseInt(seasonId.slice(4, 6))
-  return `Bangumi.tv ${year}年${month}月新番排行`
+  return `Bangumi ${year}年${month}月新番排行`
 }
 
 // 从季度ID解析年份和月份（支持字符串和数字ID）

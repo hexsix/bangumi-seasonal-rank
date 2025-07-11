@@ -20,14 +20,14 @@
               </label>
             </div>
             <!-- 排序按钮组，移动端在下 -->
-            <div class="flex gap-1.5 overflow-x-auto no-scrollbar">
+            <div class="flex gap-1.5 overflow-x-auto no-scrollbar sort-btn-group">
               <!-- no-scrollbar 可选，隐藏横向滚动条 -->
               <button 
                 v-for="option in sortOptions" 
                 :key="option.field"
                 @click="handleSort(option.field)"
                 :class="[
-                  'px-2.5 py-1 text-xs rounded font-medium transition-colors duration-150 focus:outline-none whitespace-nowrap',
+                  'px-2.5 py-1 text-xs rounded font-medium transition-colors duration-150 focus:outline-none whitespace-nowrap sort-btn',
                   sortField === option.field 
                     ? 'bg-blue-500 text-white'
                     : 'bg-gray-100 text-gray-800 hover:bg-blue-50'
@@ -139,8 +139,8 @@ const lastUpdateTime = computed(() => {
 const sortOptions = [
   { field: 'rank', label: 'Rank' },
   { field: 'score', label: '评分' },
-  { field: 'collection_total', label: '收藏人数' },
-  { field: 'average_comment', label: '话均评论' },
+  { field: 'collection_total', label: '收藏' },
+  { field: 'average_comment', label: '评论' },
   { field: 'drop_rate', label: '抛弃率' }
 ]
 
@@ -175,5 +175,19 @@ useHead({
 .anime-list > div:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 640px) {
+  .sort-btn-group {
+    gap: 4px !important;
+  }
+  .sort-btn {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    font-size: 12px !important;
+    min-width: 32px;
+  }
 }
 </style>

@@ -4,7 +4,7 @@
       <div class="flex justify-between items-center h-16 relative">
         <!-- Logo - 桌面端左侧，移动端居中 -->
         <div class="flex items-center md:flex-1">
-          <NuxtLink to="/" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors no-underline md:text-left text-center md:w-auto w-full">
+          <NuxtLink to="/" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors no-underline md:text-left text-center md:w-auto w-full clamp-title">
             {{ pageTitle }}
           </NuxtLink>
         </div>
@@ -104,3 +104,13 @@ function formatSeasonNameShort(seasonId: string): string {
   return `${year}年${month}月`
 }
 </script>
+<style scoped>
+@media (max-width: 640px) {
+  .clamp-title {
+    font-size: clamp(14px, 6vw, 28px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+</style>
