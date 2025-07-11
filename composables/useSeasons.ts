@@ -15,7 +15,11 @@ export const useSeasons = () => {
   // 生成错误感知的缓存键
   const cacheKey = computed(() => {
     const isError = !!lastError.value
-    return generateErrorAwareCacheKey('available-seasons', isError, retryAttempt.value)
+    return generateErrorAwareCacheKey('available-seasons', {
+      isError,
+      retryAttempt: retryAttempt.value,
+      useTimeWindow: true
+    })
   })
   
   // 获取可用季度列表，使用错误感知缓存键

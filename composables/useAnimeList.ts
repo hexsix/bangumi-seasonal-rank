@@ -15,7 +15,11 @@ export const useAnimeList = (seasonId: string) => {
   // 生成错误感知的缓存键
   const cacheKey = computed(() => {
     const isError = !!lastError.value
-    return generateErrorAwareCacheKey(`season-${seasonId}`, isError, retryAttempt.value)
+    return generateErrorAwareCacheKey(`season-${seasonId}`, {
+      isError,
+      retryAttempt: retryAttempt.value,
+      useTimeWindow: true
+    })
   })
   
   // 获取季度详情，使用错误感知缓存键

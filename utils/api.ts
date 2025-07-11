@@ -3,6 +3,7 @@ import type { SeasonDetail, AvailableSeasons, RawAvailableSeasons, ErrorInfo, Ca
 // 缓存配置
 const CACHE_DURATION = 30 * 60 * 1000 // 30分钟缓存时间
 const ERROR_CACHE_DURATION = 5 * 60 * 1000 // 错误响应缓存5分钟
+const UPDATE_DELAY = 30 * 60 * 1000 // 30分钟更新延迟
 
 // 获取API基础URL配置
 function getApiBaseUrl(): string {
@@ -40,11 +41,21 @@ export function isErrorResponse(response: any): boolean {
 }
 
 // 生成错误感知的缓存键
-export function generateErrorAwareCacheKey(baseKey: string, isError: boolean = false, retryAttempt: number = 0): string {
+export function generateErrorAwareCacheKey(
+  baseKey: string,
+  options: { isError?: boolean; retryAttempt?: number; useTimeWindow?: boolean } = {}
+): string {
+  const { isError = false, retryAttempt = 0, useTimeWindow = false } = options
+
   const errorSuffix = isError ? '-error' : '-success'
   const retrySuffix = retryAttempt > 0 ? `-retry-${retryAttempt}` : ''
   
-  return `${baseKey}${errorSuffix}${retrySuffix}`
+  // 基于4小时窗口的时间标识，并考虑更新延迟
+  const timeWindow = useTimeWindow 
+    ? `-${Math.floor((Date.now() - UPDATE_DELAY) / (4 * 60 * 60 * 1000))}` 
+    : ''
+
+  return `${baseKey}${timeWindow}${errorSuffix}${retrySuffix}`
 }
 
 // 获取缓存过期时间
@@ -74,7 +85,7 @@ export function getRetryDelay(attempt: number): number {
 
 // 生成动态缓存键（保持向后兼容）
 export function generateCacheKey(baseKey: string): string {
-  return generateErrorAwareCacheKey(baseKey, false)
+  return generateErrorAwareCacheKey(baseKey, { useTimeWindow: true })
 }
 
 // 通用API错误处理
