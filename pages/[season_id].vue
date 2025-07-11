@@ -28,14 +28,14 @@
                 @click="handleSort(option.field)"
                 :class="[
                   'px-2.5 py-1 text-xs rounded font-medium transition-colors duration-150 focus:outline-none whitespace-nowrap sort-btn',
-                  sortField === option.field 
+                  sortBy === option.field 
                     ? 'bg-blue-500 text-white'
                     : 'bg-gray-100 text-gray-800 hover:bg-blue-50'
                 ]"
                 style="border: none;"
               >
                 {{ option.label }} 
-                <span v-if="sortField === option.field" class="ml-1">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
+                <span v-if="sortBy === option.field" class="ml-1">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span>
               </button>
             </div>
           </div>
@@ -56,8 +56,8 @@
       </div>
 
       <!-- Anime List -->
-      <div v-else-if="sortedAnimeList.length > 0" class="anime-list">
-        <AnimeListItem v-for="(anime, index) in sortedAnimeList" :key="anime.id" :anime="anime" :index="index" @show-image="showLargeImage" />
+      <div v-else-if="filteredAnimeList.length > 0" class="anime-list">
+        <AnimeListItem v-for="(anime, index) in filteredAnimeList" :key="anime.id" :anime="anime" :index="index" @show-image="showLargeImage" />
       </div>
 
       <!-- Empty State -->
@@ -102,18 +102,6 @@ const largeImageShow = ref(false)
 const largeImageUrl = ref('')
 const largeImageAlt = ref('')
 
-// 使用新的变量名以匹配模板
-const defaultSortDirections: Record<string, 'asc' | 'desc'> = {
-  rank: 'asc',
-  score: 'desc',
-  collection_total: 'desc',
-  average_comment: 'desc',
-  drop_rate: 'desc'
-}
-
-const sortField = ref<SortOption>(sortBy.value)
-const sortOrder = ref<'asc' | 'desc'>(sortDirection.value)
-
 const filteredAnimeList = computed(() => {
   if (showOnlyRanked.value) {
     return animeList.value.filter(anime => anime.rank > 0)
@@ -121,22 +109,11 @@ const filteredAnimeList = computed(() => {
   return animeList.value
 })
 
-const sortedAnimeList = computed(() => {
-  const list = filteredAnimeList.value.slice()
-  const field = sortField.value
-  const order = sortOrder.value
-  return list.sort((a, b) => {
-    if (a[field] === b[field]) return 0
-    if (order === 'asc') return a[field] - b[field]
-    return b[field] - a[field]
-  })
-})
-
 const lastUpdateTime = computed(() => {
   return seasonData.value?.updated_at || null
 })
 
-const sortOptions = [
+const sortOptions: { field: SortOption; label: string }[] = [
   { field: 'rank', label: 'Rank' },
   { field: 'score', label: '评分' },
   { field: 'collection_total', label: '收藏' },
@@ -144,16 +121,8 @@ const sortOptions = [
   { field: 'drop_rate', label: '抛弃率' }
 ]
 
-const handleSort = (field: string) => {
-  if (sortField.value === field) {
-    // 切换当前字段方向
-    sortOrder.value = sortOrder.value === 'asc' ? 'desc' : 'asc'
-  } else {
-    // 切换字段时采用该字段默认方向
-    sortField.value = field
-    sortOrder.value = defaultSortDirections[field] || 'desc'
-  }
-  toggleSort(field as SortOption)
+const handleSort = (field: SortOption) => {
+  toggleSort(field)
 }
 
 const showLargeImage = (url: string, alt: string) => {
