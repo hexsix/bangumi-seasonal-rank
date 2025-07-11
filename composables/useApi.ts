@@ -1,14 +1,14 @@
 import type { SeasonDetail, AvailableSeasons, RawAvailableSeasons } from '~/types'
-import { getAvailableSeasons, getSeasonDetail, getCurrentSeasonId, getApiBaseUrl } from '~/utils/api'
+import { getAvailableSeasons, getSeasonDetail, getCurrentSeasonId, getApiBaseUrl, generateErrorAwareCacheKey } from '~/utils/api'
 
 // 缓存配置
 const CACHE_DURATION = 30 * 60 * 1000 // 30分钟缓存时间
 
 // API调用封装
 export const useApi = () => {
-  // 生成动态缓存键
-  const getCacheKey = (baseKey: string) => {
-    return `${baseKey}-${Math.floor(Date.now() / CACHE_DURATION)}`
+  // 生成错误感知的缓存键
+  const getCacheKey = (baseKey: string, isError: boolean = false, retryAttempt: number = 0) => {
+    return generateErrorAwareCacheKey(baseKey, isError, retryAttempt)
   }
 
   // 获取可用季度列表

@@ -1,16 +1,24 @@
 import type { Anime, SortOption, SortDirection, SeasonDetail } from '~/types'
 import { sortAnimeList } from '~/utils/helpers'
-import { getApiBaseUrl } from '~/utils/api'
+import { getApiBaseUrl, generateErrorAwareCacheKey, isErrorResponse, getRetryDelay } from '~/utils/api'
 
 // 缓存配置
 const CACHE_DURATION = 30 * 60 * 1000 // 30分钟缓存时间
 
 // 动画列表数据获取逻辑
 export const useAnimeList = (seasonId: string) => {
-  // 生成带时间戳的缓存键，确保缓存能够及时更新
-  const cacheKey = computed(() => `season-${seasonId}-${Math.floor(Date.now() / CACHE_DURATION)}`)
+  // 重试状态管理
+  const retryAttempt = ref(0)
+  const isRetrying = ref(false)
+  const lastError = ref<any>(null)
   
-  // 获取季度详情，使用动态缓存键
+  // 生成错误感知的缓存键
+  const cacheKey = computed(() => {
+    const isError = !!lastError.value
+    return generateErrorAwareCacheKey(`season-${seasonId}`, isError, retryAttempt.value)
+  })
+  
+  // 获取季度详情，使用错误感知缓存键
   const { data: seasonData, pending, error, refresh } = useFetch<SeasonDetail>(`/api/v0/season/${seasonId}`, {
     baseURL: getApiBaseUrl(),
     key: cacheKey,
@@ -21,7 +29,23 @@ export const useAnimeList = (seasonId: string) => {
       season_id: seasonId,
       updated_at: new Date().toISOString(),
       subjects: []
-    } as SeasonDetail)
+    } as SeasonDetail),
+    // 错误处理
+    onResponseError: (err) => {
+      lastError.value = err
+      console.error('API请求错误:', err)
+    },
+    onResponse: (response) => {
+      // 检查响应是否为错误
+      if (isErrorResponse(response.response._data)) {
+        lastError.value = response.response._data
+        console.error('API返回错误响应:', response.response._data)
+      } else {
+        // 成功响应，清除错误状态
+        lastError.value = null
+        retryAttempt.value = 0
+      }
+    }
   })
 
   // 排序状态
@@ -52,8 +76,41 @@ export const useAnimeList = (seasonId: string) => {
     return (now - updateTime) < CACHE_DURATION
   })
 
+  // 检查是否为错误状态
+  const isErrorState = computed(() => {
+    return !!error.value || !!lastError.value
+  })
+
+  // 智能重试机制
+  const smartRetry = async () => {
+    if (isRetrying.value) return
+    
+    isRetrying.value = true
+    retryAttempt.value++
+    
+    try {
+      // 等待重试延迟
+      const delay = getRetryDelay(retryAttempt.value - 1)
+      await new Promise(resolve => setTimeout(resolve, delay))
+      
+      // 执行重试
+      await refresh()
+      
+      // 重试成功，重置状态
+      lastError.value = null
+      retryAttempt.value = 0
+    } catch (retryError) {
+      console.error('重试失败:', retryError)
+      lastError.value = retryError
+    } finally {
+      isRetrying.value = false
+    }
+  }
+
   // 强制刷新数据
   const forceRefresh = async () => {
+    lastError.value = null
+    retryAttempt.value = 0
     await refresh()
   }
 
@@ -62,7 +119,8 @@ export const useAnimeList = (seasonId: string) => {
   
   onMounted(() => {
     autoRefreshTimer.value = setInterval(async () => {
-      if (!isDataFresh.value) {
+      // 只有在没有错误且数据不新鲜时才自动刷新
+      if (!isErrorState.value && !isDataFresh.value) {
         await refresh()
       }
     }, 5 * 60 * 1000) // 5分钟
@@ -84,6 +142,12 @@ export const useAnimeList = (seasonId: string) => {
     error,
     refresh,
     isDataFresh,
-    forceRefresh
+    forceRefresh,
+    // 新增的错误处理相关
+    isErrorState,
+    isRetrying: readonly(isRetrying),
+    retryAttempt: readonly(retryAttempt),
+    smartRetry,
+    lastError: readonly(lastError)
   }
 } 

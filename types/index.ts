@@ -4,6 +4,23 @@ export interface ApiResponse<T> {
   error?: string
 }
 
+// 错误信息类型定义
+export interface ErrorInfo {
+  type: 'network' | 'api' | 'cors' | 'unknown'
+  message: string
+  status?: number
+  retryable: boolean
+  retryCount: number
+}
+
+// 缓存键信息类型定义
+export interface CacheKeyInfo {
+  baseKey: string
+  isError: boolean
+  timestamp: number
+  retryAttempt: number
+}
+
 // 原始API响应类型
 export interface RawAvailableSeasons {
   current_season_id: number

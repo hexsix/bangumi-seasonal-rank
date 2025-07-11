@@ -1,7 +1,7 @@
 <template>
   <header class="bg-white shadow-sm border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16 relative">
+      <div class="flex justify-between items-center min-h-16 relative">
         <!-- Logo - 桌面端左侧，移动端居中 -->
         <div class="flex items-center md:flex-1">
           <NuxtLink to="/" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors no-underline md:text-left text-center md:w-auto w-full clamp-title">

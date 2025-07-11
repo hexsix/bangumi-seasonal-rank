@@ -218,6 +218,7 @@ const getMobileTopTags = (anime: Anime) => {
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     display: block;
+    line-height: 1.2;
   }
 }
 </style> 
