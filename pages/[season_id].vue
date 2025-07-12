@@ -132,7 +132,13 @@ const showLargeImage = (url: string, alt: string) => {
 }
 
 useHead({
-  title: `${formatSeasonName(seasonId)} - Bangumi.tv 动画季度排行榜`
+  title: `${formatSeasonName(seasonId)} - Bangumi 新番排行榜`,
+  meta: [
+    {
+      name: 'description',
+      content: `查看${formatSeasonName(seasonId)}所有新番动画的Bangumi.tv排行榜。我们根据用户评分、收藏数量和综合排名，为您提供最及时、最全面的新番动画排行数据。`
+    }
+  ]
 })
 </script>
 

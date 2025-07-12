@@ -74,7 +74,7 @@
 </template>
 
 <script setup lang="ts">
-import { formatTitle } from '~/utils/helpers'
+import { formatSeasonName } from '~/utils/helpers'
 
 const mobileMenuOpen = ref(false)
 const route = useRoute()
@@ -86,9 +86,10 @@ const toggleMobileMenu = () => {
 
 const pageTitle = computed(() => {
   if (route.name === 'season_id' && route.params.season_id) {
-    return formatTitle(String(route.params.season_id))
+    const seasonName = formatSeasonName(String(route.params.season_id))
+    return `Bangumi ${seasonName}新番排行`
   }
-  return 'Bangumi.tv 动画季度排行榜'
+  return 'Bangumi 新番排行榜'
 })
 
 const recentSeasons = computed(() => {

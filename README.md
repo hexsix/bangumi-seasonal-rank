@@ -1,4 +1,4 @@
-# Bangumi.tv 动画季度排行榜
+# Bangumi 新番排行榜
 
 使用Nuxt.js构建的Bangumi.tv动画季度排行榜展示网站，通过API获取实时数据。
 
@@ -15,32 +15,37 @@
 
 - **前端框架**: Nuxt 3
 - **UI框架**: UnoCSS
-- **状态管理**: 
+- **状态管理**:
 - **HTTP客户端**: Axios
-- **后端API**: 外部API服务 (https://api.rinshankaiho.fun)
+- **后端API**: 外部API服务
 
 ## 开发
 
 ### 环境要求
+
 - Node.js 18+
 - pnpm (推荐) 或 npm
 
 ### 安装依赖
+
 ```bash
 pnpm install
 ```
 
 ### 启动开发服务器
+
 ```bash
 pnpm dev
 ```
 
 ### 构建生产版本
+
 ```bash
 pnpm build
 ```
 
 ### 预览生产版本
+
 ```bash
 pnpm preview
 ```
@@ -48,11 +53,13 @@ pnpm preview
 ## 部署
 
 ### 静态部署
+
 ```bash
 pnpm generate
 ```
 
 ### 服务端部署
+
 ```bash
 pnpm build
 ```
@@ -100,7 +107,7 @@ API返回的数据结构如下:
 
 ```bash
 # API基础URL
-API_BASE_URL=https://api.rinshankaiho.fun
+API_BASE_URL=http://api.example.com
 ```
 
 ## 贡献

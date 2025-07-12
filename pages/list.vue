@@ -1,9 +1,8 @@
 <template>
   <div>
     <!-- 页面标题 -->
-    <div class="mb-8">
+    <div class="mb-4">
       <h1 class="text-3xl font-bold text-gray-900 mb-2">季度列表</h1>
-      <p class="text-gray-600">选择您想查看的动画季度</p>
     </div>
 
     <!-- 加载状态 -->
@@ -22,12 +21,12 @@
     </div>
 
     <!-- 季度列表 -->
-    <div v-else-if="years.length > 0" class="space-y-8">
-      <div v-for="year in years" :key="year" class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+    <div v-else-if="years.length > 0" class="space-y-4">
+      <div v-for="year in years" :key="year" class="bg-white rounded-lg shadow-sm border border-gray-200 pt-3 pb-3 px-3">
+        <h2 class="text-2xl font-bold text-gray-800 mb-2 mt-0">
           {{ year }}
         </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <NuxtLink
             v-for="season in groupedSeasons[year]"
             :key="season.season_id"
@@ -41,7 +40,7 @@
                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               >
             </div>
-            <div class="p-4">
+            <div class="p-2">
               <div class="text-lg font-medium text-gray-900">{{ formatSeasonName(season.season_id) }}</div>
             </div>
           </NuxtLink>
@@ -65,6 +64,6 @@ const { groupedSeasons, years, pending, error, refresh } = useSeasons()
 
 // 设置页面元数据
 useHead({
-  title: '季度列表 - Bangumi.tv 动画季度排行榜'
+  title: '季度列表 - Bangumi 新番排行榜'
 })
 </script>
