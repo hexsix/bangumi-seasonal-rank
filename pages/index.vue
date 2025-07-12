@@ -33,6 +33,6 @@ watch(currentSeasonId, (newData) => {
 
 // 设置页面元数据
 useHead({
-  title: 'Bangumi.tv 动画季度排行榜 - 首页'
+  title: 'Bangumi 新番排行榜 - 首页'
 })
 </script>

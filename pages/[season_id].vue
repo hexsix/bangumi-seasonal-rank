@@ -132,7 +132,7 @@ const showLargeImage = (url: string, alt: string) => {
 }
 
 useHead({
-  title: `${formatSeasonName(seasonId)}新番排行 - Bangumi.tv动画排行榜`,
+  title: `${formatSeasonName(seasonId)} - Bangumi 新番排行榜`,
   meta: [
     {
       name: 'description',

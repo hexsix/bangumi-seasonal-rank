@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   css: ['~/assets/styles/global.css'],
   app: {
     head: {
-      title: 'Bangumi.tv 动画季度排行榜',
+      title: 'Bangumi 新番排行榜',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

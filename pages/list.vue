@@ -64,6 +64,6 @@ const { groupedSeasons, years, pending, error, refresh } = useSeasons()
 
 // 设置页面元数据
 useHead({
-  title: '季度列表 - Bangumi.tv 动画季度排行榜'
+  title: '季度列表 - Bangumi 新番排行榜'
 })
 </script>

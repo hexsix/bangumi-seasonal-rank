@@ -15,7 +15,7 @@
             </svg>
           </a>
         </p>
-        <p class="mt-1">© 2025 Bangumi.tv 动画季度排行榜</p>
+        <p class="mt-1">© 2025 Bangumi 新番排行榜</p>
       </div>
     </div>
   </footer>
