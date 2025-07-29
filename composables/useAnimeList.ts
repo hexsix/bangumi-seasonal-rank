@@ -131,24 +131,6 @@ export const useAnimeList = (seasonId: string) => {
     await refresh()
   }
 
-  // 自动刷新机制（每5分钟检查一次）
-  const autoRefreshTimer = ref<NodeJS.Timeout | null>(null)
-  
-  onMounted(() => {
-    autoRefreshTimer.value = setInterval(async () => {
-      // 只有在没有错误且数据不新鲜时才自动刷新
-      if (!isErrorState.value && !isDataFresh.value) {
-        await refresh()
-      }
-    }, 5 * 60 * 1000) // 5分钟
-  })
-
-  onUnmounted(() => {
-    if (autoRefreshTimer.value) {
-      clearInterval(autoRefreshTimer.value)
-    }
-  })
-
   return {
     seasonData,
     animeList: sortedAnimeList,
