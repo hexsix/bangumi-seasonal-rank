@@ -57,7 +57,14 @@
 
       <!-- Anime List -->
       <div v-else-if="filteredAnimeList.length > 0" class="anime-list">
-        <AnimeListItem v-for="(anime, index) in filteredAnimeList" :key="anime.id" :anime="anime" :index="index" @show-image="showLargeImage" />
+        <AnimeListItem 
+          v-for="(anime, index) in filteredAnimeList" 
+          :key="anime.id" 
+          :anime="anime" 
+          :index="index" 
+          :top-three-by-metric="topThreeByMetric"
+          @show-image="showLargeImage" 
+        />
       </div>
 
       <!-- Empty State -->
@@ -130,6 +137,38 @@ const showLargeImage = (url: string, alt: string) => {
   largeImageAlt.value = alt
   largeImageShow.value = true
 }
+
+// 辅助函数：获取指定指标的前三名ID
+const getTopThreeIds = (subjects: any[], metric: string, direction: 'asc' | 'desc') => {
+  return [...subjects]
+    .sort((a, b) => {
+      const aVal = a[metric] as number
+      const bVal = b[metric] as number
+      return direction === 'asc' ? aVal - bVal : bVal - aVal
+    })
+    .slice(0, 3)
+    .map(anime => anime.id)
+}
+
+// 计算各个指标的前三名动画ID
+const topThreeByMetric = computed(() => {
+  if (!seasonData.value?.subjects) return {
+    collection_total: [],
+    average_comment: [],
+    drop_rate: [],
+    score: [],
+    rank: []
+  }
+  
+  const subjects = seasonData.value.subjects
+  return {
+    collection_total: getTopThreeIds(subjects, 'collection_total', 'desc'),
+    average_comment: getTopThreeIds(subjects, 'average_comment', 'desc'),
+    drop_rate: getTopThreeIds(subjects, 'drop_rate', 'asc'), // 抛弃率越小越好
+    score: getTopThreeIds(subjects, 'score', 'desc'),
+    rank: getTopThreeIds(subjects, 'rank', 'asc')
+  }
+})
 
 useHead({
   title: `${formatSeasonName(seasonId)} - Bangumi 新番排行榜`,

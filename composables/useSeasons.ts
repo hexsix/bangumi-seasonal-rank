@@ -119,24 +119,6 @@ export const useSeasons = () => {
     await refresh()
   }
 
-  // 自动刷新机制（每10分钟检查一次，季度列表更新频率较低）
-  const autoRefreshTimer = ref<NodeJS.Timeout | null>(null)
-  
-  onMounted(() => {
-    autoRefreshTimer.value = setInterval(async () => {
-      // 只有在没有错误时才自动刷新
-      if (!isErrorState.value) {
-        await refresh()
-      }
-    }, 10 * 60 * 1000) // 10分钟
-  })
-
-  onUnmounted(() => {
-    if (autoRefreshTimer.value) {
-      clearInterval(autoRefreshTimer.value)
-    }
-  })
-
   return {
     seasons: seasonsData,
     groupedSeasons,
