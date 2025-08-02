@@ -1,7 +1,7 @@
 import { ref, watch, onMounted } from 'vue'
 
 export function useColorMode() {
-  const isDark = ref(false)
+  const isDark = ref<boolean>(process.client ? document.documentElement.classList.contains('dark') : false)
   const storageKey = 'color-scheme'
 
   const setDark = (value: boolean) => {
