@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-50">
+  <div class="min-h-screen bg-gray-50 dark:bg-[#2d2e2f]">
     <!-- 头部导航 -->
     <LayoutHeader />
 

@@ -27,6 +27,13 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ],
+      script: [
+        {
+          innerHTML: `(function(){try{const t=localStorage.getItem('color-scheme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}})();`,
+          type: 'text/javascript',
+          tagPosition: 'head-prepend'
+        }
       ]
     }
   }

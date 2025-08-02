@@ -10,7 +10,7 @@
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-end gap-2 sm:gap-4 mt-2">
             <!-- 筛选勾选框，移动端在上 -->
             <div>
-              <label class="flex items-center cursor-pointer select-none text-xs sm:text-sm text-gray-700">
+              <label class="flex items-center cursor-pointer select-none text-xs sm:text-sm text-gray-700 dark:text-gray-300">
                 <input
                   type="checkbox"
                   v-model="showOnlyRanked"
@@ -30,7 +30,7 @@
                   'px-2.5 py-1 text-xs rounded font-medium transition-colors duration-150 focus:outline-none whitespace-nowrap sort-btn',
                   sortBy === option.field 
                     ? 'bg-blue-500 text-white'
-                    : 'bg-gray-100 text-gray-800 hover:bg-blue-50'
+                    : 'bg-gray-100 text-gray-800 hover:bg-blue-50 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600'
                 ]"
                 style="border: none;"
               >
@@ -44,10 +44,10 @@
 
       <!-- Loading/Error States -->
       <div v-if="pending" class="flex justify-center items-center min-h-64">
-        <div class="text-gray-500">正在加载动画数据...</div>
+        <div class="text-gray-500 dark:text-gray-400">正在加载动画数据...</div>
       </div>
       <div v-else-if="error" class="flex justify-center items-center min-h-64">
-        <div class="text-red-500">
+        <div class="text-red-500 dark:text-red-400">
           <p>加载动画数据失败</p>
           <button @click="() => refresh()" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
             重试
@@ -69,12 +69,12 @@
 
       <!-- Empty State -->
       <div v-else class="flex justify-center items-center min-h-64">
-        <div class="text-gray-500">该季度暂无动画数据</div>
+        <div class="text-gray-500 dark:text-gray-400">该季度暂无动画数据</div>
       </div>
     </div>
 
     <!-- 数据更新时间移至底部 Footer 上方 -->
-    <div v-if="lastUpdateTime" class="text-xs sm:text-sm text-gray-600 flex items-center justify-center mt-8 mb-2">
+    <div v-if="lastUpdateTime" class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex items-center justify-center mt-8 mb-2">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 sm:h-4 sm:w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>

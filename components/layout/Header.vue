@@ -1,10 +1,10 @@
 <template>
-  <header class="bg-white shadow-sm">
+  <header class="bg-white dark:bg-[#343536] shadow-sm transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center min-h-16 relative">
         <!-- Logo - 桌面端左侧，移动端居中 -->
         <div class="flex items-center md:flex-1">
-          <NuxtLink to="/" class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors no-underline md:text-left text-center md:w-auto w-full clamp-title">
+          <NuxtLink to="/" class="text-xl font-bold text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors no-underline md:text-left text-center md:w-auto w-full clamp-title">
             {{ pageTitle }}
           </NuxtLink>
         </div>
@@ -15,28 +15,35 @@
             v-for="season in recentSeasons"
             :key="season.season_id"
             :to="`/${season.season_id}`"
-            class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors no-underline"
-            active-class="text-blue-600 bg-blue-50"
+            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors no-underline"
+            active-class="text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-900/50"
           >
             {{ formatSeasonNameShort(season.season_id) }}
           </NuxtLink>
           <NuxtLink
             to="/list"
-            class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors no-underline"
-            active-class="text-blue-600 bg-blue-50"
+            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors no-underline"
+            active-class="text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-900/50"
           >
             更多
           </NuxtLink>
         </nav>
 
+        <!-- 右侧工具区 -->
+        <div class="hidden md:flex flex-1 justify-end items-center">
+          <button @click="colorMode.toggleDark()" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 border-none bg-transparent shadow-none outline-none p-2 rounded-full" aria-label="切换暗色模式">
+            <svg v-if="colorMode.isDark.value" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg v-else class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM3 11a1 1 0 100-2H2a1 1 0 100 2h1z"></path></svg>
+          </button>
+        </div>
+
         <!-- 移动端菜单按钮 -->
         <div class="md:hidden flex-1 flex justify-end">
           <button 
-            class="text-gray-700 hover:text-blue-600 transition-colors duration-200 border-none bg-transparent shadow-none outline-none" 
+            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 border-none bg-transparent shadow-none outline-none" 
             @click="toggleMobileMenu"
             aria-label="菜单"
           >
-            <!-- Material Design Hamburger Icon -->
             <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="4" y="6" width="16" height="2" rx="1" fill="currentColor"/>
               <rect x="4" y="11" width="16" height="2" rx="1" fill="currentColor"/>
@@ -53,20 +60,27 @@
             v-for="season in recentSeasons"
             :key="season.season_id"
             :to="`/${season.season_id}`"
-            class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium no-underline"
-            active-class="text-blue-600 bg-blue-50"
+            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium no-underline"
+            active-class="text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-900/50"
             @click="mobileMenuOpen = false"
           >
             {{ formatSeasonNameShort(season.season_id) }}
           </NuxtLink>
           <NuxtLink
             to="/list"
-            class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium no-underline"
-            active-class="text-blue-600 bg-blue-50"
+            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium no-underline"
+            active-class="text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-900/50"
             @click="mobileMenuOpen = false"
           >
             更多季度
           </NuxtLink>
+           <div class="border-t border-gray-200 dark:border-gray-700 pt-3 mt-3">
+             <button @click="colorMode.toggleDark()" class="w-full flex items-center justify-between text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors no-underline">
+                <span>切换主题</span>
+                <svg v-if="colorMode.isDark.value" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg v-else class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM3 11a1 1 0 100-2H2a1 1 0 100 2h1z"></path></svg>
+             </button>
+           </div>
         </div>
       </div>
     </div>
@@ -79,6 +93,9 @@ import { formatSeasonName } from '~/utils/helpers'
 const mobileMenuOpen = ref(false)
 const route = useRoute()
 const { seasons } = useSeasons()
+const { $colorMode } = useNuxtApp()
+const colorMode = $colorMode as { isDark: Ref<boolean>, toggleDark: () => void }
+
 
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
