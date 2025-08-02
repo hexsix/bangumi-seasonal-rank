@@ -2,17 +2,17 @@
   <div>
     <!-- 页面标题 -->
     <div class="mb-4">
-      <h1 class="text-3xl font-bold text-gray-900 mb-2">季度列表</h1>
+      <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">季度列表</h1>
     </div>
 
     <!-- 加载状态 -->
     <div v-if="pending" class="flex justify-center items-center min-h-64">
-      <div class="text-gray-500">正在加载季度列表...</div>
+      <div class="text-gray-500 dark:text-gray-400">正在加载季度列表...</div>
     </div>
 
     <!-- 错误状态 -->
     <div v-else-if="error" class="flex justify-center items-center min-h-64">
-      <div class="text-red-500">
+      <div class="text-red-500 dark:text-red-400">
         <p>加载季度列表失败</p>
         <button class="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" @click="() => refresh()">
           重试
@@ -22,8 +22,8 @@
 
     <!-- 季度列表 -->
     <div v-else-if="years.length > 0" class="space-y-4">
-      <div v-for="year in years" :key="year" class="bg-white rounded-lg shadow-sm border border-gray-200 pt-3 pb-3 px-3">
-        <h2 class="text-2xl font-bold text-gray-800 mb-2 mt-0">
+      <div v-for="year in years" :key="year" class="bg-white dark:bg-[#3d3d3f] rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 pt-3 pb-3 px-3">
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2 mt-0">
           {{ year }}
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -31,7 +31,7 @@
             v-for="season in groupedSeasons[year]"
             :key="season.season_id"
             :to="`/${season.season_id}`"
-            class="group block rounded-lg overflow-hidden border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300 no-underline"
+            class="group block rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-lg transition-all duration-300 no-underline"
           >
             <div class="w-full h-40 overflow-hidden">
               <img
@@ -41,7 +41,7 @@
               >
             </div>
             <div class="p-2">
-              <div class="text-lg font-medium text-gray-900">{{ formatSeasonName(season.season_id) }}</div>
+              <div class="text-lg font-medium text-gray-900 dark:text-gray-100">{{ formatSeasonName(season.season_id) }}</div>
             </div>
           </NuxtLink>
         </div>
@@ -50,7 +50,7 @@
 
     <!-- 空状态 -->
     <div v-else class="flex justify-center items-center min-h-64">
-      <div class="text-gray-500">暂无季度数据</div>
+      <div class="text-gray-500 dark:text-gray-400">暂无季度数据</div>
     </div>
   </div>
 </template>

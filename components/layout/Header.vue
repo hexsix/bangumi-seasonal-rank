@@ -1,16 +1,17 @@
 <template>
   <header class="bg-white dark:bg-[#343536] shadow-sm transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center min-h-16 relative">
-        <!-- Logo - 桌面端左侧，移动端居中 -->
-        <div class="flex items-center md:flex-1">
+      <div class="flex items-center min-h-16">
+        <!-- Logo -->
+        <div class="flex-1 md:flex-none flex items-center">
           <NuxtLink to="/" class="text-xl font-bold text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors no-underline md:text-left text-center md:w-auto w-full clamp-title">
             {{ pageTitle }}
           </NuxtLink>
         </div>
 
-        <!-- 导航菜单 (桌面) - 居中 -->
-        <nav class="hidden md:flex space-x-4 flex-1 justify-center">
+        <!-- 右侧可点击区域 (桌面) -->
+        <div class="hidden md:flex flex-1 justify-end items-center space-x-4">
+          <nav class="flex items-center space-x-4">
           <NuxtLink
             v-for="season in recentSeasons"
             :key="season.season_id"
@@ -29,9 +30,7 @@
           </NuxtLink>
         </nav>
 
-        <!-- 右侧工具区 -->
-        <div class="hidden md:flex flex-1 justify-end items-center">
-          <button @click="colorMode.toggleDark()" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 border-none bg-transparent shadow-none outline-none p-2 rounded-full" aria-label="切换暗色模式">
+          <button @click="colorMode.toggleDark()" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 border-none bg-transparent shadow-none outline-none w-10 h-10 flex items-center justify-center rounded-full" aria-label="切换暗色模式">
             <svg v-if="colorMode.isDark.value" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
             <svg v-else class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM3 11a1 1 0 100-2H2a1 1 0 100 2h1z"></path></svg>
           </button>
@@ -75,7 +74,7 @@
             更多季度
           </NuxtLink>
            <div class="border-t border-gray-200 dark:border-gray-700 pt-3 mt-3">
-             <button @click="colorMode.toggleDark()" class="w-full flex items-center justify-between text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors no-underline">
+             <button @click="colorMode.toggleDark(); mobileMenuOpen = false" class="w-full flex items-center justify-between text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium no-underline">
                 <span>切换主题</span>
                 <svg v-if="colorMode.isDark.value" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                 <svg v-else class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM3 11a1 1 0 100-2H2a1 1 0 100 2h1z"></path></svg>
