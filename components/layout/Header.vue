@@ -73,12 +73,18 @@
           >
             更多季度
           </NuxtLink>
-           <div class="border-t border-gray-200 dark:border-gray-700 pt-3 mt-3">
-             <button @click="colorMode.toggleDark(); mobileMenuOpen = false" class="w-full flex items-center justify-between text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium no-underline">
+           <div class="border-t border-gray-200 dark:border-gray-700 mt-2 pt-2">
+             <NuxtLink
+               :to="route.fullPath"
+               @click.prevent="colorMode.toggleDark(); mobileMenuOpen = false"
+               class="w-full flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium no-underline"
+               active-class="bg-transparent"
+               exact-active-class="bg-transparent"
+             >
                 <span>切换主题</span>
                 <svg v-if="colorMode.isDark.value" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                 <svg v-else class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM3 11a1 1 0 100-2H2a1 1 0 100 2h1z"></path></svg>
-             </button>
+             </NuxtLink>
            </div>
         </div>
       </div>
