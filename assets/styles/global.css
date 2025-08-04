@@ -1,5 +1,11 @@
 /* 项目特定样式 - Wind4 内置重置样式已处理基础样式 */
 
+/* 修复 Safari 和 Firefox 暗色模式闪烁问题 */
+body {
+  @apply bg-gray-50 dark:bg-[#2d2e2f];
+  transition: background-color 0.3s ease;
+}
+
 /* 自定义样式 */
 .line-clamp-1 {
   overflow: hidden;
