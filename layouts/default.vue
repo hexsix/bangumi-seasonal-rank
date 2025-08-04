@@ -14,11 +14,19 @@
 </template>
 
 <script setup lang="ts">
+import { applySafariScrollFixes, optimizeScrollPerformance } from '~/utils/safari-fixes'
+
 // 设置页面元数据
 useHead({
   title: 'Bangumi 新番排行榜',
   meta: [
     { name: 'description', content: 'Bangumi.tv动画季度排行榜展示网站，实时获取最新动画排行数据' }
   ]
+})
+
+// 在客户端应用Safari修复
+onMounted(() => {
+  applySafariScrollFixes()
+  optimizeScrollPerformance()
 })
 </script>

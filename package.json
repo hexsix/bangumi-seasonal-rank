@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@unocss/eslint-config": "^66.3.3",
-    "@unocss/nuxt": "^66.3.3"
+    "@unocss/nuxt": "^66.3.3",
+    "@unocss/preset-wind4": "^66.4.1"
   }
 }
