@@ -182,13 +182,34 @@ useHead({
 </script>
 
 <style scoped>
+/* Safari滚动优化 - 激进简化版本 */
 .anime-list > div {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* 移除所有可能误导Safari的属性 */
+  /* contain: none; */
+  /* will-change: auto; */
+  transform: translateZ(0); /* 仅保留GPU合成 */
+  /* transition: none; */
 }
 
 .anime-list > div:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  /* 最小化hover效果 */
+  transform: translateZ(0);
+  /* opacity: 1; */
+}
+
+/* Safari浏览器中完全禁用所有动画 */
+.safari-browser .anime-list > div {
+  transition: none !important;
+  animation: none !important;
+  will-change: auto !important;
+  contain: none !important;
+  transform: translateZ(0) !important;
+}
+
+.safari-browser .anime-list > div:hover {
+  /* Safari中完全禁用hover效果 */
+  transform: translateZ(0) !important;
+  opacity: 1 !important;
 }
 
 @media (max-width: 640px) {

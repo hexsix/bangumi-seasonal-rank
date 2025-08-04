@@ -3,7 +3,10 @@
 /* 修复 Safari 和 Firefox 暗色模式闪烁问题 */
 body {
   @apply bg-gray-50 dark:bg-[#2d2e2f];
-  transition: background-color 0.3s ease;
+  /* 移除过渡和contain属性，避免Safari滚动闪屏 */
+  /* transition: background-color 0.3s ease; */
+  /* contain: layout style paint; */
+  /* will-change: auto; */
 }
 
 /* 自定义样式 */
@@ -70,4 +73,67 @@ body {
   100% {
     background-position: -200% 0;
   }
+}
+
+/* Safari滚动闪屏终极修复 */
+.safari-browser {
+  -webkit-transform: translate3d(0,0,0) !important;
+  transform: translate3d(0,0,0) !important;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+  -webkit-perspective: 1000 !important;
+  perspective: 1000 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+.safari-browser * {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-transform: translateZ(0) !important;
+  transform: translateZ(0) !important;
+  /* 移除所有可能误导Safari的属性 */
+  will-change: auto !important;
+  contain: none !important;
+}
+
+.safari-browser body {
+  -webkit-overflow-scrolling: auto !important;
+  overflow-x: hidden !important;
+  -webkit-transform: translate3d(0,0,0) !important;
+  transform: translate3d(0,0,0) !important;
+}
+
+/* 滚动时完全禁用所有动画 - 激进方案 */
+.safari-scrolling * {
+  transition: none !important;
+  animation: none !important;
+  transform: translateZ(0) !important;
+  will-change: auto !important;
+}
+
+.safari-scrolling {
+  -webkit-overflow-scrolling: auto !important;
+}
+
+/* Safari深色模式闪烁修复 */
+@media (prefers-color-scheme: dark) {
+  .safari-browser {
+    color-scheme: dark !important;
+  }
+}
+
+/* Safari图片优化 */
+.safari-browser .safari-image-fix {
+  -webkit-transform: translateZ(0) !important;
+  transform: translateZ(0) !important;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+  image-rendering: -webkit-optimize-contrast !important;
+}
+
+/* 禁用Safari中可能触发闪屏的图片过渡 */
+.safari-browser img {
+  transition: none !important;
+  animation: none !important;
 }

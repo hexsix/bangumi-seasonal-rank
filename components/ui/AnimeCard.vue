@@ -1,10 +1,10 @@
 <template>
-  <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+  <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow anime-card-optimized">
     <!-- 动画海报 -->
     <div class="aspect-[3/4] bg-gray-200 overflow-hidden">
       <img
-:src="anime.images_grid" :alt="anime.name_cn || anime.name" class="w-full h-full object-cover"
-        loading="lazy" >
+:src="anime.images_grid" :alt="anime.name_cn || anime.name" class="w-full h-full object-cover safari-image-fix"
+        :loading="isSafari() ? 'eager' : 'lazy'" >
     </div>
 
     <!-- 动画信息 -->
@@ -49,6 +49,7 @@ v-for="tag in anime.meta_tags.slice(0, 3)" :key="tag"
 
 <script setup lang="ts">
 import { formatScore, formatNumber } from '~/utils/helpers'
+import { isSafari } from '~/utils/safari-fixes'
 
 defineProps({
   anime: {
@@ -57,3 +58,33 @@ defineProps({
   }
 })
 </script>
+
+<style scoped>
+/* Safari滚动优化 - 激进简化版本 */
+.anime-card-optimized {
+  /* 移除所有可能误导Safari的属性 */
+  /* contain: none; */
+  /* will-change: auto; */
+  transform: translateZ(0); /* 仅保留GPU合成 */
+}
+
+.anime-card-optimized:hover {
+  /* 最小化hover效果 */
+  transform: translateZ(0);
+}
+
+/* Safari浏览器中完全禁用所有动画 */
+.safari-browser .anime-card-optimized {
+  transition: none !important;
+  animation: none !important;
+  will-change: auto !important;
+  contain: none !important;
+  transform: translateZ(0) !important;
+}
+
+.safari-browser .anime-card-optimized:hover {
+  /* Safari中完全禁用hover效果 */
+  transform: translateZ(0) !important;
+  box-shadow: none !important;
+}
+</style>

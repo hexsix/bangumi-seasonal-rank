@@ -15,8 +15,8 @@
           v-if="props.anime && props.anime.images_grid" 
           :src="props.anime.images_grid" 
           :alt="props.anime.name" 
-          class="w-14 sm:w-16 h-20 sm:h-24 object-cover cursor-pointer rounded"
-          loading="lazy"
+          class="w-14 sm:w-16 h-20 sm:h-24 object-cover cursor-pointer rounded safari-image-fix"
+          :loading="isSafari() ? 'eager' : 'lazy'"
           @error="handleImageError"
         />
         <div v-else class="w-14 sm:w-16 h-20 sm:h-24 flex items-center justify-center bg-gray-100 dark:bg-gray-700 text-gray-400 dark:text-gray-500 rounded">
@@ -181,6 +181,7 @@
 
 <script setup lang="ts">
 import type { Anime } from '~/types'
+import { isSafari } from '~/utils/safari-fixes'
 
 const props = defineProps<{
   anime: Anime
@@ -221,17 +222,37 @@ const isTopThree = (metric: keyof typeof props.topThreeByMetric) => {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
 }
 
+/* Safari滚动优化 - 激进简化版本 */
 .anime-list > div {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* 移除所有可能误导Safari的属性 */
+  /* contain: none; */
+  /* will-change: auto; */
+  transform: translateZ(0); /* 仅保留GPU合成 */
+  
+  /* 完全移除过渡效果 */
+  /* transition: none; */
 }
 
 .anime-list > div:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  /* 最小化hover效果，避免重排 */
+  transform: translateZ(0);
+  /* opacity: 1; */
 }
 
-.dark .anime-list > div:hover {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.25);
+/* Safari浏览器中完全禁用所有动画 */
+.safari-browser .anime-list > div {
+  transition: none !important;
+  animation: none !important;
+  will-change: auto !important;
+  contain: none !important;
+  transform: translateZ(0) !important;
+}
+
+.safari-browser .anime-list > div:hover {
+  /* Safari中完全禁用hover效果 */
+  transform: translateZ(0) !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
 }
 
 @media (max-width: 640px) {
