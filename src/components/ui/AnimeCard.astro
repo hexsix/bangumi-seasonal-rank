@@ -1,0 +1,22 @@
+---
+const {
+    id,
+    name,
+    name_cn,
+    images_large,
+    images_grid,
+    score,
+    rank,
+    collection_total,
+    average_comment,
+    drop_rate,
+    air_weekday,
+    meta_tags,
+} = Astro.props;
+---
+
+<div class="anime-card">
+    <div class="">
+        <img src={images_grid} />
+    </div>
+</div>
