@@ -1,24 +1,16 @@
 ---
-const seasonName = "2025年7月";
-const seasonIdList = [
-    "202507",
-    "202504",
-    "202501",
-    "202410",
-    "202407",
-    "202404",
-];
+const { displaySeasonId, availableSeasonIdList } = Astro.props;
 ---
 
 <div class="nav-links">
     <div class="nav-title">
-        <a href="/">Bangumi {seasonName}新番排行</a>
+        <a href="/">Bangumi {displaySeasonId}新番排行</a>
     </div>
     <ul class="nav-li">
         {
-            seasonIdList.map((seasonId) => (
+            availableSeasonIdList.slice(0, 6).map((seasonId: string) => (
                 <li>
-                    <a href="/${seasonId}/">{seasonId}</a>
+                    <a href={`/${seasonId}/`}>{seasonId}</a>
                 </li>
             ))
         }

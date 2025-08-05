@@ -1,5 +1,6 @@
 ---
 const {
+    index,
     id,
     name,
     name_cn,
@@ -16,7 +17,51 @@ const {
 ---
 
 <div class="anime-card">
-    <div class="">
-        <img src={images_grid} />
+    <!-- 排名 -->
+    <div>
+        <div>{index + 1}</div>
+    </div>
+
+    <div>
+        <!-- 动画海报 -->
+        <div class="">
+            <img src={images_grid} />
+        </div>
+        <!-- 动画信息 -->
+        <div>
+            <!-- 标题 -->
+            <div>
+                <div>
+                    <a href={`https://bgm.tv/subject/${id}`} target="_blank">
+                        {name_cn}
+                    </a>
+                </div>
+                <div>{name}</div>
+            </div>
+            <!-- 评分 -->
+            <div>
+                <div>{score}</div>
+                <div>rank: {rank}</div>
+            </div>
+            <!-- 标签 -->
+            <div>
+                <div>{air_weekday}</div>
+                <div>
+                    {meta_tags.map((tag: string) => <div>{tag}</div>)}
+                </div>
+            </div>
+            <!-- 收藏数 -->
+            <div>
+                <div>
+                    收藏：{collection_total}
+                </div>
+                <div>
+                    平均评论：{average_comment}
+                </div>
+                <div>
+                    抛弃率：{drop_rate}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
