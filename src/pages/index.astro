@@ -1,8 +1,9 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "首页";
----
+const response = await fetch(
+    "https://api.rinshankaiho.fun/api/v0/season/available",
+).then((res) => res.json());
 
-<BaseLayout pageTitle={pageTitle}>
-    <h2>我超棒的博客副标题</h2>
-</BaseLayout>
+const current_season_id = response.current_season_id;
+
+return Astro.redirect(`/${current_season_id}/`);
+---
