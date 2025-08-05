@@ -56,8 +56,19 @@ const seasonImages: Record<string, string> = {
   "202507": "https://lain.bgm.tv/pic/cover/l/52/88/390555_11QS3.jpg",
   "202510": "https://lain.bgm.tv/pic/cover/l/3d/79/498378_uLEly.jpg",
 };
+
+const { availableSeasonIdList } = Astro.props;
 ---
 
 <div>
-  <h2>AnimeList</h2>
+    {availableSeasonIdList.map((seasonId: string) => (
+        <div>
+            <a href={`/${seasonId}/`}>
+                <img src={seasonImages[seasonId]} alt={seasonId} />
+            </a>
+            <div>
+                {seasonId}
+            </div>
+        </div>
+    ))}
 </div>
