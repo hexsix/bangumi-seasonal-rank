@@ -1,9 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import AnimeList from "../components/sections/AnimeList.astro";
-const pageTitle = "更多";
+
+const response = await fetch(
+    "https://api.rinshankaiho.fun/api/v0/season/available",
+).then((res) => res.json());
+
+const availableSeasonIdList = response.available_seasons;
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-    <AnimeList />
+<BaseLayout>
+    <AnimeList availableSeasonIdList={availableSeasonIdList} />
 </BaseLayout>
