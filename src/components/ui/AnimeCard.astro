@@ -1,4 +1,6 @@
 ---
+import { Icon } from "astro-icon/components";
+
 const {
     index,
     id,
@@ -53,13 +55,16 @@ const {
             <!-- 收藏数 -->
             <div>
                 <div>
-                    收藏：{collection_total}
+                    <Icon name="mdi:bookmark-outline" />
+                    <span>收藏：{collection_total}</span>
                 </div>
                 <div>
-                    平均评论：{average_comment}
+                    <Icon name="mdi:comment-outline" />
+                    <span>平均评论：{average_comment}</span>
                 </div>
                 <div>
-                    抛弃率：{drop_rate}
+                    <Icon name="mdi:trash-can-outline" />
+                    <span>抛弃率：{drop_rate}</span>
                 </div>
             </div>
         </div>

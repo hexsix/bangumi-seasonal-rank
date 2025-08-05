@@ -1,5 +1,6 @@
 ---
 import AnimeCard from "../ui/AnimeCard.astro";
+import { Icon } from "astro-icon/components";
 
 const { season_id } = Astro.props;
 
@@ -18,21 +19,29 @@ const subjects = data.subjects;
         <div>评论</div>
         <div>抛弃率</div>
     </div>
-    {subjects.map((item: any, index: number) => (
-        <AnimeCard
-            index={index}
-            id={item.id}
-            name={item.name}
-            name_cn={item.name_cn}
-            images_large={item.images_large}
-            images_grid={item.images_grid}
-            score={item.score}
-            rank={item.rank}
-            collection_total={item.collection_total}
-            average_comment={item.average_comment}
-            drop_rate={item.drop_rate}
-            air_weekday={item.air_weekday}
-            meta_tags={item.meta_tags}
-        />
-    ))}
+    <div>
+        {
+            subjects.map((item: any, index: number) => (
+                <AnimeCard
+                    index={index}
+                    id={item.id}
+                    name={item.name}
+                    name_cn={item.name_cn}
+                    images_large={item.images_large}
+                    images_grid={item.images_grid}
+                    score={item.score}
+                    rank={item.rank}
+                    collection_total={item.collection_total}
+                    average_comment={item.average_comment}
+                    drop_rate={item.drop_rate}
+                    air_weekday={item.air_weekday}
+                    meta_tags={item.meta_tags}
+                />
+            ))
+        }
+    </div>
+    <div>
+        <Icon name="mdi:clock-outline" />
+        最后更新时间：{data.updated_at}
+    </div>
 </div>
