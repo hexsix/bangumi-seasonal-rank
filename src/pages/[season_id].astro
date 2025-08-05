@@ -1,14 +1,19 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AnimeRank from "../components/sections/AnimeRank.astro";
+
 export async function getStaticPaths() {
     const data = await fetch(
         "https://api.rinshankaiho.fun/api/v0/season/available",
     ).then((res) => res.json());
     const available_seasons = data.available_seasons;
     return available_seasons.map((season_id: string) => ({
-        params: { season: season_id },
+        params: { season_id: season_id },
     }));
 }
-const { season } = Astro.params;
+const { season_id } = Astro.params;
 ---
 
-<div>{season}!</div>
+<BaseLayout>
+    <AnimeRank season_id={season_id} />
+</BaseLayout>

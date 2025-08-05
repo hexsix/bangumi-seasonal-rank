@@ -2,19 +2,30 @@
 import Header from "../components/sections/Header.astro";
 import Footer from "../components/sections/Footer.astro";
 import "../styles/global.css";
+
+const data = await fetch(
+    "https://api.rinshankaiho.fun/api/v0/season/available",
+).then((res) => res.json());
+
+const current_season_id = data.current_season_id;
+const available_season_id_list = data.available_seasons;
+
 const { pageTitle } = Astro.props;
 ---
 
 <html lang="zh-CN">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
     </head>
     <body>
-        <Header />
+        <Header
+            displaySeasonId={current_season_id}
+            availableSeasonIdList={available_season_id_list}
+        />
         <h1>{pageTitle}</h1>
         <slot />
         <Footer />

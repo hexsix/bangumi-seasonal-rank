@@ -2,12 +2,17 @@
 import Hamburger from "../icons/Hamburger.astro";
 import Navigation from "../ui/Navigation.astro";
 import ThemeIcon from "../icons/ThemeIcon.astro";
+
+const { displaySeasonId, availableSeasonIdList } = Astro.props;
 ---
 
 <header>
     <nav>
         <Hamburger />
         <ThemeIcon />
-        <Navigation />
+        <Navigation
+            displaySeasonId={displaySeasonId}
+            availableSeasonIdList={availableSeasonIdList}
+        />
     </nav>
 </header>
