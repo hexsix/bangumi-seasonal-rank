@@ -1,18 +1,112 @@
 ---
-import Hamburger from "../icons/Hamburger.astro";
-import Navigation from "../ui/Navigation.astro";
-import ThemeIcon from "../icons/ThemeIcon.astro";
+import { Icon } from "astro-icon/components";
+import ThemeToggle from "../icons/ThemeToggle.astro";
 
 const { displaySeasonId, availableSeasonIdList } = Astro.props;
+
+export function getTitle(seasonId: number) {
+    const season_id = String(seasonId);
+    const year = season_id.slice(2, 4);
+    const season = season_id.slice(4, 6);
+    return `Bangumi ${year}年${season}月新番排行`;
+}
+
+export function getSeasonName(seasonId: number) {
+    const season_id = String(seasonId);
+    const year = season_id.slice(2, 4);
+    const season = season_id.slice(4, 6);
+    return `${year}年${season}月`;
+}
+
+let title = getTitle(displaySeasonId);
+if (
+    Astro.url &&
+    (Astro.url.pathname === "/" || Astro.url.pathname === "/more/")
+) {
+    title = "Bangumi 新番排行";
+}
 ---
 
-<header>
-    <nav>
-        <Hamburger />
-        <ThemeIcon />
-        <Navigation
-            displaySeasonId={displaySeasonId}
-            availableSeasonIdList={availableSeasonIdList}
-        />
-    </nav>
+<!-- 导航栏 -->
+<header
+    class="bg-white dark:bg-[#343536] shadow-sm transition-colors duration-300 sticky top-0 z-50"
+>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center min-h-16">
+            <!-- Logo -->
+            <div class="flex-1 flex md:flex-none items-center space-x-2">
+                <span class="text-xl font-bold text-gray-800 dark:text-white"
+                    >{title}</span
+                >
+            </div>
+
+            <!-- 桌面导航 -->
+            <nav
+                class="hidden md:flex flex-1 justify-end items-center space-x-4"
+            >
+                {
+                    availableSeasonIdList
+                        .slice(0, 6)
+                        .map((seasonId: number) => (
+                            <a
+                                href={`/${seasonId}/`}
+                                class="text-gray-600 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 font-small transition-colors"
+                            >
+                                {getSeasonName(seasonId)}
+                            </a>
+                        ))
+                }
+                <a
+                    href="/more/"
+                    class="text-gray-600 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 font-small transition-colors"
+                    >更多</a
+                >
+                <ThemeToggle />
+            </nav>
+
+            <!-- 移动端汉堡菜单按钮 -->
+            <button
+                id="menu-toggle"
+                class="md:hidden text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 border-none bg-transparent shadow-none outline-none"
+            >
+                <Icon name="mdi:menu" class="text-2xl" />
+            </button>
+        </div>
+    </div>
+
+    <!-- 移动端导航菜单 -->
+    <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white dark:bg-[#343536] py-4 px-4 border-t"
+    >
+        <div class="flex flex-col space-y-4">
+            {
+                availableSeasonIdList.slice(0, 6).map((seasonId: number) => (
+                    <a
+                        href={`/${seasonId}/`}
+                        class="text-gray-600 dark:text-white dark:hover:text-blue-400 hover:text-blue-600 font-medium transition-colors"
+                    >
+                        {getSeasonName(seasonId)}
+                    </a>
+                ))
+            }
+            <a
+                href="/more/"
+                class="text-gray-600 dark:text-white dark:hover:text-blue-400 hover:text-blue-600 font-medium transition-colors"
+                >更多季度</a
+            >
+            <ThemeToggle />
+        </div>
+    </div>
 </header>
+
+<script>
+    // 移动菜单切换功能
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle?.addEventListener("click", () => {
+        // 切换菜单显示/隐藏
+        mobileMenu?.classList.toggle("hidden");
+    });
+</script>

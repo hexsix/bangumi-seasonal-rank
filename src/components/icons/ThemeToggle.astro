@@ -1,0 +1,54 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<button
+    data-theme-toggle
+    class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors w-10 h-10 flex items-center justify-center"
+>
+    <Icon name="mdi:weather-night" class="text-xl" />
+</button>
+
+<script is:inline>
+    (() => {
+        const key = "theme";
+        const root = document.documentElement;
+
+        const getInitial = () => {
+            try {
+                const ls = localStorage.getItem(key);
+                if (ls === "light" || ls === "dark") return ls;
+            } catch (_) {}
+            return window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+        };
+
+        const apply = (theme) => {
+            if (theme === "dark") {
+                root.classList.add("dark");
+            } else {
+                root.classList.remove("dark");
+            }
+        };
+
+        // init
+        apply(getInitial());
+
+        const setTheme = (theme) => {
+            apply(theme);
+            try {
+                localStorage.setItem(key, theme);
+            } catch (_) {}
+        };
+
+        document.querySelectorAll('[data-theme-toggle]').forEach((btn) => {
+            if (btn.dataset.bound) return;
+            btn.dataset.bound = '1';
+            btn.addEventListener('click', () => {
+                const next = root.classList.contains('dark') ? 'light' : 'dark';
+                setTheme(next);
+            });
+        });
+    })();
+</script>
