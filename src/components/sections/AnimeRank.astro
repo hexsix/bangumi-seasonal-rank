@@ -21,15 +21,46 @@ function formatUpdatedAt(updated_at: string) {
 ---
 
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-    <div class="anime-rank-header">
-        <div>仅显示有排名的作品</div>
-        <div>Rank</div>
-        <div>评分</div>
-        <div>收藏</div>
-        <div>评论</div>
-        <div>抛弃率</div>
+    <div
+        class="anime-rank-header mobile:flex-col sm:flex-wrap sm:flex items-center gap-2 mb-4 dark:text-gray-300 justify-end"
+    >
+        <label class="flex items-center gap-1 text-sm pb-2 sm:pb-0">
+            <input
+                id="rankOnlyToggle"
+                type="checkbox"
+                class="accent-blue-600"
+            />
+            <span>仅显示有排名的作品</span>
+        </label>
+        <div class="flex flex-wrap items-center gap-2">
+            <button class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1" data-sort-key="rank">
+                Rank
+                <Icon name="mdi:chevron-up" class="icon-asc hidden text-xs" />
+                <Icon name="mdi:chevron-down" class="icon-desc hidden text-xs" />
+            </button>
+            <button class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1" data-sort-key="score">
+                评分
+                <Icon name="mdi:chevron-up" class="icon-asc hidden text-xs" />
+                <Icon name="mdi:chevron-down" class="icon-desc hidden text-xs" />
+            </button>
+            <button class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1" data-sort-key="collection">
+                收藏
+                <Icon name="mdi:chevron-up" class="icon-asc hidden text-xs" />
+                <Icon name="mdi:chevron-down" class="icon-desc hidden text-xs" />
+            </button>
+            <button class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1" data-sort-key="comment">
+                评论
+                <Icon name="mdi:chevron-up" class="icon-asc hidden text-xs" />
+                <Icon name="mdi:chevron-down" class="icon-desc hidden text-xs" />
+            </button>
+            <button class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1" data-sort-key="drop">
+                抛弃率
+                <Icon name="mdi:chevron-up" class="icon-asc hidden text-xs" />
+                <Icon name="mdi:chevron-down" class="icon-desc hidden text-xs" />
+            </button>
+        </div>
     </div>
-    <div class="space-y-2">
+    <div id="cards-list" class="space-y-2">
         {
             subjects.map((item: any, index: number) => (
                 <AnimeCard
@@ -50,8 +81,87 @@ function formatUpdatedAt(updated_at: string) {
             ))
         }
     </div>
-    <div class="text-gray-600 dark:text-gray-400 text-xs mt-4 mb-1 flex items-center justify-center gap-1">
+    <div
+        class="text-gray-600 dark:text-gray-400 text-xs mt-4 mb-1 flex items-center justify-center gap-1"
+    >
         <Icon name="mdi:clock-outline" class="text-sm" />
         <span>数据更新时间：{formatUpdatedAt(data.updated_at)}</span>
     </div>
+
+    <script type="module" is:inline>
+        const list = document.getElementById("cards-list");
+        const cards = Array.from(list.children);
+
+        const rankOnlyToggle = document.getElementById("rankOnlyToggle");
+        const headerButtons = document.querySelectorAll("[data-sort-key]");
+
+        const params = new URLSearchParams(location.search);
+        let sortKey = params.get("sort") || "rank";
+        let order = params.get("order") || "asc";
+        let rankOnly = params.get("rankOnly") === "1";
+
+        function sortFn(a, b) {
+            const aVal = Number(a.dataset[sortKey]);
+            const bVal = Number(b.dataset[sortKey]);
+            const valA = isNaN(aVal) ? Infinity : aVal;
+            const valB = isNaN(bVal) ? Infinity : bVal;
+            return order === "asc" ? valA - valB : valB - valA;
+        }
+
+        function apply() {
+            const filtered = rankOnly
+                ? cards.filter((c) => {
+                      const r = Number(c.dataset.rank);
+                      return !Number.isNaN(r) && r > 0;
+                  })
+                : cards.slice();
+            filtered.sort(sortFn);
+            list.innerHTML = "";
+            filtered.forEach((el) => list.appendChild(el));
+
+            rankOnlyToggle.checked = rankOnly;
+            headerButtons.forEach((btn) => {
+                const active = btn.dataset.sortKey === sortKey;
+                btn.classList.toggle('bg-gray-200', active);
+                btn.classList.toggle('dark:bg-gray-600', active);
+                const ascIcon = btn.querySelector('.icon-asc');
+                const descIcon = btn.querySelector('.icon-desc');
+                if (ascIcon && descIcon) {
+                    ascIcon.classList.toggle('hidden', !(active && order === 'asc'));
+                    descIcon.classList.toggle('hidden', !(active && order === 'desc'));
+                }
+            });
+
+            const newParams = new URLSearchParams();
+            if (sortKey !== "rank") newParams.set("sort", sortKey);
+            if (order !== "asc") newParams.set("order", order);
+            if (rankOnly) newParams.set("rankOnly", "1");
+            const search = newParams.toString();
+            history.replaceState(
+                null,
+                "",
+                search ? `?${search}` : location.pathname,
+            );
+        }
+
+        rankOnlyToggle.addEventListener("change", (e) => {
+            rankOnly = e.target.checked;
+            apply();
+        });
+
+        headerButtons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const key = btn.dataset.sortKey;
+                if (key === sortKey) {
+                    order = order === "asc" ? "desc" : "asc";
+                } else {
+                    sortKey = key;
+                    order = "asc";
+                }
+                apply();
+            });
+        });
+
+        apply();
+    </script>
 </div>
