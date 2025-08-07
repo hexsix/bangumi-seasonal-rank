@@ -22,9 +22,9 @@ const available_season_id_list = data.available_seasons;
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
     </head>
-    <body class="bg-gray-50 dark:bg-[#2d2e2f] duration-200">
+    <body class="bg-gray-50 dark:bg-[#2d2e2f]">
         <Header
-            currentSeasonId={currentSeasonId}
+            currentSeasonId={current_season_id}
             availableSeasonIdList={available_season_id_list}
         />
         <slot />
