@@ -21,7 +21,7 @@ const { pageTitle } = Astro.props;
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
     </head>
-    <body>
+    <body class="bg-gray-50 dark:bg-[#2d2e2f] duration-200">
         <Header
             displaySeasonId={current_season_id}
             availableSeasonIdList={available_season_id_list}

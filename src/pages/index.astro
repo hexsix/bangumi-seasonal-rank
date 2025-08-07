@@ -5,5 +5,5 @@ const response = await fetch(
 
 const current_season_id = response.current_season_id;
 
-return Astro.redirect(`/${current_season_id}/`);
+return Astro.redirect(`/${current_season_id}/?rankOnly=1`);
 ---
