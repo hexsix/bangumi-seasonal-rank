@@ -1,11 +1,24 @@
 ---
-const platform = "github";
-const username = "hexsix";
-const repo = "bangumi-seasonal-rank"
+import { Icon } from "astro-icon/components";
+const thanks = "https://bgm.tv/user/lilyurey/index";
+const github = "https://github.com/hexsix/bangumi-seasonal-rank";
 ---
 
-<footer>
-    <p>
-        在 <a href={`https://www.${platform}.com/${username}/${repo}`}>{platform}</a> 上，了解有关我的项目的更多信息！
-    </p>
-</footer>
+<footer class="bg-white dark:bg-[#343536] border-t border-gray-200 dark:border-gray-700 mt-auto transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="text-center text-gray-500 dark:text-gray-400 text-xs">
+        <p class="flex items-center justify-center space-x-2">
+          <span>
+            不含TVSP，不含OVA/OAD，不含国产动画。感谢
+            <a href={thanks} target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">lilyurey@bgm</a>
+            编纂的目录。
+          </span>
+          <a href={github} target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+            <span class="sr-only">GitHub</span>
+            <Icon name="mdi:github" class="text-sm" />
+          </a>
+        </p>
+        <p class="mt-1">© 2025 Bangumi 新番排行榜</p>
+      </div>
+    </div>
+  </footer>
