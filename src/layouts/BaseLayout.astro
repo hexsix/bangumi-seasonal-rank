@@ -7,10 +7,11 @@ const data = await fetch(
     "https://api.rinshankaiho.fun/api/v0/season/available",
 ).then((res) => res.json());
 
-const current_season_id = data.current_season_id;
+const { pageTitle, currentSeasonId } = Astro.props;
+
+const current_season_id = currentSeasonId || data.current_season_id;
 const available_season_id_list = data.available_seasons;
 
-const { pageTitle } = Astro.props;
 ---
 
 <html lang="zh-CN" class="bg-gray-50 dark:bg-[#2d2e2f] duration-200">
@@ -23,7 +24,7 @@ const { pageTitle } = Astro.props;
     </head>
     <body class="bg-gray-50 dark:bg-[#2d2e2f] duration-200">
         <Header
-            displaySeasonId={current_season_id}
+            currentSeasonId={currentSeasonId}
             availableSeasonIdList={available_season_id_list}
         />
         <slot />

@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 
-const { displaySeasonId, availableSeasonIdList } = Astro.props;
+const { currentSeasonId, availableSeasonIdList } = Astro.props;
 
 export function getTitle(seasonId: number) {
     const season_id = String(seasonId);
@@ -17,12 +17,9 @@ export function getSeasonName(seasonId: number) {
     return `${year}年${season}月`;
 }
 
-let title = getTitle(displaySeasonId);
-if (
-    Astro.url &&
-    (Astro.url.pathname === "/" || Astro.url.pathname === "/more/")
-) {
-    title = "Bangumi 新番排行";
+let title = "Bangumi 新番排行";
+if (currentSeasonId) {
+    title = getTitle(currentSeasonId);
 }
 ---
 
@@ -105,7 +102,7 @@ if (
             >
                 <a href="#" class="flex flex-wrap gap-1">
                     <span class="flex">更改主题</span>
-                    <Icon name="mdi:weather-night" />
+                    <Icon name="mdi:weather-night"/>
                 </a>
             </button>
         </div>
