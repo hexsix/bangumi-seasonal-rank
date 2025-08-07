@@ -8,6 +8,16 @@ const data = await fetch(
     `https://api.rinshankaiho.fun/api/v0/season/${season_id}`,
 ).then((res) => res.json());
 const subjects = data.subjects;
+function formatUpdatedAt(updated_at: string) {
+    const date = new Date(updated_at);
+    return date.toLocaleDateString("zh-CN", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+    });
+}
 ---
 
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -19,7 +29,7 @@ const subjects = data.subjects;
         <div>评论</div>
         <div>抛弃率</div>
     </div>
-    <div class="space-x-2">
+    <div class="space-y-2">
         {
             subjects.map((item: any, index: number) => (
                 <AnimeCard
@@ -40,8 +50,8 @@ const subjects = data.subjects;
             ))
         }
     </div>
-    <div>
-        <Icon name="mdi:clock-outline" />
-        最后更新时间：{data.updated_at}
+    <div class="text-gray-600 dark:text-gray-300 text-xs mt-4 mb-4 flex items-center justify-center gap-1">
+        <Icon name="mdi:clock-outline" class="text-sm" />
+        <span>数据更新时间：{formatUpdatedAt(data.updated_at)}</span>
     </div>
 </div>
