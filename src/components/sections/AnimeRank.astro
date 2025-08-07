@@ -156,7 +156,11 @@ function formatUpdatedAt(updated_at: string) {
                     order = order === "asc" ? "desc" : "asc";
                 } else {
                     sortKey = key;
-                    order = "asc";
+                    if (key === "rank" || key === "drop") {
+                        order = "asc";
+                    } else {
+                        order = "desc";
+                    }
                 }
                 apply();
             });
