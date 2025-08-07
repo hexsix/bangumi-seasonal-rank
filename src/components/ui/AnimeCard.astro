@@ -18,27 +18,44 @@ const {
 } = Astro.props;
 ---
 
-<div class="anime-card">
+<div
+    class="relative flex flex-col sm:flex-row items-start p-3 mb-3 bg-white dark:bg-[#3d3d3f] rounded-lg shadow-md overflow-hidden"
+>
     <!-- 排名 -->
-    <div>
-        <div>{index + 1}</div>
+    <div
+        class="rank-badge top-0 left-0 w-8 h-8 flex items-center justify-center absolute"
+    >
+        <div
+            class="w-full h-full flex items-center justify-center font-bold text-sm text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700"
+        >
+            {index + 1}
+        </div>
     </div>
 
-    <div>
+    <div class="flex w-[calc(100%-1.5rem)] sm:w-auto ml-6 sm:ml-8 mb-2 sm:mb-0">
         <!-- 动画海报 -->
-        <div class="">
-            <img src={images_grid} />
+        <div class="flex-shrink-0 mr-3 sm:mr-4">
+            <img
+                class="w-14 sm:w-16 h-20 sm:h-24 object-cover rounded"
+                src={images_grid}
+            />
         </div>
         <!-- 动画信息 -->
         <div>
             <!-- 标题 -->
-            <div>
-                <div>
+            <div class="flex-1">
+                <div
+                    class="font-bold textbase mb-2 text-black dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400"
+                >
                     <a href={`https://bgm.tv/subject/${id}`} target="_blank">
                         {name_cn}
                     </a>
                 </div>
-                <div>{name}</div>
+                <div
+                    class="text-gray-600 dark:text-gray-300 text-xs mb-2 truncate"
+                >
+                    {name}
+                </div>
             </div>
             <!-- 评分 -->
             <div>
@@ -46,27 +63,40 @@ const {
                 <div>rank: {rank}</div>
             </div>
             <!-- 标签 -->
-            <div>
-                <div>{air_weekday}</div>
-                <div>
-                    {meta_tags.map((tag: string) => <div>{tag}</div>)}
-                </div>
+            <div class="flex flex-wrap gap-1 items-center">
+                <span
+                    class="bg-green-100 text-green-800 dark:bg-green-800/50 dark:text-green-200 text-xs px-1.5 py-0.5 rounded"
+                    >{air_weekday}</span
+                >
+                {
+                    meta_tags.map((tag: string) => (
+                        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800/50 dark:text-blue-200 text-xs px-1.5 py-0.5 rounded">
+                            {tag}
+                        </span>
+                    ))
+                }
             </div>
             <!-- 收藏数 -->
-            <div>
-                <div>
+            <div class="mt-2 flex items-center gap-4 text-xs text-gray-600 dark:text-gray-400 items-center">
+                <div class="flex flex-wrap gap-1">
                     <Icon name="mdi:bookmark-outline" />
-                    <span>收藏：{collection_total}</span>
+                    <span>收藏: {collection_total}</span>
                 </div>
-                <div>
+                <div class="flex flex-wrap gap-1">
                     <Icon name="mdi:comment-outline" />
-                    <span>平均评论：{average_comment}</span>
+                    <span>话均评论: {average_comment.toFixed(1)}</span>
                 </div>
-                <div>
+                <div class="flex flex-wrap gap-1">
                     <Icon name="mdi:trash-can-outline" />
-                    <span>抛弃率：{drop_rate}</span>
+                    <span>抛弃率: {(drop_rate * 100).toFixed(2)}%</span>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<style>
+    .rank-badge {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+    }
+</style>
