@@ -1,6 +1,5 @@
 ---
 import { Icon } from "astro-icon/components";
-import ThemeToggle from "../icons/ThemeToggle.astro";
 
 const { displaySeasonId, availableSeasonIdList } = Astro.props;
 
@@ -61,7 +60,12 @@ if (
                     class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-xs lg:text-sm transition-colors"
                     >更多</a
                 >
-                <ThemeToggle />
+                <button
+                    data-theme-toggle
+                    class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors w-10 h-10 flex items-center justify-center"
+                >
+                    <Icon name="mdi:weather-night" class="text-sm" />
+                </button>
             </nav>
 
             <!-- 移动端汉堡菜单按钮 -->
@@ -84,7 +88,7 @@ if (
                 availableSeasonIdList.slice(0, 6).map((seasonId: number) => (
                     <a
                         href={`/${seasonId}/`}
-                        class="text-gray-600 dark:text-white dark:hover:text-blue-400 hover:text-blue-600 text-sm transition-colors"
+                        class="text-gray-600 dark:text-gray-300 dark:hover:text-blue-400 hover:text-blue-600 text-sm transition-colors"
                     >
                         {getSeasonName(seasonId)}
                     </a>
@@ -92,21 +96,71 @@ if (
             }
             <a
                 href="/more/"
-                class="text-gray-600 dark:text-white dark:hover:text-blue-400 hover:text-blue-600 text-sm transition-colors"
+                class="text-gray-600 dark:text-gray-300 dark:hover:text-blue-400 hover:text-blue-600 text-sm transition-colors"
                 >更多季度</a
             >
-            <ThemeToggle />
+            <button
+                data-theme-toggle
+                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors flex"
+            >
+                <a href="#" class="flex flex-wrap gap-1">
+                    <span class="flex">更改主题</span>
+                    <Icon name="mdi:weather-night"/>
+                </a>
+            </button>
         </div>
     </div>
 </header>
 
 <script>
-    // 移动菜单切换功能
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
 
     menuToggle?.addEventListener("click", () => {
-        // 切换菜单显示/隐藏
         mobileMenu?.classList.toggle("hidden");
     });
+</script>
+
+<script is:inline>
+    (() => {
+        const key = "theme";
+        const root = document.documentElement;
+
+        const getInitial = () => {
+            try {
+                const ls = localStorage.getItem(key);
+                if (ls === "light" || ls === "dark") return ls;
+            } catch (_) {}
+            return window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+        };
+
+        const apply = (theme) => {
+            if (theme === "dark") {
+                root.classList.add("dark");
+            } else {
+                root.classList.remove("dark");
+            }
+        };
+
+        // init
+        apply(getInitial());
+
+        const setTheme = (theme) => {
+            apply(theme);
+            try {
+                localStorage.setItem(key, theme);
+            } catch (_) {}
+        };
+
+        document.querySelectorAll("[data-theme-toggle]").forEach((btn) => {
+            if (btn.dataset.bound) return;
+            btn.dataset.bound = "1";
+            btn.addEventListener("click", () => {
+                const next = root.classList.contains("dark") ? "light" : "dark";
+                setTheme(next);
+            });
+        });
+    })();
 </script>
