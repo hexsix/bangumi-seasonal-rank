@@ -10,7 +10,7 @@ const data = await fetch(
 const subjects = data.subjects;
 ---
 
-<div class="anime-rank">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
     <div class="anime-rank-header">
         <div>仅显示有排名的作品</div>
         <div>Rank</div>
@@ -19,7 +19,7 @@ const subjects = data.subjects;
         <div>评论</div>
         <div>抛弃率</div>
     </div>
-    <div>
+    <div class="space-x-2">
         {
             subjects.map((item: any, index: number) => (
                 <AnimeCard

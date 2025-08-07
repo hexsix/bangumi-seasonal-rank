@@ -60,7 +60,7 @@ const seasonImages: Record<string, string> = {
 const { availableSeasonIdList } = Astro.props;
 ---
 
-<div>
+<div class="flex items-center justify-center h-screen">
     {availableSeasonIdList.map((seasonId: string) => (
         <div>
             <a href={`/${seasonId}/`}>
