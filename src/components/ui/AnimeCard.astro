@@ -77,7 +77,7 @@ const {
                         {score.toFixed(4)}
                     </div>
                     <div class="text-gray-600 dark:text-gray-300 text-xs mb-1">
-                        rank: {rank || "N/A"}
+                        rank: {rank === 999999 ? "N/A" : rank}
                     </div>
                 </div>
             </div>

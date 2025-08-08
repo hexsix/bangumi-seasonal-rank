@@ -113,7 +113,7 @@ function formatUpdatedAt(updated_at: string) {
                 ? cards.slice()
                 : cards.filter((c) => {
                       const r = Number(c.dataset.rank);
-                      return !Number.isNaN(r) && r > 0;
+                      return !Number.isNaN(r) && r < 999999 && r > 0;
                   });
             filtered.sort(sortFn);
             list.innerHTML = "";
