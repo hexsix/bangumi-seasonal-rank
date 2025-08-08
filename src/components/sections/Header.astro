@@ -63,7 +63,8 @@ if (currentSeasonId) {
                     data-theme-toggle
                     class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 w-10 h-10 flex items-center justify-center"
                 >
-                    <Moon />
+                    <span class="block dark:hidden"><Moon /></span>
+                    <span class="hidden dark:block"><Sun /></span>
                 </button>
             </nav>
 
@@ -104,7 +105,8 @@ if (currentSeasonId) {
             >
                 <a href="#" class="flex flex-wrap gap-1">
                     <span class="flex">更改主题</span>
-                    <Moon />
+                    <span class="block dark:hidden"><Moon /></span>
+                    <span class="hidden dark:block"><Sun /></span>
                 </a>
             </button>
         </div>
