@@ -9,6 +9,6 @@ const response = await fetch(
 const availableSeasonIdList = response.available_seasons;
 ---
 
-<BaseLayout>
+<BaseLayout currentSeasonId="">
     <AnimeList availableSeasonIdList={availableSeasonIdList} />
 </BaseLayout>

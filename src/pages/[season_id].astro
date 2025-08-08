@@ -12,8 +12,15 @@ export async function getStaticPaths() {
     }));
 }
 const { season_id } = Astro.params;
+
+function getSeasonName(seasonId: number) {
+    const season_id = String(seasonId);
+    const year = season_id.slice(2, 4);
+    const season = season_id.slice(4, 6);
+    return `${year}年${season}月`;
+}
 ---
 
-<BaseLayout currentSeasonId={season_id}>
+<BaseLayout currentSeasonId={season_id} pageTitle={getSeasonName(season_id)}>
     <AnimeRank season_id={season_id} />
 </BaseLayout>

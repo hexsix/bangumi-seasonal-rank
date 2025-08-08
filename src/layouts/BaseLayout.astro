@@ -9,7 +9,7 @@ const data = await fetch(
 
 const { pageTitle, currentSeasonId } = Astro.props;
 
-const current_season_id = currentSeasonId || data.current_season_id;
+const current_season_id = currentSeasonId || "";
 const available_season_id_list = data.available_seasons;
 
 ---
@@ -20,7 +20,7 @@ const available_season_id_list = data.available_seasons;
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>{pageTitle}</title>
+        <title>{pageTitle ? `${pageTitle} - Bangumi 新番排行榜`: "Bangumi 新番排行榜"}</title>
     </head>
     <body class="bg-gray-50 dark:bg-[#2d2e2f]">
         <Header
