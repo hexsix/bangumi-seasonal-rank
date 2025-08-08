@@ -45,7 +45,7 @@ if (currentSeasonId) {
                         .slice(0, 5)
                         .map((seasonId: number) => (
                             <a
-                                href={`/${seasonId}/?rankOnly=1`}
+                                href={`/${seasonId}/`}
                                 class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-xs lg:text-sm"
                             >
                                 {getSeasonName(seasonId)}
@@ -84,7 +84,7 @@ if (currentSeasonId) {
             {
                 availableSeasonIdList.slice(0, 6).map((seasonId: number) => (
                     <a
-                        href={`/${seasonId}/?rankOnly=1`}
+                        href={`/${seasonId}/`}
                         class="text-gray-600 dark:text-gray-300 dark:hover:text-blue-400 hover:text-blue-600 text-sm"
                     >
                         {getSeasonName(seasonId)}

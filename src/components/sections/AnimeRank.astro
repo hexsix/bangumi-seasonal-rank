@@ -26,11 +26,11 @@ function formatUpdatedAt(updated_at: string) {
     >
         <label class="flex items-center gap-1 text-sm pb-2 sm:pb-0">
             <input
-                id="rankOnlyToggle"
+                id="unrankedDisplayToggle"
                 type="checkbox"
                 class="accent-blue-600"
             />
-            <span>仅显示有排名的作品</span>
+            <span>显示没有排名的作品</span>
         </label>
         <div class="flex flex-wrap items-center gap-2">
             <button class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1" data-sort-key="rank">
@@ -92,13 +92,13 @@ function formatUpdatedAt(updated_at: string) {
         const list = document.getElementById("cards-list");
         const cards = Array.from(list.children);
 
-        const rankOnlyToggle = document.getElementById("rankOnlyToggle");
+        const unrankedDisplayToggle = document.getElementById("unrankedDisplayToggle");
         const headerButtons = document.querySelectorAll("[data-sort-key]");
 
         const params = new URLSearchParams(location.search);
         let sortKey = params.get("sort") || "rank";
         let order = params.get("order") || "asc";
-        let rankOnly = params.get("rankOnly") === "1";
+        let unrankedDisplay = params.get("unrankedDisplay") === "1";
 
         function sortFn(a, b) {
             const aVal = Number(a.dataset[sortKey]);
@@ -109,17 +109,17 @@ function formatUpdatedAt(updated_at: string) {
         }
 
         function apply() {
-            const filtered = rankOnly
-                ? cards.filter((c) => {
+            const filtered = unrankedDisplay
+                ? cards.slice()
+                : cards.filter((c) => {
                       const r = Number(c.dataset.rank);
                       return !Number.isNaN(r) && r > 0;
-                  })
-                : cards.slice();
+                  });
             filtered.sort(sortFn);
             list.innerHTML = "";
             filtered.forEach((el) => list.appendChild(el));
 
-            rankOnlyToggle.checked = rankOnly;
+            unrankedDisplayToggle.checked = unrankedDisplay;
             headerButtons.forEach((btn) => {
                 const active = btn.dataset.sortKey === sortKey;
                 btn.classList.toggle('bg-gray-200', active);
@@ -135,7 +135,7 @@ function formatUpdatedAt(updated_at: string) {
             const newParams = new URLSearchParams();
             if (sortKey !== "rank") newParams.set("sort", sortKey);
             if (order !== "asc") newParams.set("order", order);
-            if (rankOnly) newParams.set("rankOnly", "1");
+            if (unrankedDisplay) newParams.set("unrankedDisplay", "1");
             const search = newParams.toString();
             history.replaceState(
                 null,
@@ -144,8 +144,8 @@ function formatUpdatedAt(updated_at: string) {
             );
         }
 
-        rankOnlyToggle.addEventListener("change", (e) => {
-            rankOnly = e.target.checked;
+        unrankedDisplayToggle.addEventListener("change", (e) => {
+            unrankedDisplay = e.target.checked;
             apply();
         });
 
