@@ -1,6 +1,8 @@
 ---
+import Downarrow from "../icons/Downarrow.astro";
+import Uparrow from "../icons/Uparrow.astro";
+import Clock from "../icons/Clock.astro"
 import AnimeCard from "../ui/AnimeCard.astro";
-import { Icon } from "astro-icon/components";
 
 const { season_id } = Astro.props;
 
@@ -35,28 +37,28 @@ function formatUpdatedAt(updated_at: string) {
         <div class="flex flex-wrap items-center gap-2">
             <button class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1" data-sort-key="rank">
                 Rank
-                <Icon name="mdi:chevron-up" class="icon-asc hidden text-xs" />
-                <Icon name="mdi:chevron-down" class="icon-desc hidden text-xs" />
+                <Uparrow class="icon-asc hidden text-xs" />
+                <Downarrow class="icon-desc hidden text-xs" />
             </button>
             <button class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1" data-sort-key="score">
                 评分
-                <Icon name="mdi:chevron-up" class="icon-asc hidden text-xs" />
-                <Icon name="mdi:chevron-down" class="icon-desc hidden text-xs" />
+                <Uparrow class="icon-asc hidden text-xs" />
+                <Downarrow class="icon-desc hidden text-xs" />
             </button>
             <button class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1" data-sort-key="collection">
                 收藏
-                <Icon name="mdi:chevron-up" class="icon-asc hidden text-xs" />
-                <Icon name="mdi:chevron-down" class="icon-desc hidden text-xs" />
+                <Uparrow class="icon-asc hidden text-xs" />
+                <Downarrow class="icon-desc hidden text-xs" />
             </button>
             <button class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1" data-sort-key="comment">
                 评论
-                <Icon name="mdi:chevron-up" class="icon-asc hidden text-xs" />
-                <Icon name="mdi:chevron-down" class="icon-desc hidden text-xs" />
+                <Uparrow class="icon-asc hidden text-xs" />
+                <Downarrow class="icon-desc hidden text-xs" />
             </button>
             <button class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1" data-sort-key="drop">
                 抛弃率
-                <Icon name="mdi:chevron-up" class="icon-asc hidden text-xs" />
-                <Icon name="mdi:chevron-down" class="icon-desc hidden text-xs" />
+                <Uparrow class="icon-asc hidden text-xs" />
+                <Downarrow class="icon-desc hidden text-xs" />
             </button>
         </div>
     </div>
@@ -84,7 +86,7 @@ function formatUpdatedAt(updated_at: string) {
     <div
         class="text-gray-600 dark:text-gray-400 text-xs mt-4 mb-1 flex items-center justify-center gap-1"
     >
-        <Icon name="mdi:clock-outline" class="text-sm" />
+        <Clock class="text-xs" />
         <span>数据更新时间：{formatUpdatedAt(data.updated_at)}</span>
     </div>
 

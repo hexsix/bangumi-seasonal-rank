@@ -1,5 +1,10 @@
 ---
-import { Icon } from "astro-icon/components";
+import Star from "../icons/Star.astro";
+import Bookmark from "../icons/Bookmark.astro";
+import Chat from "../icons/Chat.astro";
+import Fire from "../icons/Fire.astro";
+import Keep from "../icons/Keep.astro";
+import Trashbin from "../icons/Trashbin.astro";
 
 const {
     index,
@@ -11,8 +16,11 @@ const {
     score,
     rank,
     collection_total,
+    is_collection_top3,
     average_comment,
+    is_comment_top3,
     drop_rate,
+    is_drop_rate_top3,
     air_weekday,
     meta_tags,
 } = Astro.props;
@@ -102,15 +110,21 @@ const {
                     class="hidden sm:flex mt-2 gap-4 text-xs text-gray-600 dark:text-gray-400 items-center"
                 >
                     <div class="flex flex-wrap gap-1">
-                        <Icon name="mdi:bookmark-outline" />
+                        {
+                            is_collection_top3 ? <Star /> : <Bookmark />
+                        }
                         <span>收藏: {collection_total}</span>
                     </div>
                     <div class="flex flex-wrap gap-1">
-                        <Icon name="mdi:comment-outline" />
+                        {
+                            is_comment_top3 ? <Fire /> : <Chat />
+                        }
                         <span>话均评论: {average_comment.toFixed(1)}</span>
                     </div>
                     <div class="flex flex-wrap gap-1">
-                        <Icon name="mdi:trash-can-outline" />
+                        {
+                            is_drop_rate_top3 ? <Keep /> : <Trashbin />
+                        }
                         <span>抛弃率: {(drop_rate * 100).toFixed(2)}%</span>
                     </div>
                 </div>
@@ -122,15 +136,21 @@ const {
         class="sm:hidden mt-2 flex gap-4 text-xs text-gray-600 dark:text-gray-400 items-center"
     >
         <div class="flex flex-wrap gap-1">
-            <Icon name="mdi:bookmark-outline" />
+            {
+                is_collection_top3 ? <Star /> : <Bookmark />
+            }
             <span>收藏: {collection_total}</span>
         </div>
         <div class="flex flex-wrap gap-1">
-            <Icon name="mdi:comment-outline" />
+            {
+                is_comment_top3 ? <Fire /> : <Chat />
+            }
             <span>话均评论: {average_comment.toFixed(1)}</span>
         </div>
         <div class="flex flex-wrap gap-1">
-            <Icon name="mdi:trash-can-outline" />
+            {
+                is_drop_rate_top3 ? <Keep /> : <Trashbin />
+            }
             <span>抛弃率: {(drop_rate * 100).toFixed(2)}%</span>
         </div>
     </div>

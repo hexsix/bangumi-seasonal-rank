@@ -1,5 +1,7 @@
 ---
-import { Icon } from "astro-icon/components";
+import Hamburger from "../icons/Hamburger.astro";
+import Moon from "../icons/Moon.astro";
+import Sun from "../icons/Sun.astro";
 
 const { currentSeasonId, availableSeasonIdList } = Astro.props;
 
@@ -61,16 +63,16 @@ if (currentSeasonId) {
                     data-theme-toggle
                     class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 w-10 h-10 flex items-center justify-center"
                 >
-                    <Icon name="mdi:weather-night" class="text-sm" />
+                    <Moon />
                 </button>
             </nav>
 
             <!-- 移动端汉堡菜单按钮 -->
             <button
                 id="menu-toggle"
-                class="block md:hidden text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 border-none bg-transparent shadow-none outline-none"
+                class=" text-2xlblock md:hidden text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 border-none bg-transparent shadow-none outline-none"
             >
-                <Icon name="mdi:menu" class="text-2xl" />
+                <Hamburger />
             </button>
         </div>
     </div>
@@ -102,7 +104,7 @@ if (currentSeasonId) {
             >
                 <a href="#" class="flex flex-wrap gap-1">
                     <span class="flex">更改主题</span>
-                    <Icon name="mdi:weather-night"/>
+                    <Moon />
                 </a>
             </button>
         </div>
