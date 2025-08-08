@@ -109,19 +109,19 @@ const {
                 <div
                     class="hidden sm:flex mt-2 gap-4 text-xs text-gray-600 dark:text-gray-400 items-center"
                 >
-                    <div class="flex flex-wrap gap-1">
+                    <div class="flex flex-wrap gap-1 inline-flex items-center">
                         {
                             is_collection_top3 ? <Star /> : <Bookmark />
                         }
                         <span>收藏: {collection_total}</span>
                     </div>
-                    <div class="flex flex-wrap gap-1">
+                    <div class="flex flex-wrap gap-1 inline-flex items-center">
                         {
                             is_comment_top3 ? <Fire /> : <Chat />
                         }
                         <span>话均评论: {average_comment.toFixed(1)}</span>
                     </div>
-                    <div class="flex flex-wrap gap-1">
+                    <div class="flex flex-wrap gap-1 inline-flex items-center">
                         {
                             is_drop_rate_top3 ? <Keep /> : <Trashbin />
                         }
@@ -135,19 +135,19 @@ const {
     <div
         class="sm:hidden mt-2 flex gap-4 text-xs text-gray-600 dark:text-gray-400 items-center"
     >
-        <div class="flex flex-wrap gap-1">
+        <div class="flex flex-wrap gap-1 inline-flex items-center">
             {
                 is_collection_top3 ? <Star /> : <Bookmark />
             }
             <span>收藏: {collection_total}</span>
         </div>
-        <div class="flex flex-wrap gap-1">
+        <div class="flex flex-wrap gap-1 inline-flex items-center">
             {
                 is_comment_top3 ? <Fire /> : <Chat />
             }
             <span>话均评论: {average_comment.toFixed(1)}</span>
         </div>
-        <div class="flex flex-wrap gap-1">
+        <div class="flex flex-wrap gap-1 inline-flex items-center">
             {
                 is_drop_rate_top3 ? <Keep /> : <Trashbin />
             }
