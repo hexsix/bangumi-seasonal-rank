@@ -3,6 +3,15 @@ function getSeasonName(seasonId: string) {
     const season_id = String(seasonId);
     const year = season_id.slice(0, 4); // 四位年份
     const season = season_id.slice(4, 6);
+    // if (season === "01") {
+    //     return `${year}年冬`;
+    // } else if (season === "04") {
+    //     return `${year}年春`;
+    // } else if (season === "07") {
+    //     return `${year}年夏`;
+    // } else if (season === "10") {
+    //     return `${year}年秋`;
+    // }
     return `${year}年${season}月`;
 }
 
@@ -107,7 +116,7 @@ const groupedSeasons = availableSeasonIdList.reduce(
                                     />
                                 </div>
                                 <div class="p-2">
-                                    <div class="text-lg font-medium text-gray-900 dark:text-gray-100">
+                                    <div class="text-sm font-medium text-gray-900 dark:text-gray-100">
                                         {getSeasonName(seasonId)}
                                     </div>
                                 </div>
