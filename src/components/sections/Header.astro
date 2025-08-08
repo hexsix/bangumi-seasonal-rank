@@ -52,7 +52,7 @@ if (currentSeasonId) {
                                 aria-current={currentPath === `/${seasonId}/` ? 'page' : undefined}
                                 class={`${currentPath === `/${seasonId}/`
                                     ? 'bg-blue-50 dark:bg-blue-500/20 text-gray-800 dark:text-gray-100'
-                                    : 'bg-transparent text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10'} rounded-md px-3 py-1 text-xs lg:text-sm transition-colors`}
+                                    : 'bg-transparent text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10'} rounded-md px-3 py-1 text-xs lg:text-sm`}
                             >
                                 {getSeasonName(seasonId)}
                             </a>
@@ -63,7 +63,7 @@ if (currentSeasonId) {
                     aria-current={currentPath.startsWith('/more') ? 'page' : undefined}
                     class={`${currentPath.startsWith('/more')
                         ? 'bg-blue-50 dark:bg-blue-500/20 text-gray-800 dark:text-gray-100'
-                        : 'bg-transparent text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10'} rounded-md px-3 py-1 text-xs lg:text-sm transition-colors`}
+                        : 'bg-transparent text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10'} rounded-md px-3 py-1 text-xs lg:text-sm`}
                     >更多</a
                 >
                 <button
