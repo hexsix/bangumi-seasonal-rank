@@ -16,13 +16,13 @@ const {
     score,
     rank,
     collection_total,
-    is_collection_top3,
     average_comment,
-    is_comment_top3,
     drop_rate,
-    is_drop_rate_top3,
     air_weekday,
     meta_tags,
+    collection_threshold,
+    comment_threshold,
+    drop_rate_threshold,
 } = Astro.props;
 ---
 
@@ -111,19 +111,19 @@ const {
                 >
                     <div class="flex flex-wrap gap-1 inline-flex items-center">
                         {
-                            is_collection_top3 ? <Star /> : <Bookmark />
+                            collection_total > collection_threshold ? <Star /> : <Bookmark />
                         }
                         <span>收藏: {collection_total}</span>
                     </div>
                     <div class="flex flex-wrap gap-1 inline-flex items-center">
                         {
-                            is_comment_top3 ? <Fire /> : <Chat />
+                            average_comment > comment_threshold ? <Fire /> : <Chat />
                         }
                         <span>话均评论: {average_comment.toFixed(1)}</span>
                     </div>
                     <div class="flex flex-wrap gap-1 inline-flex items-center">
                         {
-                            is_drop_rate_top3 ? <Keep /> : <Trashbin />
+                            drop_rate < drop_rate_threshold ? <Keep /> : <Trashbin />
                         }
                         <span>抛弃率: {(drop_rate * 100).toFixed(2)}%</span>
                     </div>
@@ -137,19 +137,19 @@ const {
     >
         <div class="flex flex-wrap gap-1 inline-flex items-center">
             {
-                is_collection_top3 ? <Star /> : <Bookmark />
+                collection_total > collection_threshold ? <Star /> : <Bookmark />
             }
             <span>收藏: {collection_total}</span>
         </div>
         <div class="flex flex-wrap gap-1 inline-flex items-center">
             {
-                is_comment_top3 ? <Fire /> : <Chat />
+                average_comment > comment_threshold ? <Fire /> : <Chat />
             }
             <span>话均评论: {average_comment.toFixed(1)}</span>
         </div>
         <div class="flex flex-wrap gap-1 inline-flex items-center">
             {
-                is_drop_rate_top3 ? <Keep /> : <Trashbin />
+                drop_rate < drop_rate_threshold ? <Keep /> : <Trashbin />
             }
             <span>抛弃率: {(drop_rate * 100).toFixed(2)}%</span>
         </div>

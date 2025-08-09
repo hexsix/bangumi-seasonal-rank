@@ -1,7 +1,7 @@
 ---
 import Downarrow from "../icons/Downarrow.astro";
 import Uparrow from "../icons/Uparrow.astro";
-import Clock from "../icons/Clock.astro"
+import Clock from "../icons/Clock.astro";
 import AnimeCard from "../ui/AnimeCard.astro";
 
 const { season_id } = Astro.props;
@@ -9,7 +9,9 @@ const { season_id } = Astro.props;
 const data = await fetch(
     `https://api.rinshankaiho.fun/api/v0/season/${season_id}`,
 ).then((res) => res.json());
+
 const subjects = data.subjects;
+
 function formatUpdatedAt(updated_at: string) {
     const date = new Date(updated_at);
     return date.toLocaleDateString("zh-CN", {
@@ -20,6 +22,39 @@ function formatUpdatedAt(updated_at: string) {
         minute: "2-digit",
     });
 }
+
+function _collection_threshold(subjects: Array<Record<string, any>>) {
+    subjects.sort((a, b) => b.collection_total - a.collection_total);
+    if (subjects.length < 4) {
+        return 0;
+    }
+    return subjects[3].collection_total;
+}
+
+function _comment_threshold(subjects: Array<Record<string, any>>) {
+    subjects.sort((a, b) => b.average_comment - a.average_comment);
+    if (subjects.length < 4) {
+        return 0;
+    }
+    return subjects[3].average_comment;
+}
+
+function _drop_rate_threshold(subjects: Array<Record<string, any>>) {
+    subjects.sort((a, b) => a.drop_rate - b.drop_rate);
+    if (subjects.length < 4) {
+        return 0;
+    }
+    return subjects[3].drop_rate;
+}
+
+function _rerank(subjects: Array<Record<string, any>>) {
+    subjects.sort((a, b) => a.rank - b.rank);
+}
+
+const collection_threshold = _collection_threshold(subjects);
+const comment_threshold = _comment_threshold(subjects);
+const drop_rate_threshold = _drop_rate_threshold(subjects);
+_rerank(subjects);
 ---
 
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -35,27 +70,42 @@ function formatUpdatedAt(updated_at: string) {
             <span>显示没有排名的作品</span>
         </label>
         <div class="flex flex-wrap items-center gap-2">
-            <button class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1" data-sort-key="rank">
+            <button
+                class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1"
+                data-sort-key="rank"
+            >
                 Rank
                 <Uparrow class="icon-asc hidden text-xs" />
                 <Downarrow class="icon-desc hidden text-xs" />
             </button>
-            <button class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1" data-sort-key="score">
+            <button
+                class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1"
+                data-sort-key="score"
+            >
                 评分
                 <Uparrow class="icon-asc hidden text-xs" />
                 <Downarrow class="icon-desc hidden text-xs" />
             </button>
-            <button class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1" data-sort-key="collection">
+            <button
+                class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1"
+                data-sort-key="collection"
+            >
                 收藏
                 <Uparrow class="icon-asc hidden text-xs" />
                 <Downarrow class="icon-desc hidden text-xs" />
             </button>
-            <button class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1" data-sort-key="comment">
+            <button
+                class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1"
+                data-sort-key="comment"
+            >
                 评论
                 <Uparrow class="icon-asc hidden text-xs" />
                 <Downarrow class="icon-desc hidden text-xs" />
             </button>
-            <button class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1" data-sort-key="drop">
+            <button
+                class="sort-btn text-sm px-2 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-1"
+                data-sort-key="drop"
+            >
                 抛弃率
                 <Uparrow class="icon-asc hidden text-xs" />
                 <Downarrow class="icon-desc hidden text-xs" />
@@ -79,6 +129,9 @@ function formatUpdatedAt(updated_at: string) {
                     drop_rate={item.drop_rate}
                     air_weekday={item.air_weekday}
                     meta_tags={item.meta_tags}
+                    collection_threshold={collection_threshold}
+                    comment_threshold={comment_threshold}
+                    drop_rate_threshold={drop_rate_threshold}
                 />
             ))
         }
@@ -94,7 +147,9 @@ function formatUpdatedAt(updated_at: string) {
         const list = document.getElementById("cards-list");
         const cards = Array.from(list.children);
 
-        const unrankedDisplayToggle = document.getElementById("unrankedDisplayToggle");
+        const unrankedDisplayToggle = document.getElementById(
+            "unrankedDisplayToggle",
+        );
         const headerButtons = document.querySelectorAll("[data-sort-key]");
 
         const params = new URLSearchParams(location.search);
@@ -124,13 +179,19 @@ function formatUpdatedAt(updated_at: string) {
             unrankedDisplayToggle.checked = unrankedDisplay;
             headerButtons.forEach((btn) => {
                 const active = btn.dataset.sortKey === sortKey;
-                btn.classList.toggle('bg-gray-200', active);
-                btn.classList.toggle('dark:bg-gray-600', active);
-                const ascIcon = btn.querySelector('.icon-asc');
-                const descIcon = btn.querySelector('.icon-desc');
+                btn.classList.toggle("bg-gray-200", active);
+                btn.classList.toggle("dark:bg-gray-600", active);
+                const ascIcon = btn.querySelector(".icon-asc");
+                const descIcon = btn.querySelector(".icon-desc");
                 if (ascIcon && descIcon) {
-                    ascIcon.classList.toggle('hidden', !(active && order === 'asc'));
-                    descIcon.classList.toggle('hidden', !(active && order === 'desc'));
+                    ascIcon.classList.toggle(
+                        "hidden",
+                        !(active && order === "asc"),
+                    );
+                    descIcon.classList.toggle(
+                        "hidden",
+                        !(active && order === "desc"),
+                    );
                 }
             });
 
