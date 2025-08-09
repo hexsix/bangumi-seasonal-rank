@@ -93,10 +93,15 @@ const {
             <div class="card-info mt-2">
                 <!-- 标签 -->
                 <div class="flex flex-wrap gap-1 items-center">
-                    <span
-                        class="bg-green-100 text-green-800 dark:bg-green-800/50 dark:text-green-200 text-xs px-1.5 py-0.5 rounded"
-                        >{air_weekday}</span
-                    >
+                    {
+                        air_weekday ? (
+                            <span class="bg-green-100 text-green-800 dark:bg-green-800/50 dark:text-green-200 text-xs px-1.5 py-0.5 rounded">
+                                {air_weekday}
+                            </span>
+                        ) : (
+                            <></>
+                        )
+                    }
                     {
                         meta_tags.map((tag: string) => (
                             <span class="bg-blue-100 text-blue-800 dark:bg-blue-800/50 dark:text-blue-200 text-xs px-1.5 py-0.5 rounded">
@@ -111,19 +116,31 @@ const {
                 >
                     <div class="flex flex-wrap gap-1 inline-flex items-center">
                         {
-                            collection_total > collection_threshold ? <Star /> : <Bookmark />
+                            collection_total > collection_threshold ? (
+                                <Star />
+                            ) : (
+                                <Bookmark />
+                            )
                         }
                         <span>收藏: {collection_total}</span>
                     </div>
                     <div class="flex flex-wrap gap-1 inline-flex items-center">
                         {
-                            average_comment > comment_threshold ? <Fire /> : <Chat />
+                            average_comment > comment_threshold ? (
+                                <Fire />
+                            ) : (
+                                <Chat />
+                            )
                         }
                         <span>话均评论: {average_comment.toFixed(1)}</span>
                     </div>
                     <div class="flex flex-wrap gap-1 inline-flex items-center">
                         {
-                            drop_rate < drop_rate_threshold ? <Keep /> : <Trashbin />
+                            drop_rate < drop_rate_threshold ? (
+                                <Keep />
+                            ) : (
+                                <Trashbin />
+                            )
                         }
                         <span>抛弃率: {(drop_rate * 100).toFixed(2)}%</span>
                     </div>
@@ -136,21 +153,15 @@ const {
         class="sm:hidden mt-2 flex gap-4 text-xs text-gray-600 dark:text-gray-400 items-center"
     >
         <div class="flex flex-wrap gap-1 inline-flex items-center">
-            {
-                collection_total > collection_threshold ? <Star /> : <Bookmark />
-            }
+            {collection_total > collection_threshold ? <Star /> : <Bookmark />}
             <span>收藏: {collection_total}</span>
         </div>
         <div class="flex flex-wrap gap-1 inline-flex items-center">
-            {
-                average_comment > comment_threshold ? <Fire /> : <Chat />
-            }
+            {average_comment > comment_threshold ? <Fire /> : <Chat />}
             <span>话均评论: {average_comment.toFixed(1)}</span>
         </div>
         <div class="flex flex-wrap gap-1 inline-flex items-center">
-            {
-                drop_rate < drop_rate_threshold ? <Keep /> : <Trashbin />
-            }
+            {drop_rate < drop_rate_threshold ? <Keep /> : <Trashbin />}
             <span>抛弃率: {(drop_rate * 100).toFixed(2)}%</span>
         </div>
     </div>
